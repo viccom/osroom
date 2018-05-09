@@ -1,0 +1,66 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("添加页面路由")}}-{% endblock %}
+{% block content %}
+
+<data id="fp" content="{{data.fp}}" hidden></data>
+<data id="ft" content="{{data.ft}}" hidden></data>
+<div id="app" >
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li><a href="/osr-admin/permission/url?type={{data.ft}}&page={{data.fp}}"><i class="fa fa-shield"></i> {{_("权限控制")}}</a></li>
+                <li class="active">{{_("页面路由")}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row osr-adm-edit-page">
+         <div class="col-md-12 osr-col-xs-12">
+            <section class="panel">
+              <header class="panel-heading">
+                <span><i class="fa fa-compass"></i> {{_("添加页面路由")}}</span>
+              </header>
+              <div class="panel-body">
+                  <div class="form-group">
+                    {{_("页面路由")}}
+                    <input name="url" type="text" v-model="url"  class="form-control osr-input"
+                           data-bv-notempty-message="{{_('路由不能为空')}}"  required/>
+                   </div>
+                   <div class="form-group">
+                       <button v-on:click="add()" class="btn-sm btn osr-btn btn-info osr-submit-btn" >
+                        {{_("添加")}}
+                       </button>
+                  </div>
+              </div>
+            </section>
+         </div>
+    </div>
+</div>
+
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+            url:null
+            }
+    })
+
+    function add(){
+        formValidate();
+        d = {
+            url:vue.url,
+        }
+
+        var result = osrHttp("POST","/api/admin/url/permission", d);
+        result.then(function (r) {
+            if (r.status=="success" && r.data.msg_type=="s"){
+                 location.href = "/osr-admin/permission/url/edit?id="+r.data.inserted_id
+                                    +"&ft="+$("#ft").attr("content")
+                                    +"&fp="+$("#fp").attr("content")
+            }
+        });
+
+    }
+
+</script>
+{% endblock %}

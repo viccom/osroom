@@ -1,0 +1,69 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("权限表")}}-{% endblock %}
+{% block content %}
+<div id="app" >
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li><a href="/osr-admin/permission/url"><i class="fa fa-shield"></i> {{_("权限控制")}}</a></li>
+                <li class="active">{{_("权限表")}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row osr-adm-edit-page">
+        <div class="col-md-12 osr-col-xs-12">
+            <div class="panel">
+                <header class="panel-heading">
+                    <i class="fa fa-shield"></i>
+                    <strong>
+                        {{_("权限表")}} (<span class="osr-color-success">{{_("数量")}}:{[cnt]}</span>)
+                    </strong>
+                </header>
+                <div class="panel-body table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                              <th>{{_("权限名(Key)")}}</th>
+                              <th>{{_("权重")}}</th>
+                              <th>{{_("说明")}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="p in permissions">
+                              <td v-for="v in p">{[v]}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{ permissions:"", cnt:0},
+
+    })
+    // 页面一加载完就自动执行
+    $(document).ready(function(){
+      get_permission();
+
+    });
+
+    function get_permission(){
+
+        var result = osrHttp("GET","/api/admin/role/permission", {}, args={not_prompt:true});
+        result.then(function (r) {
+            vue.permissions = r.data.permissions;
+            vue.cnt = vue.permissions.length;
+        });
+    }
+
+
+</script>
+{% endblock %}
+
+

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>{{data.title}}</title>
+	<!--style-->
+		<style type="text/css">
+
+		body{
+			width:100%;
+			background-repeat:repeat;
+			margin:0;
+			padding:0;
+			}
+		table{
+            font-size: 18px;
+            border: 0;
+        }
+		@media only screen and (min-width: 800px){
+		.container{ width: 100% !important;}
+		}
+		@media only screen and (max-width: 768px){
+            /*------ top header ------ */
+			.header-top {width: 100%;}
+            .header-bg{width: 440px !important; height: 10px !important;}
+            .main-header{line-height: 28px !important;}
+            /*----- --features ---------*/
+            .feature-middle{width: 400px !important; text-align: center !important;}
+            .feature-img{height: 437px !important;}
+			.about-left {width: 275px;}
+			.about-right {width: 289px;}
+            .container{ width: 100% !important;}
+             .container-middle{width: 550px !important;}
+
+			.member {width: 13px;}table.main-img {
+                height: 400px;
+            }
+        }
+		@media only screen and (max-width: 640px){
+			.logo {font-size: 0.85em;}
+			.container{ width: 100% !important}
+			.main-img {    width: 100% !important;
+                height: 380px !important;}
+			.container-middle {width: 100% !important}
+			.about-left {width: 225px;}
+			.about-right {width: 226px; font-size: 0.98em;}
+			.mainContent {width: 550px; font-size: 0.98em;}
+			.feature {height: 136px;
+                width: 200px;}
+			table.news-info {
+                width: 210px;
+            }
+            table.news-image {
+                width: 282px;
+            }
+            a.logo {
+                font-size: 3em!important;
+            }
+            table.footer {
+                width: 100%;
+            }
+		}
+		@media only screen and (max-width: 480px){
+		.logo {font-size: 0.85em;  margin-top: .5em}
+		.container-middle {width: 100% !important;}
+		.about-right {width: 299px}
+		.main-img {width: 450px !important;height: 259px !important;}
+		.feature1 { width: 300px;}
+		.container {width: 100% !important;}
+		.feature {
+				height: 185px;
+				width: 417px;
+				text-align: Center;
+			}
+					.gallery2 {margin: 2em 0;}
+					.fet {margin-top: 2em;}
+					.wel {font-size: 2em !important;}
+					.top-header-left {font-size: 0.94em;}
+					table.banner-bottom-text {
+				width: 420px;
+			}
+			.mainContent {
+				width: 420px;
+			}
+			table.footer {
+				width: 100%;
+			}
+			td.main-subheader {
+				text-align: Center!important;
+				margin-top:20px;
+			}
+			table.news-info {
+				width: 100%;
+			}
+			table.news-image {
+				width: 100%;
+			}
+		}
+		@media only screen and (max-width: 375px){
+    		.container {
+    			width: 100% !important;
+    		}
+			table.banner-bottom-text {
+        		width: 350px;
+        	}
+        	.mainContent {
+            width: 350px;
+        	}
+        	table.footer {
+        		width: 100%;
+        	}
+        	.container-middle {
+        		width: 100% !important;
+        	}
+		}
+		@media only screen and (max-width: 320px){
+		.logo {font-size: 0.85em; width: 100%; text-align: center;}
+		.container {width: 100% !important;}
+		.main-img {width: 297px !important;height: 198px !important;}
+		.container-middle {width: 265px !important;}
+		.feature {height: 185px;width: 266px;}
+		.feature1 {width: 100%;}
+		.about-right {width: 260px;}
+		.gallery1 {width: 279px;height: 137px;}
+		.galry1 {height: 150px;}
+		.nav {width: 100%;text-align: center;}
+		.top {height: 20px;}
+		.container {
+    			width: 350px !important;
+    		}
+    			table.banner-bottom-text {
+    		width: 350px;
+    	}
+    	.mainContent {
+            width: 350px;
+        	}
+    	table.footer {
+    		width: 100%;
+    	}
+    	.container-middle {
+    		width: 250px !important;
+    	}
+    	a.logo {
+            font-size: 2.5em!important;
+        }
+        table.banner-bottom-text {
+            width: 280px;
+        }
+        .mainContent {
+            width: 280px;
+        }
+        table.footer {
+            width: 100%;
+        }
+        .container {
+            width: 050px !important;
+        }
+        table.social-icons {
+            text-align: center;
+            width: 69%;
+        }
+    }
+
+	</style>
+	<!--style-->
+</head>
+<body>
+<table align="center" border="0" cellpadding="0" cellspacing="0" align="center" class="container">
+		<tbody>
+			{% if data.app_name or data.app_logo_url %}
+			<!-- Header -->
+			<tr  bgcolor="ffffff">
+				<td>
+					<table border="0" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+										<tr class="top-header-left">
+											<td align="center">
+                                            <!--  LOGO---->
+												{% if data.app_logo_url %}
+													<img style="height:40px;" align="left" src="{{data.app_logo_url}}" alt="Logo">
+												{% endif %}
+												{% if data.app_name %}
+												<span style="color:#45b1e4;font-size:23px;">
+													{{data.app_name | safe }}
+												</span>
+												{% endif %}
+                                            <!-- end LOGO -->
+											</td>
+										</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <!-- end header -->
+			{% endif %}
+			<!--email content-->
+        	<tr>
+				<td bgcolor="ffffff" style="padding: 0px 20px 0px 20px">
+					<table  border="0" align="center" cellpadding="0" cellspacing="0" class="mainContent">
+						<tbody>
+                            <tr>
+                                <td>
+								{{data.body | safe}}
+                        		</td>
+                        	</tr>
+						</tbody>
+					</table>
+				</td>
+				<tr>
+			</tr>
+			<!--//email content-->
+        </tbody>
+</table>
+<table style="background-color:#8dabb9;width:100%" class="footer" align="center" border="0" cellpadding="0" cellspacing="0" align="center">
+        <tbody>
+			<!--Introduce-->
+			<tr>
+				<td  style="padding: 0px 25px 0px 25px">
+					<table border="0" align="center" cellpadding="0" cellspacing="0" >
+						<tr><td height="20"></td></tr>
+						<tr>
+							<td>
+								{{data.other_info | safe}}
+							</td>
+						</tr>
+						<tr><td height="15"></td></tr>
+					</table>
+				</td>
+			</tr>
+			<!--//Introduce-->
+        </tbody>
+</table>
+
+<table style="background-color:#7191a0;width:100%" class="footer" align="center" border="0" cellpadding="0" cellspacing="0" align="center">
+        <tbody>
+			<!--footer-->
+			<tr>
+				<td style="padding: 0px 20px 0px 20px" class="news-info">
+					<tr><td height="15"></td></tr>
+                    <tr>
+						<td style="font-family: Candara; font-size: 15px; color: #fff;text-align:center; line-height: 24px;background-color:#7191a0;" class="editable">
+							{{_("UTC时间")}}: {{data.utc_time}}
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family: Candara; font-size: 15px; color: #fff;text-align:center; line-height: 24px;background-color:#7191a0;" class="editable">
+							Copyright &copy;
+							<a href="{{data.site_url}}">{{data.app_name}}</a>
+							- 系统邮件, 请勿回复!
+						</td>
+					</tr>
+					<tr><td height="20"></td></tr>
+				</td>
+			</tr>
+			<!--footer-->
+		</tbody>
+</table>
+
+<table>
+    <tr>
+    	<td height="40" class="top"></td>
+    </tr>
+</table>
+
+</body>
+</html>

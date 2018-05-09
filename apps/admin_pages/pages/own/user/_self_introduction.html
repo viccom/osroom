@@ -1,0 +1,13 @@
+<div class="col-sm-3">
+    <label>{{_("作者简介")}}</label>
+    <br>
+    <a class="avatar" :href="'/osr-admin/own/user?id='+user._id">
+        <img width="35px" height="35px" class="osr-img-circle-b" v-bind:src="user.avatar_url.url" alt="{{_('头像')}}">
+        &nbsp;
+        <span class="text-success">{[user.username]}</span>
+    </a>
+
+    <div class="osr-text">
+        {[user.introduction]}
+    </div>
+</div>

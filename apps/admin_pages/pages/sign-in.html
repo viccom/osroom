@@ -1,0 +1,129 @@
+{% extends "based/based_no_head.html" %}
+{% block title %}{{_("登录")}}-{% endblock %}
+{% block content %}
+
+<div class="row osr-edit-page osr-login-page">
+    <section class="osr-panel">
+        <div id="app">
+            <p class="text-center">
+                <img class="osr-logo" src="{{g.site_global.site_config.LOGO_IMG_URL_SECONDAEY}}" alt="Logo">
+            </p>
+            <div class="form-group">
+              <input name="username" id="username" type="text" class="form-control osr-input"
+                     v-model="username" minlength="3" placeholder="{{_('用户名或电子邮箱')}}"
+                     data-bv-notempty-message="{{_('用户名或电子邮箱错误')}}"
+                     data-bv-stringLength-message="{{_('用户名或电子邮箱错误')}}" required/>
+            </div>
+            <div class="form-group">
+              <input name="password" id="password" type="password" class="form-control osr-input" v-model="password"
+                     minlength="8" placeholder="{{_('输入密码')}}"
+                     data-bv-notempty-message="{{_('密码错误')}}"
+                     data-bv-stringLength-message="{{_('密码错误')}}" required/>
+            </div>
+
+            <div v-if="code_url" class="form-group">
+              <input name="code" type="text" v-model="code" class="form-control osr-input"
+                     placeholder="{{_('图片验证码')}}"
+                    data-bv-notempty-message="{{_('验证码错误')}}" required/>
+            </div>
+            <div v-if="code_url" class="form-group">
+                <img :src="code_url" alt="Code Img">
+                <i v-on:click="get_imgcode" class="fa fa-refresh"></i>
+            </div>
+
+            <div class="form-group form-inline">
+              <div class="checkbox checkbox-success">
+                   <input name="remember_me" id="remember_me" class="form-check-input" type="checkbox"  checked>
+                   <label for="remember_me" class="form-check-label"></label>
+                  {{_("记住登录")}} |
+                  <a href="/osr-admin/recover-password">{{_("忘记密码")}}?</a>
+              </div>
+            </div>
+            <div class="form-group text-center">
+                <button v-on:click="sign_in()" class="btn-block btn osr-btn btn-info">
+                    {{_("登录")}}
+                </button>
+            </div>
+            <div class="form-group text-center">
+                <a href="/osr-admin/sign-up" class="btn-block btn osr-btn btn-default">
+                    {{_('注册')}}
+                </a>
+            </div>
+              <br>
+            <div class="form-group">
+                  {% include 'module/_no_header_select_lan.html' %}
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+            username:"",
+            remember_me:0,
+            code:null,
+            code_url:null,
+            code_url_obj:{},
+            password:""}
+    })
+
+    // 页面一加载完就自动执行
+    $(document).ready(function(){
+        var r = osrHttp("GET","/api/global");
+        r.then(function (result) {
+            if(result.data.is_authenticated){
+                window.location.href = "/";
+            }
+        })
+
+    });
+
+    function sign_in(){
+        formValidate();
+        if (vue.remember_me){
+            vue.remember_me = 1;
+        }else{
+            vue.remember_me = 0;
+        }
+        var d = {username:vue.username,
+                 password:vue.password,
+                 remember_me:vue.remember_me,
+                 code:vue.code,
+                 code_url_obj:JSON.stringify(vue.code_url_obj),
+                 next:get_url_parameter()["next"]
+                 };
+
+         // 提交数据
+         var result = osrHttp("PUT","/api/sign-in", d);
+         result.then(function (r) {
+                if(r.data.msg_type=="s"){
+                    window.location.href = r.data/to_url;
+
+                }else if(r.data.open_img_verif_code){
+                    get_imgcode();
+                }
+         }).catch(function (r) {
+            if(r.data.open_img_verif_code){
+                get_imgcode();
+            }
+         });
+    }
+
+    function get_imgcode(){
+
+        var result = osrHttp("GET","/api/vercode/image", {}, args={not_prompt:true});
+        result.then(function (r) {
+            if(r.data.msg_type == "s"){
+                vue.code_url = r.data.code.url;
+                vue.code_url_obj = r.data.code.img_url_obj;
+            }
+        })
+    }
+
+
+
+</script>
+
+{% endblock %}

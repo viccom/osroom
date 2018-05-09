@@ -1,0 +1,189 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("内容分类管理")}}-{% endblock %}
+{% block content %}
+<data id="type" content="{{data.type}}"></data>
+<div id="app" >
+    <div v-if="single_type"  class="row">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li><a :href="'/osr-admin/media/'+curren_type[1]+'?page={{data.fp}}'">
+                    <i class="fa fa-archive"></i> {[curren_type[0]]}</a>
+                </li>
+                <li class="active">{[curren_type[0]]}分类</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row osr-adm-edit-page">
+        <div class="col-md-12 osr-col-xs-12">
+            <section class="panel">
+              <header class="panel-heading">
+                  <span v-if="single_type"> {[curren_type[0]]}分类</span>
+                  <span v-else>{{_("内容分类")}}</span>
+                  <a class="pull-right" v-if="single_type" v-bind:href="'/osr-admin/media/'+curren_type[1]+'?page={{data.fp}}'">
+                        <i class="fa fa-arrow-circle-left"></i>
+                        {{_("返回")}}
+                    </a>
+
+              </header>
+              <div class="panel-body">
+
+                    <div class="form-group" v-if="!single_type">
+                        <select @change="switch_type($event.target.value)" class="form-control osr-form-control input-sm m-b-10">
+                              <option v-if="v===curren_type[1]" v-for="(v,k) in category_types" :value="v" selected>{[k]} </option>
+                              <option v-if="v!==curren_type[1]" v-for="(v,k) in category_types" :value="v" >{[k]} </option>
+                        </select>
+                    </div>
+
+                  <div class="text-center">
+
+                    <div v-for="category in categorys" class="form-group">
+                        <label>
+                        <input type="text" class="form-control osr-input" v-model="category.name" minlength="1" placeholder="{{_('分类名称')}}" required/>
+                        </label>
+                        <button v-on:click="update(category._id, category.name)" class="btn-sm osr-btn btn btn-info">{{_("保存")}}</button>
+                        <button v-on:click="warning_modal(null, 'del', category._id)" class="btn-sm osr-btn btn btn-danger" >{{_("删除")}}</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                        <input type="text" class="form-control osr-input" v-model="new_category" minlength="1" placeholder="{{_('分类名称')}}" required/>
+                        </label>
+                        <button v-on:click="add()" class="btn-sm osr-btn btn btn-success">{{_("添加")}}</button>
+                         <button class="btn-sm osr-btn btn btn-default disabled">{{_("删除")}}</button>
+                    </div>
+                 </div>
+              </div>
+            </section>
+        </div>
+    </div>
+</div>
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+        category_types:[],
+        curren_type:null,
+        categorys:[],
+        new_category:"",
+        single_type:false
+      },
+      methods: {show_btn:show_btn}
+    })
+
+    // 加载完页面执行
+    $(document).ready(function(){
+
+        var type_v = $("#type").attr("content");
+        if(type_v){
+            vue.curren_type = [type_v, type_v];
+        }
+        if(vue.curren_type){
+            vue.single_type = true;
+        }
+        get_category_type();
+        get_categorys();
+    })
+
+    function show_btn(id){
+        alert(id)
+        if( $("#"+id).hasClass("show") ){
+            // 执行隐藏
+            $("#"+id).hide().removeClass("show");
+            // 其他
+        }else{
+            // 显示
+            $("#"+id).show().addClass("show");
+        }
+    }
+    function get_category_type(){
+
+        var result = osrHttp("GET","/api/content/category",
+                            {action:'get_category_type'},
+                            args={not_prompt:true});
+        result.then(function (r) {
+            vue.category_types = r.data.types;
+            // types keys
+            var keys = get_obj_keys(vue.category_types);
+            if(!vue.curren_type){
+                vue.curren_type = [keys[0], vue.category_types[keys[0]]];
+            }else{
+                for(var i in vue.category_types) {
+                    if(vue.category_types[i] == vue.curren_type[1] ){
+                        vue.curren_type[0] = i;
+                        break;
+                    }
+                }
+            }
+        });
+    }
+
+    function get_categorys(){
+
+        var result = osrHttp("GET","/api/admin/content/category",
+                            {type:vue.curren_type[1]},
+                            args={not_prompt:true});
+        result.then(function (r) {
+            vue.categorys = r.data.categorys;
+        });
+    }
+
+    function switch_type(value){
+        vue.curren_type[1] = value;
+        for(var i in vue.category_types) {
+                if(vue.category_types[i] == vue.curren_type[1] ){
+                    vue.curren_type[0] = i;
+                    break;
+                }
+        }
+
+        get_categorys();
+    }
+
+    function add(){
+
+        var d = {
+            name:vue.new_category,
+            type:vue.curren_type[1]
+        }
+        // 提交数据
+        var result = osrHttp("POST","/api/admin/content/category", d);
+        result.then(function (r) {
+            if (r.status=="success" && r.data.msg_type=="s"){
+                get_categorys();
+                vue.new_category = "";
+            }
+        });
+    }
+
+    function update(id, name){
+        var d = {
+                 name:name,
+                 id:id,
+                 type:vue.curren_type[1]
+        }
+        // 提交数据
+        var result = osrHttp("PUT","/api/admin/content/category", d);
+        result.then(function (r) {
+            if (r.status=="success" && r.data.msg_type=="s"){
+                get_categorys();
+            }
+        });
+    }
+
+    function del(id){
+
+        var d = {
+                 ids:JSON.stringify([id])
+        }
+        // 提交数据
+        var result = osrHttp("DELETE","/api/admin/content/category", d);
+        result.then(function (r) {
+            if (r.status=="success" && r.data.msg_type=="s"){
+                get_categorys();
+            }
+        });
+    }
+</script>
+{% endblock %}

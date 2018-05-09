@@ -1,0 +1,221 @@
+{% extends "osr-style/pages/based/based.html" %}
+{% block title %}{{_("摄影")}}-{% endblock %}
+{% block content %}
+<data id="category" content="{{data.category}}"></data>
+<div id="app" >
+    <div class="row osr-page">
+            <div class="col-xs-12">
+                 <header class="panel-heading tab-bg-dark-navy-blue osr-panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li id="head_li_all">
+                            <a data-toggle="tab" class="osr-pointer" v-on:click='get_global(1, category_names)'>
+                                 {{_("全部")}}
+                            </a>
+                        </li>
+                        <li :id="'head_li_'+index" v-for="(name, index ) in category_names">
+                            <a data-toggle="tab" class="osr-pointer" v-on:click='get_global(1,[name])'>
+                                 {[name]}
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <br>
+
+                <div id="galley" class="docs-pictures clearfix">
+                    <div  v-for="(media, index) in photos.datas" class="osr-img-list osr-pointer col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img class="osr-media-img" :src="media.url+img_w_h" :alt="media.title"
+                             :data-original="media.url" v-on:click="init_viewer()">
+                         <div v-if="media.title" class="img-title osr-text-overleft"  data-toggle="tooltip" :title="media.title">
+                             {[media.title]}
+                         </div>
+                        <div v-else class="img-title">&nbsp;</div>
+                        <span class="osr-date">
+                            <i class="fa fa-exclamation-circle"
+                               data-toggle="tooltip" title="{{_('版权归原作者所有,与本站无关.如果侵权,请联系本站删除!')}}" ></i>
+                            &nbsp;
+                            <a class="fa fa-eye osr-date" :href="'/photo/introduction?mid='+media._id" target="_blank" > {{_("瞄简介")}}</a> |
+                            {{_("上传于")}} {[media.time | formatDate]}
+                        </span>
+                         <hr>
+                    </div>
+                </div>
+
+                <!-- 页面导航-->
+                <div class="text-center visible-lg visible-md">
+                    <ul class="pagination">
+                        <li v-if="pages.last < pages.current_page && pages.last>0">
+                            <a class="osr-pointer" v-on:click="get_global(pages.last, current_category)">«</a>
+                        </li>
+                        <li v-else class="disabled">
+                            <a>«</a>
+                        </li>
+
+                        <li v-for="page in pages.last_show" >
+                            <a class="osr-pointer" v-if="page!='...'" v-on:click="get_global(page, current_category)">{[page]}</a>
+                            <a v-else href="#">...</a>
+                        </li>
+
+                        <li class="active">
+                            <a class="osr-pointer" v-on:click="get_global(pages.current_page, current_category)">{[pages.current_page]}</a>
+                        </li>
+
+                       <li v-for="page in pages.next_show" >
+                            <a class="osr-pointer" v-if="page!='...'" v-on:click="get_global(page, current_category)" >{[page]}</a>
+                            <a v-else href="#">...</a>
+                       </li>
+
+                       <li v-if="pages.next > pages.current_page && pages.next<=pages.page_total">
+                            <a class="osr-pointer" v-on:click="get_global(pages.next, current_category)">»</a>
+                        </li>
+                        <li v-else class="disabled">
+                            <a>»</a>
+                        </li>
+                    </ul>
+               </div>
+                <!-- //页面导航-->
+
+                 <!-- m页面导航-->
+                <ul class="pager col-sm-12 visible-xs visible-sm">
+                    <li v-if="pages.last < pages.current_page && pages.last>0" class="previous">
+                        <a v-on:click="get_global(pages.last, current_category)" class="osr-pointer">
+                            {{_("上一页")}}
+                        </a>
+                    </li>
+                     <span class="text-center osr-text">{{_('第{[photos.current_page]}页/共{[photos.page_total]}页')}}</span>
+                    <li v-if="pages.next > pages.current_page  && pages.next<=pages.page_total" class="next">
+                        <a v-on:click="get_global(pages.next, current_category)" class="osr-pointer">
+                            {{_("下一页")}}
+                        </a>
+                    </li>
+                </ul>
+                <!-- //m页面导航-->
+        </div>
+    </div>
+</div>
+<script src="/theme/static/js/image/viewer.min.js?v={{g.site_global.site_config.STATIC_FILE_VERSION}}"></script>
+<script src="/theme/static/js/image/jquery-viewer.min.js?v={{g.site_global.site_config.STATIC_FILE_VERSION}}"></script>
+<link href="/theme/static/css/image/viewer.min.css?v={{g.site_global.site_config.STATIC_FILE_VERSION}}" rel="stylesheet" type="text/css" />
+<script>
+
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+            photos:[{}],
+            category_names:[],
+            current_category:[],
+            sort:"t-desc",
+            pages:[],
+            page:1,
+            img_w_h:"?w=0&h=120",
+      },
+      filters: {
+            formatDate: function (time) {
+              return irrformatDate(time, "yyyy-MM-dd hh:mm");
+            }
+      },
+      updated:function(){
+        //每次渲染完执行
+        this.$nextTick(function(){
+            if(this.current_category.length < 2){
+                    var index = this.category_names.indexOf(this.current_category[0]);
+                    nav_active("head_li_"+index);
+                }else{
+                    nav_active("head_li_all");
+            }
+        });
+      }
+    })
+
+    // 加载完页面执行
+    $(document).ready(function(){
+        result = get_show_category();
+        result.then(function (r) {
+
+            var current_category = $("#category").attr("content");
+            vue.current_category = current_category?current_category:"all";
+
+            var url_s = get_url_parameter()
+            vue.page = get_obj_value(url_s, "page", vue.page)
+
+            if(!vue.current_category || vue.current_category == "all"){
+                vue.current_category = vue.category_names;
+            }else{
+                vue.current_category = [vue.current_category]
+            }
+            get_global(vue.page, vue.current_category);
+
+
+        });
+    })
+
+    function get_show_category(){
+
+        var conditions = [
+             {
+                type:"text",
+                names:["photo-page-setting"],
+                result_key:"category_names"
+             }
+
+        ];
+        var d ={
+            conditions:JSON.stringify(conditions)
+        }
+
+        var result = osrHttp("GET","/api/global/media", d, args={not_prompt:true});
+        result.then(function (r) {
+            vue.category_names = r.data.medias.category_names[0];
+            vue.category_names = vue.category_names.text.split(";")
+        });
+
+        return result;
+    }
+
+    function get_global(page, category_name){
+        vue.page = page;
+        vue.current_category = category_name;
+        var d ={
+            category_type:"image",
+            category_name:JSON.stringify(vue.current_category),
+            page:vue.page,
+            pre:12
+        }
+
+        var result = osrHttp("GET","/api/global/media", d, args={not_prompt:true});
+
+        result.then(function (r) {
+            vue.photos = r.data.medias;
+            vue.pages = paging(page_total=vue.photos.page_total, current_page=vue.photos.current_page);
+        });
+
+        if(vue.current_category.length < 2){
+            var temp_category = vue.current_category[0];
+        }else{
+            var temp_category = "all";
+        }
+
+        var url = window.location.pathname
+                    +"?category="+temp_category
+                    +"&page="+page
+        history_state(null, url);
+    }
+
+    //初始化图片查看器
+    var is_init_viewer = false;
+    function init_viewer(id) {
+        id = id?id:"galley";
+        if(!is_init_viewer){
+            var $images = $('#'+id);
+            $images.on({}).viewer({
+                interval:2500
+            });
+            is_init_viewer = true;
+        }
+        $('#'+id).on({}).viewer('update');
+    }
+
+
+</script>
+
+{% endblock %}

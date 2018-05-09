@@ -1,0 +1,41 @@
+<footer class="osr-footer">
+    <a href="#top" data-toggle="tooltip" title="{{_('回到顶部')}}" class="osr-footer-totop back-to-top pull-right btn btn-sm btn-success">
+          <i class="fa  fa-arrow-up"></i>
+    </a>
+  <div class="text-center">
+       <!--友情链接-->
+      <ul>
+          {%for k,v in g.site_global.site_config.FRIEND_LINK.items() %}
+            <li style="display:inline;">
+                <a href="{{v.url}}">
+                    {{k}}
+                </a>
+            </li>&nbsp;
+          {% endfor %}
+      </ul>
+      <!--//友情链接-->
+
+      <div class="visible-lg visible-md">
+
+
+          {{_('欢迎使用')}}
+          <a class="osr-color-success" href="http://www.osroom.com" target="_blank">
+              <img src="/theme/static/sys_imgs/osroom-logo.png?h=40" height="14px" width="auto" alt="OSROOM">
+          </a>. {{_('版本')}} {{g.site_global.site_config.sys_version}}
+          Licensed under <a class="osr-color-secondary" href="http://opensource.org/licenses/BSD-2-Clause" target="_blank">
+          BSD license
+        </a>.
+        <a href="https://github.com/osroom/osroom" target="_blank" >
+          <i class="am-icon-github"></i> GitHub.
+        </a>
+      </div>
+
+      <div class="visible-sm visible-xs">
+          <a class="osr-color-success" href="http://www.osroom.com" target="_blank">
+              <img src="/theme/static/sys_imgs/osroom-logo.png?h=40" height="14px" width="auto" alt="OSROOM">
+          </a>{{_('提供')}}. BSD license.
+        <a href="https://github.com/osroom/osroom" target="_blank" >
+          <i class="am-icon-github"></i> GitHub.
+        </a>
+      </div>
+</footer>

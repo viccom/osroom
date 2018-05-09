@@ -1,0 +1,825 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-01-24 22:27+0800\n"
+"PO-Revision-Date: 2018-01-04 20:55+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: /home/work/project/osroom/apps/configs/sys_config.py:75
+msgid "405, The method is not allowed for the requested URL"
+msgstr "405, 请求方式不存在"
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:52
+msgid "Create up to 2 tokens"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:65
+msgid "Activate token successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:67
+msgid "Activation token failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:82
+msgid "Disable token successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:84
+msgid "Disable token failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:86
+msgid "Keep at least one active token"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:99
+#: /home/work/project/osroom/apps/modules/email/process/email.py:56
+#: /home/work/project/osroom/apps/modules/message/process/user_message.py:202
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:92
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:204
+msgid "Successfully deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:101
+#: /home/work/project/osroom/apps/modules/audit/process/rules.py:70
+#: /home/work/project/osroom/apps/modules/category/process/category.py:101
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:193
+msgid "Delete failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:103
+msgid "Delete failed, keep at least one token"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:140
+msgid "The OSR-RestsToken is invalid."
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/client_auth.py:143
+msgid ""
+"Token is miss, unconventional web browsing requests please provide \"X"
+"-OSR-RestToken\", otherwise provide \"X-CSRFToken\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:67
+msgid "The provided OSR-BearerToken has expired"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:69
+msgid "Invalid OSR-BearerToken"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:118
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:144
+msgid "User authentication failed, user does not exist"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:124
+msgid ""
+"User authentication token expired or changed. Please log in again for "
+"access"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:128
+#: /home/work/project/osroom/apps/core/auth/jwt_auth.py:160
+msgid "No user authentication token provided \"X-OSR-BearerToken\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/errorhandler.py:29
+msgid "Permission denied"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/errorhandler.py:43
+msgid "The page(api) does not exist or has been deprecated"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/errorhandler.py:59
+msgid "Server error"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/errorhandler.py:84
+msgid ""
+"Please add the 'X-OSR-RestToken' or 'X-CSRFToken' request header, the "
+"specific use please refer to the osroom system documentation: "
+"http://www.osroom.com"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/permission.py:26
+msgid "Permission denied,requires \"{}\" permission"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:12
+msgid "The \"{}\" cannot be empty"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:22
+msgid "The minimum length of \"{}\" is {} characters"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:33
+msgid "The maximum length of \"{}\" is {} characters"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:43
+msgid "\"{}\" needs to be of type {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:52
+msgid "The value of parameter \"{}\" can only be one of \"{}\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:61
+msgid "The value of parameter \"{}\" can not be \"{}\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:72
+#: /home/work/project/osroom/apps/core/flask/reqparse.py:78
+msgid "The value of parameter \"{}\" is illegal"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/apis/api_doc.py:56
+msgid "Sorry! The website has closed this data interface"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:30
+msgid "Without this API"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:110
+msgid "Add success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:137
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:164
+#: /home/work/project/osroom/apps/modules/user/process/role.py:90
+msgid "Save success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:139
+#: /home/work/project/osroom/apps/modules/message/process/user_message.py:180
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:47
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:96
+#: /home/work/project/osroom/apps/modules/user/process/basic.py:57
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:83
+#: /home/work/project/osroom/apps/modules/user/process/role.py:125
+#: /home/work/project/osroom/apps/modules/user/process/role.py:131
+msgid "No changes"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:149
+msgid "Remove success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:162
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:165
+msgid "Get the source code and fail"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/api_doc/process/api_doc.py:181
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:45
+msgid "The update is successful"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/audit/process/rules.py:47
+msgid "The rule already exists"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/audit/process/rules.py:53
+#: /home/work/project/osroom/apps/modules/category/process/category.py:57
+#: /home/work/project/osroom/apps/modules/user/process/role.py:45
+msgid "Add a success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/audit/process/rules.py:67
+#: /home/work/project/osroom/apps/modules/category/process/category.py:98
+msgid "Delete the success,{}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/category/process/category.py:54
+#: /home/work/project/osroom/apps/modules/category/process/category.py:75
+msgid "Name already exists"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/category/process/category.py:80
+#: /home/work/project/osroom/apps/modules/media/process/media.py:240
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:220
+msgid "Modify the success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/category/process/category.py:82
+msgid "Update failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:49
+#: /home/work/project/osroom/apps/modules/post/process/adm_post.py:82
+msgid "Submitted successfully, {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:52
+#: /home/work/project/osroom/apps/modules/post/process/adm_post.py:85
+msgid "Submitted failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:65
+#: /home/work/project/osroom/apps/modules/post/process/adm_post.py:99
+msgid "Move to a permanently deleted area, {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:68
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:93
+#: /home/work/project/osroom/apps/modules/post/process/adm_post.py:102
+#: /home/work/project/osroom/apps/modules/post/process/adm_post.py:122
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:187
+msgid "Operation failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:75
+#: /home/work/project/osroom/apps/modules/post/process/posts.py:236
+msgid "Removed from the database, {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:78
+#: /home/work/project/osroom/apps/modules/post/process/posts.py:239
+msgid "Unable to delete, please contact technical personnel"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/adm_comment.py:90
+#: /home/work/project/osroom/apps/modules/post/process/adm_post.py:119
+msgid "Restore success, {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:40
+msgid "Comment feature is not open"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:71
+msgid "You comment too often and come back later"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:75
+msgid "Articles are not published, can not comment"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:98
+msgid "Guest reviews feature is not open, please login account comments"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:153
+msgid "Successful reviews"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:191
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:178
+msgid "Delete the success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:225
+#: /home/work/project/osroom/apps/modules/post/process/post.py:59
+msgid "Success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment.py:227
+#: /home/work/project/osroom/apps/modules/post/process/post.py:61
+msgid "Failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment_find.py:16
+#: /home/work/project/osroom/apps/modules/post/process/posts.py:37
+msgid "The \"pre\" must not exceed the maximum amount"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/comments/process/comment_find.py:52
+#: /home/work/project/osroom/apps/modules/post/process/posts.py:85
+msgid "The \"sort\" parameter is not correct"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/email/process/email.py:58
+#: /home/work/project/osroom/apps/modules/media/process/media.py:269
+#: /home/work/project/osroom/apps/modules/message/process/user_message.py:204
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:60
+msgid "Failed to delete"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/global_data/process/global_data.py:41
+msgid "Get the current user information successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/media/process/media.py:66
+msgid "The type \"{}\" exists in the name \"{}\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/media/process/media.py:97
+msgid "{} uploaded successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/media/process/media.py:102
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:56
+msgid "Added successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/media/process/media.py:211
+msgid "The type \"{}\" exists in the name \"aaa\" \"{}\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/media/process/media.py:242
+msgid "The content is not modified"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/media/process/media.py:267
+msgid "{} files have been deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/message/process/send_msg.py:40
+msgid "Station news success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/message/process/send_msg.py:59
+msgid "Mail message is being sent"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/message/process/send_msg.py:62
+msgid "There is no such email address user"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/message/process/send_msg.py:65
+msgid "E-mail address can not be empty"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/message/process/user_message.py:178
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:81
+msgid "Update succeed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/apis/adm_post.py:50
+msgid "aaaaa"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:61
+msgid "Up to {} tags are used"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:162
+msgid "Issue success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:175
+msgid "Removed to recycle bin"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:184
+msgid "{},{}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:202
+msgid "Restore success,{}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/post/process/user_post.py:205
+msgid "Restore failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/get_file_log.py:30
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:77
+msgid "Connection host[{}] failed,Check the host Settings"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/get_file_log.py:70
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:98
+msgid "There is no host {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:57
+msgid "Successfully deleted {} host information"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:87
+msgid "[Warning]: \"sudo\" command go to the server"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:89
+msgid "[Warning]: \"rm\" command go to the server"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/host_setting.py:94
+msgid "Command executed {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/session_set.py:18
+msgid "Set up language success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/session_set.py:22
+msgid "Does not support this language"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:33
+msgid "Lack of parameter"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:50
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:56
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:150
+msgid "Switch success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:95
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:123
+msgid "There is no such data"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:116
+msgid "Root permission required"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:160
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:167
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:178
+msgid "The format of the \"value\" errors, need a \"{}\" type"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/setting/process/settings.py:173
+msgid "There is no {}"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:25
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:35
+msgid "This route can not be used"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:42
+msgid "Routing existing"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:74
+#: /home/work/project/osroom/apps/modules/theme_setting/process/static_file.py:68
+msgid "File not found,'{}'"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/page.py:95
+msgid "This file can not be deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/static_file.py:92
+msgid "File does not exist can not be edited,'{}'"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/static_file.py:98
+msgid "Saved successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:56
+msgid "Theme format error, please upload zip archive"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:65
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:80
+msgid "The same name theme already exists"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:109
+msgid "Theme installed successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:112
+msgid "The topic name and topic directory in the configuration are inconsistent"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:115
+msgid ""
+"The theme of the upload is incorrect, the configuration file does not "
+"exist"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:136
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:164
+msgid "Theme does not exist"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:166
+msgid "The current use of the theme can not be deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/theme_setting/process/themes.py:177
+msgid "Delete failed, at least keep a theme"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/token/process/jwt_client_token.py:27
+msgid "Created successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/upload/process/upload_file.py:49
+msgid "Uploaded successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/upload/process/upload_file.py:56
+#: /home/work/project/osroom/apps/modules/user/process/avatar_upload.py:64
+msgid "Upload failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/upload/process/upload_file.py:63
+#: /home/work/project/osroom/apps/modules/upload/process/upload_file.py:67
+msgid "Get file error"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/upload/process/upload_file.py:70
+msgid "No file submitted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/apis/online.py:72
+#: /home/work/project/osroom/apps/modules/user/apis/online.py:79
+msgid "Successfully logged out"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/apis/user.py:29
+msgid "This {} address has been registered"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/apis/user.py:32
+#: /home/work/project/osroom/apps/modules/user/process/email.py:27
+msgid "This is the email address you currently use"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/apis/user.py:35
+msgid "This {} can be used"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/apis/user.py:49
+#: /home/work/project/osroom/apps/modules/user/apis/user.py:52
+msgid "The ID belongs to the current logged in user"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:18
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:24
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:38
+msgid "The specified user is not found"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:79
+#: /home/work/project/osroom/apps/modules/user/process/basic.py:54
+msgid "Update success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:91
+msgid "No permission modification"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:126
+msgid "Has recovered {} users, {} users can not operate"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:129
+msgid "Recycle user failed.May not have permission"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:134
+msgid "{} users have been deleted and {} users can not be deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:137
+msgid "Failed to delete.May not have permission"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:164
+msgid "Restore the {} users,The other {} users have no power control"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:167
+msgid "Restore the failure.May not have permission"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:194
+msgid "{} user activation is successful, {} no permission to operate"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/adm_user.py:197
+msgid "Activation failed.May not have permission"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/avatar_upload.py:52
+msgid "Save failed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/avatar_upload.py:61
+msgid "Save successfully"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/basic.py:41
+msgid "The editor saves failure"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/basic.py:48
+#: /home/work/project/osroom/apps/modules/user/process/sign_up.py:47
+msgid "Name has been used"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/basic.py:50
+msgid "Domain has been used"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/basic.py:52
+msgid "Personality domains cannot be modified"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/email.py:23
+msgid "This E-mail address has been registered"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/email.py:36
+#: /home/work/project/osroom/apps/modules/user/process/password.py:34
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:81
+#: /home/work/project/osroom/apps/modules/user/process/sign_in.py:51
+#: /home/work/project/osroom/apps/modules/user/process/sign_up.py:37
+msgid "Verification code error"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/online.py:13
+msgid "Sorry, temporarily unregistered function"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/online.py:37
+msgid "remember_me requires an integer"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/password.py:14
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:56
+msgid "Now use the password mistake"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/password.py:17
+msgid "Two password is not the same"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:18
+msgid "Lack of parameters \"user_id\""
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:61
+msgid "The date of birth requires an 8-digit date,Such as '{}'"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/profile.py:69
+msgid "Address format is not in conformity with the requirements"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:21
+msgid "The specified role is not found"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:59
+msgid ""
+"The current user permissions are lower than the permissions that you want"
+" to add, without permission to add"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:71
+#: /home/work/project/osroom/apps/modules/user/process/role.py:127
+msgid "Existing default role"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:79
+#: /home/work/project/osroom/apps/modules/user/process/role.py:134
+msgid "Role name already exists"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:102
+#: /home/work/project/osroom/apps/modules/user/process/role.py:110
+msgid ""
+"The current user permissions are lower than the permissions you want to "
+"modify, without permission to modify"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:159
+msgid "Delete the success, {} of the roles have users and cannot be deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/role.py:163
+msgid ""
+"{} role do not have permission to delete, {} of the roles have users and "
+"cannot be deleted"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:44
+msgid "Password change is successful, please login again"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:51
+msgid "Password change failed(unknown error)"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:96
+msgid "Email is changed"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:106
+msgid "Password mistake"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/setting.py:156
+msgid "Reset password failed(unknown error)"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_in.py:28
+msgid "Is logged in"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_in.py:40
+#: /home/work/project/osroom/apps/modules/user/process/sign_in.py:124
+msgid "Account or password error"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_in.py:101
+msgid "Sign in success"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_in.py:108
+msgid "Account not activated"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_up.py:43
+msgid "The two passwords don't match"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_up.py:50
+msgid "This email has been registered in the site oh, please login directly."
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_up.py:73
+msgid "Registered successfully,Please check your email for verification code"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/sign_up_anomaly.py:51
+msgid ""
+"[Abnormal login] Your account {}, is logined in {}/{}/{} on {} [UTC "
+"Time].\n"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/user.py:60
+msgid "Password is not a readable attribute"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/user/process/user.py:116
+msgid "Unknown"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/verification_code/process/send_code.py:14
+msgid "Verification code"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/verification_code/process/send_code.py:25
+msgid "The verification code has been sent to your email address"
+msgstr ""
+
+#: /home/work/project/osroom/apps/modules/verification_code/process/send_code.py:27
+msgid "Currently only support is sent to the email"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/geo/ip_to_geo.py:22
+msgid "Local"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/pyssh/pyssh.py:42
+msgid "Please improve the host information"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/validation/str_format.py:24
+msgid "The name format is not correct,You can't use '.','*','#','?'"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/validation/str_format.py:32
+msgid "Name is not legal, there is sensitive information"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/validation/str_format.py:48
+msgid ""
+"The domain format is not correct,Only use Numbers, letters, and at least "
+"4 characters"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/validation/str_format.py:64
+msgid "The email format is not correct"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/validation/str_format.py:75
+msgid ""
+"Password at least 8 characters! And at least contain Numbers, letters, "
+"special characters of two kinds"
+msgstr ""
+
+#: /home/work/project/osroom/apps/utils/validation/str_format.py:87
+msgid "The password is too simple, can not use continuous characters!"
+msgstr ""
+

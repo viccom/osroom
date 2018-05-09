@@ -1,0 +1,118 @@
+{% extends "osr-style/pages/based/based_no_head.html" %}
+{% block title %}{{_("注册")}}-{% endblock %}
+{% block content %}
+<div class="row osr-edit-page osr-login-page">
+    <section class="osr-panel">
+        <div id="app">
+            <p class="text-center">
+                <a href="/">
+                    <img class="osr-logo" src="{{g.site_global.site_config.LOGO_IMG_URL_SECONDAEY}}" alt="Logo">
+                </a>
+            </p>
+            <div class="form-group">
+              <input name="username" id="username" type="text" class="form-control osr-input"
+                     v-model="username" minlength="3" placeholder="{{_('用户名')}}"
+                     data-bv-notempty-message="{{_('用户名不能为空')}}"
+                     data-bv-stringLength-message="{{_('用户名至少3个字符')}}" required/>
+            </div>
+            <div class="form-group">
+              <input name="email" id="email" class="form-control osr-input" type="email" v-model="email"
+                     data-bv-emailAddress="true" data-bv-emailAddress-message="{{_('邮箱地址不合法')}}"
+                    data-bv-notempty-message="{{_('邮箱地址不能为空')}}" required
+                     placeholder="电子邮箱"  required/>
+            </div>
+            <div class="form-group">
+              <input name="password" id="password" class="form-control osr-input" type="password" v-model="password"
+                     minlength="8" placeholder="{{_('输入密码')}}"
+                     data-bv-notempty-message="{{_('至少8个字符')}}"
+                     data-bv-stringLength-message="{{_('至少8个字符')}}" required/>
+            </div>
+            <div class="form-group">
+              <input name="password2" id="password2" class="form-control osr-input" type="password" v-model="password2"
+                     placeholder="{{_('再次输入密码')}}"
+                     data-bv-identical="true"
+                     data-bv-notempty-message="{{_('至少8个字符')}}"
+                     data-bv-identical-message="{{_('前后密码不一致')}}"
+                     data-bv-identical-field="password" required/>
+            </div>
+
+            {% include 'osr-style/pages/module/_send_code.html' %}
+
+            <div class="form-group">
+                <button v-on:click="sign_up()" class="btn-block btn osr-btn btn-info osr-submit-btn">
+                    {{_('注册')}}
+                </button>
+            </div>
+            <div class="form-group">
+                <a href="/sign-in" class="btn-block btn osr-btn btn-default">
+                    {{_('已有账户')}}
+                </a>
+            </div>
+            <div class="form-group osr-color-gray text-center">
+                {{_('点击 "注册" 即表示您同意并愿意遵守')}}<br>
+                <a href="/statement?s=user_agreement">{{_("用户协议")}}</a>
+                与
+                <a href="/statement?s=privacy_policy">{{_("隐私政策")}}</a>
+            </div>
+
+            <div class="form-group">
+                  {% include 'osr-style/pages/module/_no_header_select_lan.html' %}
+            </div>
+
+        </div>
+    </section>
+</div>
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data: {
+        username:'',
+        email:'',
+        password: '',
+        password2: '',
+        email_code:"",
+        //_send_code.html需要参数
+        img_code_url_obj:{},
+        img_code_url:"",
+        img_code:""
+      }
+    })
+
+    // 页面一加载完就自动执行
+    $(document).ready(function(){
+
+        (function($) {
+            if ($.AMUI && $.AMUI.validator) {
+            // 增加多个正则
+            $.AMUI.validator.patterns = $.extend($.AMUI.validator.patterns, {
+                 osrEmail:/^[a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
+                 osrPassword:/^(?!(?:\d+|[a-zA-Z]+)$)[\da-zA-Z]{8,}$/
+            });
+            // 增加单个正则
+            //$.AMUI.validator.patterns.osrEmail = /^[a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        }
+        })(window.jQuery);
+
+        var result = osrHttp("GET","/api/global");
+        result.then(function (r) {
+            if(r.data.is_authenticated){
+                window.location.href = "/";
+            }
+        })
+    });
+
+   function sign_up(){
+        formValidate();
+        var d = {username:vue.username,
+                    email:vue.email,
+                    password:vue.password,
+                    password2:vue.password2,
+                    code:vue.email_code
+                }
+        // 提交数据
+        osrHttp("POST","/api/sign-up", d);
+   }
+
+</script>
+{% endblock %}

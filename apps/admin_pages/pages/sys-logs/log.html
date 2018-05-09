@@ -1,0 +1,109 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("日志")}}-{% endblock %}
+{% block content %}
+<data id="name"  content="{{data.name}}"></data>
+<data id="ip" content="{{data.ip}}"></data>
+<data id="page" content="{{data.page}}"></data>
+<div id="app" >
+    <div class="row osr-adm-edit-page">
+        <div class="col-md-12 osr-col-xs-12">
+
+            <section class="panel">
+              <header class="panel-heading">
+                <span><i class="fa fa-file-text-o"></i> {{data.name}}[{{data.ip}}]</span>
+              </header>
+              <div class="panel-body">
+                  <div v-html="logs.datas"></div>
+              </div>
+            </section>
+            <!-- 页面导航-->
+            <div class="text-center hidden-md-down">
+                <ul class="pagination">
+                    <li v-if="pages.last < pages.current_page && pages.last>0">
+                    <a v-on:click="get_logs(pages.last)">«</a>
+                </li>
+                <li v-else class="disabled">
+                    <a>«</a>
+                </li>
+
+                <li v-for="page in pages.last_show" >
+                    <a v-if="page!='...'" v-on:click="get_logs(page)">{[page]}</a>
+                    <a v-else href="#">...</a>
+                </li>
+
+                <li class="active">
+                    <a v-on:click="get_logs(pages.current_page)">{[pages.current_page]}</a>
+                </li>
+
+               <li v-for="page in pages.next_show" >
+                    <a v-if="page!='...'" v-on:click="get_logs(page)" >{[page]}</a>
+                    <a v-else href="#">...</a>
+               </li>
+
+               <li v-if="pages.next > pages.current_page && pages.next<=pages.page_total">
+                    <a v-on:click="get_logs(pages.next)">»</a>
+                </li>
+                <li v-else class="disabled">
+                    <a>»</a>
+                </li>
+                </ul>
+           </div>
+            <!-- //页面导航-->
+            <!-- m页面导航-->
+            <ul class="pager visible-xs visible-sm">
+                <li v-if="pages.last < pages.current_page && pages.last>0" class="previous">
+                    <a v-on:click="get_logs(pages.last)" class="osr-pointer" >
+                        {{_("上一页")}}
+                    </a>
+                </li>
+                <li v-if="pages.next > pages.current_page  && pages.next<=pages.page_total" class="next">
+                    <a v-on:click="get_logs(pages.next)" class="osr-pointer">{{_("下一页")}}</a>
+                </li>
+            </ul>
+            <!-- //m页面导航-->
+
+        </div>
+    </div>
+</div>
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{logs:""},
+      pages:{},
+      page:1,
+      log_name:"",
+      host_ip:""
+    })
+
+    // 页面一加载完就自动执行
+    $(document).ready(function(){
+        page = $("#page").attr("content");
+        vue.page = page?page:vue.page;
+        get_logs(vue.page);
+    });
+
+    function get_logs(page){
+        vue.log_name = $("#name").attr("content");
+        vue.host_ip = $("#ip").attr("content");
+        d = {
+            name:vue.log_name,
+            page:page,
+            ip:vue.host_ip
+        }
+
+        var result = osrHttp("GET","/api/admin/setting/sys/log",d, args={not_prompt:true});
+       result.then(function (r) {
+            vue.logs = r.data.logs;
+            vue.pages = paging(page_total=vue.logs.page_total,
+                                current_page=vue.logs.current_page);
+       });
+
+        var url = window.location.pathname+"?page="+page+"&name="+vue.log_name+"&ip="+vue.host_ip;
+        history_state(title=null,url=url);
+    }
+
+
+</script>
+
+{% endblock %}

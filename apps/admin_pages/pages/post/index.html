@@ -1,0 +1,527 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("文章管理")}}-{% endblock %}
+{% block content %}
+<data id="state" content="{{data.state}}"></data>
+<data id="page" content="{{data.page}}"></data>
+<data id="sort" content="{{data.sort}}"></data>
+<data id="keyword" content="{{data.keyword}}"></data>
+<div id="app" >
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel">
+                <header class="panel-heading">
+                    <i class="fa fa-file-text-o"></i>
+                    <strong>
+                        {{_("文章")}}(<span class="osr-color-success">{{_("结果")}}{[posts.data_total]}</span>)
+                    </strong>
+                </header>
+                <div class="panel-body table-responsive">
+                    <div class="box-tools form-inline">
+                        <div class="input-group pull-left">
+                            <select id="status" name="status"  class="form-control osr-form-control input-sm" @change="get_posts($event.target.value, 1, '')">
+                                <option  v-for="sta,k in status_list" v-if="sta==status" selected="selected" :value ="sta">{[k]}</option>
+                                <option v-for="sta,k in status_list" v-if="sta!=status" :value ="sta">{[k]}</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group pull-right">
+                            <div class="btn-group">
+                                <input type="text" v-model="keyword" v-on:keypress="get_posts(status, 1, keyword)" class="form-control osr-input input-sm" style="width: 150px;" placeholder="{{_('搜索')}}">
+                                <button v-on:click="get_posts(status, 1, keyword)" class="btn btn-sm btn-default osr-btn">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                              <th >
+                                <div class="checkbox checkbox-success">
+                                  <input id="check_all" v-on:click="osr_check_all(posts.datas, checkAll, set)" type="checkbox"
+                                        v-model="checkAll" unchecked>
+                                  <label for="check_all"></label>
+                                </div>
+                              </th>
+                              <th>{{_("标题")}}</th>
+                              <th>{{_("作者")}}</th>
+                              <th>{{_("喜欢")}}
+                                  <i v-on:click="get_posts(status, page, keyword, 'like')" class="fa fa-sort"></i>
+                              </th>
+                              <th>{{_("评论")}}
+                                  <i v-on:click="get_posts(status, page, keyword, 'comment_num')"class="fa fa-sort"></i>
+                              </th>
+                              <th>
+                                  {{_("发布时间")}}
+                                  <span v-on:click="get_posts(status, page, keyword, 'issue_time')" class="fa fa-sort"></span>
+                              </th>
+                              <th>
+                                  {{_("举报")}}
+                                  <i v-on:click="get_posts(status, page, keyword, 'inform_total')" class="fa fa-sort"></i>
+                              </th>
+                              <th>
+                                  {{_("鉴定(分)")}}
+                                  <i v-on:click="get_posts(status, page, keyword, 'audit_score')" class="fa fa-sort"></i>
+                              </th>
+                              <th>
+                                  {{_("其他")}}
+                              </th>
+                              <th>{{_("备注")}}<br>({{_("鉴定类别")}})</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(post,index) in posts.datas">
+                              <td width="50px">
+                                  <div class="checkbox checkbox-success">
+                                       <input :id="post._id" type="checkbox"  v-bind:value="post._id" unchecked>
+                                       <label :for="post._id"></label>
+                                  </div>
+
+                              </td>
+                              <td width="250px">
+                                  <a v-if="post.title.length>20" :href="'/osr-admin/own/user/post/preview?id='+post._id" target="target"
+                                     data-toggle="tooltip" :title="post.title"  :id="'title'+post._id">
+                                        {[post.title.slice(0,20)]}...
+                                  </a>
+
+                                  <a v-else :href="'/osr-admin/own/user/post/preview?id='+post._id" target="target">
+                                     {[post.title]}
+                                  </a>
+                              </td>
+                                <td width="100px" class="hide-sm-only">
+                                    <a :href="'/osr-admin/own/user?id='+post.user_id" target="_blank">{[post.user.username]}</a>
+                                </td>
+                                <td width="100px">
+                                    {[post.like]}
+                                </td>
+                                <td width="100px">{[post.comment_num]}</td>
+                                <td width="150px" class="hide-sm-only">
+                                    <span data-toggle="tooltip" v-bind:title='post.update_time | UptimeformatDate'>
+                                        {[post.issue_time | formatDate]}
+                                    </span>
+                                </td>
+                                <td width="100px">
+                                    <span v-if="post.inform" class="osr-color-danger">
+                                        {[post.inform.total]}
+                                    </span>
+                                </td>
+
+                                <td width="150px">{[post.audit_score]}</td>
+                                <td width="100px">
+                                    <a v-on:click="put_post_view(index)" class="osr-pointer" data-toggle="modal" data-target="#post_more">
+                                        {{_("更多")}}...
+                                    </a>
+                                </td>
+
+                                <td width="200px">
+                                    <span v-if="status=='user_remove'">
+                                        <span v-if="post.is_delete==2">
+                                            {{_("用户删除")}}
+                                        </span>
+                                        <span v-else-if="post.is_delete==3">
+                                            {{_("管理员删除")}}
+                                        </span>
+                                        <br>
+                                    </span>
+                                    <span>
+                                        <span v-if="!post.audited" class="osr-color-warning">({{_("未审核")}})</span>
+                                        <span v-else>
+                                            <span v-if="post.audit_way=='artificial'">{{_("人工审核")}}</span>
+                                            <span v-else>{{_("自动审核")}}</span>
+                                        </span>
+                                        <br>
+                                        <span class="osr-color-warning" v-if="post.audit_label">({[post.audit_label]})</span>
+                                        <span class="osr-color-warning" v-else-if="post.audit_way=='artificial'">({{_("人工鉴定")}})</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+
+            <div class="btn-group btn-group-sm">
+                <button v-on:click="operation_posts('approved')" v-if="status=='unqualified' || status=='not_audit'" type="button" class="btn osr-btn btn-success">
+                    <span class="fa fa-circle-o"></span> {{_("通过")}}
+                </button>
+                <button v-on:click="operation_posts('non-approval')" v-if="status=='is_issued' || status=='not_audit'" type="button" class="btn osr-btn btn-info">
+                    <span class="fa fa-ban"></span> {{_("不通过")}}
+                </button>
+                <button v-on:click="warning_modal({msg:'{{_('确定移入待删区?')}}'}, 'operation_posts', 'pending_delete')" v-if="status!='user_remove'" type="button" class="btn osr-btn btn-warning">
+                    <span class="fa fa-recycle"></span>{{_("移入待删除")}}
+                </button>
+                <button v-on:click="operation_posts('restore')" v-if="status=='user_remove'" type="button" class="btn osr-btn btn-primary">
+                    <span class="fa fa-mail-reply"></span> {{_("恢复")}}
+                </button>
+                <button v-on:click="warning_modal(null, 'operation_posts','delete')" v-if="status=='user_remove'" type="button" class="btn osr-btn btn-danger">
+                    <span class="fa fa-trash-o"></span> {{_("永久删除")}}
+                </button>
+            </div>
+
+
+            <!-- 页面导航-->
+            <div class="text-center visible-lg visible-md">
+                <ul class="pagination">
+                    <li v-if="pages.last < pages.current_page && pages.last>0">
+                        <a v-on:click="get_posts(status, pages.last, keyword)">«</a>
+                    </li>
+                    <li v-else class="disabled">
+                        <a>«</a>
+                    </li>
+
+                    <li v-for="page in pages.last_show" >
+                        <a v-if="page!='...'" v-on:click="get_posts(status, page, keyword)">{[page]}</a>
+                        <a v-else href="#">...</a>
+                    </li>
+
+                    <li class="active">
+                        <a v-on:click="get_posts(status, pages.current_page, keyword)">{[pages.current_page]}</a>
+                    </li>
+
+                   <li v-for="page in pages.next_show" >
+                        <a v-if="page!='...'" v-on:click="get_posts(status, page, keyword)" >{[page]}</a>
+                        <a v-else href="#">...</a>
+                   </li>
+
+                   <li v-if="pages.next > pages.current_page && pages.next<=pages.page_total">
+                        <a v-on:click="get_posts(status, pages.next, keyword)">»</a>
+                    </li>
+                    <li v-else class="disabled">
+                        <a>»</a>
+                    </li>
+                </ul>
+           </div>
+            <!-- //页面导航-->
+            <!-- m页面导航-->
+            <ul class="pager visible-xs visible-sm">
+                <li v-if="pages.last < pages.current_page && pages.last>0" class="previous">
+                    <a v-on:click="get_posts(status, pages.last, keyword)">
+                        {{_("上一页")}}
+                    </a>
+                </li>
+                <li v-if="pages.next > pages.current_page  && pages.next<=pages.page_total" class="next">
+                    <a v-on:click="get_posts(status, pages.next, keyword)">{{_("下一页")}}</a>
+                </li>
+            </ul>
+            <!-- //m页面导航-->
+        </div>
+    </div>
+
+     <!-- 详细信息模态-->
+    <div class="modal fade" id="post_more" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">{{_("评论")}}</h4>
+                </div>
+                <div class="modal-body" >
+                    <header class="panel-heading tab-bg-dark-navy-blue osr-panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a class="osr-pointer" data-toggle="tab" data-target="#more_info">{{_("更多信息")}}</a>
+                            </li>
+                            <li class="">
+                                <a class="osr-pointer" data-toggle="tab" data-target="#inform">{{_("被举报")}}</a>
+                            </li>
+                            <li class="">
+                                <a class="osr-pointer" data-toggle="tab" data-target="#show_content">{{_("正文")}}</a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div id=more_info class="tab-pane active">
+                                <!--<strong>{{_("文集分类")}}: </strong>-->
+                                <!--<span v-if="post_view.category">{[post_view.category]}</span>-->
+                                <!--<span v-else>{{_("默认")}}</span>-->
+                                <!--<br>-->
+                                <strong>{{_("编辑格式")}}: </strong>{[post_view.editor]}<br>
+                                <strong>{{_("最近更新")}}: </strong>{[post_view.update_time | formatDate]}<br>
+                                <strong>{{_("标签")}}: </strong><br>
+                                <span  v-for="tag in post_view.tags" class="osr-text">
+                                    {[tag]} &nbsp;&nbsp;
+                                </span>
+                            </div>
+
+                            <div id="show_content" class="tab-pane">
+                                <span class="osr-color-secondary">{{_("字数")}}: {[post_view.word_num]}</span>
+                                <div v-html="post_view.content"></div>
+                            </div>
+
+                            <div id="inform" class="tab-pane">
+                                 <div v-if="post_view.inform">
+                                     <strong>{{_("举报总数")}}: </strong>{[post_view.inform.total]}<br>
+                                     <strong>{{_("最后举报")}}: </strong>{[post_view.inform.update_time | formatDate]}<br>
+                                     <span  v-if="k!='total' && k!='update_time'" v-for="(v,k) in post_view.inform">
+                                        <strong>{[k]}: </strong>{[v.cnt]}<br>
+                                     </span>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-info" type="button" data-dismiss="modal" aria-hidden="true"> {{_("关闭")}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //详细信息模态-->
+
+</div>
+
+<script>
+
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+          posts:{datas:{}},
+          status:"is_issued",
+          status_list:{
+                '{{_("正常")}}':"is_issued",
+                '{{_("草稿")}}':"draft",
+                '{{_("未审核")}}':"not_audit",
+                '{{_("未通过")}}':"unqualified",
+                '{{_("回收站")}}':"recycle",
+                '{{_("待删除")}}':"user_remove"
+               },
+          keyword:"",
+          checkAll:false,
+          set:false,
+          page:1,
+          pages:{},
+          sort:"",
+          post_view:{inform:{}}
+
+      },
+      filters: {
+            formatDate: function (time) {
+              if(time){
+                return formatDate(time, "yyyy-MM-dd hh:mm:ss");
+              }
+              return "";
+            },
+            UptimeformatDate: function (time) {
+              if(time){
+                return '{{_("最近更新: ")}}'+formatDate(time, "yyyy-MM-dd hh:mm:ss");
+              }
+              return "";
+            }
+      }
+    })
+
+    // 加载完页面执行
+    $(document).ready(function(){
+        var status = $("#state").attr("content");
+        vue.status = status?status:vue.status;
+        var page = $("#page").attr("content");
+        vue.page = page?page:vue.page;
+
+        var sort = $("#sort").attr("content");
+        vue.sort = sort?sort:vue.sort;
+
+        var keyword = $("#keyword").attr("content");
+        vue.keyword = keyword?keyword:vue.keyword;
+        get_posts(vue.status,vue.page,vue.keyword);
+    })
+
+    function get_posts(status, page, keyword, sort_field){
+        vue.keyword = keyword;
+        vue.status = status;
+        vue.page = page;
+        var sort = sorting(sort_field);
+        d = {
+            page:page,
+            status:vue.status,
+            keyword:keyword,
+            sort:JSON.stringify(sort)
+        }
+
+        var result = osrHttp("GET","/api/admin/post", d, args={not_prompt:true});
+        result.then(function (r) {
+            vue.posts = r.data.posts;
+            vue.checkAll = false;
+            osr_check_all(vue.posts.datas, vue.checkAll, vue.set);
+            vue.pages = paging(page_total=vue.posts.page_total,
+                            current_page=vue.posts.current_page);
+        });
+        var url = window.location.pathname+"?page="+page+"&state="+vue.status+"&sort="+vue.sort;
+        if(vue.keyword){
+            url = url + "&keyword="+vue.keyword;
+        }
+        history_state(title=null,url=url);
+    }
+
+    function operation_posts(operation){
+
+        ids = JSON.stringify(osr_get_checked_id());
+        if (operation=="approved"){
+            var d = {
+                 op:'audit',
+                 ids:ids,
+                 score:0
+                 };
+            // 提交数据
+            var result = osrHttp("PUT","/api/admin/post", d);
+        }else if(operation=="non-approval"){
+            var d = {
+                op:'audit',
+                 ids:ids,
+                 score:100
+                 };
+            // 提交数据
+            var result = osrHttp("PUT","/api/admin/post", d);
+
+        }else if(operation=="pending_delete"){
+            var d = {
+                 ids:ids,
+                 pending_delete:1
+                 };
+            // 提交数据
+            var result = osrHttp("DELETE","/api/admin/post", d);
+
+        }else if(operation=="delete"){
+            var d = {
+                 ids:ids,
+                 pending_delete:0
+                 };
+            // 提交数据
+            var result = osrHttp("DELETE","/api/admin/post", d);
+
+        }else if(operation=="restore"){
+            var d = {
+                 op:'restore',
+                 ids:ids,
+                 };
+            // 提交数据
+            var result = osrHttp("PUT","/api/admin/post", d);
+
+        }
+        result.then(function (r) {
+            if(r.data.msg_type=='s'){
+                get_posts(vue.status,vue.page, vue.keyword);
+            }
+        });
+
+    }
+
+    function put_post_view(index){
+        vue.post_view = vue.posts.datas[index];
+
+    }
+
+    function sorting(sort_field){
+        // 反转排序
+        if(sort_field=="issue_time"){
+            if(vue.sort == "it-desc"){
+                vue.sort = "it-asc";
+            }else{
+                vue.sort = "it-desc";
+            }
+        }else if(sort_field=="update_time"){
+            if(vue.sort == "ut-desc"){
+                vue.sort = "ut-asc";
+            }else{
+                vue.sort = "ut-desc";
+            }
+        }else if(sort_field=="like"){
+            if(vue.sort == "like-desc"){
+                vue.sort = "like-asc";
+            }else{
+                vue.sort = "like-desc";
+            }
+        }else if(sort_field=="pv"){
+            if(vue.sort == "pv-desc"){
+                vue.sort = "pv-asc";
+            }else{
+                vue.sort = "pv-desc";
+            }
+        }else if(sort_field=="comment_num"){
+            if(vue.sort == "comment_num-desc"){
+                vue.sort = "comment_num-asc";
+            }else{
+                vue.sort = "comment_num-desc";
+            }
+        }else if(sort_field=="word_num"){
+            if(vue.sort == "word_num-desc"){
+                vue.sort = "word_num-asc";
+            }else{
+                vue.sort = "word_num-desc";
+            }
+        }else if(sort_field=="audit_score"){
+            if(vue.sort == "audit_score-desc"){
+                vue.sort = "audit_score-asc";
+            }else{
+                vue.sort = "audit_score-desc";
+            }
+        }else if(sort_field=="inform_total"){
+            if(vue.sort == "inform_total-desc"){
+                vue.sort = "inform_total-asc";
+            }else{
+                vue.sort = "inform_total-desc";
+            }
+        }
+
+        //排序参数
+        if(vue.sort=="it-desc"){
+            sort = [{"issue_time":-1}];
+
+        }else if(vue.sort=="it-asc"){
+            sort = [{"issue_time":1}];
+
+        }else if(vue.sort=="ut-desc"){
+            sort = [{"update_time":-1}];
+
+        }else if(vue.sort=="ut-asc"){
+            sort = [{"update_time":1}];
+
+        }else if(vue.sort=="like-desc"){
+            sort = [{"like":-1}];
+
+        }else if(vue.sort=="like-asc"){
+            sort = [{"like":1}];
+
+        }else if(vue.sort=="pv-desc"){
+            sort = [{"pv":-1}];
+
+        }else if(vue.sort=="pv-asc"){
+            sort = [{"pv":1}];
+
+        }else if(vue.sort=="comment_num-desc"){
+            sort = [{"comment_num":-1}];
+
+        }else if(vue.sort=="comment_num-asc"){
+            sort = [{"comment_num":1}];
+
+        }else if(vue.sort=="word_num-desc"){
+            sort = [{"word_num":-1}];
+
+        }else if(vue.sort=="word_num-asc"){
+            sort = [{"word_num":1}];
+
+        }else if(vue.sort=="audit_score-desc"){
+            sort = [{"audit_score":-1}];
+
+        }else if(vue.sort=="audit_score-asc"){
+            sort = [{"audit_score":1}];
+
+        }else if(vue.sort=="inform_total-desc"){
+            sort = [{"inform.total":-1}];
+
+        }else if(vue.sort=="inform_total-asc"){
+            sort = [{"inform.total":1}];
+
+        }else{
+            sort = [{"issue_time": -1}, {"like": -1}, {"comment_num": -1}, {"pv": -1},];
+        }
+
+        return sort;
+    }
+
+</script>
+{% endblock %}
+
+

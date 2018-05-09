@@ -1,0 +1,94 @@
+{% extends "osr-style/pages/based/based.html" %}
+{% block title %}{{_("平台协议")}}-{% endblock %}
+{% block content %}
+<div id="app" class="row osr-edit-page">
+    <section class="osr-panel article">
+        <header class="panel-heading tab-bg-dark-navy-blue osr-panel-heading">
+            <ul class="nav nav-tabs">
+                <li id="head_li_user_agreement">
+                    <a data-toggle="tab" class="osr-pointer" v-on:click='get_global("user_agreement")'>
+                         {{_("用户协议")}}
+                    </a>
+                </li>
+                <li id="head_li_demo_use_agreement">
+                    <a data-toggle="tab" class="osr-pointer" v-on:click='get_global("demo_use_agreement")'>
+                         {{_("Demo使用协议")}}
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <!-- 文章头-->
+        <h3>
+            {[statement.title]}
+        </h3>
+        <br>
+        <article>
+            <!-- 正文-->
+            <div v-html="statement.text_html" v-highlight></div>
+            <!-- //正文-->
+        </article>
+    </section>
+
+</div>
+
+<script src="/theme/static/js/markdown/marked.min.js?v={{g.site_global.site_config.STATIC_FILE_VERSION}}"></script>
+<link href="/theme/static/css/highlight-style-github.css?v={{g.site_global.site_config.STATIC_FILE_VERSION}}" rel="stylesheet">
+<script src="/theme/static/js/highlight.js?v={{g.site_global.site_config.STATIC_FILE_VERSION}}"></script>
+<script>
+
+     Vue.directive('highlight',function (el) {
+      let blocks = el.querySelectorAll('pre code');
+      blocks.forEach((block)=>{
+        hljs.highlightBlock(block)
+      })
+    })
+
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+            statement:{},
+            name:"user_agreement",
+      },
+      filters: {
+            formatDate: function (time) {
+              return irrformatDate(time, "yyyy-MM-dd hh:mm");
+            }
+      }
+    })
+
+    // 加载完页面执行
+    $(document).ready(function(){
+        var url_s = get_url_parameter()
+        vue.name = get_obj_value(url_s,"s")
+        get_global(vue.name);
+        nav_active("head_li_"+vue.name);
+    });
+
+    function get_global(name){
+        vue.name = name;
+        var conditions = [
+             {
+                type:"text",
+                names:[vue.name],
+                result_key:"statement"
+             }
+        ]
+        var d ={
+            conditions:JSON.stringify(conditions)
+
+        }
+
+        var result = osrHttp("GET","/api/global/media", d, args={not_prompt:true});
+        result.then(function (r) {
+            vue.statement = r.data.medias.statement[0];
+        });
+
+        var url = window.location.pathname
+                    +"?s="+vue.name
+        history_state(null, url);
+    }
+
+</script>
+{% endblock %}

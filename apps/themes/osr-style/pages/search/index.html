@@ -1,0 +1,185 @@
+{% extends "osr-style/pages/based/based.html" %}
+{% block title %}{{_("搜索")}}-{% endblock %}
+{% block content %}
+<div id="app">
+
+    <div class="row osr-page" style="padding-top:30px">
+        <div class="input-group text-center"  style="max-width: 400px;">
+            <input type="text" name="q" class="form-control osr-input input-md" v-model="keyword" placeholder="{{_('文章 用户')}}">
+            <span class="input-group-btn">
+                <button  class="btn btn-md osr-btn btn-flat" v-on:click="global_search(keyword, target, 1)"
+                style="background:#27c24c;color:#fff">
+                    {{_("搜索")}}
+                </button>
+            </span>
+        </div>
+
+        <!--<div class="from-group form-inline text-center">-->
+          <!--<input name="title" type="text" class="form-control osr-input" v-model="keyword"-->
+                 <!--placeholder="{{_('文章 用户')}}" style="min-width: 300px;">-->
+            <!--<button class="btn btn-success osr-btn" v-on:click="global_search(keyword, target, 1)">{{_("搜索")}}</button>-->
+        <!--</div>-->
+        <!--文章导航-->
+         <header  class="panel-heading tab-bg-dark-navy-blue osr-panel-heading">
+            <ul class="nav nav-tabs">
+                <li id="head_li_post">
+                    <a data-toggle="tab" data-target="post" class="osr-pointer" v-on:click="global_search(keyword, 'post', 1)">
+                        <i class="fa fa-file-text-o"></i> {{_("文章")}}
+                    </a>
+                </li>
+                <li id="head_li_user">
+                    <a data-toggle="tab" data-target="user" class="osr-pointer" v-on:click="global_search(keyword, 'user', 1)">
+                        <i class="fa fa-user"></i> {{_("用户")}}
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <!--post-->
+        <ul v-if="target=='post'" id="post" class="osr-list-group">
+            <li class="osr-list-group-item have-img" v-for="post in posts.items.datas">
+                  <div class="item-content">
+                      <div class="list-author">
+                          <span class="osr-date">
+                               <span v-if="post.issue_time" >
+                                  <i class="fa fa-clock-o"></i>&nbsp;{[post.issue_time | formatDate]}
+                              </span>
+                          </span>
+                      </div>
+                        <!--title-->
+                      <a class="osr-title" target="_blank" :href="'/post?id='+post._id">
+                        {[post.title]}
+                      </a>
+                        <!--title-->
+
+                      <!--摘要-->
+                      <div class="osr-text">
+                          <span v-html="post.brief_content"></span>...
+                      </div>
+                        <!--摘要-->
+
+                </div>
+             </li>
+        </ul>
+        <!--//post-->
+        <!--user-->
+        <ul v-if="target=='user'" id="user" class="osr-users-list">
+                <li class="osr-users-list-item" v-for="user in users.items.datas">
+                    <div class="author">
+                        <a class="avatar" :href="'/user?id='+user._id">
+                            <img width="48px" height="48px" class="osr-img-circle-b" v-bind:src="user.avatar_url.url" alt="{{_('头像')}}">
+                        </a>
+                        <div class="info">
+                            <a class="name" :href="'/user?id='+user._id">
+                                {[user.username]}
+                            </a>
+                            <span v-if="user.gender=='m'" class="fa fa-mars osr-fa-gender-m" ></span>
+                            <span v-if="user.gender=='f'" class="fa fa-venus osr-fa-gender-f"></span>
+                            <div class="meta">
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+        </ul>
+        <!--//user-->
+
+        <!-- m页面导航-->
+        <ul class="pager col-sm-12">
+            <li v-if="pages.last < pages.current_page && pages.last>0" class="previous">
+                <a v-on:click="global_search(keyword, target, pages.last)" class="osr-pointer">
+                    {{_("上一页")}}
+                </a>
+            </li>
+             <span class="text-center osr-text">{{_('第{[posts.items.current_page]}页/共{[posts.items.page_total]}页')}}</span>
+            <li v-if="pages.next > pages.current_page  && pages.next<=pages.page_total" class="next">
+                <a v-on:click="global_search(keyword, target, pages.next)" class="osr-pointer">
+                    {{_("下一页")}}
+                </a>
+            </li>
+        </ul>
+        <!-- //页面导航-->
+    </div>
+</div>
+<script>
+
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+            users:{kw:"", items:[]},
+            posts:{kw:"", items:[]},
+            pages:[],
+            page:1,
+            keyword:"",
+            target:""
+      },
+      filters: {
+            formatDate: function (time) {
+              return irrformatDate(time, "yyyy-MM-dd hh:mm");
+            }
+      }
+    })
+
+    // 加载完页面执行
+    $(document).ready(function(){
+        var url_s = get_url_parameter();
+        vue.keyword = get_obj_value(url_s, "s");
+        vue.target = get_obj_value(url_s, "t", "post");
+        vue.page = get_obj_value(url_s, "page", 1);
+        global_search(vue.keyword, vue.target, vue.page);
+        nav_active("head_li_"+vue.target);
+
+    })
+
+
+    function global_search(keyword, target, page){
+
+        vue.keyword = keyword;
+        vue.target = target;
+        vue.page = page;
+        if(!vue.keyword){
+            return 0;
+        };
+
+        //if(vue.target=="post" && vue.posts.kw == keyword){
+        //    return 0;
+        //}else if(vue.target=="user" && vue.users.kw == keyword){
+        //    return 0;
+        //}
+
+        vue.target = target;
+        vue.page = page;
+        d = {
+            keyword:keyword,
+            page:vue.page
+        }
+        if(target){
+            d["target"] = target;
+        }
+        var result = osrHttp("GET","/api/search", d, args={not_prompt:true});
+        result.then(function (r) {
+            if(!$.isEmptyObject(r.data.posts)){
+                vue.posts = r.data.posts;
+
+                vue.pages = paging(page_total=r.data.posts.items.page_total,
+                                    current_page=r.data.posts.items.current_page);
+            }
+            if(!$.isEmptyObject(r.data.users)){
+                console.log(r.data.users);
+                vue.users = r.data.users;
+                vue.pages = paging(page_total=r.data.users.items.page_total,
+                                    current_page=r.data.users.items.current_page);
+            }
+        });
+
+        var url = window.location.pathname
+                    +"?s="+keyword
+                    +"&page="+page
+        if(vue.target){
+            url = url+'&t='+vue.target;
+        }
+        history_state(null, url);
+    }
+</script>
+
+{% endblock %}

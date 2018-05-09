@@ -1,0 +1,66 @@
+<!-- 左侧栏,包含徽标和侧边栏 -->
+<aside id="sidebar-left" class="left-side sidebar-offcanvas visible-xs">
+    <!-- 侧边栏：style可以在sidebar.less中找到 -->
+    <section class="sidebar osr-sidebar">
+
+        <!-- 侧边栏菜单：：样式可以在sidebar.less中找到 -->
+
+        <ul id="sidebar_menu" class="sidebar-menu">
+            <li>
+                <a class="lv1-a" href="/">
+                    {{_("发现")}}
+                </a>
+            </li>
+
+            <li>
+                <a class="lv1-a" href="/photo">
+                    {{_("摄影")}}
+                </a>
+            </li>
+
+            <li>
+                <a class="lv1-a" href="javascript:;" data-target="#about-us" data-toggle="collapse">
+                    <span>{{_("关于")}}</span>
+                    <i class="fa fa-angle-right osr-sidebar-fa-right osr-sidebar-fa-right"></i>
+                </a>
+                <ul id="about-us" class="osr-sidebar-menu-lv2 collapse">
+                    <li>
+                        <a href="/about-us">
+                            <span>{{_("关于我们")}}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact">
+                            <span>{{_("联系我们")}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="lv1-a" href="http://www.osroom.com/support" target="_blank">
+                    {{_("支持我们")}}
+                </a>
+            </li>
+
+            <li>
+                <a class="lv1-a" href="javascript:;" data-target="#switch-lan" data-toggle="collapse">
+                    <span>{{g.site_global.language.all_language[g.site_global.language.current]["alias"]}}</span>
+                    <i class="fa fa-angle-right osr-sidebar-fa-right osr-sidebar-fa-right"></i>
+                </a>
+                <ul id="switch-lan" class="osr-sidebar-menu-lv2 collapse">
+
+                    {% for k,v in g.site_global.language.all_language.items() %}
+                    <li>
+                        <a onclick="set_language('{{k}}')">
+                            <span>{{v.name}}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+
+
+        </ul>
+    </section>
+    <!-- /.侧边栏 -->
+</aside>

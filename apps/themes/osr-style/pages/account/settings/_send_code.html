@@ -1,0 +1,137 @@
+
+<!--发送验证码-->
+<span id="send_code_div"  hidden>
+    <button id="send_code"  data-toggle="modal" data-target="#send_code_modal"  class="btn osr-btn btn-success">
+        {{_('发送邮件验证码')}}
+    </button>
+</span>
+<span id="send_code_2_div">
+    <button id="send_code_2" v-on:click="send_code()"  class="btn osr-btn btn-success">
+        {{_('发送邮件验证码')}}
+    </button>
+</span>
+<!--模拟框-->
+<div class="modal fade" id="send_code_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">{{_("发送验证码")}}</h4>
+            </div>
+            <div v-if="img_code_url" class="modal-body text-center" >
+                <div class="form-group">
+                  <input name="code" type="text" v-model="img_code" class="text-center form-control osr-input"
+                   placeholder="{{_('图片验证码')}}"
+                   data-bv-notempty-message="{{_('验证码错误')}}" required/>
+                </div>
+                <div class="form-group">
+                    <img :src="img_code_url" alt="Code Img">
+                    <i v-on:click="get_imgcode()" class="fa fa-refresh"></i>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-info osr-btn" type="button" data-dismiss="modal" aria-hidden="true"> {{_("关闭")}}</button>
+                <button class="btn btn-success osr-btn" v-on:click="send_code()" type="button" aria-hidden="true"> {{_("发送验证码")}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模拟框-->
+<!--发送验证码//-->
+ <script>
+
+   function get_imgcode(){
+        var result = osrHttp("GET","/api/vercode/image",{},args={not_prompt:true});
+        result.then(function (r) {
+            if(r.data.code){
+                vue.img_code_url = r.data.code.url;
+                vue.img_code_url_obj = r.data.code.img_url_obj;
+            }
+        });
+
+   }
+
+   function send_code(){
+
+        //查看邮箱是否可以使用
+        var d = { value:vue.email, field:"email"};
+        var result = osrHttp("GET","/api/account/data/availability",d);
+        result.then(function (r) {
+            if(r.data.msg_type == "s"){
+                d = {
+                    account:"{{current_user.email}}",
+                    account_type:"email",
+                    code:vue.img_code,
+                    code_url_obj:JSON.stringify(vue.img_code_url_obj)
+                };
+                d2 = {
+                    account:vue.email,
+                    account_type:"email",
+                    code:vue.img_code,
+                    code_url_obj:JSON.stringify(vue.img_code_url_obj)
+                };
+                // 提交数据
+                var result = osrHttp("POST", "/api/vercode/send", d);
+                result.then(function (r) {
+                    send_success_process(r);
+                }).catch(function(r){
+                    send_failed(r);
+                });
+
+                var result2 = osrHttp("POST", "/api/vercode/send", d2);
+                result2.then(function (r) {
+                    send_success_process(r)
+                }).catch(function(r){
+                    send_failed(r);
+                });
+            }
+        });
+   }
+
+   function send_success_process(r){
+        //发送成功
+        if(r.data.msg_type=="s"){
+            //发送成功
+            $("#send_code_div").hide();
+            $("#send_code_2_div").show();
+
+            //验证码发送成功, 关闭已经打开的模态框(如果已经打开)
+            $('#send_code_modal').modal('hide');
+
+            $("#send_code_2").attr("disabled","disabled");
+            var n = 60;
+            window.setInterval(
+                function(){
+                    if(!n){
+                        $("#send_code_2").attr("disabled",false);
+                        $('#send_code_2').text("{{_('发送验证码')}}")
+                        return;
+                    };
+                    $('#send_code_2').text(n+"s{{_('后重发')}}")
+                    n -= 1;
+                },
+            1000);
+
+        }
+
+   }
+
+   function send_failed(r){
+
+        var temp_code = null;
+        if(r.data.code){
+            temp_code = r.data.code;
+        }else if(r2.data.code){
+            temp_code = r2.data.code;
+        }
+        if(temp_code){
+            //图片验证码错误, 需要输入图片验证码 打开模态框,
+            $('#send_code_modal').modal('show');
+            vue.img_code_url = temp_code.url;
+            vue.img_code_url_obj = temp_code.img_url_obj;
+            $("#send_code_div").show();
+            $("#send_code_2_div").hide();
+        }
+   }
+ </script>

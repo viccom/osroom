@@ -1,0 +1,1252 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-05-06 14:26+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: apps/configs/sys_config.py:99
+msgid "405, The method is not allowed for the requested URL"
+msgstr ""
+
+#: apps/core/auth/jwt_auth.py:65
+msgid "The provided OSR-BearerToken has expired"
+msgstr ""
+
+#: apps/core/auth/jwt_auth.py:68
+msgid "Invalid OSR-BearerToken"
+msgstr ""
+
+#: apps/core/auth/jwt_auth.py:117 apps/core/auth/jwt_auth.py:143
+msgid "User authentication failed, user does not exist"
+msgstr ""
+
+#: apps/core/auth/jwt_auth.py:123
+msgid ""
+"User authentication token expired or changed. Please log in again for "
+"access"
+msgstr ""
+
+#: apps/core/auth/jwt_auth.py:125
+msgid "Token is abnormal"
+msgstr ""
+
+#: apps/core/auth/jwt_auth.py:127 apps/core/auth/jwt_auth.py:159
+msgid "No user authentication token provided \"OSR-BearerToken\""
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:55
+msgid "Create up to 2 tokens"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:68
+msgid "Activate token successfully"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:70
+msgid "Activation token failed"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:85
+msgid "Disable token successfully"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:87
+msgid "Disable token failed"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:89
+msgid "Keep at least one active token"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:102
+#: apps/modules/message/process/sys_message.py:58
+#: apps/modules/message/process/user_message.py:184
+#: apps/modules/permission/process/url_permission.py:190
+#: apps/modules/plug_in_manager/process/manager.py:118
+#: apps/modules/theme_setting/process/page.py:101
+#: apps/modules/theme_setting/process/themes.py:268
+msgid "Successfully deleted"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:104 apps/modules/audit/process/rules.py:70
+#: apps/modules/category/process/category.py:127
+#: apps/modules/comments/process/comment.py:233
+#: apps/modules/permission/process/url_permission.py:192
+msgid "Delete failed"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:106
+msgid "Delete failed, keep at least one token"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:140
+msgid "Invalid SecretToken for OSR-RestsToken"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:152
+msgid ""
+"Token malformed, should be 'SecretToken <token>' or 'AccessToken <token>'"
+" and 'ClientId <client_id>'"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:157 apps/core/flask/request.py:77
+msgid ""
+"Token is miss, unconventional web browsing requests please provide \"OSR-"
+"RestToken\", otherwise provide \"X-CSRFToken\""
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:181
+msgid "Failed to get, please try again"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:184
+msgid "The OSR-RestToken provided by the request header is not a SecretToken"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:200
+msgid "Invalid AccessToken or AccessToken has expired"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:205
+msgid "Can not find the ClientId matching 'AccessToken'"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:212
+msgid "SecretToken in OSr-RestToken is invalid"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:218
+msgid "AccessToken in OSr-RestToken is invalid"
+msgstr ""
+
+#: apps/core/auth/rest_token_auth.py:224
+msgid "OSR-RestToken validation failed."
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:60
+msgid ""
+"Please add the 'OSR-RestToken' or 'X-CSRFToken' request header, the "
+"specific use please refer to the osroom system documentation: "
+"http://www.osroom.com"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:67
+msgid "Not logged in"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:94
+msgid "Permission denied"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:97
+msgid "The api does not exist or has been deprecated"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:100
+msgid "Server error"
+msgstr ""
+
+#: apps/core/flask/login_manager.py:53
+msgid "Anonymous users can not access '{}', need to log in"
+msgstr ""
+
+#: apps/core/flask/login_manager.py:63
+msgid "Anonymous users can not access, you need to log in"
+msgstr ""
+
+#: apps/core/flask/permission.py:35 apps/core/flask/permission.py:58
+msgid "Permission denied,requires \"{}\" permission"
+msgstr ""
+
+#: apps/core/flask/reqparse.py:12
+msgid "The \"{}\" cannot be empty"
+msgstr ""
+
+#: apps/core/flask/reqparse.py:22
+msgid "The minimum length of \"{}\" is {} characters"
+msgstr ""
+
+#: apps/core/flask/reqparse.py:33
+msgid "The maximum length of \"{}\" is {} characters"
+msgstr ""
+
+#: apps/core/flask/reqparse.py:43
+msgid "\"{}\" needs to be of type {}"
+msgstr ""
+
+#: apps/core/flask/reqparse.py:52
+msgid "The value of parameter \"{}\" can only be one of \"{}\""
+msgstr ""
+
+#: apps/core/flask/reqparse.py:61
+msgid "The value of parameter \"{}\" can not be \"{}\""
+msgstr ""
+
+#: apps/core/flask/reqparse.py:70
+msgid "Parameter {} can only be of the following type: \"{}\""
+msgstr ""
+
+#: apps/core/flask/reqparse.py:81 apps/core/flask/reqparse.py:87
+msgid "The value of parameter \"{}\" is illegal"
+msgstr ""
+
+#: apps/core/plug_in/manager.py:103
+msgid "Plugin startup file does not exist"
+msgstr ""
+
+#: apps/core/plug_in/manager.py:221
+#: apps/modules/theme_setting/process/themes.py:173
+msgid "Configuration file \"conf.yaml\" but few parameters \"{}\""
+msgstr ""
+
+#: apps/core/plug_in/manager.py:224
+msgid "Missing startup file in plugin package"
+msgstr ""
+
+#: apps/core/plug_in/manager.py:235
+msgid "Plugin installed successfully"
+msgstr ""
+
+#: apps/core/plug_in/manager.py:238
+msgid "Missing plugin main function(execution function)"
+msgstr ""
+
+#: apps/modules/audit/process/rules.py:41
+msgid "rule"
+msgstr ""
+
+#: apps/modules/audit/process/rules.py:47
+msgid "The rule already exists"
+msgstr ""
+
+#: apps/modules/audit/process/rules.py:53
+#: apps/modules/category/process/category.py:74
+#: apps/modules/user/process/role.py:45
+msgid "Add a success"
+msgstr ""
+
+#: apps/modules/audit/process/rules.py:67
+#: apps/modules/category/process/category.py:124
+msgid "Delete the success,{}"
+msgstr ""
+
+#: apps/modules/category/process/category.py:23
+msgid "category id"
+msgstr ""
+
+#: apps/modules/category/process/category.py:43
+#: apps/modules/category/process/category.py:59
+msgid "category type"
+msgstr ""
+
+#: apps/modules/category/process/category.py:64
+#: apps/modules/category/process/category.py:86
+#: apps/modules/media/process/media.py:55
+#: apps/modules/media/process/media.py:213
+#: apps/modules/plug_in_manager/process/manager.py:52
+#: apps/modules/plug_in_manager/process/manager.py:88
+#: apps/modules/plug_in_manager/process/manager.py:112
+#: apps/modules/user/process/role.py:51 apps/modules/user/process/role.py:54
+#: apps/modules/user/process/role.py:95 apps/utils/validation/str_format.py:19
+msgid "name"
+msgstr ""
+
+#: apps/modules/category/process/category.py:71
+#: apps/modules/category/process/category.py:93
+msgid "Name already exists"
+msgstr ""
+
+#: apps/modules/category/process/category.py:99
+#: apps/modules/media/process/media.py:293
+#: apps/modules/permission/process/url_permission.py:167
+#: apps/modules/plug_in_manager/process/setting.py:128
+#: apps/modules/setting/process/settings.py:248
+msgid "Modify the success"
+msgstr ""
+
+#: apps/modules/category/process/category.py:101
+#: apps/modules/permission/process/url_permission.py:169
+msgid "No modification"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:44
+msgid "Comment on alleged violations"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:70
+#: apps/modules/post/process/adm_post.py:74
+msgid "Submitted successfully, {}"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:73
+#: apps/modules/post/process/adm_post.py:77
+msgid "Submitted failed"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:86
+#: apps/modules/post/process/adm_post.py:91
+msgid "Move to a permanently deleted area, {}"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:89
+msgid "Does not match the data to be deleted"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:96
+#: apps/modules/post/process/post_process.py:228
+msgid "Removed from the database, {}"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:99
+#: apps/modules/comments/process/adm_comment.py:114
+#: apps/modules/post/process/adm_post.py:94
+#: apps/modules/post/process/adm_post.py:114
+#: apps/modules/post/process/post_process.py:231
+#: apps/modules/post/process/user_post.py:201
+msgid "No match to relevant data"
+msgstr ""
+
+#: apps/modules/comments/process/adm_comment.py:111
+#: apps/modules/post/process/adm_post.py:111
+msgid "Restore success, {}"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:38
+msgid "Comment feature is not open"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:49
+msgid "comment"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:65
+msgid "You comment too often and come back later"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:74
+msgid "Articles do not exist or have not been published"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:82
+msgid "Your comment goal does not exist"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:107
+msgid "Guest reviews feature is not open, please login account comments"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:165
+msgid "[Label:{}]Comment on alleged violations"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:193
+msgid "Successful reviews"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:231
+#: apps/modules/post/process/user_post.py:192
+msgid "Delete the success"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:265
+#: apps/modules/post/process/post.py:90
+msgid "Success"
+msgstr ""
+
+#: apps/modules/comments/process/comment.py:267
+#: apps/modules/post/process/post.py:92
+msgid "Failed"
+msgstr ""
+
+#: apps/modules/comments/process/comment_find.py:17
+#: apps/modules/post/process/post_process.py:39
+msgid "The \"pre\" must not exceed the maximum amount"
+msgstr ""
+
+#: apps/modules/content_inform/process/inform.py:38
+msgid "details"
+msgstr ""
+
+#: apps/modules/content_inform/process/inform.py:61
+msgid "Submitted successfully, thanks for your participation"
+msgstr ""
+
+#: apps/modules/content_inform/process/inform.py:64
+msgid "Submit failed, please try again"
+msgstr ""
+
+#: apps/modules/follow/process/user_follow.py:42
+msgid "Followed"
+msgstr ""
+
+#: apps/modules/follow/process/user_follow.py:45
+msgid "You can't follow yourself"
+msgstr ""
+
+#: apps/modules/follow/process/user_follow.py:48
+msgid "You are already following this user"
+msgstr ""
+
+#: apps/modules/follow/process/user_follow.py:83
+msgid "Unfollow success"
+msgstr ""
+
+#: apps/modules/follow/process/user_follow.py:86
+msgid "Unfollow failed"
+msgstr ""
+
+#: apps/modules/global_data/process/global_data.py:46
+msgid "Get the current user information successfully"
+msgstr ""
+
+#: apps/modules/media/process/media.py:51
+#: apps/modules/media/process/media.py:155
+msgid "type"
+msgstr ""
+
+#: apps/modules/media/process/media.py:71
+#: apps/modules/media/process/media.py:262
+msgid "The type \"{}\" exists in the name \"{}\""
+msgstr ""
+
+#: apps/modules/media/process/media.py:104
+msgid "{} uploaded successfully"
+msgstr ""
+
+#: apps/modules/media/process/media.py:109
+#: apps/modules/permission/process/url_permission.py:108
+#: apps/modules/theme_setting/process/page.py:68
+msgid "Added successfully"
+msgstr ""
+
+#: apps/modules/media/process/media.py:234
+msgid "Update picture successfully"
+msgstr ""
+
+#: apps/modules/media/process/media.py:236
+msgid "Failed to update"
+msgstr ""
+
+#: apps/modules/media/process/media.py:295
+msgid "The content is not modified"
+msgstr ""
+
+#: apps/modules/media/process/media.py:320
+msgid "{} files have been deleted"
+msgstr ""
+
+#: apps/modules/media/process/media.py:322
+#: apps/modules/message/process/sys_message.py:60
+#: apps/modules/message/process/user_message.py:186
+#: apps/modules/plug_in_manager/process/manager.py:124
+#: apps/modules/setting/process/host_setting.py:59
+msgid "Failed to delete"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:26
+#: apps/modules/post/process/user_post.py:56
+msgid "title"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:27
+#: apps/modules/post/process/user_post.py:61
+#: apps/modules/post/process/user_post.py:70
+msgid "content"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:28
+msgid "send type"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:29
+msgid "user name"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:49
+msgid "Station news success"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:51
+msgid "No relevant user"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:64
+msgid "Mail message is being sent"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:66
+msgid "There is no such email address user"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:79
+msgid "SMS sent"
+msgstr ""
+
+#: apps/modules/message/process/send_msg.py:81
+msgid "No user mobile phone number was obtained"
+msgstr ""
+
+#: apps/modules/message/process/user_message.py:160
+#: apps/modules/user/process/profile.py:94
+msgid "Update succeed"
+msgstr ""
+
+#: apps/modules/message/process/user_message.py:162
+#: apps/modules/setting/process/host_setting.py:46
+#: apps/modules/user/process/adm_user.py:121
+#: apps/modules/user/process/profile.py:96
+#: apps/modules/user/process/profile.py:148
+#: apps/modules/user/process/role.py:124 apps/modules/user/process/role.py:130
+msgid "No changes"
+msgstr ""
+
+#: apps/modules/permission/process/url_permission.py:36
+msgid "No relevant data found"
+msgstr ""
+
+#: apps/modules/permission/process/url_permission.py:93
+#: apps/modules/theme_setting/process/page.py:32
+msgid "routing"
+msgstr ""
+
+#: apps/modules/permission/process/url_permission.py:98
+msgid "Routing already exists"
+msgstr ""
+
+#: apps/modules/permission/process/url_permission.py:111
+msgid "Add failed"
+msgstr ""
+
+#: apps/modules/permission/process/url_permission.py:128
+msgid "method"
+msgstr ""
+
+#: apps/modules/permission/process/url_permission.py:142
+#: apps/modules/user/process/role.py:99
+msgid ""
+"The current user permissions are lower than the permissions you want to "
+"modify, without permission to modify"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:61
+msgid "Plugin[{}] with similar functionality is in use, please stop it first"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:73
+msgid "Plug-in activated successfully"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:75
+msgid "Plug-in is already activated"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:77
+msgid "Plug-in activation failed"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:98
+msgid "Plug-in stopped successfully"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:100
+msgid "Plug-in failed to stop"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:139
+#: apps/modules/theme_setting/process/themes.py:99
+msgid "File format error, please upload zip archive"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:150
+msgid "The same name plugin already exists"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/manager.py:168
+#: apps/modules/theme_setting/process/themes.py:108
+#: apps/modules/theme_setting/process/themes.py:123
+msgid "The same name theme already exists"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:61
+#: apps/modules/setting/process/settings.py:123
+#: apps/modules/setting/process/settings.py:151
+msgid "There is no such data"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:98
+#: apps/modules/plug_in_manager/process/setting.py:105
+#: apps/modules/plug_in_manager/process/setting.py:115
+#: apps/modules/setting/process/settings.py:188
+#: apps/modules/setting/process/settings.py:195
+#: apps/modules/setting/process/settings.py:205
+msgid "The format of the \"value\" errors, need a \"{}\" type"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:111
+#: apps/modules/setting/process/settings.py:201
+msgid "There is no {}"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:150
+msgid "Refreshed successfully"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:152
+msgid ""
+"Failed to refresh. Please check the previous plug-in page for error "
+"messages"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:170
+msgid "There is no requirement file"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:230
+msgid ""
+"Some host connections failed. Successfully connected host has installed "
+"requirements package in the background"
+msgstr ""
+
+#: apps/modules/plug_in_manager/process/setting.py:234
+msgid "Executed related installation commands in the background"
+msgstr ""
+
+#: apps/modules/post/process/adm_post.py:70
+msgid "Post allegedly violated"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:37
+msgid "Up to {} tags are used"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:43
+msgid "tag"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:173
+msgid "[Label:{}]Post allegedly violated"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:176
+msgid "Issue success"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:178
+#: apps/modules/user/process/role.py:118
+msgid "Save success"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:189
+msgid "Removed to recycle bin"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:198
+msgid "{},{}"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:216
+msgid "Restore success,{}"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:219
+msgid "Restore failed"
+msgstr ""
+
+#: apps/modules/setting/process/get_file_log.py:29
+#: apps/modules/setting/process/host_setting.py:83
+msgid "Connection host[{}] failed,Check the host Settings"
+msgstr ""
+
+#: apps/modules/setting/process/get_file_log.py:69
+#: apps/modules/setting/process/host_setting.py:106
+msgid "There is no host {}"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:30
+#: apps/modules/user/process/profile.py:108
+msgid "username"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:30
+msgid "password"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:44
+msgid "The update is successful"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:56
+msgid "Successfully deleted {} host information"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:78
+#: apps/modules/setting/process/host_setting.py:127
+msgid "[{}] {}"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:95
+msgid "[Warning]: \"sudo\" command go to the server"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:97
+msgid "[Warning]: \"rm\" command go to the server"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:102
+msgid "Command executed {}"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:131
+msgid "Connection host[{}] failed"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:135
+msgid "Successfully connecting server host"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:137
+msgid "Host does not exist"
+msgstr ""
+
+#: apps/modules/setting/process/session_set.py:20
+msgid "Set up language success"
+msgstr ""
+
+#: apps/modules/setting/process/session_set.py:22
+msgid "Does not support this language"
+msgstr ""
+
+#: apps/modules/setting/process/settings.py:36
+msgid "Lack of parameter"
+msgstr ""
+
+#: apps/modules/setting/process/settings.py:53
+#: apps/modules/setting/process/settings.py:59
+#: apps/modules/theme_setting/process/themes.py:210
+msgid "Switch success"
+msgstr ""
+
+#: apps/modules/setting/process/settings.py:144
+msgid "Root permission required"
+msgstr ""
+
+#: apps/modules/theme_setting/process/page.py:22
+msgid "file type"
+msgstr ""
+
+#: apps/modules/theme_setting/process/page.py:36
+#: apps/modules/theme_setting/process/page.py:46
+msgid "This route can not be used"
+msgstr ""
+
+#: apps/modules/theme_setting/process/page.py:53
+msgid "Routing existing"
+msgstr ""
+
+#: apps/modules/theme_setting/process/page.py:89
+#: apps/modules/theme_setting/process/static_file.py:93
+msgid "File not found,'{}'"
+msgstr ""
+
+#: apps/modules/theme_setting/process/page.py:104
+msgid "This file can not be deleted"
+msgstr ""
+
+#: apps/modules/theme_setting/process/static_file.py:116
+msgid "File does not exist can not be edited,'{}'"
+msgstr ""
+
+#: apps/modules/theme_setting/process/static_file.py:122
+msgid "Saved successfully"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:31
+msgid "Get success"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:34
+msgid "Readme file does not exist"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:151
+msgid "Theme installed successfully"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:177
+msgid ""
+"The theme name and theme directory name in the configuration are "
+"inconsistent.(\"{}\" compared with \"{}\")"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:180
+msgid ""
+"The theme of the upload is incorrect, the configuration file(conf.yaml) "
+"does not exist"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:193
+#: apps/modules/theme_setting/process/themes.py:226
+msgid "Theme does not exist"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:228
+msgid "The current use of the theme can not be deleted"
+msgstr ""
+
+#: apps/modules/theme_setting/process/themes.py:239
+msgid "Delete failed, at least keep a theme"
+msgstr ""
+
+#: apps/modules/token/process/rest_token.py:26
+msgid "Created successfully"
+msgstr ""
+
+#: apps/modules/upload/process/upload_file.py:49
+msgid "Uploaded successfully"
+msgstr ""
+
+#: apps/modules/upload/process/upload_file.py:56
+#: apps/modules/user/process/avatar_upload.py:64
+msgid "Upload failed"
+msgstr ""
+
+#: apps/modules/upload/process/upload_file.py:63
+#: apps/modules/upload/process/upload_file.py:67
+msgid "Get file error"
+msgstr ""
+
+#: apps/modules/upload/process/upload_file.py:70
+msgid "No file submitted"
+msgstr ""
+
+#: apps/modules/user/apis/inspection_query.py:30
+msgid "This {} address has been registered"
+msgstr ""
+
+#: apps/modules/user/apis/inspection_query.py:33
+#: apps/modules/user/process/email.py:31
+msgid "This is the email address you currently use"
+msgstr ""
+
+#: apps/modules/user/apis/inspection_query.py:36
+msgid "This {} can be used"
+msgstr ""
+
+#: apps/modules/user/apis/inspection_query.py:50
+#: apps/modules/user/apis/inspection_query.py:53
+msgid "The ID belongs to the current logged in user"
+msgstr ""
+
+#: apps/modules/user/apis/online.py:109 apps/modules/user/apis/online.py:116
+msgid "Successfully logged out"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:22
+#: apps/modules/user/process/user_profile_process.py:32
+#: apps/modules/user/process/user_profile_process.py:61
+msgid "The specified user is not found"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:104
+#: apps/modules/user/process/profile.py:151
+msgid "Update success"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:116
+msgid "No permission modification"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:151
+msgid "Has recovered {} users, {} users can not operate"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:154
+msgid "Recycle user failed.May not have permission"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:159
+msgid "{} users have been deleted and {} users can not be deleted"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:162
+msgid "Failed to delete.May not have permission"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:189
+msgid "Restore the {} users,The other {} users have no power control"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:192
+msgid "Restore the failure.May not have permission"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:219
+msgid "{} user activation is successful, {} no permission to operate"
+msgstr ""
+
+#: apps/modules/user/process/adm_user.py:222
+msgid "Activation failed.May not have permission"
+msgstr ""
+
+#: apps/modules/user/process/avatar_upload.py:53
+msgid "Save failed"
+msgstr ""
+
+#: apps/modules/user/process/avatar_upload.py:62
+msgid "Save successfully"
+msgstr ""
+
+#: apps/modules/user/process/email.py:22
+msgid "email"
+msgstr ""
+
+#: apps/modules/user/process/email.py:27
+msgid "This E-mail address has been registered"
+msgstr ""
+
+#: apps/modules/user/process/email.py:40
+msgid "Invalid verification code [currently bound]"
+msgstr ""
+
+#: apps/modules/user/process/email.py:43
+msgid "Invalid verification code [ready to bind]"
+msgstr ""
+
+#: apps/modules/user/process/email.py:72
+msgid "Verification code error [currently bound]"
+msgstr ""
+
+#: apps/modules/user/process/email.py:87
+msgid "Verification code error [ready to bind]"
+msgstr ""
+
+#: apps/modules/user/process/email.py:102
+msgid "Email is changed"
+msgstr ""
+
+#: apps/modules/user/process/email.py:112
+msgid "Password mistake"
+msgstr ""
+
+#: apps/modules/user/process/online.py:13
+msgid "Sorry, temporarily unregistered function"
+msgstr ""
+
+#: apps/modules/user/process/online.py:39
+msgid "remember_me requires an integer"
+msgstr ""
+
+#: apps/modules/user/process/password.py:22
+#: apps/modules/user/process/password.py:89
+msgid "Now use the password mistake"
+msgstr ""
+
+#: apps/modules/user/process/password.py:25
+#: apps/modules/user/process/password.py:131
+msgid "Two password is not the same"
+msgstr ""
+
+#: apps/modules/user/process/password.py:77
+msgid "Password change is successful, please login again"
+msgstr ""
+
+#: apps/modules/user/process/password.py:84
+msgid "Password change failed(unknown error)"
+msgstr ""
+
+#: apps/modules/user/process/password.py:105
+#: apps/modules/user/process/password.py:118
+msgid "Account does not exist"
+msgstr ""
+
+#: apps/modules/user/process/password.py:122
+msgid "Email or SMS verification code error"
+msgstr ""
+
+#: apps/modules/user/process/password.py:150
+msgid "Password reset notification"
+msgstr ""
+
+#: apps/modules/user/process/password.py:154
+#: apps/modules/user/process/sign_in.py:166
+#: apps/modules/user/process/sign_up.py:106
+#: apps/utils/verify/msg_verify_code.py:73
+msgid "End"
+msgstr ""
+
+#: apps/modules/user/process/password.py:161
+msgid "Password reset successfully.Please return to login page to login"
+msgstr ""
+
+#: apps/modules/user/process/password.py:164
+msgid "Reset password failed(unknown error)"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:26
+msgid "Lack of parameters \"user_id\""
+msgstr ""
+
+#: apps/modules/user/process/profile.py:62
+msgid "The date of birth requires an 8-digit date,Such as '{}'"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:67
+#: apps/modules/user/process/sign_in.py:227
+msgid "gender"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:74
+msgid "Address format is not in conformity with the requirements"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:131
+msgid "The editor saves failure"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:138
+#: apps/modules/user/process/sign_up.py:37
+msgid "Name has been used"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:141
+msgid "Domain has been used"
+msgstr ""
+
+#: apps/modules/user/process/profile.py:143
+msgid "Personality custom domain cannot be modified"
+msgstr ""
+
+#: apps/modules/user/process/role.py:21
+msgid "The specified role is not found"
+msgstr ""
+
+#: apps/modules/user/process/role.py:59
+msgid ""
+"The current user permissions are lower than the permissions that you want"
+" to add, without permission to add"
+msgstr ""
+
+#: apps/modules/user/process/role.py:71 apps/modules/user/process/role.py:126
+msgid "Existing default role"
+msgstr ""
+
+#: apps/modules/user/process/role.py:79 apps/modules/user/process/role.py:133
+msgid "Role name already exists"
+msgstr ""
+
+#: apps/modules/user/process/role.py:158
+msgid "Delete the success, {} of the roles have users and cannot be deleted"
+msgstr ""
+
+#: apps/modules/user/process/role.py:161
+msgid ""
+"{} role do not have permission to delete, {} of the roles have users and "
+"cannot be deleted"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:35
+#: apps/modules/user/process/sign_up.py:23
+msgid "Is logged in"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:51
+#: apps/modules/user/process/sign_in.py:106
+msgid "Account or password error"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:65
+#: apps/modules/user/process/sign_up.py:63
+#: apps/modules/user/process/sign_up.py:82
+msgid "Verification code error"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:85
+#: apps/modules/user/process/sign_in.py:205
+msgid "Sign in success"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:92
+#: apps/modules/user/process/sign_in.py:209
+msgid "Account is inactive or frozen"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:147
+msgid "Abnormal login"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:157
+msgid ""
+"<b>Abnormal login</b><br> Your account <a>{}</a>, is logined in <span "
+"style='color:#483D8B'>{}</span> on {} [UTC Time].<br>"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:186
+msgid ""
+"No login processing plugin for this platform, please install the relevant"
+" plugin first"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:249
+#: apps/modules/user/process/sign_up.py:118
+msgid "Registered successfully"
+msgstr ""
+
+#: apps/modules/user/process/sign_in.py:253
+#: apps/modules/user/process/sign_up.py:122
+msgid "Data saved incorrectly, please try again"
+msgstr ""
+
+#: apps/modules/user/process/sign_up.py:43
+msgid "The two passwords don't match"
+msgstr ""
+
+#: apps/modules/user/process/sign_up.py:55
+msgid "This email has been registered in the site oh, please login directly."
+msgstr ""
+
+#: apps/modules/user/process/sign_up.py:73
+msgid "This number has been registered in the site oh, please login directly."
+msgstr ""
+
+#: apps/modules/user/process/sign_up.py:99
+msgid "Registration success notification"
+msgstr ""
+
+#: apps/modules/user/process/user.py:62
+msgid "Password is not a readable attribute"
+msgstr ""
+
+#: apps/modules/user/process/user.py:122
+msgid "Unknown"
+msgstr ""
+
+#: apps/modules/verification_code/process/send_code.py:35
+msgid "Email"
+msgstr ""
+
+#: apps/modules/verification_code/process/send_code.py:47
+#: apps/modules/verification_code/process/send_code.py:71
+msgid "This account is not registered on this platform"
+msgstr ""
+
+#: apps/modules/verification_code/process/send_code.py:58
+msgid "Telephone number"
+msgstr ""
+
+#: apps/modules/verification_code/process/send_code.py:109
+msgid ""
+"The system detects that your network is sending verification codes "
+"frequently. Please try again later!"
+msgstr ""
+
+#: apps/modules/verification_code/process/send_code.py:119
+msgid "Image verification code error, email not sent"
+msgstr ""
+
+#: apps/modules/verification_code/process/send_code.py:128
+msgid ""
+"The system detected that your operation is too frequent and you need to "
+"verify the picture verification code"
+msgstr ""
+
+#: apps/plugins/aliyun_oss_plugin/upfile_cloud.py:104
+#: apps/plugins/qiniu_cloud_plugin/upfile_cloud.py:113
+msgid "Please configure the third-party file storage domain name"
+msgstr ""
+
+#: apps/plugins/geoip_plugin/main.py:27
+msgid "Local"
+msgstr ""
+
+#: apps/utils/pyssh/pyssh.py:42
+msgid "Please improve the host information"
+msgstr ""
+
+#: apps/utils/send_msg/send_message.py:24
+msgid ""
+"There is no plug-in for sending SMS messages to mobile phones, please "
+"install the relevant plug-in"
+msgstr ""
+
+#: apps/utils/send_msg/send_message.py:31
+msgid "Failed to send"
+msgstr ""
+
+#: apps/utils/send_msg/send_message.py:35
+msgid "SMS sent successfully"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:24
+msgid "The name format is not correct,You can't use '.','*','#','?'"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:32
+msgid "Name is not legal, there is sensitive information"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:44
+msgid "custom domain"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:48
+msgid ""
+"The domain format is not correct,Only use Numbers, letters, and at least "
+"4 characters"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:64
+#: apps/utils/validation/str_format.py:78
+msgid "The email format is not correct"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:85
+msgid "The url format is not correct"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:97
+msgid ""
+"Password at least 8 characters! And at least contain Numbers, letters, "
+"special characters of two kinds"
+msgstr ""
+
+#: apps/utils/validation/str_format.py:109
+msgid "The password is too simple, can not use continuous characters!"
+msgstr ""
+
+#: apps/utils/verify/msg_verify_code.py:70
+msgid "Verification code"
+msgstr ""
+
+#: apps/utils/verify/msg_verify_code.py:80
+msgid "Has been sent. If not, please check spam"
+msgstr ""
+
+#: apps/utils/verify/msg_verify_code.py:87
+msgid ""
+"[{}] Your verification code is: {}. If you do not send it, please ignore "
+"it. Please do not tell the verification code to others"
+msgstr ""
+
+#: apps/utils/verify/msg_verify_code.py:114
+msgid "Your verification code is"
+msgstr ""
+
+#: apps/utils/verify/msg_verify_code.py:115
+msgid ""
+"If you do not send it, please ignore it.Please do not tell the "
+"verification code to others"
+msgstr ""
+

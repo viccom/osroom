@@ -1,0 +1,282 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("文本")}}-{% endblock %}
+{% block content %}
+<data id="category" content="{{data.category}}"></data>
+<data id="page" content="{{data.page}}"></data>
+<data id="sort" content="{{data.sort}}"></data>
+<data id="keyword" content="{{data.keyword}}"></data>
+<data id="cid" content="{{data.cid}}"></data>
+<div id="app" >
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel">
+                <header class="panel-heading">
+                    <i class="fa fa-file-text-o"></i>
+                    <strong>
+                        {{_("文本")}}(<span class="osr-color-success">{{_("结果")}}{[medias.data_total]}</span>)
+                    </strong>
+                </header>
+                <div class="panel-body table-responsive">
+                    <div class="box-tools form-inline">
+                        <div class="input-group pull-left">
+                            <select id="status" name="status"  class="form-control osr-form-control input-sm" @change="switch_category($event.target.value)">
+                               <option v-if="ct._id==curren_category" v-for="ct in media_categorys" :value="ct._id+'___'+ct.name" selected>
+                                    {[ct.name]}
+                                </option>
+
+                               <option v-if="curren_category" value="___全部" >{{_("全部")}}</option>
+                               <option v-else value="___全部" selected>{{_("全部")}}</option>
+                               <option v-if="curren_category !='default'" value="default___默认" >{{_("默认")}}</option>
+                               <option v-else  value="default___默认" selected>{{_("默认")}}</option>
+
+                                <option v-if="ct._id!=curren_category" v-for="ct in media_categorys" :value="ct._id+'___'+ct.name" >
+                                    {[ct.name]}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="input-group pull-right">
+                            <input v-on:keypress="get_media(1,keyword)" type="text" v-model="keyword" class="form-control osr-input input-sm" style="width: 150px;" placeholder="{{_('搜索')}}">
+                            <div class="btn-group">
+                                <button v-on:click="get_media(1,keyword)" class="btn btn-sm btn-default osr-btn">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="btn-group-sm">
+                       <a v-bind:href="'/osr-admin/category?type='+media_type+'&fp='+page" class="btn osr-btn btn-info">
+                           <i class="fa fa-cog"></i>  {{_("分类设置")}}
+                       </a>
+
+                      <button v-on:click="get_media()" id="refresh-btn" type="button"
+                              class="btn-sm btn osr-btn btn-default">
+                           <i class="fa fa-refresh"></i>
+                      </button>
+
+                      <button v-on:click="get_media(page, keyword, 'time')"  type="button"
+                              class="btn-sm btn osr-btn btn-success">
+                           {{_("时间排序")}}<i class="fa fa-sort"></i>
+                      </button>
+                      <a v-bind:href="'/osr-admin/media/text-edit?cid='+curren_category" type="button" class="btn-sm btn osr-btn btn-info">
+                          <i class="fa fa-plus"></i> {{_("添加")}}
+                      </a>
+
+                      <button v-on:click="warning_modal(null, 'del_media')" id="delete-btn" type="button"
+                              class="btn-sm btn osr-btn btn-danger">
+                           <i class="fa fa-trash"></i>{{_("删除")}}
+                      </button>
+                    </div>
+                    
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                              <th >
+                                <div class="checkbox checkbox-success">
+                                  <input id="check_all" v-on:click="osr_check_all(medias.datas, checkAll, set)" type="checkbox"
+                                        v-model="checkAll" unchecked>
+                                  <label for="check_all"></label>
+                                </div>
+                              </th>
+                              <th>{{_("名称")}}</th>
+                              <th>{{_("标题")}}</th>
+                              <th>{{_("链接")}}</th>
+                              <th>{{_("文本内容")}}</th>
+                              <th>{{_("创建时间")}}</th>
+                              <th>{{_("操作")}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="media in medias.datas">
+                              <td width="50px">
+                                  <div class="checkbox checkbox-success">
+                                       <input :id="media._id" type="checkbox"  v-bind:value="media._id" unchecked>
+                                       <label :for="media._id"></label>
+                                  </div>
+
+                              </td>
+                           <td width="150px">
+                                 {[media.name]}
+                            </td>
+                            <td >
+                                <span v-if="media.title.length>15" :id="'title'+media._id" data-toggle="tooltip" :title="media.title">
+                                    {[media.title.slice(0,15)]}...
+                                </span>
+                                <span v-else >{[media.title]}</span>
+                            </td>
+                            <td>
+                                <span v-if="media.link.length>15" class="text-secondary"
+                                v-on:mouseover="osr_popover('link'+media._id, media.link, 'open');"
+                               v-on:mouseout="osr_popover('link'+media._id, media.link, 'close');" :id="'link'+media._id">
+                                    {[media.link.slice(7,15)]}...
+                                </span>
+                                <span v-else >{[media.link]}</span>
+                            </td>
+                            <td width="150px">
+                                <span>
+                                    {[media.text.slice(0,10)]}...
+                                    <a v-bind:href="'/osr-admin/media/text-edit?cid='+curren_category+'&id='+media._id+'&fp='+page">
+                                        {{_("查看")}}
+                                    </a>
+                                </span>
+                            </td>
+                            <td width="150px">{[media.time | formatDate]}</td>
+                            <td width="150px">
+                                <a v-bind:href="'/osr-admin/media/text-edit?cid='+curren_category+'&id='+media._id+'&fp='+page" class="btn-sm btn osr-btn btn-info">
+                                    <span class="fa fa-pencil-square-o"></span> {{_("详情|编辑")}}
+                                </a>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% include 'media/_paging.html' %}
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+          media_type:"text",
+          medias:[],
+          page:1,
+          media_view:{},
+          media_edit:{},
+          media_categorys:[],
+          curren_category:"",
+          checkAll:false, set:false,
+          keyword:"",
+          pages:{},
+          page:1,
+          sort:""
+      },
+      filters: {
+            formatDate: function (time) {
+              return formatDate(time, "yyyy-MM-dd hh:mm");
+            }
+      }
+    })
+
+    //加载完页面立即执行
+    $(document).ready(function(){
+
+        var cid = $("#cid").attr("content");
+        vue.curren_category = cid;
+        get_category();
+        var page = $("#page").attr("content");
+        vue.page = page?page:vue.page;
+        var sort = $("#sort").attr("content");
+        vue.sort = sort?sort:vue.sort;
+        var keyword = $("#keyword").attr("content");
+        vue.keyword = keyword?keyword:vue.keyword;
+
+        get_media(vue.page, vue.keyword)
+    });
+
+    //获取媒体数据
+    function get_media(page, keyword, sort_field){
+        vue.page = page;
+        vue.keyword = keyword;
+
+        var sort = sorting(sort_field);
+        var d = {
+            ctype:vue.media_type,
+            category_id:vue.curren_category,
+            keyword:vue.keyword,
+            page:vue.page,
+            sort:JSON.stringify(sort)
+        }
+
+        var result = osrHttp("GET","/api/admin/upload/media-file",d,args={not_prompt:true});
+        result.then(function (r) {
+
+            vue.medias = r.data.medias;
+            vue.checkAll = false;
+            osr_check_all(vue.medias.datas, vue.checkAll, vue.set);
+            vue.pages = paging(page_total=vue.medias.page_total,
+             current_page=vue.medias.current_page);
+        });
+        var url = window.location.pathname+"?page="+page+"&cid="+vue.curren_category+"&sort="+vue.sort;
+        if(vue.keyword){
+            url = url + "&keyword="+vue.keyword;
+        }
+        history_state(title=null,url=url);
+
+    }
+
+    //获取分类
+    function get_category(){
+
+        var result = osrHttp("GET","/api/admin/content/category",{type:vue.media_type},args={not_prompt:true});
+        result.then(function (r) {
+            vue.media_categorys = r.data.categorys;
+        });
+    }
+
+    //全选
+    function my_check_all(){
+        osr_check_all(vue.medias.datas, vue.checkAll, vue.set);
+        if(vue.checkAll){
+            $("#check-btn-text").text("{{_('取消全选')}}");
+        }else{
+            $("#check-btn-text").text("{{_('全选')}}");
+        }
+        vue.checkAll = !vue.checkAll;
+
+    }
+
+    //切换分类
+    function switch_category(value) {
+        vue.curren_category = value.split("___")[0];
+        get_media(1,'');
+    }
+
+    //删除媒体数据
+    function del_media(){
+        var ids = osr_get_checked_id();
+        if(ids.length){
+            ids = JSON.stringify(ids);
+            var d = {
+                ids:ids
+            }
+            var result = osrHttp("DELETE","/api/admin/upload/media-file", d);
+            result.then(function (r) {
+                if(r.data.msg_type="s"){
+                    get_media();
+                }
+            });
+
+        }else{
+            alert_msg({msg:"请选择要删除的项", msg_type:"w"});
+        }
+    }
+
+    function sorting(sort_field){
+        // 反转排序
+        if(sort_field=="time"){
+            if(vue.sort == "time-desc"){
+                vue.sort = "time-asc";
+            }else{
+                vue.sort = "time-desc";
+            }
+        }
+
+        //排序参数
+        if(vue.sort=="time-desc"){
+            sort = [{"time":-1}];
+
+        }else if(vue.sort=="time-asc"){
+            sort = [{"time":1}];
+
+        }
+        return sort;
+    }
+
+</script>
+
+{% endblock %}

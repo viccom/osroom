@@ -1,0 +1,114 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("服务器编辑")}}-{% endblock %}
+{% block content %}
+
+<data id="ip" content="{{data.ip}}" hidden></data>
+<div id="app" >
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li><a href="/osr-admin/setting/host"><i class="fa fa-server"></i> {{_("服务器管理")}}</a></li>
+                <li class="active">{{_("服务器编辑")}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row osr-adm-edit-page">
+
+        <div class="col-md-12 osr-col-xs-12">
+
+            <section class="panel">
+              <header class="panel-heading">
+                <span><i class="fa fa-linux"></i>  {{_("编辑")}}: {{data.ip}}</span>
+              </header>
+              <div class="panel-body">
+                      <div class="form-group">
+                        <label for="username">{{_("用户名")}}</label>
+                        <input v-model="username" type="text" class="form-control osr-input" id="username" minlength="1"
+                               placeholder="{{_('主机用户名')}}" required/>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">{{_("密码")}}</label>
+                        <input v-model="password" type="password" class="form-control osr-input" id="password" minlength="1"
+                           placeholder="{{_('主机密码')}}" required/>
+                      </div>
+                      <div class="form-group">
+                        <label for="port">{{_("主机端口")}}({{_("默认")}}22)</label>
+                        <input v-model="port" type="text" class="form-control osr-input" id="port" placeholder="{{_('端口')}}">
+                      </div>
+                      <div class="form-group">
+                        <label for="port">{{_("命令(注释#开头)")}}</label>
+                        <textarea v-model="cmd" style="height:200px;" class="form-control osr-input" id="cmd" placeholder="{{_('保存一个需要常用的Linux shell 命令')}}"></textarea>
+                      </div>
+                      <button v-on:click="save_host()" class="btn osr-btn btn-info" >
+                       {{_("保存")}}
+                      </button>
+                      <button v-on:click="test_connect()" class="btn osr-btn btn-success" >
+                        {{_("测试连接")}}
+                      </button>
+              </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data: {
+        username:'',
+        password:'',
+        cmd: '',
+        port: 22,
+        host_ip:""
+      }
+    })
+    // 页面一加载完就自动执行
+    $(document).ready(function(){
+
+        get_host();
+    });
+
+    function get_host(){
+
+
+        var ip = $("#ip").attr("content");
+        vue.host_ip = ip;
+        var d = {
+            host_ip:ip
+        }
+
+        var result = osrHttp("GET","/api/admin/setting/sys/host",d, args={not_prompt:true});
+       result.then(function (r) {
+             vue.username = r.data.host.host_info.username;
+            vue.password = r.data.host.host_info.password;
+            vue.port = r.data.host.host_info.port;
+            vue.cmd = r.data.host.cmd;
+        });
+    }
+
+   function save_host(){
+        var data = {
+            username:vue.username,
+            password:vue.password,
+            cmd:vue.cmd,
+            host_ip:vue.host_ip,
+            host_port:vue.port
+
+        }
+        osrHttp("PUT","/api/admin/setting/sys/host", data);
+   }
+
+
+   function test_connect(){
+        d = {
+            host_ip:vue.host_ip
+        }
+        osrHttp("PUT","/api/admin/setting/sys/host/connection-test", d);
+    }
+
+</script>
+
+{% endblock %}

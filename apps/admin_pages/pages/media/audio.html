@@ -1,0 +1,140 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("音频库")}}-{% endblock %}
+{% block content %}
+<data id="cid" content="{{data.cid}}"></data>
+<div id="app" >
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel">
+                <header class="panel-heading">
+                    <i class="fa fa-volume-up"></i>
+                    <strong>
+                        {{_("音频库")}}(<span class="osr-color-success">{{_("结果")}}{[medias.data_total]}</span>)
+                    </strong>
+                </header>
+                <div class="panel-body table-responsive">
+                    {% include 'media/_bar.html' %}
+                     <!-- 上传-->
+                    <div id="upload-html" hidden>
+                        {% include 'module/upload.html' %}
+                    </div>
+                    <!-- //上传-->
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                              <th >
+                                <div class="checkbox checkbox-success">
+                                  <input id="check_all" v-on:click="osr_check_all(medias.datas, checkAll, set)" type="checkbox"
+                                        v-model="checkAll" unchecked>
+                                  <label for="check_all"></label>
+                                </div>
+                              </th>
+                              <th>{{_("名称")}}</th>
+                              <th>{{_("标题")}}</th>
+                              <th>{{_("文本内容")}}</th>
+                              <th>{{_("上传时间")}}</th>
+                              <th>{{_("操作")}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="media in medias.datas">
+                                <td width="50px">
+                                  <div class="checkbox checkbox-success">
+                                       <input :id="media._id" type="checkbox"  v-bind:value="media._id" unchecked>
+                                       <label :for="media._id"></label>
+                                  </div>
+
+                                </td>
+
+                                <td>
+                                    <span>{[media.name]}</span>
+                                </td>
+                                <td >
+                                    <span>{[media.title]}</span>
+                                </td>
+                                <td>
+                                    <span v-if="media.text"  data-toggle="tooltip" :title="media.text">
+                                        {[media.text.slice(0,20)]}...
+                                    </span>
+                                    <span v-else>{[media.text]}</span>
+                                </td>
+                                <td>{[media.time | formatDate]}</td>
+                                <td>
+                                    <button v-on:click="play(media)" class="btn-sm btn osr-btn btn-success">
+                                        <i class="fa fa-play-circle-o" > {{_("播放")}}</i>
+                                    </button>
+                                    <a :href="'/osr-admin/media/audio-edit?cid='+curren_category+'&id='+media._id+'&fp='+page" class="btn-sm btn osr-btn btn-info">
+                                        <span class="fa fa-pencil-square-o"></span> {{_("详情|编辑")}}
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             {% include 'media/_paging.html' %}
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+          media_type:"audio",
+          medias:[],
+          page:1,
+          media_view:{},
+          media_edit:{},
+          media_categorys:[],
+          curren_category:"",
+          start_upload:false,
+          checkAll:false, set:false,
+          keyword:"",
+          paly_url:"",
+          pages:{}
+      },
+      filters: {
+            formatDate: function (time) {
+              return irrformatDate(time, "yyyy-MM-dd hh:mm");
+            }
+      }
+    })
+
+    //音频播放
+    function play(media){
+        vue.paly_url = media.url;
+    }
+
+    //文件上传配置
+    function uploader_conf(data){
+
+        var conf = {
+            pick: {
+                id: '#filePicker',
+                label: '{{_("点击选择音频")}}'
+            },
+            formData:data,
+            fileVal: "upfile",
+            dnd: '#dndArea',
+            paste: '#uploader',
+            swf: '../../dist/Uploader.swf',
+            chunked: false,
+            chunkSize: 512 * 1024,
+            server: "/api/admin/upload/media-file",
+            // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
+            disableGlobalDnd: true,
+            fileNumLimit: 100,
+            fileSizeLimit:500 * 1024 * 1024,    // 500 M
+            fileSingleSizeLimit:100 * 1024 * 1024    // 100 M
+        }
+        return conf;
+    }
+
+</script>
+{% include 'media/_script.html' %}
+{% endblock %}

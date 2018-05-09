@@ -1,0 +1,85 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("仪表盘")}}-{% endblock %}
+{% block content %}
+<div id="app">
+    <div class="row" >
+
+        <div class="col-md-12">
+            <div class="alert alert-info osr-alert osr-alert-secondary osr-bg-color-secondary">
+             <button data-dismiss="alert" class="close close-sm" type="button">
+                 <i class="fa fa-times"></i>
+             </button>
+                <h4>{{_("欢迎使用OSROOM")}}</h4>
+              <span>{{_("版本")}}:{{g.site_global.site_config.sys_version}}</span>&nbsp;&nbsp;
+              <a href="https://github.com/osroom/osroom" target="_blank">
+                  <i class="fa fa-github"></i>
+                  {{_("查看最新版本")}}
+              </a>
+            </div>
+        </div>
+
+    </div>
+
+    {% include '_index_chd1.html' %}
+    {% include '_index_chd2.html' %}
+    {% include '_index_chd3.html' %}
+    <div id="more" class="row text-center" >
+        <div class="btn-group ">
+            <button class="btn osr-btn btn-success" onclick="get_inform()">
+                {{_("查看更多")}}
+            </button>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+         datas:{user:{},comment:{},post:{},inform:{},plugin:{},message:{},media:{}}
+
+      },
+      filters: {
+            formatDate: function (time) {
+              return formatDate(time, "yyyy-MM-dd hh:mm:ss");
+            }
+      }
+    })
+
+    // 加载完页面执行
+    $(document).ready(function(){
+        get_datas();
+    })
+
+    function get_datas(){
+        var keys = ["post", "comment", "user", "media", "plugin", "message"];
+        d = {
+            project:JSON.stringify(keys)
+        }
+
+        var r = osrHttp("GET","/api/admin/report/basic", d);
+        r.then(function (result) {
+            vue.datas = result.data;
+            alert_msg({msg:"{{_('数据有缓存延迟')}}", msg_type:"s"});
+        })
+
+    }
+
+    function get_inform(){
+        $("#more").text("{{_('加载中')}}...");
+        d = {
+            project:JSON.stringify(["inform"])
+        }
+        var r = osrHttp("GET","/api/admin/report/basic", d);
+        r.then(function (result) {
+            vue.$set(vue.datas, "inform", result.data.inform);
+            $("#more").hide();
+        })
+    }
+
+
+</script>
+{% endblock %}

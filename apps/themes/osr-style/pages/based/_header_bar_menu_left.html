@@ -1,0 +1,55 @@
+<div class="osr-navbar-left navbar-left hidden-xs">
+    <a href="/" class="osr-logo pull-left" title='{{_("首页")}}'>
+        {% if g.site_global.site_config.PC_LOGO_DISPLAY == "logo" %}
+            <img src="{{g.site_global.site_config.LOGO_IMG_URL}}" alt="Logo"/>
+        {% elif g.site_global.site_config.PC_LOGO_DISPLAY == "name" %}
+            {{g.site_global.site_config.APP_NAME}}
+        {% else %}
+            <img src="{{g.site_global.site_config.LOGO_IMG_URL}}" alt="Logo"/>
+            {{g.site_global.site_config.APP_NAME}}
+        {% endif %}
+    </a>
+
+    <ul id="navbar_left" class="nav navbar-nav">
+        <li class="user-menu dropdown">
+            <a class="lv1-a" href="/">
+                {{_("发现")}}
+            </a>
+        </li>
+
+        <li class="user-menu dropdown">
+            <a class="lv1-a" href="/photo">
+                {{_("摄影")}}
+            </a>
+
+        </li>
+
+        <li class="user-menu dropdown">
+            <a class="osr-pointer lv1-a dropdown-toggle" data-toggle="dropdown">
+                {{_("关于")}}
+                <i class="caret"></i>
+            </a>
+
+            <ul id="account-menu" class="dropdown-menu dropdown-custom dropdown-menu-right">
+                <li>
+                    <a href="/about-us">
+                        {{_("关于我们")}}
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        {{_("联系我们")}}
+                    </a>
+                </li>
+           </ul>
+        </li>
+        <li class="user-menu dropdown">
+            <a class="lv1-a" href="http://www.osroom.com/support" target="_blank">
+                {{_("支持我们")}}
+            </a>
+
+        </li>
+    </ul>
+
+
+</div>

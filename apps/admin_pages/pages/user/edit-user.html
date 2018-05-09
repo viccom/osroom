@@ -1,0 +1,111 @@
+{% extends "based/based.html" %}
+{% block title %}{{_("编辑用户信息")}}-{% endblock %}
+{% block content %}
+
+<data id="user_id" content="{{data.id}}" hidden></data>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="breadcrumb">
+            <li><a href="/osr-admin/user?status={{data.fs}}&page={{data.fp}}"><i class="fa fa-users"></i> {{_("用户管理")}}</a></li>
+            <li class="active">{{_("编辑")}}</li>
+        </ul>
+    </div>
+</div>
+<div id="app" class="row osr-adm-edit-page">
+    <div class="col-md-12 osr-col-xs-12">
+        <section class="panel">
+          <header class="panel-heading">
+             <i class="fa fa-user-o"></i> 编辑
+          </header>
+          <div class="panel-body">
+              <div>
+                  <div class="form-group">
+                      <label>{{_("用户名")}}</label>&nbsp;{[user.username]}
+                  </div>
+                  <div class="form-group">
+                      <label>{{_("电子邮箱")}}</label>&nbsp;{[user.email]}
+                  </div>
+                  <div v-if="user.mphone_num" class="form-group">
+                      <label>{{_("手机号码")}}</label>&nbsp;{[user.mphone_num.slice(0,3)]}****{[user.mphone_num.slice(-5,-1)]}
+                  </div>
+
+                  <div class="form-group form-inline">
+                    <label>{{_("用户角色")}}</label>
+                      <select id="role" name="role"  class="form-control osr-form-control osr-form-control input-sm m-b-10">
+                         <option v-if="role._id===user.role_id" selected = "selected" v-for="role in roles.datas" v-bind:value =role._id>{[role.name]}</option>
+                         <option v-if="role._id!==user.role_id" v-for="role in roles.datas" v-bind:value =role._id>{[role.name]}</option>
+                    </select>
+                    </div>
+
+                  <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                           <input v-if="user.active" id="active" class="form-check-input" type="checkbox" value="on_site" checked>
+                           <input v-else id="active" class="form-check-input" type="checkbox" value="on_site" unchecked>
+                          <label for="active" class="form-check-label"></label>
+                          {{_("激活")}}
+                      </div>
+                  </div>
+
+                  <button v-on:click="save()" class="btn osr-btn btn-info" >
+                   {{_("保存")}}
+                </button>
+
+              </div>
+          </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{roles:"",
+            user:"",
+            role_id:"",
+            active:"",
+            purl:"/api/admin/user"
+            }
+    })
+
+    // 页面一加载完就自动执行
+    $(document).ready(function(){
+
+      var user_id = $("#user_id").attr("content");
+      if (user_id){
+          //获取role的信息
+          vue.purl = "/api/admin/user";
+          var d = {"id":user_id};
+
+          var result = osrHttp("GET","/api/admin/user", d,args={not_prompt:true});
+          result.then(function (r) {
+                vue.user = r.data.user;
+          });
+      }
+      //获取权重数据,遍历添加到select标签
+      var result = osrHttp("GET","/api/admin/role",{},args={not_prompt:true});
+        result.then(function (r) {
+            vue.roles = r.data.roles;
+        });
+    });
+
+    //当点击提交按钮,提交用于填入的数据到api
+    function save(){
+        var role_id = $("#role").val();
+        var active = $("#active").is(":checked");
+        if (active){
+            active = 1;
+        }else{
+            active = 0;
+        }
+        var d = {
+                 id:vue.user._id,
+                 role_id:role_id,
+                 active:active
+                 };
+        // 提交数据
+        var result = osrHttp("PUT",vue.purl, d);
+    }
+
+</script>
+{% endblock %}

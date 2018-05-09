@@ -1,0 +1,1257 @@
+# Chinese (Simplified, China) translations for .
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the  project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  v1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-05-06 14:26+0800\n"
+"PO-Revision-Date: 2018-05-01 13:31+0800\n"
+"Last-Translator: AllenWoo\n"
+"Language: en_GB\n"
+"Language-Team: zh_Hans_CN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: apps/configs/sys_config.py:99
+msgid "405, The method is not allowed for the requested URL"
+msgstr "405, 请求方式不存在"
+
+#: apps/core/auth/jwt_auth.py:65
+msgid "The provided OSR-BearerToken has expired"
+msgstr "提供的OSR-BearerToken已过期"
+
+#: apps/core/auth/jwt_auth.py:68
+msgid "Invalid OSR-BearerToken"
+msgstr "OSR-BearerToken无效"
+
+#: apps/core/auth/jwt_auth.py:117 apps/core/auth/jwt_auth.py:143
+msgid "User authentication failed, user does not exist"
+msgstr "用户验证失败, 用户不存在"
+
+#: apps/core/auth/jwt_auth.py:123
+msgid ""
+"User authentication token expired or changed. Please log in again for "
+"access"
+msgstr "用户身份验证令牌已过期或已更改，请再次登录访问"
+
+#: apps/core/auth/jwt_auth.py:125
+msgid "Token is abnormal"
+msgstr "Token错误"
+
+#: apps/core/auth/jwt_auth.py:127 apps/core/auth/jwt_auth.py:159
+msgid "No user authentication token provided \"OSR-BearerToken\""
+msgstr "没有提供用户验证令牌\"OSR-BearerToken \""
+
+#: apps/core/auth/rest_token_auth.py:55
+msgid "Create up to 2 tokens"
+msgstr "最多创建2个Token"
+
+#: apps/core/auth/rest_token_auth.py:68
+msgid "Activate token successfully"
+msgstr "激活Token成功"
+
+#: apps/core/auth/rest_token_auth.py:70
+msgid "Activation token failed"
+msgstr "激活Token失败"
+
+#: apps/core/auth/rest_token_auth.py:85
+msgid "Disable token successfully"
+msgstr "显示Token成功"
+
+#: apps/core/auth/rest_token_auth.py:87
+msgid "Disable token failed"
+msgstr "显示Token失败"
+
+#: apps/core/auth/rest_token_auth.py:89
+msgid "Keep at least one active token"
+msgstr "至少保留一个激活的Token"
+
+#: apps/core/auth/rest_token_auth.py:102
+#: apps/modules/message/process/sys_message.py:58
+#: apps/modules/message/process/user_message.py:184
+#: apps/modules/permission/process/url_permission.py:190
+#: apps/modules/plug_in_manager/process/manager.py:118
+#: apps/modules/theme_setting/process/page.py:101
+#: apps/modules/theme_setting/process/themes.py:268
+msgid "Successfully deleted"
+msgstr "删除成功"
+
+#: apps/core/auth/rest_token_auth.py:104 apps/modules/audit/process/rules.py:70
+#: apps/modules/category/process/category.py:127
+#: apps/modules/comments/process/comment.py:233
+#: apps/modules/permission/process/url_permission.py:192
+msgid "Delete failed"
+msgstr "删除失败"
+
+#: apps/core/auth/rest_token_auth.py:106
+msgid "Delete failed, keep at least one token"
+msgstr "删除失败, 至少保留一个Token"
+
+#: apps/core/auth/rest_token_auth.py:140
+msgid "Invalid SecretToken for OSR-RestsToken"
+msgstr "OSR-RestsToken无效的SecretToken"
+
+#: apps/core/auth/rest_token_auth.py:152
+msgid ""
+"Token malformed, should be 'SecretToken <token>' or 'AccessToken <token>'"
+" and 'ClientId <client_id>'"
+msgstr "令牌格式错误, 应该是'SecretToken <token>'或'AccessToken <令牌>'和'ClientId <client_id>'"
+
+#: apps/core/auth/rest_token_auth.py:157 apps/core/flask/request.py:77
+msgid ""
+"Token is miss, unconventional web browsing requests please provide \"OSR-"
+"RestToken\", otherwise provide \"X-CSRFToken\""
+msgstr "令牌缺失, 非传统的网页浏览请求, 请提供\"OSR-RestToken\"，否则提供\"X-CSRFToken \""
+
+#: apps/core/auth/rest_token_auth.py:181
+msgid "Failed to get, please try again"
+msgstr "获取失败, 请重试"
+
+#: apps/core/auth/rest_token_auth.py:184
+msgid "The OSR-RestToken provided by the request header is not a SecretToken"
+msgstr "请求头提供的\"OSR-RestToken\"不是\"SecretToken\""
+
+#: apps/core/auth/rest_token_auth.py:200
+msgid "Invalid AccessToken or AccessToken has expired"
+msgstr "AccessToken错误或已过期"
+
+#: apps/core/auth/rest_token_auth.py:205
+msgid "Can not find the ClientId matching 'AccessToken'"
+msgstr "未能找到\"ClientId\"对应的\"AccessToken\""
+
+#: apps/core/auth/rest_token_auth.py:212
+msgid "SecretToken in OSr-RestToken is invalid"
+msgstr "请求头参数OSR-RestToken中的SecretToken无效"
+
+#: apps/core/auth/rest_token_auth.py:218
+msgid "AccessToken in OSr-RestToken is invalid"
+msgstr "请求头参数OSR-RestToken中的AccessToken无效"
+
+#: apps/core/auth/rest_token_auth.py:224
+msgid "OSR-RestToken validation failed."
+msgstr "OSR-RestToken验证失败"
+
+#: apps/core/flask/errorhandler.py:60
+msgid ""
+"Please add the 'OSR-RestToken' or 'X-CSRFToken' request header, the "
+"specific use please refer to the osroom system documentation: "
+"http://www.osroom.com"
+msgstr ""
+"请添加\"OSR-RestToken\"或\"X-CSRFToken\"到请求头部, "
+"具体使用请参考osroom系统文档：\"http://www.osroom.com\""
+
+#: apps/core/flask/errorhandler.py:67
+msgid "Not logged in"
+msgstr "未登录"
+
+#: apps/core/flask/errorhandler.py:94
+msgid "Permission denied"
+msgstr "没有权限"
+
+#: apps/core/flask/errorhandler.py:97
+msgid "The api does not exist or has been deprecated"
+msgstr "api不存在或已被弃用"
+
+#: apps/core/flask/errorhandler.py:100
+msgid "Server error"
+msgstr "服务器错误"
+
+#: apps/core/flask/login_manager.py:53
+msgid "Anonymous users can not access '{}', need to log in"
+msgstr "匿名用户不能请求'{}', 请先登录"
+
+#: apps/core/flask/login_manager.py:63
+msgid "Anonymous users can not access, you need to log in"
+msgstr "匿名用户不能访问, 请登录"
+
+#: apps/core/flask/permission.py:35 apps/core/flask/permission.py:58
+msgid "Permission denied,requires \"{}\" permission"
+msgstr "没有权限, 需要\"{}\"权限"
+
+#: apps/core/flask/reqparse.py:12
+msgid "The \"{}\" cannot be empty"
+msgstr "\"{}\"不能为空"
+
+#: apps/core/flask/reqparse.py:22
+msgid "The minimum length of \"{}\" is {} characters"
+msgstr "\"{}\"至少需要{}个字符"
+
+#: apps/core/flask/reqparse.py:33
+msgid "The maximum length of \"{}\" is {} characters"
+msgstr "\"{}\"最多{}个字符"
+
+#: apps/core/flask/reqparse.py:43
+msgid "\"{}\" needs to be of type {}"
+msgstr "\"{}\"只能是{}类型"
+
+#: apps/core/flask/reqparse.py:52
+msgid "The value of parameter \"{}\" can only be one of \"{}\""
+msgstr "\"{}\"的值只能是\"{}\"中的一个"
+
+#: apps/core/flask/reqparse.py:61
+msgid "The value of parameter \"{}\" can not be \"{}\""
+msgstr "\"{}\"的值不能时\"{}\"中的任意一个"
+
+#: apps/core/flask/reqparse.py:70
+msgid "Parameter {} can only be of the following type: \"{}\""
+msgstr "参数{}只能时以下类型:\"{}\""
+
+#: apps/core/flask/reqparse.py:81 apps/core/flask/reqparse.py:87
+msgid "The value of parameter \"{}\" is illegal"
+msgstr "参数\"{}\" 的值是非法的"
+
+#: apps/core/plug_in/manager.py:103
+msgid "Plugin startup file does not exist"
+msgstr "插件启动文件不存在"
+
+#: apps/core/plug_in/manager.py:221
+#: apps/modules/theme_setting/process/themes.py:173
+msgid "Configuration file \"conf.yaml\" but few parameters \"{}\""
+msgstr "插件配置文件\"conf.yaml\"缺少参数\"{}\""
+
+#: apps/core/plug_in/manager.py:224
+msgid "Missing startup file in plugin package"
+msgstr "插件包中缺少启动文件"
+
+#: apps/core/plug_in/manager.py:235
+msgid "Plugin installed successfully"
+msgstr "插件安装成功"
+
+#: apps/core/plug_in/manager.py:238
+msgid "Missing plugin main function(execution function)"
+msgstr "缺少插件主要功能（执行功能）"
+
+#: apps/modules/audit/process/rules.py:41
+msgid "rule"
+msgstr "规则"
+
+#: apps/modules/audit/process/rules.py:47
+msgid "The rule already exists"
+msgstr "规则已存在"
+
+#: apps/modules/audit/process/rules.py:53
+#: apps/modules/category/process/category.py:74
+#: apps/modules/user/process/role.py:45
+msgid "Add a success"
+msgstr "添加成功"
+
+#: apps/modules/audit/process/rules.py:67
+#: apps/modules/category/process/category.py:124
+msgid "Delete the success,{}"
+msgstr "删除成功:{}"
+
+#: apps/modules/category/process/category.py:23
+msgid "category id"
+msgstr "category id"
+
+#: apps/modules/category/process/category.py:43
+#: apps/modules/category/process/category.py:59
+msgid "category type"
+msgstr "category type"
+
+#: apps/modules/category/process/category.py:64
+#: apps/modules/category/process/category.py:86
+#: apps/modules/media/process/media.py:55
+#: apps/modules/media/process/media.py:213
+#: apps/modules/plug_in_manager/process/manager.py:52
+#: apps/modules/plug_in_manager/process/manager.py:88
+#: apps/modules/plug_in_manager/process/manager.py:112
+#: apps/modules/user/process/role.py:51 apps/modules/user/process/role.py:54
+#: apps/modules/user/process/role.py:95 apps/utils/validation/str_format.py:19
+msgid "name"
+msgstr "名称"
+
+#: apps/modules/category/process/category.py:71
+#: apps/modules/category/process/category.py:93
+msgid "Name already exists"
+msgstr "名称已存在"
+
+#: apps/modules/category/process/category.py:99
+#: apps/modules/media/process/media.py:293
+#: apps/modules/permission/process/url_permission.py:167
+#: apps/modules/plug_in_manager/process/setting.py:128
+#: apps/modules/setting/process/settings.py:248
+msgid "Modify the success"
+msgstr "修改成功"
+
+#: apps/modules/category/process/category.py:101
+#: apps/modules/permission/process/url_permission.py:169
+msgid "No modification"
+msgstr "未修改"
+
+#: apps/modules/comments/process/adm_comment.py:44
+msgid "Comment on alleged violations"
+msgstr "评论涉嫌违规"
+
+#: apps/modules/comments/process/adm_comment.py:70
+#: apps/modules/post/process/adm_post.py:74
+msgid "Submitted successfully, {}"
+msgstr "提交成功, {}"
+
+#: apps/modules/comments/process/adm_comment.py:73
+#: apps/modules/post/process/adm_post.py:77
+msgid "Submitted failed"
+msgstr "提交失败"
+
+#: apps/modules/comments/process/adm_comment.py:86
+#: apps/modules/post/process/adm_post.py:91
+msgid "Move to a permanently deleted area, {}"
+msgstr "移至永久删除的区域:{}"
+
+#: apps/modules/comments/process/adm_comment.py:89
+msgid "Does not match the data to be deleted"
+msgstr "与要删除的数据不符"
+
+#: apps/modules/comments/process/adm_comment.py:96
+#: apps/modules/post/process/post_process.py:228
+msgid "Removed from the database, {}"
+msgstr "从数据库删除:{}"
+
+#: apps/modules/comments/process/adm_comment.py:99
+#: apps/modules/comments/process/adm_comment.py:114
+#: apps/modules/post/process/adm_post.py:94
+#: apps/modules/post/process/adm_post.py:114
+#: apps/modules/post/process/post_process.py:231
+#: apps/modules/post/process/user_post.py:201
+msgid "No match to relevant data"
+msgstr "没有匹配到相关数据"
+
+#: apps/modules/comments/process/adm_comment.py:111
+#: apps/modules/post/process/adm_post.py:111
+msgid "Restore success, {}"
+msgstr "恢复成功, {}"
+
+#: apps/modules/comments/process/comment.py:38
+msgid "Comment feature is not open"
+msgstr "评论功能已关闭"
+
+#: apps/modules/comments/process/comment.py:49
+msgid "comment"
+msgstr "评论"
+
+#: apps/modules/comments/process/comment.py:65
+msgid "You comment too often and come back later"
+msgstr "发表评论太频繁, 请稍后再发"
+
+#: apps/modules/comments/process/comment.py:74
+msgid "Articles do not exist or have not been published"
+msgstr "文章不存在或尚未发布"
+
+#: apps/modules/comments/process/comment.py:82
+msgid "Your comment goal does not exist"
+msgstr "你的评论目标不存在"
+
+#: apps/modules/comments/process/comment.py:107
+msgid "Guest reviews feature is not open, please login account comments"
+msgstr "访客评论功能未开启，请登录后评论"
+
+#: apps/modules/comments/process/comment.py:165
+msgid "[Label:{}]Comment on alleged violations"
+msgstr "[标记：{}]评论内容不合法"
+
+#: apps/modules/comments/process/comment.py:193
+msgid "Successful reviews"
+msgstr "成功提交评论"
+
+#: apps/modules/comments/process/comment.py:231
+#: apps/modules/post/process/user_post.py:192
+msgid "Delete the success"
+msgstr "删除成功"
+
+#: apps/modules/comments/process/comment.py:265
+#: apps/modules/post/process/post.py:90
+msgid "Success"
+msgstr "成功"
+
+#: apps/modules/comments/process/comment.py:267
+#: apps/modules/post/process/post.py:92
+msgid "Failed"
+msgstr "失败"
+
+#: apps/modules/comments/process/comment_find.py:17
+#: apps/modules/post/process/post_process.py:39
+msgid "The \"pre\" must not exceed the maximum amount"
+msgstr "每页显示的数据条目不能超过设置的最高条数"
+
+#: apps/modules/content_inform/process/inform.py:38
+msgid "details"
+msgstr "详情"
+
+#: apps/modules/content_inform/process/inform.py:61
+msgid "Submitted successfully, thanks for your participation"
+msgstr "提交成功，感谢你的参与"
+
+#: apps/modules/content_inform/process/inform.py:64
+msgid "Submit failed, please try again"
+msgstr "提交失败，请重试"
+
+#: apps/modules/follow/process/user_follow.py:42
+msgid "Followed"
+msgstr "已关注"
+
+#: apps/modules/follow/process/user_follow.py:45
+msgid "You can't follow yourself"
+msgstr "不能关注自己"
+
+#: apps/modules/follow/process/user_follow.py:48
+msgid "You are already following this user"
+msgstr "已关注过该用户"
+
+#: apps/modules/follow/process/user_follow.py:83
+msgid "Unfollow success"
+msgstr "取消关注成功"
+
+#: apps/modules/follow/process/user_follow.py:86
+msgid "Unfollow failed"
+msgstr "取消关注失败"
+
+#: apps/modules/global_data/process/global_data.py:46
+msgid "Get the current user information successfully"
+msgstr "获取当前用户信息成功"
+
+#: apps/modules/media/process/media.py:51
+#: apps/modules/media/process/media.py:155
+msgid "type"
+msgstr "类型"
+
+#: apps/modules/media/process/media.py:71
+#: apps/modules/media/process/media.py:262
+msgid "The type \"{}\" exists in the name \"{}\""
+msgstr "当前类型 \"{}\" 已存在名称 \"{}\""
+
+#: apps/modules/media/process/media.py:104
+msgid "{} uploaded successfully"
+msgstr "已成功上传{}"
+
+#: apps/modules/media/process/media.py:109
+#: apps/modules/permission/process/url_permission.py:108
+#: apps/modules/theme_setting/process/page.py:68
+msgid "Added successfully"
+msgstr "添加成功"
+
+#: apps/modules/media/process/media.py:234
+msgid "Update picture successfully"
+msgstr "更新图片成功"
+
+#: apps/modules/media/process/media.py:236
+msgid "Failed to update"
+msgstr "更新失败"
+
+#: apps/modules/media/process/media.py:295
+msgid "The content is not modified"
+msgstr "内容未修改"
+
+#: apps/modules/media/process/media.py:320
+msgid "{} files have been deleted"
+msgstr "{} 文件已被删除"
+
+#: apps/modules/media/process/media.py:322
+#: apps/modules/message/process/sys_message.py:60
+#: apps/modules/message/process/user_message.py:186
+#: apps/modules/plug_in_manager/process/manager.py:124
+#: apps/modules/setting/process/host_setting.py:59
+msgid "Failed to delete"
+msgstr "删除失败"
+
+#: apps/modules/message/process/send_msg.py:26
+#: apps/modules/post/process/user_post.py:56
+msgid "title"
+msgstr "标题"
+
+#: apps/modules/message/process/send_msg.py:27
+#: apps/modules/post/process/user_post.py:61
+#: apps/modules/post/process/user_post.py:70
+msgid "content"
+msgstr "内容"
+
+#: apps/modules/message/process/send_msg.py:28
+msgid "send type"
+msgstr "发送类型"
+
+#: apps/modules/message/process/send_msg.py:29
+msgid "user name"
+msgstr "用户名"
+
+#: apps/modules/message/process/send_msg.py:49
+msgid "Station news success"
+msgstr "站内通知成功"
+
+#: apps/modules/message/process/send_msg.py:51
+msgid "No relevant user"
+msgstr "没有相关用户"
+
+#: apps/modules/message/process/send_msg.py:64
+msgid "Mail message is being sent"
+msgstr "邮件通知已发送"
+
+#: apps/modules/message/process/send_msg.py:66
+msgid "There is no such email address user"
+msgstr "没有找到用户邮件地址"
+
+#: apps/modules/message/process/send_msg.py:79
+msgid "SMS sent"
+msgstr "短信发送"
+
+#: apps/modules/message/process/send_msg.py:81
+msgid "No user mobile phone number was obtained"
+msgstr "没有获得用户手机号码"
+
+#: apps/modules/message/process/user_message.py:160
+#: apps/modules/user/process/profile.py:94
+msgid "Update succeed"
+msgstr "更新成功"
+
+#: apps/modules/message/process/user_message.py:162
+#: apps/modules/setting/process/host_setting.py:46
+#: apps/modules/user/process/adm_user.py:121
+#: apps/modules/user/process/profile.py:96
+#: apps/modules/user/process/profile.py:148
+#: apps/modules/user/process/role.py:124 apps/modules/user/process/role.py:130
+msgid "No changes"
+msgstr "未修改"
+
+#: apps/modules/permission/process/url_permission.py:36
+msgid "No relevant data found"
+msgstr "没有相关数据"
+
+#: apps/modules/permission/process/url_permission.py:93
+#: apps/modules/theme_setting/process/page.py:32
+msgid "routing"
+msgstr "路由"
+
+#: apps/modules/permission/process/url_permission.py:98
+msgid "Routing already exists"
+msgstr "路由已存在"
+
+#: apps/modules/permission/process/url_permission.py:111
+msgid "Add failed"
+msgstr "添加失败"
+
+#: apps/modules/permission/process/url_permission.py:128
+msgid "method"
+msgstr "请求方式"
+
+#: apps/modules/permission/process/url_permission.py:142
+#: apps/modules/user/process/role.py:99
+msgid ""
+"The current user permissions are lower than the permissions you want to "
+"modify, without permission to modify"
+msgstr "当前用户权限低于你要修改的权限，无权修改"
+
+#: apps/modules/plug_in_manager/process/manager.py:61
+msgid "Plugin[{}] with similar functionality is in use, please stop it first"
+msgstr "相同类型的插件[{}]正在使用，请先停止它"
+
+#: apps/modules/plug_in_manager/process/manager.py:73
+msgid "Plug-in activated successfully"
+msgstr "插件激活成功"
+
+#: apps/modules/plug_in_manager/process/manager.py:75
+msgid "Plug-in is already activated"
+msgstr "插件已激活"
+
+#: apps/modules/plug_in_manager/process/manager.py:77
+msgid "Plug-in activation failed"
+msgstr "插件激活失败"
+
+#: apps/modules/plug_in_manager/process/manager.py:98
+msgid "Plug-in stopped successfully"
+msgstr "插件停用成功"
+
+#: apps/modules/plug_in_manager/process/manager.py:100
+msgid "Plug-in failed to stop"
+msgstr "成绩停用失败"
+
+#: apps/modules/plug_in_manager/process/manager.py:139
+#: apps/modules/theme_setting/process/themes.py:99
+msgid "File format error, please upload zip archive"
+msgstr "文件格式错误，请上传zip压缩包"
+
+#: apps/modules/plug_in_manager/process/manager.py:150
+msgid "The same name plugin already exists"
+msgstr "相同名称的插件已存在"
+
+#: apps/modules/plug_in_manager/process/manager.py:168
+#: apps/modules/theme_setting/process/themes.py:108
+#: apps/modules/theme_setting/process/themes.py:123
+msgid "The same name theme already exists"
+msgstr "相同名称的主题已存在"
+
+#: apps/modules/plug_in_manager/process/setting.py:61
+#: apps/modules/setting/process/settings.py:123
+#: apps/modules/setting/process/settings.py:151
+msgid "There is no such data"
+msgstr "没有相关数据"
+
+#: apps/modules/plug_in_manager/process/setting.py:98
+#: apps/modules/plug_in_manager/process/setting.py:105
+#: apps/modules/plug_in_manager/process/setting.py:115
+#: apps/modules/setting/process/settings.py:188
+#: apps/modules/setting/process/settings.py:195
+#: apps/modules/setting/process/settings.py:205
+msgid "The format of the \"value\" errors, need a \"{}\" type"
+msgstr "“value”格式错误，需要一个“{}”类型"
+
+#: apps/modules/plug_in_manager/process/setting.py:111
+#: apps/modules/setting/process/settings.py:201
+msgid "There is no {}"
+msgstr "没有{}"
+
+#: apps/modules/plug_in_manager/process/setting.py:150
+msgid "Refreshed successfully"
+msgstr "刷新成功"
+
+#: apps/modules/plug_in_manager/process/setting.py:152
+msgid ""
+"Failed to refresh. Please check the previous plug-in page for error "
+"messages"
+msgstr "刷新失败，请查看插件的错误信息"
+
+#: apps/modules/plug_in_manager/process/setting.py:170
+msgid "There is no requirement file"
+msgstr "没有需求文件"
+
+#: apps/modules/plug_in_manager/process/setting.py:230
+msgid ""
+"Some host connections failed. Successfully connected host has installed "
+"requirements package in the background"
+msgstr "部分服务器连接失败，连接成功的服务器已在后台安装第三方需求包"
+
+#: apps/modules/plug_in_manager/process/setting.py:234
+msgid "Executed related installation commands in the background"
+msgstr "在后台执行相关需求命令"
+
+#: apps/modules/post/process/adm_post.py:70
+msgid "Post allegedly violated"
+msgstr "文章涉嫌违规"
+
+#: apps/modules/post/process/user_post.py:37
+msgid "Up to {} tags are used"
+msgstr "最多使用{}标签"
+
+#: apps/modules/post/process/user_post.py:43
+msgid "tag"
+msgstr "标签"
+
+#: apps/modules/post/process/user_post.py:173
+msgid "[Label:{}]Post allegedly violated"
+msgstr "[标记：{}]发布的内容不合法"
+
+#: apps/modules/post/process/user_post.py:176
+msgid "Issue success"
+msgstr "发布成功"
+
+#: apps/modules/post/process/user_post.py:178
+#: apps/modules/user/process/role.py:118
+msgid "Save success"
+msgstr "保存草稿成功"
+
+#: apps/modules/post/process/user_post.py:189
+msgid "Removed to recycle bin"
+msgstr "已移到回收站"
+
+#: apps/modules/post/process/user_post.py:198
+msgid "{},{}"
+msgstr ""
+
+#: apps/modules/post/process/user_post.py:216
+msgid "Restore success,{}"
+msgstr "恢复成功，{}"
+
+#: apps/modules/post/process/user_post.py:219
+msgid "Restore failed"
+msgstr "恢复失败"
+
+#: apps/modules/setting/process/get_file_log.py:29
+#: apps/modules/setting/process/host_setting.py:83
+msgid "Connection host[{}] failed,Check the host Settings"
+msgstr "连接服务器[{}]失败，请检查服务器设置"
+
+#: apps/modules/setting/process/get_file_log.py:69
+#: apps/modules/setting/process/host_setting.py:106
+msgid "There is no host {}"
+msgstr "没有服务器{}"
+
+#: apps/modules/setting/process/host_setting.py:30
+#: apps/modules/user/process/profile.py:108
+msgid "username"
+msgstr "用户名"
+
+#: apps/modules/setting/process/host_setting.py:30
+msgid "password"
+msgstr "密码"
+
+#: apps/modules/setting/process/host_setting.py:44
+msgid "The update is successful"
+msgstr "更新成功"
+
+#: apps/modules/setting/process/host_setting.py:56
+msgid "Successfully deleted {} host information"
+msgstr "成功删除{}服务器信息"
+
+#: apps/modules/setting/process/host_setting.py:78
+#: apps/modules/setting/process/host_setting.py:127
+msgid "[{}] {}"
+msgstr ""
+
+#: apps/modules/setting/process/host_setting.py:95
+msgid "[Warning]: \"sudo\" command go to the server"
+msgstr "【警告】”sudo”命令禁止使用，请直接到服务器终端使用"
+
+#: apps/modules/setting/process/host_setting.py:97
+msgid "[Warning]: \"rm\" command go to the server"
+msgstr "【警告】”rm”命令禁止在此使用，请直接到服务器终端使用"
+
+#: apps/modules/setting/process/host_setting.py:102
+msgid "Command executed {}"
+msgstr "命令已执行"
+
+#: apps/modules/setting/process/host_setting.py:131
+msgid "Connection host[{}] failed"
+msgstr "连接主机[{}]失败"
+
+#: apps/modules/setting/process/host_setting.py:135
+msgid "Successfully connecting server host"
+msgstr "成功连接服务器"
+
+#: apps/modules/setting/process/host_setting.py:137
+msgid "Host does not exist"
+msgstr "服务器不存在"
+
+#: apps/modules/setting/process/session_set.py:20
+msgid "Set up language success"
+msgstr "设置语言成功"
+
+#: apps/modules/setting/process/session_set.py:22
+msgid "Does not support this language"
+msgstr "不支持选择的语言"
+
+#: apps/modules/setting/process/settings.py:36
+msgid "Lack of parameter"
+msgstr "缺少参数"
+
+#: apps/modules/setting/process/settings.py:53
+#: apps/modules/setting/process/settings.py:59
+#: apps/modules/theme_setting/process/themes.py:210
+msgid "Switch success"
+msgstr "切换成功"
+
+#: apps/modules/setting/process/settings.py:144
+msgid "Root permission required"
+msgstr "需要ROOT权限"
+
+#: apps/modules/theme_setting/process/page.py:22
+msgid "file type"
+msgstr "文件类型"
+
+#: apps/modules/theme_setting/process/page.py:36
+#: apps/modules/theme_setting/process/page.py:46
+msgid "This route can not be used"
+msgstr "这个路由不能使用"
+
+#: apps/modules/theme_setting/process/page.py:53
+msgid "Routing existing"
+msgstr "路由已存在"
+
+#: apps/modules/theme_setting/process/page.py:89
+#: apps/modules/theme_setting/process/static_file.py:93
+msgid "File not found,'{}'"
+msgstr "文件未找到，”{}”"
+
+#: apps/modules/theme_setting/process/page.py:104
+msgid "This file can not be deleted"
+msgstr "该文件不能删除"
+
+#: apps/modules/theme_setting/process/static_file.py:116
+msgid "File does not exist can not be edited,'{}'"
+msgstr "文件不存在，不能编辑，“{}”"
+
+#: apps/modules/theme_setting/process/static_file.py:122
+msgid "Saved successfully"
+msgstr "保存成功"
+
+#: apps/modules/theme_setting/process/themes.py:31
+msgid "Get success"
+msgstr "获取成功"
+
+#: apps/modules/theme_setting/process/themes.py:34
+msgid "Readme file does not exist"
+msgstr "Readme文件不存在"
+
+#: apps/modules/theme_setting/process/themes.py:151
+msgid "Theme installed successfully"
+msgstr "主题安装成功"
+
+#: apps/modules/theme_setting/process/themes.py:177
+msgid ""
+"The theme name and theme directory name in the configuration are "
+"inconsistent.(\"{}\" compared with \"{}\")"
+msgstr "主题名称与主题文件夹名称不一致(“{}” 对比 “{}”)"
+
+#: apps/modules/theme_setting/process/themes.py:180
+msgid ""
+"The theme of the upload is incorrect, the configuration file(conf.yaml) "
+"does not exist"
+msgstr "上传的主题不正确，配置文件（conf.yaml）不存在"
+
+#: apps/modules/theme_setting/process/themes.py:193
+#: apps/modules/theme_setting/process/themes.py:226
+msgid "Theme does not exist"
+msgstr "主题不存在"
+
+#: apps/modules/theme_setting/process/themes.py:228
+msgid "The current use of the theme can not be deleted"
+msgstr "当前使用主题不能删除"
+
+#: apps/modules/theme_setting/process/themes.py:239
+msgid "Delete failed, at least keep a theme"
+msgstr "删除失败，至少保留一个主题"
+
+#: apps/modules/token/process/rest_token.py:26
+msgid "Created successfully"
+msgstr "创建成功"
+
+#: apps/modules/upload/process/upload_file.py:49
+msgid "Uploaded successfully"
+msgstr "上传成功"
+
+#: apps/modules/upload/process/upload_file.py:56
+#: apps/modules/user/process/avatar_upload.py:64
+msgid "Upload failed"
+msgstr "上传失败"
+
+#: apps/modules/upload/process/upload_file.py:63
+#: apps/modules/upload/process/upload_file.py:67
+msgid "Get file error"
+msgstr "获取文件出现错误"
+
+#: apps/modules/upload/process/upload_file.py:70
+msgid "No file submitted"
+msgstr "没有提交文件"
+
+#: apps/modules/user/apis/inspection_query.py:30
+msgid "This {} address has been registered"
+msgstr "{}地址已被注册"
+
+#: apps/modules/user/apis/inspection_query.py:33
+#: apps/modules/user/process/email.py:31
+msgid "This is the email address you currently use"
+msgstr "这是您目前使用的电子邮件地址"
+
+#: apps/modules/user/apis/inspection_query.py:36
+msgid "This {} can be used"
+msgstr "{}可以使用"
+
+#: apps/modules/user/apis/inspection_query.py:50
+#: apps/modules/user/apis/inspection_query.py:53
+msgid "The ID belongs to the current logged in user"
+msgstr "该ID属于当前登录的用户"
+
+#: apps/modules/user/apis/online.py:109 apps/modules/user/apis/online.py:116
+msgid "Successfully logged out"
+msgstr "成功注销登录"
+
+#: apps/modules/user/process/adm_user.py:22
+#: apps/modules/user/process/user_profile_process.py:32
+#: apps/modules/user/process/user_profile_process.py:61
+msgid "The specified user is not found"
+msgstr "未找到指定用户"
+
+#: apps/modules/user/process/adm_user.py:104
+#: apps/modules/user/process/profile.py:151
+msgid "Update success"
+msgstr "更新成功"
+
+#: apps/modules/user/process/adm_user.py:116
+msgid "No permission modification"
+msgstr "没有权限修改"
+
+#: apps/modules/user/process/adm_user.py:151
+msgid "Has recovered {} users, {} users can not operate"
+msgstr "已恢复{}个用户，还有{}个用户不能操作"
+
+#: apps/modules/user/process/adm_user.py:154
+msgid "Recycle user failed.May not have permission"
+msgstr "回收用户失败，没有权限"
+
+#: apps/modules/user/process/adm_user.py:159
+msgid "{} users have been deleted and {} users can not be deleted"
+msgstr "{}个用户已被删除，还有{}个用户删除失败"
+
+#: apps/modules/user/process/adm_user.py:162
+msgid "Failed to delete.May not have permission"
+msgstr "删除失败许没有权限删除"
+
+#: apps/modules/user/process/adm_user.py:189
+msgid "Restore the {} users,The other {} users have no power control"
+msgstr "已恢复{}个用户，其他无权操作"
+
+#: apps/modules/user/process/adm_user.py:192
+msgid "Restore the failure.May not have permission"
+msgstr "恢复失败，没有权限"
+
+#: apps/modules/user/process/adm_user.py:219
+msgid "{} user activation is successful, {} no permission to operate"
+msgstr "{}个用户激活成功，还有{}个用户无权操作"
+
+#: apps/modules/user/process/adm_user.py:222
+msgid "Activation failed.May not have permission"
+msgstr "激活失败，没有权限"
+
+#: apps/modules/user/process/avatar_upload.py:53
+msgid "Save failed"
+msgstr "保存失败"
+
+#: apps/modules/user/process/avatar_upload.py:62
+msgid "Save successfully"
+msgstr "保存成功"
+
+#: apps/modules/user/process/email.py:22
+msgid "email"
+msgstr "电子邮箱"
+
+#: apps/modules/user/process/email.py:27
+msgid "This E-mail address has been registered"
+msgstr "此电子邮箱已被注册"
+
+#: apps/modules/user/process/email.py:40
+msgid "Invalid verification code [currently bound]"
+msgstr "验证码错误（当前账号）"
+
+#: apps/modules/user/process/email.py:43
+msgid "Invalid verification code [ready to bind]"
+msgstr "验证码错误（准备绑定账号）"
+
+#: apps/modules/user/process/email.py:72
+msgid "Verification code error [currently bound]"
+msgstr "验证码错误（当前账号）"
+
+#: apps/modules/user/process/email.py:87
+msgid "Verification code error [ready to bind]"
+msgstr "验证码错误（准备绑定）"
+
+#: apps/modules/user/process/email.py:102
+msgid "Email is changed"
+msgstr "电子邮箱已修改"
+
+#: apps/modules/user/process/email.py:112
+msgid "Password mistake"
+msgstr "密码错误"
+
+#: apps/modules/user/process/online.py:13
+msgid "Sorry, temporarily unregistered function"
+msgstr "抱歉！注册功能暂时关闭"
+
+#: apps/modules/user/process/online.py:39
+msgid "remember_me requires an integer"
+msgstr "remember_me  需要时一个整数0 或 1"
+
+#: apps/modules/user/process/password.py:22
+#: apps/modules/user/process/password.py:89
+msgid "Now use the password mistake"
+msgstr "当前使用密码错误"
+
+#: apps/modules/user/process/password.py:25
+#: apps/modules/user/process/password.py:131
+msgid "Two password is not the same"
+msgstr "前后密码不一致"
+
+#: apps/modules/user/process/password.py:77
+msgid "Password change is successful, please login again"
+msgstr "密码修改成功，请重新登录"
+
+#: apps/modules/user/process/password.py:84
+msgid "Password change failed(unknown error)"
+msgstr "密码修改失败（未知错误）"
+
+#: apps/modules/user/process/password.py:105
+#: apps/modules/user/process/password.py:118
+msgid "Account does not exist"
+msgstr "账户不存在"
+
+#: apps/modules/user/process/password.py:122
+msgid "Email or SMS verification code error"
+msgstr "邮件或短信验证码错误"
+
+#: apps/modules/user/process/password.py:150
+msgid "Password reset notification"
+msgstr "密码重设通知"
+
+#: apps/modules/user/process/password.py:154
+#: apps/modules/user/process/sign_in.py:166
+#: apps/modules/user/process/sign_up.py:106
+#: apps/utils/verify/msg_verify_code.py:73
+msgid "End"
+msgstr "结束"
+
+#: apps/modules/user/process/password.py:161
+msgid "Password reset successfully.Please return to login page to login"
+msgstr "密码重设成功，请回到登录页面登录"
+
+#: apps/modules/user/process/password.py:164
+msgid "Reset password failed(unknown error)"
+msgstr "密码重设失败（未知错误）"
+
+#: apps/modules/user/process/profile.py:26
+msgid "Lack of parameters \"user_id\""
+msgstr "缺少参数“user_id”"
+
+#: apps/modules/user/process/profile.py:62
+msgid "The date of birth requires an 8-digit date,Such as '{}'"
+msgstr "出生日期需要8个数字，例如：“{}”"
+
+#: apps/modules/user/process/profile.py:67
+#: apps/modules/user/process/sign_in.py:227
+msgid "gender"
+msgstr "gender"
+
+#: apps/modules/user/process/profile.py:74
+msgid "Address format is not in conformity with the requirements"
+msgstr "地址格式不符合要求"
+
+#: apps/modules/user/process/profile.py:131
+msgid "The editor saves failure"
+msgstr "保存失败"
+
+#: apps/modules/user/process/profile.py:138
+#: apps/modules/user/process/sign_up.py:37
+msgid "Name has been used"
+msgstr "名称已被使用"
+
+#: apps/modules/user/process/profile.py:141
+msgid "Domain has been used"
+msgstr "域名已被使用"
+
+#: apps/modules/user/process/profile.py:143
+msgid "Personality custom domain cannot be modified"
+msgstr "自定义个性域名不能修改"
+
+#: apps/modules/user/process/role.py:21
+msgid "The specified role is not found"
+msgstr "未找到指定角色\t\t\t\t\t"
+
+#: apps/modules/user/process/role.py:59
+msgid ""
+"The current user permissions are lower than the permissions that you want"
+" to add, without permission to add"
+msgstr "当前用户权限低于您要添加的权限，无法添加权限"
+
+#: apps/modules/user/process/role.py:71 apps/modules/user/process/role.py:126
+msgid "Existing default role"
+msgstr "已存在默认角色"
+
+#: apps/modules/user/process/role.py:79 apps/modules/user/process/role.py:133
+msgid "Role name already exists"
+msgstr "角色名称已存在"
+
+#: apps/modules/user/process/role.py:158
+msgid "Delete the success, {} of the roles have users and cannot be deleted"
+msgstr "删除成功，还有{}个角色存在用户，无法删除"
+
+#: apps/modules/user/process/role.py:161
+msgid ""
+"{} role do not have permission to delete, {} of the roles have users and "
+"cannot be deleted"
+msgstr "{}角色没有权限删除，{}角色拥有用户且无法删除"
+
+#: apps/modules/user/process/sign_in.py:35
+#: apps/modules/user/process/sign_up.py:23
+msgid "Is logged in"
+msgstr "已登录"
+
+#: apps/modules/user/process/sign_in.py:51
+#: apps/modules/user/process/sign_in.py:106
+msgid "Account or password error"
+msgstr "账号或密码错误"
+
+#: apps/modules/user/process/sign_in.py:65
+#: apps/modules/user/process/sign_up.py:63
+#: apps/modules/user/process/sign_up.py:82
+msgid "Verification code error"
+msgstr "验证码错误"
+
+#: apps/modules/user/process/sign_in.py:85
+#: apps/modules/user/process/sign_in.py:205
+msgid "Sign in success"
+msgstr "登录成功"
+
+#: apps/modules/user/process/sign_in.py:92
+#: apps/modules/user/process/sign_in.py:209
+msgid "Account is inactive or frozen"
+msgstr "账号未激活或已冻结"
+
+#: apps/modules/user/process/sign_in.py:147
+msgid "Abnormal login"
+msgstr "异常登录"
+
+#: apps/modules/user/process/sign_in.py:157
+msgid ""
+"<b>Abnormal login</b><br> Your account <a>{}</a>, is logined in <span "
+"style='color:#483D8B'>{}</span> on {} [UTC Time].<br>"
+msgstr ""
+"<b>异常登录</ b> <br>您的帐户<a> {} </a>在UTC时间，在<span style ='color：＃483D8B'> {} "
+"</ span>]地区登录"
+
+#: apps/modules/user/process/sign_in.py:186
+msgid ""
+"No login processing plugin for this platform, please install the relevant"
+" plugin first"
+msgstr "当前平台没有登录处理插件，请先安装相关插件"
+
+#: apps/modules/user/process/sign_in.py:249
+#: apps/modules/user/process/sign_up.py:118
+msgid "Registered successfully"
+msgstr "注册成功"
+
+#: apps/modules/user/process/sign_in.py:253
+#: apps/modules/user/process/sign_up.py:122
+msgid "Data saved incorrectly, please try again"
+msgstr "数据保存不正确，请重试"
+
+#: apps/modules/user/process/sign_up.py:43
+msgid "The two passwords don't match"
+msgstr "前后密码不一致"
+
+#: apps/modules/user/process/sign_up.py:55
+msgid "This email has been registered in the site oh, please login directly."
+msgstr "此电子邮件已在本站注册，请直接登录"
+
+#: apps/modules/user/process/sign_up.py:73
+msgid "This number has been registered in the site oh, please login directly."
+msgstr "此手机号码已在本站注册，请直接登录。"
+
+#: apps/modules/user/process/sign_up.py:99
+msgid "Registration success notification"
+msgstr "注册成功通知"
+
+#: apps/modules/user/process/user.py:62
+msgid "Password is not a readable attribute"
+msgstr "密码不是可读属性"
+
+#: apps/modules/user/process/user.py:122
+msgid "Unknown"
+msgstr "未知"
+
+#: apps/modules/verification_code/process/send_code.py:35
+msgid "Email"
+msgstr "电子邮箱"
+
+#: apps/modules/verification_code/process/send_code.py:47
+#: apps/modules/verification_code/process/send_code.py:71
+msgid "This account is not registered on this platform"
+msgstr "此帐户未在此平台上注册"
+
+#: apps/modules/verification_code/process/send_code.py:58
+msgid "Telephone number"
+msgstr "手机号码"
+
+#: apps/modules/verification_code/process/send_code.py:109
+msgid ""
+"The system detects that your network is sending verification codes "
+"frequently. Please try again later!"
+msgstr "系统检测到您的网络正在频繁发送验证码。 请稍后再试！"
+
+#: apps/modules/verification_code/process/send_code.py:119
+msgid "Image verification code error, email not sent"
+msgstr "图片验证码错误，所以电子邮件未发送"
+
+#: apps/modules/verification_code/process/send_code.py:128
+msgid ""
+"The system detected that your operation is too frequent and you need to "
+"verify the picture verification code"
+msgstr "系统检测到您的操作过于频繁，您需要验证图片验证码"
+
+#: apps/plugins/aliyun_oss_plugin/upfile_cloud.py:104
+#: apps/plugins/qiniu_cloud_plugin/upfile_cloud.py:113
+msgid "Please configure the third-party file storage domain name"
+msgstr "请配置第三方文件存储域名"
+
+#: apps/plugins/geoip_plugin/main.py:27
+msgid "Local"
+msgstr "本地"
+
+#: apps/utils/pyssh/pyssh.py:42
+msgid "Please improve the host information"
+msgstr "请改善主机信息"
+
+#: apps/utils/send_msg/send_message.py:24
+msgid ""
+"There is no plug-in for sending SMS messages to mobile phones, please "
+"install the relevant plug-in"
+msgstr "没有用于向手机发送短信的插件，请安装相关插件"
+
+#: apps/utils/send_msg/send_message.py:31
+msgid "Failed to send"
+msgstr "发送失败"
+
+#: apps/utils/send_msg/send_message.py:35
+msgid "SMS sent successfully"
+msgstr "短信发送成功"
+
+#: apps/utils/validation/str_format.py:24
+msgid "The name format is not correct,You can't use '.','*','#','?'"
+msgstr "名称不合法，不能使用特殊字符'.','*','#','?'"
+
+#: apps/utils/validation/str_format.py:32
+msgid "Name is not legal, there is sensitive information"
+msgstr "名称不合法，有敏感信息"
+
+#: apps/utils/validation/str_format.py:44
+msgid "custom domain"
+msgstr "自定义域名"
+
+#: apps/utils/validation/str_format.py:48
+msgid ""
+"The domain format is not correct,Only use Numbers, letters, and at least "
+"4 characters"
+msgstr "自定义域格式不正确，只能使用数字，字母和至少4个字符"
+
+#: apps/utils/validation/str_format.py:64
+#: apps/utils/validation/str_format.py:78
+msgid "The email format is not correct"
+msgstr "电子邮件格式错误"
+
+#: apps/utils/validation/str_format.py:85
+msgid "The url format is not correct"
+msgstr "URL格式错误"
+
+#: apps/utils/validation/str_format.py:97
+msgid ""
+"Password at least 8 characters! And at least contain Numbers, letters, "
+"special characters of two kinds"
+msgstr "密码至少8个字符！ 至少包含数字，字母，特殊字符中的任意两种"
+
+#: apps/utils/validation/str_format.py:109
+msgid "The password is too simple, can not use continuous characters!"
+msgstr "密码太简单，不能使用连续字符！"
+
+#: apps/utils/verify/msg_verify_code.py:70
+msgid "Verification code"
+msgstr "验证码"
+
+#: apps/utils/verify/msg_verify_code.py:80
+msgid "Has been sent. If not, please check spam"
+msgstr "已发送，如果未收到，请检查垃圾邮件"
+
+#: apps/utils/verify/msg_verify_code.py:87
+msgid ""
+"[{}] Your verification code is: {}. If you do not send it, please ignore "
+"it. Please do not tell the verification code to others"
+msgstr "[{}] 您的验证码是：{}。 如果您没有发送，请忽略它。 请不要将验证码告诉他人哦！"
+
+#: apps/utils/verify/msg_verify_code.py:114
+msgid "Your verification code is"
+msgstr "您的验证码是"
+
+#: apps/utils/verify/msg_verify_code.py:115
+msgid ""
+"If you do not send it, please ignore it.Please do not tell the "
+"verification code to others"
+msgstr "如果您没有发送，请忽略它。不要将验证码告诉其他人！"
+

@@ -1,0 +1,49 @@
+{% extends "based/based_no_sidebar.html" %}
+{% block title %}{{data.name}}-{% endblock %}
+{% block content %}
+<data id="id" content="{{data.id}}"></data>
+<div id="app" class="row">
+    <div class="col-xs-12">
+        <div class="panel">
+            <header class="panel-heading">
+                <i class="fa fa-youtube-play"></i>
+                <strong>
+                    {{_("视频播放")}}
+                </strong>
+                <p class="osr-text-overleft">{{data.name}}</p>
+            </header>
+            <div class="panel-body table-responsive">
+                <video width="100%" height="auto" :src="media.url"
+                    poster="/static/sys_imgs/video-play.png" controls="controls"></video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var vue = new Vue({
+      el: '#app',
+      delimiters:['{[', ']}'],
+      data:{
+        media:{}
+      }
+    });
+
+    // 加载完页面执行
+    $(document).ready(function(){
+        get_media();
+    });
+
+    function get_media(){
+        var d = {
+            id:$("#id").attr("content"),
+        }
+
+        var result = osrHttp("GET","/api/admin/upload/media-file", d, args={not_prompt:true});
+        result.then(function (r) {
+            vue.media = r.data.media;
+        });
+    }
+</script>
+
+{% endblock %}
