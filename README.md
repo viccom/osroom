@@ -6,9 +6,7 @@
 开源协议:BSD2
 
 <div align=center><img width="auto" src="https://raw.githubusercontent.com/osroom/osroom/master/docs/imgs/dashboard.png" alt="osroom"/></div>
-OSRoom介绍与文档: http://www.osroom.com
 
-OSRoom Demo: http://demo.osroom.com
 
 > 支持
 - 插件开发，官方插件Github地址: https://github.com/osroom-plugins
@@ -20,4 +18,3 @@ OSRoom Demo: http://demo.osroom.com
 * 主项目osroom主要构建osroom核心部分，包括插件扩展功能. 更多的功能需求使用插件单独开发扩展，需要使用时导入到osroom主项目中，结合使用。
 为何想这样做？贡献者和贡献者的精力有限。
 
-网址: http://www.osroom.com 
