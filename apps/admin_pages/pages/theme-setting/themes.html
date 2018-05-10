@@ -115,7 +115,7 @@
     function upload_theme(){
         var formData = new FormData();
         var name = $("#upfile").attr("name");
-        formData.append("theme", $("#upfile")[0].files[0]);
+        formData.append("upfile", $("#upfile")[0].files[0]);
         var result = osrHttpUpload("POST","/api/admin/theme", formData);
         result.then(function (r) {
             if(r.data.msg_type=="s"){

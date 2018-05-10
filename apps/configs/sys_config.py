@@ -126,6 +126,7 @@ SESSION_USE_SIGNER = True
  *安全
 '''
 # CSRF配置, 只对普通浏览器请求验证有效, 对使用RestToken验证的请求无效
+WTF_CSRF_TIME_LIMIT = 3600*2
 CSRF_ENABLED = False # 这里关闭, 再@app.before_request再选择性开启需要验证token的请求
 WTF_CSRF_CHECK_DEFAULT = False # 这里关闭, 再@app.before_request再选择性开启需要验证token的请求
 WTF_CSRF_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE"]

@@ -18,7 +18,6 @@ def get_user_public_info(**kwargs):
     :param determine_following:判断当前登录用户是否有关注该用户, 前提是is_basic参数为False
     :return:
     '''
-    print("==============Public info 没缓存")
     user_id = kwargs.get("user_id")
     is_basic = kwargs.get("is_basic", 0)
     determine_following = kwargs.get("determine_following", True)
@@ -51,7 +50,6 @@ def get_user_all_info(**kwargs):
     :return:
     '''
 
-    print("==============All info 没缓存")
     user_id = kwargs.get("user_id")
     is_basic = kwargs.get("is_basic", 0)
     determine_following = kwargs.get("determine_following", True)
@@ -71,6 +69,7 @@ def get_user_all_info(**kwargs):
             if user_login_log:
                 user_login_log["_id"] = str(user_login_log["_id"])
                 user["user_login_log"] = user_login_log
+
         return True, user
 
 def get_user_follow_data(user_id, determine_following=True):

@@ -8,6 +8,7 @@ from flask_babel import gettext
 from flask_login import current_user
 
 from apps.configs.sys_config import APPS_PATH
+from apps.modules.user.process.user_profile_process import delete_user_info_cache
 from apps.utils.image.image import ImageCompression
 from apps.utils.upload.file_up import file_up, file_del, fileup_base_64
 from apps.app import mdb_user
@@ -58,8 +59,10 @@ def avatar_upload():
                     imgcp = ImageCompression(path, path)
                     ava_size = get_config("account", "USER_AVATAR_SIZE")
                     imgcp.custom_pixels(ava_size[0], ava_size[1])
-
                 data = {'msg':gettext("Save successfully"), 'msg_type':"s", "http_status":201}
     if not data:
         data = {'msg':gettext("Upload failed"), 'msg_type':"w", "http_status":400}
+
+    # 清理user信息数据缓存
+    delete_user_info_cache(user_id=current_user.str_id)
     return data

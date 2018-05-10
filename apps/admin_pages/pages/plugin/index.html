@@ -256,7 +256,7 @@
     function upload_plugin(){
         var formData = new FormData();
         var name = $("#upfile").attr("name");
-        formData.append("plugin", $("#upfile")[0].files[0]);
+        formData.append("upfile", $("#upfile")[0].files[0]);
 
         var result = osrHttpUpload("POST","/api/admin/plugin", formData);
         result.then(function (r) {
