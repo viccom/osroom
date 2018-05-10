@@ -153,7 +153,6 @@ def post_issue():
             "word_num":text_l,
             "is_delete":0,
             "imgs":imgs,
-            "like_user_id":[],
             "cover_url":cover_url
         }
 
@@ -162,6 +161,7 @@ def post_issue():
         else:
             post["comment_num"] = 0
             post["like"] = 0
+            post["like_user_id"] = []
             post["user_id"] = current_user.str_id
             post["editor"] = editor
             r = mdb_web.db.post.insert_one(post)

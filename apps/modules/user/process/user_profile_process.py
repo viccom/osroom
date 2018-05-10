@@ -69,7 +69,6 @@ def get_user_all_info(**kwargs):
             if user_login_log:
                 user_login_log["_id"] = str(user_login_log["_id"])
                 user["user_login_log"] = user_login_log
-
         return True, user
 
 def get_user_follow_data(user_id, determine_following=True):

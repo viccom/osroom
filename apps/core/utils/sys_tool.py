@@ -145,12 +145,13 @@ def add_user(mdb_user):
     if user:
         mdb_user.db.user.update_one({"_id":user["_id"]},
                                 {
-                                    "$set":{"password":password_hash, "role_id":root_id}
+                                    "$set":{"password":password_hash, "role_id":str(root_id)}
                                  })
         print(" * This user already exists, updated password.")
     else:
         print(' * Create root user...')
-        user = user_model(username=username, email=email, password=password, custom_domain=-1, role_id=root_id, active=True)
+        user = user_model(username=username, email=email, password=password, custom_domain=-1,
+                          role_id=str(root_id), active=True)
         r = mdb_user.db.user.insert_one(user)
         if r.inserted_id:
             print(" * Create a root user role successfully")

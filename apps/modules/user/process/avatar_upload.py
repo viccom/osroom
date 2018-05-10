@@ -42,7 +42,8 @@ def avatar_upload():
         result = result[0]
         user = mdb_user.db.user.find_one({"_id":current_user.id})
         if user:
-            if result["key"] != user['avatar_url']["key"]:
+            if user['avatar_url'] and "key" in user['avatar_url'] \
+                    and  result["key"] != user['avatar_url']["key"]:
                 # 当使用了不同的名字删除老的头像
                 file_del(user['avatar_url'])
 
