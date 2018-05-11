@@ -43,7 +43,6 @@ def push_url_to_db(app):
                                                 "create": "auto",
                                                 "update_time": now_time})
 
-
     urls = mdb_sys.dbs["sys_urls"].find({})
     for url in urls:
         if "url" in url:
