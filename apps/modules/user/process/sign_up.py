@@ -89,7 +89,8 @@ def p_sign_up(username, password, password2, code, email=None, mobile_phone_numb
                           email=email,
                           mphone_num = mobile_phone_number,
                           password=password,
-                          custom_domain=-1, role_id=role_id,
+                          custom_domain=-1,
+                          role_id=str(role_id),
                           active=True)
         r = mdb_user.db.user.insert_one(user)
 

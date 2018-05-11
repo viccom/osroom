@@ -393,7 +393,7 @@
             var url = "/api/admin/user"
         }
         // 提交数据
-        var result = osrHttp("PUT",url, d);
+        var result = osrHttp("DELETE",url, d);
         result.then(function (r) {
             if(r.data.msg_type=='s'){
                 get_users(vue.status, vue.page, vue.keyword );

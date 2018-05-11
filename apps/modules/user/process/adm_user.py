@@ -9,7 +9,7 @@ from apps.utils.format.number import get_num_digits
 from apps.utils.format.obj_format import json_to_pyseq, str_to_num
 from apps.utils.paging.paging import datas_paging
 from apps.app import mdb_user
-from apps.utils.upload.get_filepath import get_file_url
+from apps.utils.upload.get_filepath import get_avatar_url
 
 __author__ = "Allen Woo"
 
@@ -36,7 +36,6 @@ def users():
     page = int(request.argget.all('page', 1))
     pre = int(request.argget.all('pre', 10))
     keyword = request.argget.all('keyword', '').strip()
-    query_conditions = {}
     if status == "normal" or not status:
         status = "normal"
         query_conditions = {"is_delete": {"$in": [False, 0]}, "active": {"$in": [True, 1]}}
@@ -79,9 +78,8 @@ def users():
                                          reverse=True)
             user["user_op_log"] = user_op_log
 
-
         user["role_id"] = str(user["role_id"])
-        user["avatar_url"]["url"] = get_file_url(user["avatar_url"])
+        user["avatar_url"]["url"] = get_avatar_url(user["avatar_url"])
 
     data["users"] = datas_paging(pre=pre, page_num=page, data_cnt=data_cnt, datas=users)
     data["status"] = status
@@ -153,6 +151,7 @@ def user_del():
         else:
             data = {'msg': gettext("Recycle user failed.May not have permission"), 'msg_type': "w", "http_status":401}
     else:
+        # 永久删除
         r = mdb_user.db.user.delete_many({"_id": {"$in": ids}, "is_delete": {"$in": [1, True]}})
         if r.deleted_count:
             data = {'msg': gettext(

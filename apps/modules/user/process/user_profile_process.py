@@ -2,7 +2,7 @@
 from bson import ObjectId
 from flask_babel import gettext
 from flask_login import current_user
-from apps.utils.upload.get_filepath import get_file_url
+from apps.utils.upload.get_filepath import get_file_url, get_avatar_url
 from apps.app import mdb_user, cache
 
 __author__ = "Allen Woo"
@@ -32,7 +32,7 @@ def get_user_public_info(**kwargs):
     else:
         user["_id"] = str(user["_id"])
         user["custom_domain"] = str(user["custom_domain"])
-        user["avatar_url"]["url"] = get_file_url(user["avatar_url"])
+        user["avatar_url"]["url"] = get_avatar_url(user["avatar_url"])
         if not is_basic:
             user["follow"] = get_user_follow_data(user["_id"], determine_following=determine_following)
         return True, user
@@ -58,7 +58,7 @@ def get_user_all_info(**kwargs):
         return False, gettext("The specified user is not found")
     else:
         user["_id"] = str(user["_id"])
-        user["avatar_url"]["url"] = get_file_url(user["avatar_url"])
+        user["avatar_url"]["url"] = get_avatar_url(user["avatar_url"])
         if not is_basic:
             user["follow"] = get_user_follow_data(user["_id"], determine_following=determine_following)
             # 登录日志

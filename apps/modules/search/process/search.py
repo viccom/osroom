@@ -7,7 +7,7 @@ from apps.core.flask.reqparse import arg_verify
 from apps.modules.post.process.post_process import get_posts_pr
 from apps.utils.format.obj_format import str_to_num
 from apps.utils.paging.paging import datas_paging
-from apps.utils.upload.get_filepath import get_file_url
+from apps.utils.upload.get_filepath import get_avatar_url
 
 __author__ = "Allen Woo"
 
@@ -53,7 +53,7 @@ def search_process():
         users = list(us.skip(pre * (page - 1)).limit(pre))
         for user in users:
             user['_id'] = str(user['_id'])
-            user["avatar_url"]["url"] = get_file_url(user["avatar_url"])
+            user["avatar_url"]["url"] = get_avatar_url(user["avatar_url"])
 
         data["users"]["items"] = datas_paging(pre=pre, page_num=page, data_cnt=data_cnt, datas=users)
 

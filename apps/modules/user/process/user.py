@@ -4,7 +4,7 @@ from flask_babel import gettext
 from flask_login import UserMixin, current_user, AnonymousUserMixin
 from werkzeug.security import check_password_hash
 from apps.core.flask.permission import custom_url_permissions
-from apps.utils.upload.get_filepath import get_file_url
+from apps.utils.upload.get_filepath import get_avatar_url
 from apps.app import mdb_user
 from apps.core.utils.get_config import get_config
 
@@ -30,7 +30,7 @@ class User(UserMixin):
             self.mphone_num = user["mphone_num"]
             self.custom_domain = user["custom_domain"]
             self.gender = user["gender"]
-            self.avatar_url = get_file_url(user["avatar_url"])
+            self.avatar_url = get_avatar_url(user["avatar_url"])
             self.role_id = ObjectId(user["role_id"])
             self.active = user["active"]
             self.is_delete = user["is_delete"]

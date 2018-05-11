@@ -13,7 +13,7 @@ def get_localfile_path(file_url_obj):
     :return:file url
     '''
 
-    if isinstance(file_url_obj, dict) and "type" in file_url_obj:
+    if isinstance(file_url_obj, dict) and "key" in file_url_obj:
         path = "{}/{}/{}".format(STATIC_PATH, get_config("upload", "SAVE_DIR"), file_url_obj["key"]).replace("//", "/")
         return path
     else:
@@ -27,7 +27,7 @@ def get_file_url(file_url_obj, save_dir=get_config("upload", "SAVE_DIR")):
     :return:file url
     '''
 
-    if isinstance(file_url_obj, dict) and "type" in file_url_obj:
+    if isinstance(file_url_obj, dict) and "key" in file_url_obj:
 
         # 检测上传插件
         data = plugin_manager.call_plug(hook_name="file_storage",
@@ -38,5 +38,20 @@ def get_file_url(file_url_obj, save_dir=get_config("upload", "SAVE_DIR")):
         else:
             url = data
         return url
-    else:
+    elif isinstance(file_url_obj, str):
         return file_url_obj
+    else:
+        return None
+
+
+def get_avatar_url(file_url_obj):
+    '''
+    专用于获取头像url
+    :return:
+    '''
+
+    if "key" in file_url_obj and file_url_obj["key"]:
+        return get_file_url(file_url_obj)
+    elif "key" in file_url_obj and not file_url_obj["key"]:
+        return get_config("account", "DEFAULT_AVATAR")
+    return None
