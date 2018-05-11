@@ -77,8 +77,7 @@ class User(UserMixin):
         :return:
         '''
         role = mdb_user.db.role.find_one({"_id":self.role_id})
-        return not permissions or \
-               (role and permissions & role['permissions'] and self.active and not self.is_delete)
+        return not permissions or (role and int(permissions) & int(role['permissions']) and self.active and not self.is_delete)
 
     def page_permission_check(self, urls):
 
