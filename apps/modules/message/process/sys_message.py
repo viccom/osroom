@@ -1,11 +1,15 @@
 # -*-coding:utf-8-*-
+import os
 from bson import ObjectId
+from copy import deepcopy
 from flask import request
 from flask_babel import gettext
 
 from apps.app import mdb_sys
 from apps.utils.format.obj_format import str_to_num, objid_to_str, json_to_pyseq
 from apps.utils.paging.paging import datas_paging
+from apps.utils.text_parsing.text_parsing import richtext_extract_img
+from apps.utils.upload.file_up import file_del
 
 __author__ = "Allen Woo"
 
@@ -52,6 +56,30 @@ def delete_sys_message():
     for i in range(0, len(ids)):
         ids[i] = ObjectId(ids[i])
     q = {"_id": {"$in": ids}}
+
+    # 查找出要删除中的邮件消息
+    q2 = deepcopy(q)
+    q2["type"] = "email"
+    msgs = mdb_sys.db.sys_message.find(q2)
+    rm_imgs = [] # 要删除的邮件消息图片
+    for msg in msgs:
+        srcs = richtext_extract_img(richtext=msg["html"])
+        rm_imgs.extend(srcs)
+
+    for rm_img in rm_imgs:
+        # 获取图片url中唯一部分
+        key = os.path.split(rm_img)
+        if len(key) > 0:
+            key = key[-1]
+        else:
+            continue
+        # 查找出图片对应的key
+        img_obj = mdb_sys.db.sys_msg_img.find_one({"imgs.key": {"$regex": key}})
+        if img_obj:
+            for img in img_obj["imgs"]:
+                # 删除
+                file_del(img)
+            mdb_sys.db.sys_msg_img.delete_one({"_id": img_obj["_id"]})
 
     r = mdb_sys.db.sys_message.delete_many(q)
     if r.deleted_count:

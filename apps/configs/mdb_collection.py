@@ -9,11 +9,12 @@ collections = {"mdb_web":[
                         "verify_code",    # web验证码
                         "tempfile",     # 用于保存临时文件
                         "media",        # 用于保存媒体的信息,如图片
-                            ],
+                  ],
             "mdb_sys":[
                         'sys_token',
                         'audit_rules',
                         'sys_message',
+                        'sys_msg_img',
                         'sys_config',
                         'sys_host',
                         'sys_call_record',# 用户一些操作频率记录

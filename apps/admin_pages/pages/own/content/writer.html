@@ -8,7 +8,7 @@
         <div id="app">
             <div class="form-inline">
                     <div class="pull-left input-group">
-                        <select id="category" class="form-control osr-form-control" name="category" v-model="category">
+                        <select id="category" class="form-control osr-form-control" name="category" @change="switch_category($event.target.value)">
                           <option v-if="!category" :value="category" selected>{{_('默认文集')}} </option>
                           <option v-if="category===cg._id" v-for="cg in categorys" v-bind:value =cg._id selected>{[cg.name]} </option>
                           <option v-if="category!==cg._id" v-for="cg in categorys" v-bind:value =cg._id>{[cg.name]} </option>
@@ -252,6 +252,10 @@
             }
         });
 
+    }
+
+    function switch_category(value){
+        vue.category = value;
     }
 
      window.onbeforeunload=function(){

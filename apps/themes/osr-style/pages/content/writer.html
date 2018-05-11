@@ -8,7 +8,7 @@
         <div id="app">
             <div class="form-inline">
                 <div class="pull-left input-group">
-                    <select id="category" class="form-control osr-form-control" name="category" v-model="category">
+                    <select id="category" class="form-control osr-form-control" name="category" @change="switch_category($event.target.value)">
                       <option v-if="!category" :value="category" selected>{{_('默认文集')}} </option>
                       <option v-if="category===cg._id" v-for="cg in categorys" v-bind:value =cg._id selected>{[cg.name]} </option>
                       <option v-if="category!==cg._id" v-for="cg in categorys" v-bind:value =cg._id>{[cg.name]} </option>
@@ -146,7 +146,6 @@
             vue.editor_name = "{{current_user.editor}}";
         {% endif %}
         get_post();
-        get_categorys();
     })
 
     function get_post(){
@@ -168,8 +167,8 @@
                 vue.title = vue.post.title;
                 vue.tags = vue.post.tags;
                 vue2.tags = vue.tags;
-                vue.category = vue.post.category;
 
+                vue.category = vue.post.category;
                 if(vue.editor_name != vue.post.editor){
                     alert("{{_('抱歉!检查到文本编辑器类型错误(editor),请关闭页面重新打开')}}!.");
                 }else if(vue.editor_name == "markdown"){
@@ -183,6 +182,9 @@
                 }else{
                     vue.save_name = "{{_('更新草稿')}}";
                 }
+
+                get_categorys();
+
              });
         }
 
@@ -254,6 +256,10 @@
             }
         });
 
+    }
+
+    function switch_category(value){
+        vue.category = value;
     }
 
     window.onbeforeunload=function(){

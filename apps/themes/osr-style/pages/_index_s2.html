@@ -118,10 +118,10 @@
 
 <div class="col-md-4">
     <!--推荐位3 文本媒体-->
-    <div class="text-center">
-        <a :href="rec_3[0].link" target="_blank" class="text-success" style="font-size:25px;">
+    <div v-if="rec_3" class="text-center">
+        <a :href="rec_3.link" target="_blank" class="text-success" style="font-size:25px;">
             <i class="fa fa-github" style="font-size:30px;"></i>
-            <span>{[rec_3[0].title]}</span>
+            <span>{[rec_3.title]}</span>
         </a>
     </div>
     <!--//推荐位3-->

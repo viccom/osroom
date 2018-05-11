@@ -38,6 +38,7 @@ def sys_host_edit():
                                    {"$set":{"host_info.port":port,
                                             "host_info.username":username,
                                             "host_info.password":password,
+                                            "host_info.local_ip"
                                             "cmd":cmd}})
 
         if r.modified_count:

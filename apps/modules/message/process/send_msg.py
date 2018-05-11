@@ -1,12 +1,17 @@
 # -*-coding:utf-8-*-
+import time
 from flask import request
 from flask_babel import gettext
-from apps.app import mdb_user
+from flask_login import current_user
+
+from apps.app import mdb_user, mdb_sys
 from apps.core.flask.reqparse import arg_verify
 from apps.modules.message.process.user_message import insert_user_msg
+from apps.modules.upload.process.tempfile import clean_tempfile
 from apps.utils.send_msg.send_email import send_email
 from apps.utils.format.obj_format import json_to_pyseq
 from apps.utils.send_msg.send_message import send_mobile_msg
+from apps.utils.text_parsing.text_parsing import richtext_extract_img
 
 __author__ = "Allen Woo"
 
@@ -38,6 +43,22 @@ def send_msg():
         query["username"] = {"$in": username}
 
     users = list(mdb_user.db.user.find(query, {"_id": 1, "email": 1, "mphone_num":1}))
+
+    # 清理消息中的临时img
+    if "email" not in send_type:
+        # 删除所有上传的图片
+        srcs = []
+    else:
+        # 保留邮件内容中使用的图片
+        srcs = richtext_extract_img(richtext=content_html)
+    imgs = clean_tempfile(user_id=current_user.str_id,
+                          type="image", old_file=[],
+                          keey_file=srcs)
+    if imgs:
+        # 保存邮件中上传的图片记录, 以便之后删除
+        mdb_sys.db.sys_msg_img.insert({"time":time.time(), "imgs":imgs,
+                                         "send_user_id":current_user.str_id,
+                                         "title":title})
 
     for send_t in send_type:
         if send_t == "on_site":
