@@ -250,7 +250,6 @@ def get_plugin_info(hook_name):
     :param url:
     :return:
     '''
-    print("get 插件 info")
     value = mdb_sys.dbs["plugin"].find_one({"hook_name": hook_name,"active":{"$in":[1, True]}},
                                            {"_id": 0})
     return value

@@ -34,7 +34,6 @@ def get_user_public_info(**kwargs):
         user["custom_domain"] = str(user["custom_domain"])
         user["avatar_url"]["url"] = get_file_url(user["avatar_url"])
         if not is_basic:
-            print("=====")
             user["follow"] = get_user_follow_data(user["_id"], determine_following=determine_following)
         return True, user
 
