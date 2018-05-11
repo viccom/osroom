@@ -1,51 +1,51 @@
 # -*-coding:utf-8-*-
 __author__ = "Allen Woo"
 DB_CONFIG = {
+    "redis": {
+        "password": "<Your password>",
+        "host": [
+            "127.0.0.1"
+        ],
+        "port": [
+            "6379"
+        ]
+    },
     "mongodb": {
-        "mongo_user": {
-            "username": "root",
-            "dbname": "osr_user",
-            "host": [
-                "127.0.0.1:27017"
-            ],
-            "config": {
-                "fsync": False,
-                "replica_set": None
-            },
-            "password": "<Your password>"
-        },
-        "mongo_sys": {
-            "username": "root",
-            "dbname": "osr_sys",
-            "host": [
-                "127.0.0.1:27017"
-            ],
-            "config": {
-                "fsync": False,
-                "replica_set": None
-            },
-            "password": "<Your password>"
-        },
         "mongo_web": {
-            "username": "root",
+            "password": "<Your password>",
+            "username": "work",
             "dbname": "osr_web",
             "host": [
                 "127.0.0.1:27017"
             ],
             "config": {
-                "fsync": False,
-                "replica_set": None
-            },
-            "password": "<Your password>"
+                "replica_set": None,
+                "fsync": False
+            }
+        },
+        "mongo_user": {
+            "password": "<Your password>",
+            "username": "work",
+            "dbname": "osr_user",
+            "host": [
+                "127.0.0.1:27017"
+            ],
+            "config": {
+                "replica_set": None,
+                "fsync": False
+            }
+        },
+        "mongo_sys": {
+            "password": "<Your password>",
+            "username": "work",
+            "dbname": "osr_sys",
+            "host": [
+                "127.0.0.1:27017"
+            ],
+            "config": {
+                "replica_set": None,
+                "fsync": False
+            }
         }
-    },
-    "redis": {
-        "host": [
-            "127.0.0.1"
-        ],
-        "password": "<Your password>",
-        "port": [
-            "6379"
-        ]
     }
 }
