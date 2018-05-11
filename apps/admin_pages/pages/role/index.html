@@ -149,20 +149,23 @@
             vue.roles = r.data.roles;
             vue.pages = paging(page_total=vue.roles.page_total,
                             current_page=vue.roles.current_page);
-        });
-
-        var result2 = osrHttp("GET","/api/admin/role/permission", {}, args={not_prompt:true});
-        result2.then(function (pers) {
-            $.each(vue.roles.datas, function(index, value, array) {
-                vue.roles.datas[index].permission_names = [];
-                $.each(pers.data.permissions, function(i, v, a) {
-                    if (value.permissions & v[1]){
-
-                        vue.roles.datas[index].permission_names.push(v[0]);
-                    }
+            //获取全部
+            var result2 = osrHttp("GET","/api/admin/role/permission", {}, args={not_prompt:true});
+            result2.then(function (pers) {
+                $.each(vue.roles.datas, function(index, value, array) {
+                    vue.roles.datas[index].permission_names = [];
+                    $.each(pers.data.permissions, function(i, v, a) {
+                        if (value.permissions & v[1]){
+                            vue.roles.datas[index].permission_names.push(v[0]);
+                        }
+                    });
                 });
+                vue.$forceUpdate();
             });
+
         });
+
+
         var url = window.location.pathname+"?page="+page;
         history_state(title=null,url=url);
     }
