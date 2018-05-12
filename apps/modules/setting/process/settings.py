@@ -10,6 +10,7 @@ from flask_login import current_user
 from apps.configs.sys_config import CONFIG_CACHE_KEY, MUST_ROOT_SETTING
 from apps.core.flask.permission import permissions
 from apps.core.flask.reqparse import arg_verify
+from apps.core.utils.get_config import get_config
 from apps.utils.format.number import get_num_digits
 from apps.utils.format.obj_format import json_to_pyseq, objid_to_str, str_to_num
 from apps.utils.format.time_format import time_to_utcdate
@@ -21,7 +22,13 @@ __author__ = "Allen Woo"
 def sys_config_version():
 
     version_uses = mdb_sys.db.sys_config.find_one({"new_version":{"$exists":True}}, {"_id":0})
-    hosts = objid_to_str(list(mdb_sys.db.sys_host.find({"type":"web"})))
+    hosts = list(mdb_sys.db.sys_host.find({"type":"web"}))
+    key_hiding = get_config("system", "KEY_HIDING")
+    for h in hosts:
+        h["_id"] = str(h["_id"])
+        if key_hiding and "password" in h["host_info"] and h["host_info"]["password"]:
+            h["host_info"]["password"] = "Has been hidden"
+
     version_uses["used_versions"].reverse()
     data = {"version":version_uses, "hosts":hosts}
     return data
@@ -110,8 +117,12 @@ def get_sys_configs():
         temp_list_json = []
 
         # 将值是list和dict的配置放发哦数组后面
+        key_hiding  = get_config("system", "KEY_HIDING")
         for conf in confs:
             conf["_id"] = str(conf["_id"])
+
+            if key_hiding and conf["type"] == "password":
+                conf["value"] = "Has been hidden"
             if conf["type"] in ["list", "dict"]:
                 temp_list_json.append(conf)
             else:
@@ -119,6 +130,10 @@ def get_sys_configs():
         temp_list_other.extend(temp_list_json)
 
         data["configs"] = temp_list_other
+        if key_hiding:
+            data["msg_type"] = "w"
+            data["msg"] = gettext("The KEY_HIDING switch in the system configuration has been enabled."
+                                  " The value of the password type has been replaced.")
     else:
         data = {"msg":gettext("There is no such data"), "msg_type":"warning", "http_status":400}
     return data

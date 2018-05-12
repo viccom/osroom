@@ -5,7 +5,8 @@ from flask_login import current_user
 import time
 from apps.modules.user.process.user_profile_process import get_user_all_info, get_user_public_info, \
     delete_user_info_cache
-from apps.utils.validation.str_format import ver_user_domainhacks, ver_name
+from apps.utils.content_evaluation.content import content_inspection_text
+from apps.utils.validation.str_format import ver_user_domainhacks, short_str_verifi, short_str_verifi
 from apps.core.flask.reqparse import arg_verify
 from apps.utils.format.obj_format import json_to_pyseq, str_to_num
 from apps.utils.format.time_format import time_to_utcdate
@@ -80,6 +81,11 @@ def profile_update():
         if not s:
             return {"msg":r, "msg_type":"w", "http_status":403}
 
+    s,r = short_str_verifi(s=info, allow_special_chart=True)
+    if not s:
+        data = {'msg': r,'msg_type': "w", "http_status": 400}
+        return data
+
     update_data = {
         'gender':gender,
         'homepage':homepage,
@@ -108,7 +114,7 @@ def user_basic_edit():
     s, r = arg_verify(reqargs=[(gettext("username"), username)], required=True)
     if not s:
         return r
-    r,s = ver_name(username, "username")
+    r,s = short_str_verifi(username, "username")
     if not r:
         data = {'msg':s, 'msg_type':"e", "http_status":422}
         return data

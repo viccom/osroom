@@ -7,7 +7,7 @@ from apps.core.template.get_template import get_email_html
 from apps.core.utils.get_config import get_config
 from apps.utils.send_msg.send_email import send_email
 from apps.utils.send_msg.send_message import send_mobile_msg
-from apps.utils.validation.str_format import email_format_ver, password_format_ver, ver_name, mobile_phone_format_ver
+from apps.utils.validation.str_format import email_format_ver, password_format_ver, short_str_verifi, mobile_phone_format_ver
 from apps.app import mdb_user
 from apps.modules.user.models.user import user_model
 from apps.utils.verify.msg_verify_code import verify_code
@@ -27,7 +27,7 @@ def p_sign_up(username, password, password2, code, email=None, mobile_phone_numb
         return data
 
     # 用户名格式验证
-    s1, r1 = ver_name(username, project="username")
+    s1, r1 = short_str_verifi(username, project="username")
     # 密码格式验证
     s2, r2 = password_format_ver(password)
     if not s1:

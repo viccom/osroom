@@ -83,7 +83,7 @@ def add_user(mdb_user):
     :return:
     '''
     from werkzeug.security import generate_password_hash
-    from apps.utils.validation.str_format import ver_name, email_format_ver, password_format_ver
+    from apps.utils.validation.str_format import short_str_verifi, email_format_ver, password_format_ver
     from apps.modules.user.models.user import user_model
 
     print(' * [User] add')

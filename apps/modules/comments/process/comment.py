@@ -13,7 +13,7 @@ from apps.core.utils.get_config import get_config
 from apps.modules.message.process.user_message import insert_user_msg
 from apps.utils.content_evaluation.content import content_inspection_text
 from apps.utils.format.obj_format import json_to_pyseq
-from apps.utils.validation.str_format import ver_name, email_format_ver
+from apps.utils.validation.str_format import short_str_verifi, email_format_ver
 from apps.app import mdb_web, mdb_user
 __author__ = "Allen Woo"
 
@@ -93,7 +93,7 @@ def comment_issue():
         username = request.argget.all('username')
         email = request.argget.all('email')
         # 用户名格式验证
-        r, s = ver_name(username)
+        r, s = short_str_verifi(username)
         if not r:
             data= {'msg': s, 'msg_type': "e", "http_status":422}
             return data

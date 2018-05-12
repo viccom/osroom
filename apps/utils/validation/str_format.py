@@ -4,33 +4,39 @@ import regex as re
 from flask_babel import gettext
 from apps.app import mdb_sys
 from apps.core.flask.reqparse import arg_verify
+from apps.utils.content_evaluation.content import content_inspection_text
 
 __author__ = 'Allen Woo'
 
-def ver_name(name, project=None):
+def short_str_verifi(short_str, project=None, allow_special_chart=False):
 
     '''
-    各种名字字符验证
+    各种名字短字符串验证
     Character name to verify
-    :param name:
+    :param s:
+    allow_special_chart: 是否允许特殊字符
     :return:
     '''
 
-    s, r = arg_verify(reqargs=[(gettext("name"),name)], required=True)
+    s, r = arg_verify(reqargs=[(gettext("name"),short_str)], required=True)
     if not s:
         return False, r["msg"]
 
-    elif re.search(r"[\.\*#\?]+",name):
-        return False, gettext("The name format is not correct,You can't use '.','*','#','?'")
-    elif current_user.is_authenticated and current_user.is_staff:
-        return True, gettext("")
-
-    if project:
+    if not allow_special_chart:
+        if re.search(r"[\.\*#\?]+",short_str):
+            return False, gettext("The name format is not correct,You can't use '.','*','#','?'")
+    warning_msg = gettext("Some contents contain sensitive information or do not meet the requirements of this site. Please correct it and try again.")
+    if not (current_user.is_authenticated and current_user.is_staff):
         rules = mdb_sys.db.audit_rules.find({"project":project})
         for rule in rules:
-            if re.search(r"^{}$".format(rule["rule"]), name):
-                return False, gettext("Name is not legal, there is sensitive information")
-    return True, gettext("")
+            if re.search(r"^{}$".format(rule["rule"]), short_str):
+                return False, warning_msg
+
+    r = content_inspection_text(short_str)
+    if r["label"] != "no_plugin" and r["score"] == 100:
+        return False, warning_msg
+
+    return True, ""
 
 
 def ver_user_domainhacks(domain):

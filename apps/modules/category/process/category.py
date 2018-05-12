@@ -8,7 +8,7 @@ from flask_login import current_user
 from apps.core.flask.reqparse import arg_verify
 from apps.utils.async.async import async_process
 from apps.utils.format.obj_format import objid_to_str, json_to_pyseq
-from apps.utils.validation.str_format import ver_name
+from apps.utils.validation.str_format import short_str_verifi
 from apps.app import mdb_web
 from apps.core.utils.get_config import get_config
 __author__ = "Allen Woo"
@@ -60,7 +60,7 @@ def category_add(user_id=None):
                       only=get_config("category", "CATEGORY_TYPE").values())
     if not s:
         return r
-    s1,v = ver_name(name, "class_name")
+    s1,v = short_str_verifi(name, "class_name")
     s2, r2 = arg_verify(reqargs=[(gettext("name"), name), ], required=True,
                       max_len=int(get_config("category", "CATEGORY_MAX_LEN")))
     if not s1:
@@ -82,7 +82,7 @@ def category_edit(user_id=None):
     ntype = request.argget.all('type')
     name = request.argget.all('name')
 
-    s1, v = ver_name(name, "class_name")
+    s1, v = short_str_verifi(name, "class_name")
     s2, r2 = arg_verify(reqargs=[(gettext("name"), name), ], required=True,
                         max_len=int(get_config("category", "CATEGORY_MAX_LEN")))
     if not s1:

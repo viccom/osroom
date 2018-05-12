@@ -13,7 +13,7 @@ from apps.modules.upload.process.tempfile import clean_tempfile
 from apps.utils.content_evaluation.content import content_inspection_text
 from apps.utils.format.obj_format import json_to_pyseq
 from apps.utils.text_parsing.text_parsing import richtext_extract_img
-from apps.utils.validation.str_format import ver_name
+from apps.utils.validation.str_format import short_str_verifi
 from apps.app import mdb_web
 from apps.core.utils.get_config import get_config
 __author__ = "Allen Woo"
@@ -39,14 +39,13 @@ def post_issue():
         return data
 
     tags = list(set(tags))
+    temp_tags = ""
     for tag in tags:
         s, r = arg_verify(reqargs=[(gettext("tag"), tag)], max_len=get_config("post", "TAG_MAX_LEN"))
         if not s:
             return r
-        s,v = ver_name(tag, "class_name")
-        if not s:
-            data = {"msg":v,"msg_type":"w", "http_status":422}
-            return data
+        temp_tags = "{} {}".format(tag, temp_tags)
+
     # 分类验证
     try:
         ObjectId(category)
@@ -113,7 +112,7 @@ def post_issue():
             cover_url = imgs[0]
 
         if issue_way:
-            r = content_inspection_text("{} {}".format(title, content))
+            r = content_inspection_text("{} {} {}".format(title, content, temp_tags))
             audit_score = r["score"]
             audit_label = r["label"]
             if r["label"] == "detection_off" or ("suggestion" in r and r["suggestion"] == "review"):

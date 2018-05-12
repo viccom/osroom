@@ -6,6 +6,7 @@ from apps.app import mdb_sys
 import regex as re
 from apps.core.flask.reqparse import arg_verify
 from apps.core.flask.response import response_format
+from apps.core.utils.get_config import get_config
 from apps.utils.format.obj_format import json_to_pyseq
 from apps.utils.pyssh.pyssh import audit_host_info, MySSH
 
@@ -16,7 +17,16 @@ def get_sys_host():
     ip = request.argget.all('host_ip')
     host = mdb_sys.db.sys_host.find_one({"host_info.local_ip":ip})
     host["_id"] = str(host["_id"])
+    if get_config("system", "KEY_HIDING") and "password" in host["host_info"] and\
+            host["host_info"]["password"]:
+        host["host_info"]["password"] = "Has been hidden"
+
     data = {"host":host}
+    if get_config("system", "KEY_HIDING"):
+        data["msg_type"] = "w"
+        data["msg"] = gettext("The KEY_HIDING switch in the system configuration has been enabled."
+                              " The value of the password type has been replaced.")
+
     return data
 
 def sys_host_edit():
@@ -85,8 +95,9 @@ def sys_host_exec_cmd():
                         "msg_type": "e", "http_status":400}
                 return data
         result = []
-        if not exec_cmd:
+        if not exec_cmd and "cmd" in host:
             exec_cmd = host["cmd"]
+
         for cmd in exec_cmd.split("\n"):
             cmd = cmd.strip()
             if re.search(r"^#.*", cmd):
@@ -102,7 +113,7 @@ def sys_host_exec_cmd():
         ssh.close()
         data = {"msg": gettext("Command executed {}").format(ip),
                 "msg_type": "s", "http_status":201,
-                "result": result, "cmd":host["cmd"]}
+                "result": result, "cmd":exec_cmd}
     else:
         data = {"msg": gettext("There is no host {}").format(ip), "msg_type": "e", "http_status":400}
 

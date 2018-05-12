@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  v1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-12 17:50+0800\n"
+"POT-Creation-Date: 2018-05-13 01:46+0800\n"
 "PO-Revision-Date: 2018-05-01 13:31+0800\n"
 "Last-Translator: AllenWoo\n"
 "Language: en_GB\n"
@@ -103,7 +103,7 @@ msgid ""
 " and 'ClientId <client_id>'"
 msgstr "令牌格式错误, 应该是'SecretToken <token>'或'AccessToken <令牌>'和'ClientId <client_id>'"
 
-#: apps/core/auth/rest_token_auth.py:157 apps/core/flask/request.py:77
+#: apps/core/auth/rest_token_auth.py:157 apps/core/flask/request.py:79
 msgid ""
 "Token is miss, unconventional web browsing requests please provide \"OSR-"
 "RestToken\", otherwise provide \"X-CSRFToken\""
@@ -263,7 +263,7 @@ msgstr "category type"
 #: apps/modules/plug_in_manager/process/manager.py:88
 #: apps/modules/plug_in_manager/process/manager.py:112
 #: apps/modules/user/process/role.py:51 apps/modules/user/process/role.py:54
-#: apps/modules/user/process/role.py:95 apps/utils/validation/str_format.py:19
+#: apps/modules/user/process/role.py:95 apps/utils/validation/str_format.py:21
 msgid "name"
 msgstr "名称"
 
@@ -275,8 +275,8 @@ msgstr "名称已存在"
 #: apps/modules/category/process/category.py:99
 #: apps/modules/media/process/media.py:293
 #: apps/modules/permission/process/url_permission.py:167
-#: apps/modules/plug_in_manager/process/setting.py:128
-#: apps/modules/setting/process/settings.py:248
+#: apps/modules/plug_in_manager/process/setting.py:139
+#: apps/modules/setting/process/settings.py:263
 msgid "Modify the success"
 msgstr "修改成功"
 
@@ -309,7 +309,7 @@ msgid "Does not match the data to be deleted"
 msgstr "与要删除的数据不符"
 
 #: apps/modules/comments/process/adm_comment.py:96
-#: apps/modules/post/process/post_process.py:228
+#: apps/modules/post/process/post_process.py:274
 msgid "Removed from the database, {}"
 msgstr "从数据库删除:{}"
 
@@ -317,8 +317,8 @@ msgstr "从数据库删除:{}"
 #: apps/modules/comments/process/adm_comment.py:114
 #: apps/modules/post/process/adm_post.py:94
 #: apps/modules/post/process/adm_post.py:114
-#: apps/modules/post/process/post_process.py:231
-#: apps/modules/post/process/user_post.py:201
+#: apps/modules/post/process/post_process.py:277
+#: apps/modules/post/process/user_post.py:200
 msgid "No match to relevant data"
 msgstr "没有匹配到相关数据"
 
@@ -360,22 +360,22 @@ msgid "Successful reviews"
 msgstr "成功提交评论"
 
 #: apps/modules/comments/process/comment.py:231
-#: apps/modules/post/process/user_post.py:192
+#: apps/modules/post/process/user_post.py:191
 msgid "Delete the success"
 msgstr "删除成功"
 
 #: apps/modules/comments/process/comment.py:265
-#: apps/modules/post/process/post.py:88
+#: apps/modules/post/process/post.py:86
 msgid "Success"
 msgstr "成功"
 
 #: apps/modules/comments/process/comment.py:267
-#: apps/modules/post/process/post.py:90
+#: apps/modules/post/process/post.py:88
 msgid "Failed"
 msgstr "失败"
 
 #: apps/modules/comments/process/comment_find.py:17
-#: apps/modules/post/process/post_process.py:39
+#: apps/modules/post/process/post_process.py:38
 msgid "The \"pre\" must not exceed the maximum amount"
 msgstr "每页显示的数据条目不能超过设置的最高条数"
 
@@ -411,7 +411,7 @@ msgstr "取消关注成功"
 msgid "Unfollow failed"
 msgstr "取消关注失败"
 
-#: apps/modules/global_data/process/global_data.py:46
+#: apps/modules/global_data/process/global_data.py:44
 msgid "Get the current user information successfully"
 msgstr "获取当前用户信息成功"
 
@@ -455,18 +455,18 @@ msgstr "{} 文件已被删除"
 #: apps/modules/message/process/sys_message.py:88
 #: apps/modules/message/process/user_message.py:186
 #: apps/modules/plug_in_manager/process/manager.py:124
-#: apps/modules/setting/process/host_setting.py:60
+#: apps/modules/setting/process/host_setting.py:70
 msgid "Failed to delete"
 msgstr "删除失败"
 
 #: apps/modules/message/process/send_msg.py:31
-#: apps/modules/post/process/user_post.py:56
+#: apps/modules/post/process/user_post.py:55
 msgid "title"
 msgstr "标题"
 
 #: apps/modules/message/process/send_msg.py:32
-#: apps/modules/post/process/user_post.py:61
-#: apps/modules/post/process/user_post.py:70
+#: apps/modules/post/process/user_post.py:60
+#: apps/modules/post/process/user_post.py:69
 msgid "content"
 msgstr "内容"
 
@@ -503,15 +503,15 @@ msgid "No user mobile phone number was obtained"
 msgstr "没有获得用户手机号码"
 
 #: apps/modules/message/process/user_message.py:160
-#: apps/modules/user/process/profile.py:94
+#: apps/modules/user/process/profile.py:100
 msgid "Update succeed"
 msgstr "更新成功"
 
 #: apps/modules/message/process/user_message.py:162
-#: apps/modules/setting/process/host_setting.py:47
+#: apps/modules/setting/process/host_setting.py:57
 #: apps/modules/user/process/adm_user.py:119
-#: apps/modules/user/process/profile.py:96
-#: apps/modules/user/process/profile.py:148
+#: apps/modules/user/process/profile.py:102
+#: apps/modules/user/process/profile.py:154
 #: apps/modules/user/process/role.py:124 apps/modules/user/process/role.py:130
 msgid "No changes"
 msgstr "未修改"
@@ -583,47 +583,55 @@ msgstr "相同名称的插件已存在"
 msgid "The same name theme already exists"
 msgstr "相同名称的主题已存在"
 
-#: apps/modules/plug_in_manager/process/setting.py:61
-#: apps/modules/setting/process/settings.py:123
-#: apps/modules/setting/process/settings.py:151
+#: apps/modules/plug_in_manager/process/setting.py:51
+#: apps/modules/setting/process/host_setting.py:27
+#: apps/modules/setting/process/settings.py:135
+msgid ""
+"The KEY_HIDING switch in the system configuration has been enabled. The "
+"value of the password type has been replaced."
+msgstr "参数配置system下的KEY_HIDING已开启. 当前为password类型数据的值已被替换."
+
+#: apps/modules/plug_in_manager/process/setting.py:72
+#: apps/modules/setting/process/settings.py:138
+#: apps/modules/setting/process/settings.py:166
 msgid "There is no such data"
 msgstr "没有相关数据"
 
-#: apps/modules/plug_in_manager/process/setting.py:98
-#: apps/modules/plug_in_manager/process/setting.py:105
-#: apps/modules/plug_in_manager/process/setting.py:115
-#: apps/modules/setting/process/settings.py:188
-#: apps/modules/setting/process/settings.py:195
-#: apps/modules/setting/process/settings.py:205
+#: apps/modules/plug_in_manager/process/setting.py:109
+#: apps/modules/plug_in_manager/process/setting.py:116
+#: apps/modules/plug_in_manager/process/setting.py:126
+#: apps/modules/setting/process/settings.py:203
+#: apps/modules/setting/process/settings.py:210
+#: apps/modules/setting/process/settings.py:220
 msgid "The format of the \"value\" errors, need a \"{}\" type"
 msgstr "“value”格式错误，需要一个“{}”类型"
 
-#: apps/modules/plug_in_manager/process/setting.py:111
-#: apps/modules/setting/process/settings.py:201
+#: apps/modules/plug_in_manager/process/setting.py:122
+#: apps/modules/setting/process/settings.py:216
 msgid "There is no {}"
 msgstr "没有{}"
 
-#: apps/modules/plug_in_manager/process/setting.py:150
+#: apps/modules/plug_in_manager/process/setting.py:161
 msgid "Refreshed successfully"
 msgstr "刷新成功"
 
-#: apps/modules/plug_in_manager/process/setting.py:152
+#: apps/modules/plug_in_manager/process/setting.py:163
 msgid ""
 "Failed to refresh. Please check the previous plug-in page for error "
 "messages"
 msgstr "刷新失败，请查看插件的错误信息"
 
-#: apps/modules/plug_in_manager/process/setting.py:170
+#: apps/modules/plug_in_manager/process/setting.py:181
 msgid "There is no requirement file"
 msgstr "没有需求文件"
 
-#: apps/modules/plug_in_manager/process/setting.py:230
+#: apps/modules/plug_in_manager/process/setting.py:241
 msgid ""
 "Some host connections failed. Successfully connected host has installed "
 "requirements package in the background"
 msgstr "部分服务器连接失败，连接成功的服务器已在后台安装第三方需求包"
 
-#: apps/modules/plug_in_manager/process/setting.py:234
+#: apps/modules/plug_in_manager/process/setting.py:245
 msgid "Executed related installation commands in the background"
 msgstr "在后台执行相关需求命令"
 
@@ -635,36 +643,36 @@ msgstr "文章涉嫌违规"
 msgid "Up to {} tags are used"
 msgstr "最多使用{}标签"
 
-#: apps/modules/post/process/user_post.py:43
+#: apps/modules/post/process/user_post.py:44
 msgid "tag"
 msgstr "标签"
 
-#: apps/modules/post/process/user_post.py:173
+#: apps/modules/post/process/user_post.py:172
 msgid "[Label:{}]Post allegedly violated"
 msgstr "[标记：{}]发布的内容不合法"
 
-#: apps/modules/post/process/user_post.py:176
+#: apps/modules/post/process/user_post.py:175
 msgid "Issue success"
 msgstr "发布成功"
 
-#: apps/modules/post/process/user_post.py:178
+#: apps/modules/post/process/user_post.py:177
 #: apps/modules/user/process/role.py:118
 msgid "Save success"
 msgstr "保存草稿成功"
 
-#: apps/modules/post/process/user_post.py:189
+#: apps/modules/post/process/user_post.py:188
 msgid "Removed to recycle bin"
 msgstr "已移到回收站"
 
-#: apps/modules/post/process/user_post.py:198
+#: apps/modules/post/process/user_post.py:197
 msgid "{},{}"
 msgstr ""
 
-#: apps/modules/post/process/user_post.py:216
+#: apps/modules/post/process/user_post.py:215
 msgid "Restore success,{}"
 msgstr "恢复成功，{}"
 
-#: apps/modules/post/process/user_post.py:219
+#: apps/modules/post/process/user_post.py:218
 msgid "Restore failed"
 msgstr "恢复失败"
 
@@ -673,58 +681,58 @@ msgid "keyword"
 msgstr "关键词"
 
 #: apps/modules/setting/process/get_file_log.py:29
-#: apps/modules/setting/process/host_setting.py:84
+#: apps/modules/setting/process/host_setting.py:94
 msgid "Connection host[{}] failed,Check the host Settings"
 msgstr "连接服务器[{}]失败，请检查服务器设置"
 
 #: apps/modules/setting/process/get_file_log.py:69
-#: apps/modules/setting/process/host_setting.py:107
+#: apps/modules/setting/process/host_setting.py:118
 msgid "There is no host {}"
 msgstr "没有服务器{}"
 
-#: apps/modules/setting/process/host_setting.py:30
-#: apps/modules/user/process/profile.py:108
+#: apps/modules/setting/process/host_setting.py:40
+#: apps/modules/user/process/profile.py:114
 msgid "username"
 msgstr "用户名"
 
-#: apps/modules/setting/process/host_setting.py:30
+#: apps/modules/setting/process/host_setting.py:40
 msgid "password"
 msgstr "密码"
 
-#: apps/modules/setting/process/host_setting.py:45
+#: apps/modules/setting/process/host_setting.py:55
 msgid "The update is successful"
 msgstr "更新成功"
 
-#: apps/modules/setting/process/host_setting.py:57
+#: apps/modules/setting/process/host_setting.py:67
 msgid "Successfully deleted {} host information"
 msgstr "成功删除{}服务器信息"
 
-#: apps/modules/setting/process/host_setting.py:79
-#: apps/modules/setting/process/host_setting.py:128
+#: apps/modules/setting/process/host_setting.py:89
+#: apps/modules/setting/process/host_setting.py:139
 msgid "[{}] {}"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:96
+#: apps/modules/setting/process/host_setting.py:107
 msgid "[Warning]: \"sudo\" command go to the server"
 msgstr "【警告】”sudo”命令禁止使用，请直接到服务器终端使用"
 
-#: apps/modules/setting/process/host_setting.py:98
+#: apps/modules/setting/process/host_setting.py:109
 msgid "[Warning]: \"rm\" command go to the server"
 msgstr "【警告】”rm”命令禁止在此使用，请直接到服务器终端使用"
 
-#: apps/modules/setting/process/host_setting.py:103
+#: apps/modules/setting/process/host_setting.py:114
 msgid "Command executed {}"
 msgstr "命令已执行"
 
-#: apps/modules/setting/process/host_setting.py:132
+#: apps/modules/setting/process/host_setting.py:143
 msgid "Connection host[{}] failed"
 msgstr "连接主机[{}]失败"
 
-#: apps/modules/setting/process/host_setting.py:136
+#: apps/modules/setting/process/host_setting.py:147
 msgid "Successfully connecting server host"
 msgstr "成功连接服务器"
 
-#: apps/modules/setting/process/host_setting.py:138
+#: apps/modules/setting/process/host_setting.py:149
 msgid "Host does not exist"
 msgstr "服务器不存在"
 
@@ -736,17 +744,17 @@ msgstr "设置语言成功"
 msgid "Does not support this language"
 msgstr "不支持选择的语言"
 
-#: apps/modules/setting/process/settings.py:36
+#: apps/modules/setting/process/settings.py:43
 msgid "Lack of parameter"
 msgstr "缺少参数"
 
-#: apps/modules/setting/process/settings.py:53
-#: apps/modules/setting/process/settings.py:59
+#: apps/modules/setting/process/settings.py:60
+#: apps/modules/setting/process/settings.py:66
 #: apps/modules/theme_setting/process/themes.py:210
 msgid "Switch success"
 msgstr "切换成功"
 
-#: apps/modules/setting/process/settings.py:144
+#: apps/modules/setting/process/settings.py:159
 msgid "Root permission required"
 msgstr "需要ROOT权限"
 
@@ -868,7 +876,7 @@ msgid "The specified user is not found"
 msgstr "未找到指定用户"
 
 #: apps/modules/user/process/adm_user.py:102
-#: apps/modules/user/process/profile.py:151
+#: apps/modules/user/process/profile.py:157
 msgid "Update success"
 msgstr "更新成功"
 
@@ -1006,37 +1014,37 @@ msgstr "密码重设成功，请回到登录页面登录"
 msgid "Reset password failed(unknown error)"
 msgstr "密码重设失败（未知错误）"
 
-#: apps/modules/user/process/profile.py:26
+#: apps/modules/user/process/profile.py:27
 msgid "Lack of parameters \"user_id\""
 msgstr "缺少参数“user_id”"
 
-#: apps/modules/user/process/profile.py:62
+#: apps/modules/user/process/profile.py:63
 msgid "The date of birth requires an 8-digit date,Such as '{}'"
 msgstr "出生日期需要8个数字，例如：“{}”"
 
-#: apps/modules/user/process/profile.py:67
+#: apps/modules/user/process/profile.py:68
 #: apps/modules/user/process/sign_in.py:227
 msgid "gender"
 msgstr "gender"
 
-#: apps/modules/user/process/profile.py:74
+#: apps/modules/user/process/profile.py:75
 msgid "Address format is not in conformity with the requirements"
 msgstr "地址格式不符合要求"
 
-#: apps/modules/user/process/profile.py:131
+#: apps/modules/user/process/profile.py:137
 msgid "The editor saves failure"
 msgstr "保存失败"
 
-#: apps/modules/user/process/profile.py:138
+#: apps/modules/user/process/profile.py:144
 #: apps/modules/user/process/sign_up.py:37
 msgid "Name has been used"
 msgstr "名称已被使用"
 
-#: apps/modules/user/process/profile.py:141
+#: apps/modules/user/process/profile.py:147
 msgid "Domain has been used"
 msgstr "域名已被使用"
 
-#: apps/modules/user/process/profile.py:143
+#: apps/modules/user/process/profile.py:149
 msgid "Personality custom domain cannot be modified"
 msgstr "自定义个性域名不能修改"
 
@@ -1202,40 +1210,42 @@ msgstr "发送失败"
 msgid "SMS sent successfully"
 msgstr "短信发送成功"
 
-#: apps/utils/validation/str_format.py:24
+#: apps/utils/validation/str_format.py:27
 msgid "The name format is not correct,You can't use '.','*','#','?'"
 msgstr "名称不合法，不能使用特殊字符'.','*','#','?'"
 
-#: apps/utils/validation/str_format.py:32
-msgid "Name is not legal, there is sensitive information"
-msgstr "名称不合法，有敏感信息"
+#: apps/utils/validation/str_format.py:28
+msgid ""
+"Some contents contain sensitive information or do not meet the "
+"requirements of this site. Please correct it and try again."
+msgstr "部分内容存在敏感信息或不合本站规定的"
 
-#: apps/utils/validation/str_format.py:44
+#: apps/utils/validation/str_format.py:50
 msgid "custom domain"
 msgstr "自定义域名"
 
-#: apps/utils/validation/str_format.py:48
+#: apps/utils/validation/str_format.py:54
 msgid ""
 "The domain format is not correct,Only use Numbers, letters, and at least "
 "4 characters"
 msgstr "自定义域格式不正确，只能使用数字，字母和至少4个字符"
 
-#: apps/utils/validation/str_format.py:64
-#: apps/utils/validation/str_format.py:78
+#: apps/utils/validation/str_format.py:70
+#: apps/utils/validation/str_format.py:84
 msgid "The email format is not correct"
 msgstr "电子邮件格式错误"
 
-#: apps/utils/validation/str_format.py:85
+#: apps/utils/validation/str_format.py:91
 msgid "The url format is not correct"
 msgstr "URL格式错误"
 
-#: apps/utils/validation/str_format.py:97
+#: apps/utils/validation/str_format.py:103
 msgid ""
 "Password at least 8 characters! And at least contain Numbers, letters, "
 "special characters of two kinds"
 msgstr "密码至少8个字符！ 至少包含数字，字母，特殊字符中的任意两种"
 
-#: apps/utils/validation/str_format.py:109
+#: apps/utils/validation/str_format.py:115
 msgid "The password is too simple, can not use continuous characters!"
 msgstr "密码太简单，不能使用连续字符！"
 
@@ -1262,4 +1272,5 @@ msgid ""
 "If you do not send it, please ignore it.Please do not tell the "
 "verification code to others"
 msgstr "如果您没有发送，请忽略它。不要将验证码告诉其他人！"
+
 
