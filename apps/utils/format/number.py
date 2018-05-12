@@ -8,5 +8,5 @@ def get_num_digits(num):
         if not num:
             break
         n += 1
-        num = num >> 1
+        num = int(num) >> 1
     return n
