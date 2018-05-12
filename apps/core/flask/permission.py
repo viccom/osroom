@@ -76,7 +76,7 @@ def get_permission_key(permission):
 
     keys = []
     for k,v in get_configs("permission").items():
-        if v & permission:
+        if int(v) & int(permission):
             keys.append(k)
 
     return keys

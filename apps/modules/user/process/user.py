@@ -98,7 +98,7 @@ class User(UserMixin):
 
         role = mdb_user.db.role.find_one({"_id":self.role_id})
 
-        return role and role['permissions'] & get_config("permission", "STAFF")
+        return role and int(role['permissions']) & int(get_config("permission", "STAFF"))
 
 
     @property
