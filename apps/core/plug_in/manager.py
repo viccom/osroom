@@ -43,7 +43,7 @@ class PluginManager():
         s, r = verify_plugin(plug_path)
         if not s:
             # 标记插件为出错插件
-            mdb_sys.dbs["plugin"].update_one({"plugin_name": plugin_name},
+            mdb_sys.dbs["plugin"].update_one({"plugin_name": plugin_name, "update_time":{"$lt":self.current_time}},
                                                  {"$set": {"error":r,
                                                            "installed_time":self.current_time,
                                                            "update_time":self.current_time,
@@ -88,7 +88,8 @@ class PluginManager():
                             module = import_module(module_path)
                     except BaseException as e:
                         # 标记插件为出错插件
-                        mdb_sys.dbs["plugin"].update_one({"plugin_name": plugin_name},
+                        mdb_sys.dbs["plugin"].update_one({"plugin_name": plugin_name,
+                                                          "update_time":{"$lt":self.current_time}},
                                                          {"$set": {"error": str(e),
                                                                    "update_time": self.current_time,
                                                                    "active": 0,
@@ -119,7 +120,9 @@ class PluginManager():
                     self.unregister_plugin(plugin_name)
 
                 # 更新插件信息到数据库
-                mdb_sys.dbs["plugin"].update_one({"plugin_name": plugin_name}, {"$set": plug_conf})
+                mdb_sys.dbs["plugin"].update_one({"plugin_name": plugin_name,
+                                                  "update_time":{"$lt":self.current_time}},
+                                                 {"$set": plug_conf})
 
             else:
                 # 插件不存在

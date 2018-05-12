@@ -28,7 +28,8 @@ def push_url_to_db(app):
         else:
             continue
 
-        r = mdb_sys.dbs["sys_urls"].update_one({"url":rule.rule.rstrip("/")},
+        # 防止同时启动多个应用时前面启动的把后面的覆盖, 故更新时"update_time":{"$lt":now_time}
+        r = mdb_sys.dbs["sys_urls"].update_one({"url":rule.rule.rstrip("/"), "update_time":{"$lt":now_time}},
                                            {"$set":{"methods":list(rule.methods),
                                                     "endpoint":rule.endpoint,
                                                     "type":type,
@@ -48,5 +49,5 @@ def push_url_to_db(app):
         if "url" in url:
             cache.delete(key="get_sys_url_url_{}".format(url['url']), db_type="redis")
 
-    # 清理已不存在的api等
+    # 清理已不存在的api
     mdb_sys.dbs["sys_urls"].delete_many({"type": {"$ne": "page"}, "update_time": {"$lt": now_time}})
