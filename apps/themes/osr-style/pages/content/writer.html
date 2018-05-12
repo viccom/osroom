@@ -146,6 +146,7 @@
             vue.editor_name = "{{current_user.editor}}";
         {% endif %}
         get_post();
+        get_categorys();
     })
 
     function get_post(){
@@ -182,9 +183,6 @@
                 }else{
                     vue.save_name = "{{_('更新草稿')}}";
                 }
-
-                get_categorys();
-
              });
         }
 
