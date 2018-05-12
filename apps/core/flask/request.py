@@ -62,6 +62,8 @@ class OsrRequestProcess():
             请求前执行函数
             :return:
             '''
+
+            request.c_method = request.method
             if request.path.startswith(api.url_prefix):
                 # 只要是api请求都需要token验证
 
@@ -76,11 +78,10 @@ class OsrRequestProcess():
                     response = current_app.make_response(
                         gettext('Token is miss, unconventional web browsing requests please provide "OSR-RestToken",'
                                 ' otherwise provide "X-CSRFToken"'))
+
                     raise OsrTokenError(response.get_data(as_text=True), response=response)
 
-
             request.argget = Request()
-            request.c_method = request.method
 
             '''
             兼容前端某些js框架或浏览器不能使用DELETE, PUT, PATCH等请求时,
