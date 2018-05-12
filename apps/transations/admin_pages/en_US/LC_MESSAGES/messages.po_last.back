@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-12 15:58+0800\n"
+"POT-Creation-Date: 2018-05-12 16:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -117,7 +117,7 @@ msgstr "Comment"
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:32
 #: apps/admin_pages/pages/user/index.html:14
 msgid "用户"
-msgstr "user"
+msgstr "User"
 
 #: apps/admin_pages/pages/_index_chd2.html:70
 msgid "待处理事件"
