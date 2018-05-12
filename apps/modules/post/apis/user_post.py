@@ -3,6 +3,7 @@ from flask import request
 from apps.core.flask.login_manager import osr_login_required
 from apps.configs.sys_config import METHOD_WARNING
 from apps.core.blueprint import api
+from apps.core.flask.permission import permission_required, permissions
 from apps.core.flask.response import response_format
 from apps.modules.post.process.user_post import post_issue, post_restore, post_delete
 
@@ -10,6 +11,7 @@ __author__ = 'Allen Woo'
 
 @api.route('/user/post', methods=['POST', 'PUT', 'PATCH', 'DELETE'])
 @osr_login_required
+@permission_required(permissions(["USER"]))
 def api_user_post_op():
 
     '''

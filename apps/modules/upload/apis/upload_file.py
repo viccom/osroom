@@ -2,6 +2,7 @@
 from flask import request
 from apps.core.flask.login_manager import osr_login_required
 from apps.core.blueprint import api
+from apps.core.flask.permission import permission_required, permissions
 from apps.core.flask.response import response_format
 from apps.modules.upload.process.upload_file import file_upload
 
@@ -9,6 +10,7 @@ __author__ = "Allen Woo"
 
 @api.route('/upload/file', methods=['POST'])
 @osr_login_required
+@permission_required(permissions(["USER"]))
 def api_file_upload():
 
     '''

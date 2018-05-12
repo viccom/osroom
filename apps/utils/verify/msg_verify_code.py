@@ -70,7 +70,7 @@ def create_code_send(account, account_type):
         subject = gettext("Verification code")
         data = {"title": subject,
                 "body": email_code_html_body(_str),
-                "other_info":gettext("End"),
+                "other_info":None,
                 }
         html = get_email_html(data)
         send_email(subject=subject,
@@ -105,12 +105,11 @@ def email_code_html_body(code):
     '''
 
     body = '''
-        <tr><td>{}:</td></tr>
-
-            <tr><td align="center" style="color: #69B922; font-size: 20px;">
+        <span>{}:</span><br>
+        <span style="color: #69B922; font-size: 20px;text-align: center;">
                 {}
-            </td></tr>
-        <tr><td>{}</td></tr>
+        </span><br>
+        <span>{}</span><br>
         '''.format(gettext('Your verification code is'),code,
                gettext('If you do not send it, please ignore it.Please do not tell the verification code to others'))
     return body

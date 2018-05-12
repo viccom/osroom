@@ -1,6 +1,7 @@
 # -*-coding:utf-8-*-
 from apps.core.flask.login_manager import osr_login_required
 from apps.core.blueprint import api
+from apps.core.flask.permission import permission_required, permissions
 from apps.core.flask.response import response_format
 from apps.modules.user.process.email import email_update
 
@@ -8,6 +9,7 @@ __author__ = "Allen Woo"
 
 @api.route('/account/email', methods=['PUT'])
 @osr_login_required
+@permission_required(permissions(["USER"]))
 def api_account_email():
 
     '''

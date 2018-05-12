@@ -3,6 +3,7 @@ from flask import request
 from apps.core.flask.login_manager import osr_login_required
 from apps.configs.sys_config import METHOD_WARNING
 from apps.core.blueprint import api
+from apps.core.flask.permission import permission_required, permissions
 from apps.core.flask.response import response_format
 from apps.modules.user.process.profile import profile_update, public_profile, user_basic_edit, all_profile
 
@@ -21,6 +22,7 @@ def user_public():
 
 @api.route('/account/basic', methods=['PUT'])
 @osr_login_required
+@permission_required(permissions(["USER"]))
 def api_account_basic():
 
     '''
@@ -39,6 +41,7 @@ def api_account_basic():
 
 @api.route('/account/profile', methods=['GET','PUT'])
 @osr_login_required
+@permission_required(permissions(["USER"]))
 def api_account_profile():
 
     '''

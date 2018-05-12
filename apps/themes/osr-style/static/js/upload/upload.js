@@ -245,14 +245,14 @@ function init_upload(webupload_conf, before_send_header) {
                             break;
 
                         case 'interrupt':
-                            text = $("#js-tr-up-exceeds-size").attr("content");;
+                            text = $("#js-tr-upload-failed").attr("content");
                             break;
 
                         default:
                             if(msg){
                                 text = msg;
                             }else{
-                                text = $("#js-tr-up-exceeds-size").attr("content");
+                                text = $("#js-tr-upload-failed").attr("content");
                             }
                             break;
                     }

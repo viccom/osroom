@@ -2,12 +2,14 @@
 # -*-coding:utf-8-*-
 from apps.core.flask.login_manager import osr_login_required
 from apps.core.blueprint import api
+from apps.core.flask.permission import permission_required, permissions
 from apps.core.flask.response import response_format
 from apps.modules.user.process.avatar_upload import avatar_upload
 __author__ = "Allen Woo"
 
 @api.route('/account/upload/avatar', methods=['PUT'])
 @osr_login_required
+@permission_required(permissions(["USER"]))
 def api_avatar_upload():
 
     '''
