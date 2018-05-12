@@ -80,7 +80,7 @@ class Cache():
 
                         cache_key = tkey.lstrip("_")
                     else:
-                        cache_key = "{}{}".format(tkey, request.path)
+                        cache_key = "{}_{}".format(tkey, request.path)
                     if key_base64:
                         cache_key = base64.b64encode(cache_key.encode()).decode()
                 else:
@@ -216,7 +216,7 @@ class Cache():
                 else:
                     q = {"key": key}
 
-                self.mdb_coll.delete_one(q)
+                self.mdb_coll.delete_many(q)
         else:
             if db_type == "redis":
                 self.redis.delete(key)
@@ -225,7 +225,7 @@ class Cache():
                     q = {"key": {"$regex":key}}
                 else:
                     q = {"key": key}
-                self.mdb_coll.delete_one(q)
+                self.mdb_coll.delete_many(q)
 
 
     def clear(self, db_type=None):

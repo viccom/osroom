@@ -5,7 +5,7 @@ from flask_babel import gettext
 import time
 from flask_login import current_user
 from werkzeug.exceptions import abort
-from apps.app import mdb_web, mdb_user
+from apps.app import mdb_web, mdb_user, cache
 from apps.modules.user.process.user_profile_process import get_user_public_info
 from apps.utils.format.obj_format import objid_to_str
 from apps.utils.paging.paging import datas_paging
@@ -34,7 +34,6 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
     :return:
     '''
 
-    data = {}
     if pre > get_config("post", "NUM_PAGE_MAX"):
         data = {"msg":gettext('The "pre" must not exceed the maximum amount'),
                 "msg_type":"e", "http_status":400}
@@ -56,6 +55,8 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
             # 默认获取当前用户
             query_conditions["user_id"] = current_user.str_id
 
+    # 是否使用缓存, 按以下条件决定
+    use_cache = False
     if status == "no_issued":
         query_conditions['$or'] = [
             {'issued':0},
@@ -86,6 +87,10 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
         query_conditions['is_delete'] = {"$in":[2,3]}
 
     else:
+        if "user_id" not in other_filter or not current_user.is_authenticated or\
+                other_filter["user_id"] != current_user.str_id:
+            # 如果没有查询中没有指定用户,或者指定的用户不是当前用户, 则使用缓存功能
+            use_cache = True
         query_conditions['issued'] = 1
         query_conditions['is_delete'] = 0
         query_conditions['audit_score'] = {"$lt":get_config("content_inspection", "ALLEGED_ILLEGAL_SCORE")}
@@ -110,6 +115,47 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
         gt_time = (now_time - 86400*(time_range-1)) - now_time%86400
         query_conditions["issue_time"] = {'$gt':gt_time}
 
+    get_userinfo = kwargs.get("get_userinfo", True)
+
+    if use_cache:
+        return get_posts_use_cache(query_conditions=query_conditions,
+                        field=field, sort=sort,
+                        pre=pre,
+                        page=page,
+                        get_userinfo=get_userinfo)
+    else:
+        return get_posts_query(query_conditions=query_conditions,
+                        field=field, sort=sort,
+                        pre=pre,
+                        page=page,
+                        get_userinfo=get_userinfo)
+
+@cache.cached(timeout=get_config("post","GET_POST_CACHE_TIME_OUT"))
+def get_posts_use_cache(query_conditions, field, sort, pre, page, get_userinfo):
+    '''
+    调用get_posts_query, 主要提供缓存功能
+    :param query_conditions:
+    :param field:
+    :param sort:
+    :param pre:
+    :param page:
+    :param get_userinfo:
+    :return:
+    '''
+    return get_posts_query(query_conditions, field, sort, pre, page, get_userinfo)
+
+def get_posts_query(query_conditions, field, sort, pre, page, get_userinfo):
+    '''
+    提供查询条件等获取文章
+    :param query_conditions:
+    :param field:
+    :param sort:
+    :param pre:
+    :param page:
+    :param get_userinfo:
+    :return:
+    '''
+    data = {}
     if field:
         ps = mdb_web.db.post.find(query_conditions, field)
     else:
@@ -117,8 +163,6 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
 
     data_cnt = ps.count(True)
     posts = list(ps.sort(sort).skip(pre*(page-1)).limit(pre))
-
-    get_userinfo = kwargs.get("get_userinfo", True)
     for post in posts:
         post = objid_to_str(post, ["_id", "user_id", "audit_user_id"])
         # image
@@ -141,6 +185,7 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
 
     data["posts"] = datas_paging(pre=pre, page_num=page, data_cnt = data_cnt, datas = posts)
     return data
+
 
 def get_post_pr(post_id="", other_filter=None, is_admin=False, *args, **kwargs):
     '''
@@ -189,6 +234,7 @@ def get_post_pr(post_id="", other_filter=None, is_admin=False, *args, **kwargs):
     else:
         abort(404)
     return data
+
 
 def delete_post(ids=[]):
 

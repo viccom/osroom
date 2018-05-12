@@ -56,8 +56,6 @@ def get_posts():
     data = get_posts_pr(page=page, field=temp_field, pre=pre, sort=sort, status=status,
                         time_range=time_range,matching_rec=matching_rec, keyword=keyword,
                         other_filter=other_filter)
-
-
     return data
 
 def post_like():

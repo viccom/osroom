@@ -46,6 +46,7 @@ def api_post():
         data = {"msg_type":"w", "msg":METHOD_WARNING, "http_status":405}
     return response_format(data)
 
+
 @api.route('/post', methods=['PUT'])
 @osr_login_required
 def api_post_op():

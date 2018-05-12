@@ -1,51 +1,51 @@
 # -*-coding:utf-8-*-
 __author__ = "Allen Woo"
 DB_CONFIG = {
+    "redis": {
+        "host": [
+            "127.0.0.1"
+        ],
+        "password": "<Your password>",
+        "port": [
+            "6379"
+        ]
+    },
     "mongodb": {
-        "mongo_user": {
-            "dbname": "osr_user",
-            "username": "work",
-            "password": "<Your password>",
-            "host": [
-                "127.0.0.1:27017"
-            ],
-            "config": {
-                "replica_set": None,
-                "fsync": False
-            }
-        },
         "mongo_web": {
-            "dbname": "osr_web",
             "username": "work",
-            "password": "<Your password>",
             "host": [
                 "127.0.0.1:27017"
             ],
+            "password": "<Your password>",
+            "dbname": "osr_web",
             "config": {
-                "replica_set": None,
-                "fsync": False
+                "fsync": False,
+                "replica_set": None
             }
         },
         "mongo_sys": {
-            "dbname": "osr_sys",
             "username": "work",
-            "password": "<Your password>",
             "host": [
                 "127.0.0.1:27017"
             ],
+            "password": "<Your password>",
+            "dbname": "osr_sys",
             "config": {
-                "replica_set": None,
-                "fsync": False
+                "fsync": False,
+                "replica_set": None
+            }
+        },
+        "mongo_user": {
+            "username": "work",
+            "host": [
+                "127.0.0.1:27017"
+            ],
+            "password": "<Your password>",
+            "dbname": "osr_user",
+            "config": {
+                "fsync": False,
+                "replica_set": None
             }
         }
-    },
-    "redis": {
-        "port": [
-            "6379"
-        ],
-        "password": "<Your password>",
-        "host": [
-            "127.0.0.1"
-        ]
     }
 }

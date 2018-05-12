@@ -17,7 +17,7 @@
     <meta name="author" content="OSROOM osroom.com"/>
     {% include "osr-style/pages/based/css.html" %}
     {% include "osr-style/pages/based/top-js.html" %}
-    {{g.site_global.site_config.HEAD_CODE}}
+    {{g.site_global.site_config.HEAD_CODE | safe }}
 </head>
 
 {% block body %}

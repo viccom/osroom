@@ -4,15 +4,13 @@ from flask_babel import gettext
 from flask_login import current_user
 from apps.configs.sys_config import VERSION
 from apps.utils.paging.paging import datas_paging
-
-__author__ = "Allen Woo"
 from apps.core.utils.get_config import get_configs
 from apps.utils.upload.get_filepath import get_file_url
 from flask import request
 from apps.app import mdb_web, mdb_user
 from apps.utils.format.obj_format import json_to_pyseq, objid_to_str, str_to_num
 
-
+__author__ = "Allen Woo"
 def get_global_site_data(req_type="api"):
 
     '''
@@ -53,10 +51,12 @@ def get_global_media():
     根据conditions获取category_name获取media
     :return:
     '''
-    medias = {}
+
     conditions = json_to_pyseq(request.argget.all("conditions", []))
     category_name =  json_to_pyseq(request.argget.all("category_name", []))
     media_id = request.argget.all("media_id")
+
+    medias = {}
     if media_id:
         media = mdb_web.db.media.find_one({"_id": ObjectId(media_id)})
         media["_id"] = str(media["_id"])
