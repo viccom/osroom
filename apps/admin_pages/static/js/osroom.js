@@ -73,9 +73,7 @@ function osrHttp(type, url, data, args){
               error: function (XMLHttpRequest, textStatus, errorThrown) {
                     //消息弹出
                     data = $.parseJSON(XMLHttpRequest.responseText)
-                    if(!not_prompt){
-                        alert_msg(data);
-                    }
+                    alert_msg(data);
                     if(data.to_url){
                         location.href = data.to_url;
                     }
