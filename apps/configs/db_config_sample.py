@@ -2,48 +2,48 @@
 __author__ = "Allen Woo"
 DB_CONFIG = {
     "mongodb": {
-        "mongo_sys": {
-            "password": "<Your password>",
+        "mongo_user": {
+            "dbname": "osr_user",
             "username": "work",
-            "dbname": "osr_sys",
+            "password": "<Your password>",
+            "host": [
+                "127.0.0.1:27017"
+            ],
             "config": {
                 "replica_set": None,
                 "fsync": False
-            },
-            "host": [
-                "127.0.0.1:27017"
-            ]
+            }
         },
         "mongo_web": {
-            "password": "<Your password>",
-            "username": "work",
             "dbname": "osr_web",
-            "config": {
-                "replica_set": None,
-                "fsync": False
-            },
-            "host": [
-                "127.0.0.1:27017"
-            ]
-        },
-        "mongo_user": {
-            "password": "<Your password>",
             "username": "work",
-            "dbname": "osr_user",
+            "password": "<Your password>",
+            "host": [
+                "127.0.0.1:27017"
+            ],
             "config": {
                 "replica_set": None,
                 "fsync": False
-            },
+            }
+        },
+        "mongo_sys": {
+            "dbname": "osr_sys",
+            "username": "work",
+            "password": "<Your password>",
             "host": [
                 "127.0.0.1:27017"
-            ]
+            ],
+            "config": {
+                "replica_set": None,
+                "fsync": False
+            }
         }
     },
     "redis": {
-        "password": "<Your password>",
         "port": [
             "6379"
         ],
+        "password": "<Your password>",
         "host": [
             "127.0.0.1"
         ]
