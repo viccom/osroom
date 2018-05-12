@@ -3,16 +3,16 @@
 {% block content %}
 <div id="app" class="row osr-edit-page">
     <section class="osr-panel article">
-        <header class="panel-heading tab-bg-dark-navy-blue osr-panel-heading">
+        <header v-if="name!='demo_use_agreement'" class="panel-heading tab-bg-dark-navy-blue osr-panel-heading">
             <ul class="nav nav-tabs">
                 <li id="head_li_user_agreement">
                     <a data-toggle="tab" class="osr-pointer" v-on:click='get_global("user_agreement")'>
                          {{_("用户协议")}}
                     </a>
                 </li>
-                <li id="head_li_demo_use_agreement">
+                <li id="head_li_privacy_policy">
                     <a data-toggle="tab" class="osr-pointer" v-on:click='get_global("demo_use_agreement")'>
-                         {{_("Demo使用协议")}}
+                         {{_("隐私政策")}}
                     </a>
                 </li>
             </ul>

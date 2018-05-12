@@ -55,13 +55,15 @@ def init_core_module(app):
     # 在此之前, 任何程序不能调用utils.get_config.py下的方法
     ###################################################
 
-    from apps.core.utils.get_config import get_configs
+    from apps.core.utils.get_config import get_configs, get_config
     from apps.core.flask.request import OsrRequestProcess
     from apps.core.flask.errorhandler import ErrorHandler
     from apps.core.blueprint import api, admin_view, theme_view, static, open_api
     from apps.core.flask.routing import RegexConverter
     from apps.core.flask.routing import push_url_to_db
 
+    # 最大请求大小
+    app.config["MAX_CONTENT_LENGTH"] = get_config("system", "MAX_CONTENT_LENGTH")*1024*1024
     # Session会话配置
     session_config = get_configs("session")
     session_config["SESSION_PROTECTION"] = SESSION_PROTECTION

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-12 15:33+0800\n"
+"POT-Creation-Date: 2018-05-12 17:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: apps/configs/sys_config.py:99
+#: apps/configs/sys_config.py:100
 msgid "405, The method is not allowed for the requested URL"
 msgstr ""
 
@@ -823,7 +823,7 @@ msgid "Uploaded successfully"
 msgstr ""
 
 #: apps/modules/upload/process/upload_file.py:56
-#: apps/modules/user/process/avatar_upload.py:65
+#: apps/modules/user/process/avatar_upload.py:77
 msgid "Upload failed"
 msgstr ""
 
@@ -905,11 +905,16 @@ msgstr ""
 msgid "Activation failed.May not have permission"
 msgstr ""
 
-#: apps/modules/user/process/avatar_upload.py:55
+#: apps/modules/user/process/avatar_upload.py:31
+#: apps/modules/user/process/avatar_upload.py:39
+msgid "Upload avatar image can not exceed {}M"
+msgstr ""
+
+#: apps/modules/user/process/avatar_upload.py:67
 msgid "Save failed"
 msgstr ""
 
-#: apps/modules/user/process/avatar_upload.py:63
+#: apps/modules/user/process/avatar_upload.py:75
 msgid "Save successfully"
 msgstr ""
 

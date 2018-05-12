@@ -90,8 +90,9 @@ WEBLOG_EXCEP_FILENAME = "error.log"
 LOG_FORMATTER = "%(asctime)s %(levelname)s %(message)s"
 WEBLOG_NORMAL_LEVEL = logging.DEBUG
 WEBLOG_EXCEP_LEVEL = logging.INFO
-# 如果为True则错误日志中不写入"详细的错误", 值写入错误类型
+# 如果为True则错误日志中不写入"详细的错误", 只写入错误类型
 PRESERVE_CONTEXT_ON_EXCEPTION = False
+
 '''
  Request
 '''

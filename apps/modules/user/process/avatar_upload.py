@@ -24,10 +24,22 @@ def avatar_upload():
     '''
     result = None
     imgfile_base = request.argget.all("imgfile_base")
+    max_size_mb = get_config("account", "USER_AVATAR_MAX_SIZE")
+    max_size_b = max_size_mb*1024*1024
     if imgfile_base:
-        result = fileup_base_64(uploaded_files = [imgfile_base], prefix="user_avatar/")
+        if len(imgfile_base) >max_size_b:
+            data = {"msg":gettext("Upload avatar image can not exceed {}M".format(max_size_mb)),
+                    "msg_type":"w", "http_status":413}
+            return data
+        else:
+            result = fileup_base_64(uploaded_files = [imgfile_base], prefix="user_avatar/")
     else:
-        file = request.files['imgfile']
+        file = request.files['upfile']
+        if len(file.read()) > max_size_b:
+            data = {"msg":gettext("Upload avatar image can not exceed {}M".format(max_size_mb)),
+                    "msg_type":"w", "http_status":413}
+            return data
+
         if file:
             tailoring = request.argget.all('tailoring')
             if tailoring:
