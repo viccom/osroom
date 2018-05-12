@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  v1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-06 14:26+0800\n"
+"POT-Creation-Date: 2018-05-12 15:33+0800\n"
 "PO-Revision-Date: 2018-05-01 13:31+0800\n"
 "Last-Translator: AllenWoo\n"
 "Language: en_GB\n"
@@ -73,7 +73,7 @@ msgid "Keep at least one active token"
 msgstr "至少保留一个激活的Token"
 
 #: apps/core/auth/rest_token_auth.py:102
-#: apps/modules/message/process/sys_message.py:58
+#: apps/modules/message/process/sys_message.py:86
 #: apps/modules/message/process/user_message.py:184
 #: apps/modules/permission/process/url_permission.py:190
 #: apps/modules/plug_in_manager/process/manager.py:118
@@ -206,24 +206,24 @@ msgstr "参数{}只能时以下类型:\"{}\""
 msgid "The value of parameter \"{}\" is illegal"
 msgstr "参数\"{}\" 的值是非法的"
 
-#: apps/core/plug_in/manager.py:103
+#: apps/core/plug_in/manager.py:104
 msgid "Plugin startup file does not exist"
 msgstr "插件启动文件不存在"
 
-#: apps/core/plug_in/manager.py:221
+#: apps/core/plug_in/manager.py:224
 #: apps/modules/theme_setting/process/themes.py:173
 msgid "Configuration file \"conf.yaml\" but few parameters \"{}\""
 msgstr "插件配置文件\"conf.yaml\"缺少参数\"{}\""
 
-#: apps/core/plug_in/manager.py:224
+#: apps/core/plug_in/manager.py:227
 msgid "Missing startup file in plugin package"
 msgstr "插件包中缺少启动文件"
 
-#: apps/core/plug_in/manager.py:235
+#: apps/core/plug_in/manager.py:238
 msgid "Plugin installed successfully"
 msgstr "插件安装成功"
 
-#: apps/core/plug_in/manager.py:238
+#: apps/core/plug_in/manager.py:241
 msgid "Missing plugin main function(execution function)"
 msgstr "缺少插件主要功能（执行功能）"
 
@@ -329,7 +329,7 @@ msgstr "恢复成功, {}"
 
 #: apps/modules/comments/process/comment.py:38
 msgid "Comment feature is not open"
-msgstr "评论涉嫌违规"
+msgstr "评论功能已关闭"
 
 #: apps/modules/comments/process/comment.py:49
 msgid "comment"
@@ -365,12 +365,12 @@ msgid "Delete the success"
 msgstr "删除成功"
 
 #: apps/modules/comments/process/comment.py:265
-#: apps/modules/post/process/post.py:90
+#: apps/modules/post/process/post.py:88
 msgid "Success"
 msgstr "成功"
 
 #: apps/modules/comments/process/comment.py:267
-#: apps/modules/post/process/post.py:92
+#: apps/modules/post/process/post.py:90
 msgid "Failed"
 msgstr "失败"
 
@@ -452,53 +452,53 @@ msgid "{} files have been deleted"
 msgstr "{} 文件已被删除"
 
 #: apps/modules/media/process/media.py:322
-#: apps/modules/message/process/sys_message.py:60
+#: apps/modules/message/process/sys_message.py:88
 #: apps/modules/message/process/user_message.py:186
 #: apps/modules/plug_in_manager/process/manager.py:124
-#: apps/modules/setting/process/host_setting.py:59
+#: apps/modules/setting/process/host_setting.py:60
 msgid "Failed to delete"
 msgstr "删除失败"
 
-#: apps/modules/message/process/send_msg.py:26
+#: apps/modules/message/process/send_msg.py:31
 #: apps/modules/post/process/user_post.py:56
 msgid "title"
 msgstr "标题"
 
-#: apps/modules/message/process/send_msg.py:27
+#: apps/modules/message/process/send_msg.py:32
 #: apps/modules/post/process/user_post.py:61
 #: apps/modules/post/process/user_post.py:70
 msgid "content"
 msgstr "内容"
 
-#: apps/modules/message/process/send_msg.py:28
+#: apps/modules/message/process/send_msg.py:33
 msgid "send type"
 msgstr "发送类型"
 
-#: apps/modules/message/process/send_msg.py:29
+#: apps/modules/message/process/send_msg.py:34
 msgid "user name"
 msgstr "用户名"
 
-#: apps/modules/message/process/send_msg.py:49
+#: apps/modules/message/process/send_msg.py:70
 msgid "Station news success"
 msgstr "站内通知成功"
 
-#: apps/modules/message/process/send_msg.py:51
+#: apps/modules/message/process/send_msg.py:72
 msgid "No relevant user"
 msgstr "没有相关用户"
 
-#: apps/modules/message/process/send_msg.py:64
+#: apps/modules/message/process/send_msg.py:85
 msgid "Mail message is being sent"
 msgstr "邮件通知已发送"
 
-#: apps/modules/message/process/send_msg.py:66
+#: apps/modules/message/process/send_msg.py:87
 msgid "There is no such email address user"
 msgstr "没有找到用户邮件地址"
 
-#: apps/modules/message/process/send_msg.py:79
+#: apps/modules/message/process/send_msg.py:100
 msgid "SMS sent"
 msgstr "短信发送"
 
-#: apps/modules/message/process/send_msg.py:81
+#: apps/modules/message/process/send_msg.py:102
 msgid "No user mobile phone number was obtained"
 msgstr "没有获得用户手机号码"
 
@@ -508,8 +508,8 @@ msgid "Update succeed"
 msgstr "更新成功"
 
 #: apps/modules/message/process/user_message.py:162
-#: apps/modules/setting/process/host_setting.py:46
-#: apps/modules/user/process/adm_user.py:121
+#: apps/modules/setting/process/host_setting.py:47
+#: apps/modules/user/process/adm_user.py:119
 #: apps/modules/user/process/profile.py:96
 #: apps/modules/user/process/profile.py:148
 #: apps/modules/user/process/role.py:124 apps/modules/user/process/role.py:130
@@ -668,13 +668,17 @@ msgstr "恢复成功，{}"
 msgid "Restore failed"
 msgstr "恢复失败"
 
+#: apps/modules/search/process/search.py:26
+msgid "keyword"
+msgstr ""
+
 #: apps/modules/setting/process/get_file_log.py:29
-#: apps/modules/setting/process/host_setting.py:83
+#: apps/modules/setting/process/host_setting.py:84
 msgid "Connection host[{}] failed,Check the host Settings"
 msgstr "连接服务器[{}]失败，请检查服务器设置"
 
 #: apps/modules/setting/process/get_file_log.py:69
-#: apps/modules/setting/process/host_setting.py:106
+#: apps/modules/setting/process/host_setting.py:107
 msgid "There is no host {}"
 msgstr "没有服务器{}"
 
@@ -687,40 +691,40 @@ msgstr "用户名"
 msgid "password"
 msgstr "密码"
 
-#: apps/modules/setting/process/host_setting.py:44
+#: apps/modules/setting/process/host_setting.py:45
 msgid "The update is successful"
 msgstr "更新成功"
 
-#: apps/modules/setting/process/host_setting.py:56
+#: apps/modules/setting/process/host_setting.py:57
 msgid "Successfully deleted {} host information"
 msgstr "成功删除{}服务器信息"
 
-#: apps/modules/setting/process/host_setting.py:78
-#: apps/modules/setting/process/host_setting.py:127
+#: apps/modules/setting/process/host_setting.py:79
+#: apps/modules/setting/process/host_setting.py:128
 msgid "[{}] {}"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:95
+#: apps/modules/setting/process/host_setting.py:96
 msgid "[Warning]: \"sudo\" command go to the server"
 msgstr "【警告】”sudo”命令禁止使用，请直接到服务器终端使用"
 
-#: apps/modules/setting/process/host_setting.py:97
+#: apps/modules/setting/process/host_setting.py:98
 msgid "[Warning]: \"rm\" command go to the server"
 msgstr "【警告】”rm”命令禁止在此使用，请直接到服务器终端使用"
 
-#: apps/modules/setting/process/host_setting.py:102
+#: apps/modules/setting/process/host_setting.py:103
 msgid "Command executed {}"
 msgstr "命令已执行"
 
-#: apps/modules/setting/process/host_setting.py:131
+#: apps/modules/setting/process/host_setting.py:132
 msgid "Connection host[{}] failed"
 msgstr "连接主机[{}]失败"
 
-#: apps/modules/setting/process/host_setting.py:135
+#: apps/modules/setting/process/host_setting.py:136
 msgid "Successfully connecting server host"
 msgstr "成功连接服务器"
 
-#: apps/modules/setting/process/host_setting.py:137
+#: apps/modules/setting/process/host_setting.py:138
 msgid "Host does not exist"
 msgstr "服务器不存在"
 
@@ -822,7 +826,7 @@ msgid "Uploaded successfully"
 msgstr "上传成功"
 
 #: apps/modules/upload/process/upload_file.py:56
-#: apps/modules/user/process/avatar_upload.py:64
+#: apps/modules/user/process/avatar_upload.py:65
 msgid "Upload failed"
 msgstr "上传失败"
 
@@ -858,57 +862,57 @@ msgid "Successfully logged out"
 msgstr "成功注销登录"
 
 #: apps/modules/user/process/adm_user.py:22
-#: apps/modules/user/process/user_profile_process.py:32
-#: apps/modules/user/process/user_profile_process.py:61
+#: apps/modules/user/process/user_profile_process.py:31
+#: apps/modules/user/process/user_profile_process.py:58
 msgid "The specified user is not found"
 msgstr "未找到指定用户"
 
-#: apps/modules/user/process/adm_user.py:104
+#: apps/modules/user/process/adm_user.py:102
 #: apps/modules/user/process/profile.py:151
 msgid "Update success"
 msgstr "更新成功"
 
-#: apps/modules/user/process/adm_user.py:116
+#: apps/modules/user/process/adm_user.py:114
 msgid "No permission modification"
 msgstr "没有权限修改"
 
-#: apps/modules/user/process/adm_user.py:151
+#: apps/modules/user/process/adm_user.py:149
 msgid "Has recovered {} users, {} users can not operate"
 msgstr "已恢复{}个用户，还有{}个用户不能操作"
 
-#: apps/modules/user/process/adm_user.py:154
+#: apps/modules/user/process/adm_user.py:152
 msgid "Recycle user failed.May not have permission"
 msgstr "回收用户失败，没有权限"
 
-#: apps/modules/user/process/adm_user.py:159
+#: apps/modules/user/process/adm_user.py:158
 msgid "{} users have been deleted and {} users can not be deleted"
 msgstr "{}个用户已被删除，还有{}个用户删除失败"
 
-#: apps/modules/user/process/adm_user.py:162
+#: apps/modules/user/process/adm_user.py:161
 msgid "Failed to delete.May not have permission"
 msgstr "删除失败许没有权限删除"
 
-#: apps/modules/user/process/adm_user.py:189
+#: apps/modules/user/process/adm_user.py:188
 msgid "Restore the {} users,The other {} users have no power control"
 msgstr "已恢复{}个用户，其他无权操作"
 
-#: apps/modules/user/process/adm_user.py:192
+#: apps/modules/user/process/adm_user.py:191
 msgid "Restore the failure.May not have permission"
 msgstr "恢复失败，没有权限"
 
-#: apps/modules/user/process/adm_user.py:219
+#: apps/modules/user/process/adm_user.py:218
 msgid "{} user activation is successful, {} no permission to operate"
 msgstr "{}个用户激活成功，还有{}个用户无权操作"
 
-#: apps/modules/user/process/adm_user.py:222
+#: apps/modules/user/process/adm_user.py:221
 msgid "Activation failed.May not have permission"
 msgstr "激活失败，没有权限"
 
-#: apps/modules/user/process/avatar_upload.py:53
+#: apps/modules/user/process/avatar_upload.py:55
 msgid "Save failed"
 msgstr "保存失败"
 
-#: apps/modules/user/process/avatar_upload.py:62
+#: apps/modules/user/process/avatar_upload.py:63
 msgid "Save successfully"
 msgstr "保存成功"
 
@@ -985,8 +989,7 @@ msgstr "密码重设通知"
 
 #: apps/modules/user/process/password.py:154
 #: apps/modules/user/process/sign_in.py:166
-#: apps/modules/user/process/sign_up.py:106
-#: apps/utils/verify/msg_verify_code.py:73
+#: apps/modules/user/process/sign_up.py:107
 msgid "End"
 msgstr "结束"
 
@@ -1105,12 +1108,12 @@ msgid ""
 msgstr "当前平台没有登录处理插件，请先安装相关插件"
 
 #: apps/modules/user/process/sign_in.py:249
-#: apps/modules/user/process/sign_up.py:118
+#: apps/modules/user/process/sign_up.py:119
 msgid "Registered successfully"
 msgstr "注册成功"
 
 #: apps/modules/user/process/sign_in.py:253
-#: apps/modules/user/process/sign_up.py:122
+#: apps/modules/user/process/sign_up.py:123
 msgid "Data saved incorrectly, please try again"
 msgstr "数据保存不正确，请重试"
 
@@ -1126,7 +1129,7 @@ msgstr "此电子邮件已在本站注册，请直接登录"
 msgid "This number has been registered in the site oh, please login directly."
 msgstr "此手机号码已在本站注册，请直接登录。"
 
-#: apps/modules/user/process/sign_up.py:99
+#: apps/modules/user/process/sign_up.py:100
 msgid "Registration success notification"
 msgstr "注册成功通知"
 
@@ -1134,7 +1137,7 @@ msgstr "注册成功通知"
 msgid "Password is not a readable attribute"
 msgstr "密码不是可读属性"
 
-#: apps/modules/user/process/user.py:122
+#: apps/modules/user/process/user.py:127
 msgid "Unknown"
 msgstr "未知"
 
@@ -1245,11 +1248,11 @@ msgid ""
 "it. Please do not tell the verification code to others"
 msgstr "[{}] 您的验证码是：{}。 如果您没有发送，请忽略它。 请不要将验证码告诉他人哦！"
 
-#: apps/utils/verify/msg_verify_code.py:114
+#: apps/utils/verify/msg_verify_code.py:113
 msgid "Your verification code is"
 msgstr "您的验证码是"
 
-#: apps/utils/verify/msg_verify_code.py:115
+#: apps/utils/verify/msg_verify_code.py:114
 msgid ""
 "If you do not send it, please ignore it.Please do not tell the "
 "verification code to others"

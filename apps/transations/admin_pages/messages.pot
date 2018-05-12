@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-06 09:37+0800\n"
+"POT-Creation-Date: 2018-05-12 15:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr ""
 #: apps/admin_pages/pages/comment/index.html:87
 #: apps/admin_pages/pages/media/other.html:61
 #: apps/admin_pages/pages/media/text.html:119
-#: apps/admin_pages/pages/plugin/index.html:114
+#: apps/admin_pages/pages/plugin/index.html:115
 #: apps/admin_pages/pages/setting/_config_warning_info.html:14
 #: apps/admin_pages/pages/setting/host/index.html:36
 msgid "查看"
@@ -196,8 +196,8 @@ msgstr ""
 msgid "欢迎使用OSROOM"
 msgstr ""
 
-#: apps/admin_pages/pages/based/footer.html:18
-#: apps/admin_pages/pages/based/footer_adm.html:12
+#: apps/admin_pages/pages/based/footer.html:16
+#: apps/admin_pages/pages/based/footer_adm.html:9
 #: apps/admin_pages/pages/index.html:13
 #: apps/admin_pages/pages/setting/config-versions.html:36
 msgid "版本"
@@ -221,6 +221,12 @@ msgstr ""
 
 #: apps/admin_pages/pages/recover-password.html:2
 msgid "找回密码"
+msgstr ""
+
+#: apps/admin_pages/pages/recover-password.html:12
+#: apps/admin_pages/pages/recover-password.html:15
+#: apps/admin_pages/pages/user/edit-user.html:26
+msgid "电子邮箱"
 msgstr ""
 
 #: apps/admin_pages/pages/own/account/settings/email.html:26
@@ -327,7 +333,7 @@ msgstr ""
 
 #: apps/admin_pages/pages/message/send.html:43
 #: apps/admin_pages/pages/own/account/settings/_basis.html:17
-#: apps/admin_pages/pages/setting/host/edit.html:25
+#: apps/admin_pages/pages/setting/host/edit.html:32
 #: apps/admin_pages/pages/sign-up.html:12
 #: apps/admin_pages/pages/user/edit-user.html:23
 msgid "用户名"
@@ -450,7 +456,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/user/message/_notice.html:28
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:67
 #: apps/admin_pages/pages/permission/url/index.html:106
-#: apps/admin_pages/pages/plugin/index.html:89
+#: apps/admin_pages/pages/plugin/index.html:90
 #: apps/admin_pages/pages/role/index.html:58
 #: apps/admin_pages/pages/setting/host/index.html:49
 #: apps/admin_pages/pages/theme-setting/file/index.html:63
@@ -474,7 +480,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/user/post/_comment.html:227
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:82
 #: apps/admin_pages/pages/permission/url/index.html:150
-#: apps/admin_pages/pages/plugin/index.html:164
+#: apps/admin_pages/pages/plugin/index.html:165
 #: apps/admin_pages/pages/post/index.html:199
 #: apps/admin_pages/pages/role/index.html:106
 #: apps/admin_pages/pages/setting/configs.html:117
@@ -495,7 +501,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/user/post/_comment.html:231
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:88
 #: apps/admin_pages/pages/permission/url/index.html:154
-#: apps/admin_pages/pages/plugin/index.html:168
+#: apps/admin_pages/pages/plugin/index.html:169
 #: apps/admin_pages/pages/post/index.html:203
 #: apps/admin_pages/pages/role/index.html:110
 #: apps/admin_pages/pages/setting/configs.html:121
@@ -621,7 +627,7 @@ msgstr ""
 
 #: apps/admin_pages/pages/based/_user_dropdown.html:27
 #: apps/admin_pages/pages/based/sidebar.html:260
-#: apps/admin_pages/pages/plugin/index.html:86
+#: apps/admin_pages/pages/plugin/index.html:87
 #: apps/admin_pages/pages/plugin/setting.html:9
 #: apps/admin_pages/pages/plugin/setting.html:15
 msgid "设置"
@@ -642,18 +648,18 @@ msgstr ""
 msgid "当前页面为OSROOM自带页面(属管理端), 需公开相关页面访问,建议使用主题"
 msgstr ""
 
-#: apps/admin_pages/pages/based/footer.html:9
-#: apps/admin_pages/pages/based/footer_adm.html:3
+#: apps/admin_pages/pages/based/footer.html:8
+#: apps/admin_pages/pages/based/footer_adm.html:2
 msgid "回到顶部"
 msgstr ""
 
-#: apps/admin_pages/pages/based/footer.html:15
-#: apps/admin_pages/pages/based/footer_adm.html:9
+#: apps/admin_pages/pages/based/footer.html:13
+#: apps/admin_pages/pages/based/footer_adm.html:6
 msgid "欢迎使用"
 msgstr ""
 
-#: apps/admin_pages/pages/based/footer.html:30
-#: apps/admin_pages/pages/based/footer_adm.html:24
+#: apps/admin_pages/pages/based/footer.html:28
+#: apps/admin_pages/pages/based/footer_adm.html:21
 msgid "提供"
 msgstr ""
 
@@ -1002,7 +1008,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/content/category/index.html:26
 #: apps/admin_pages/pages/own/content/writer.html:122
 #: apps/admin_pages/pages/role/edit-role.html:56
-#: apps/admin_pages/pages/setting/host/edit.html:44
+#: apps/admin_pages/pages/setting/host/edit.html:51
 #: apps/admin_pages/pages/theme-setting/file/add-page.html:45
 #: apps/admin_pages/pages/user/edit-user.html:50
 msgid "保存"
@@ -1212,7 +1218,7 @@ msgstr ""
 #: apps/admin_pages/pages/media/video-edit.html:38
 #: apps/admin_pages/pages/post/index.html:237
 #: apps/admin_pages/pages/role/index.html:31
-#: apps/admin_pages/pages/setting/host/edit.html:36
+#: apps/admin_pages/pages/setting/host/edit.html:43
 msgid "默认"
 msgstr ""
 
@@ -1593,8 +1599,8 @@ msgstr ""
 msgid "您当前使用的是富文本编辑器"
 msgstr ""
 
-#: apps/admin_pages/pages/module/email/send-temp.html:246
-msgid "UTC时间"
+#: apps/admin_pages/pages/module/email/send-temp.html:79
+msgid "系统邮件, 请勿回复"
 msgstr ""
 
 #: apps/admin_pages/pages/module/exception/401.html:2
@@ -1606,8 +1612,8 @@ msgid "无权访问该页面"
 msgstr ""
 
 #: apps/admin_pages/pages/module/exception/401.html:32
-#: apps/admin_pages/pages/module/exception/404.html:33
-#: apps/admin_pages/pages/module/exception/500.html:32
+#: apps/admin_pages/pages/module/exception/404.html:32
+#: apps/admin_pages/pages/module/exception/500.html:31
 msgid "回到首页"
 msgstr ""
 
@@ -1615,7 +1621,7 @@ msgstr ""
 msgid "404页面不存在"
 msgstr ""
 
-#: apps/admin_pages/pages/module/exception/404.html:33
+#: apps/admin_pages/pages/module/exception/404.html:32
 msgid "该页面不存在"
 msgstr ""
 
@@ -1623,7 +1629,7 @@ msgstr ""
 msgid "500Server Error"
 msgstr ""
 
-#: apps/admin_pages/pages/module/exception/500.html:32
+#: apps/admin_pages/pages/module/exception/500.html:31
 msgid "错误ID"
 msgstr ""
 
@@ -1749,7 +1755,7 @@ msgid "格式不合法"
 msgstr ""
 
 #: apps/admin_pages/pages/own/account/settings/_profile.html:50
-#: apps/admin_pages/pages/plugin/index.html:65
+#: apps/admin_pages/pages/plugin/index.html:66
 msgid "简介"
 msgstr ""
 
@@ -1768,7 +1774,7 @@ msgid "邮箱修改"
 msgstr ""
 
 #: apps/admin_pages/pages/own/account/settings/email.html:15
-#: apps/admin_pages/pages/setting/host/edit.html:31
+#: apps/admin_pages/pages/setting/host/edit.html:38
 msgid "密码"
 msgstr ""
 
@@ -1857,7 +1863,7 @@ msgstr ""
 msgid "更新草稿"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:258
+#: apps/admin_pages/pages/own/content/writer.html:262
 msgid "确认已保存内容后才离开哦"
 msgstr ""
 
@@ -2277,13 +2283,14 @@ msgstr ""
 
 #: apps/admin_pages/pages/plugin/_edit.html:134
 #: apps/admin_pages/pages/setting/config-versions.html:35
+#: apps/admin_pages/pages/setting/host/edit.html:28
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:26
 #: apps/admin_pages/pages/setting/host/index.html:22
 msgid "主机IP"
 msgstr ""
 
 #: apps/admin_pages/pages/plugin/_edit.html:135
-#: apps/admin_pages/pages/plugin/index.html:66
+#: apps/admin_pages/pages/plugin/index.html:67
 msgid "插件依赖包安装状态"
 msgstr ""
 
@@ -2318,45 +2325,49 @@ msgid "[删除]功能只对单点部署有效: 集群部署的站点, 请直接�
 msgstr ""
 
 #: apps/admin_pages/pages/plugin/index.html:57
-msgid "插件安装成功后, 请检查是否需要安装依赖包. 如果需要， 请安装请进入设置检查依赖包安装情况"
+msgid "插件安装成功后, 1.请检查是否需要安装依赖包. 如果需要， 请安装请进入设置检查依赖包安装情况."
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:64
+#: apps/admin_pages/pages/plugin/index.html:58
+msgid "2.检测插件是否需要配置, 部分插件需要激活后才会出现配置项"
+msgstr ""
+
+#: apps/admin_pages/pages/plugin/index.html:65
 msgid "名称(别名)"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:67
+#: apps/admin_pages/pages/plugin/index.html:68
 msgid "安装时间"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:77
+#: apps/admin_pages/pages/plugin/index.html:78
 msgid "确定停止使用此插件?"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:79
+#: apps/admin_pages/pages/plugin/index.html:80
 msgid "停止"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:83
+#: apps/admin_pages/pages/plugin/index.html:84
 #: apps/admin_pages/pages/user/edit-user.html:45
 #: apps/admin_pages/pages/user/index.html:50
 #: apps/admin_pages/pages/user/index.html:115
 msgid "激活"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:98
+#: apps/admin_pages/pages/plugin/index.html:99
 msgid "插件设置有误或缺少插件需求包，请进入设置检查，然后重新激活插件"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:99
+#: apps/admin_pages/pages/plugin/index.html:100
 msgid "如果以上操作无效，可能是插件程序出现致命的错误，请删除，重新安装"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:108
+#: apps/admin_pages/pages/plugin/index.html:109
 msgid "查看详情"
 msgstr ""
 
-#: apps/admin_pages/pages/plugin/index.html:117
+#: apps/admin_pages/pages/plugin/index.html:118
 msgid "不需要"
 msgstr ""
 
@@ -2564,33 +2575,37 @@ msgstr ""
 msgid "服务器管理"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:27
+#: apps/admin_pages/pages/setting/host/edit.html:26
+msgid "IP"
+msgstr ""
+
+#: apps/admin_pages/pages/setting/host/edit.html:34
 msgid "主机用户名"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:33
+#: apps/admin_pages/pages/setting/host/edit.html:40
 msgid "主机密码"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:36
+#: apps/admin_pages/pages/setting/host/edit.html:43
 msgid "主机端口"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:37
+#: apps/admin_pages/pages/setting/host/edit.html:44
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:29
 msgid "端口"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:40
+#: apps/admin_pages/pages/setting/host/edit.html:47
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:35
 msgid "命令(注释#开头)"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:41
+#: apps/admin_pages/pages/setting/host/edit.html:48
 msgid "保存一个需要常用的Linux shell 命令"
 msgstr ""
 
-#: apps/admin_pages/pages/setting/host/edit.html:47
+#: apps/admin_pages/pages/setting/host/edit.html:54
 msgid "测试连接"
 msgstr ""
 
@@ -2803,10 +2818,6 @@ msgstr ""
 
 #: apps/admin_pages/pages/user/edit-user.html:2
 msgid "编辑用户信息"
-msgstr ""
-
-#: apps/admin_pages/pages/user/edit-user.html:26
-msgid "电子邮箱"
 msgstr ""
 
 #: apps/admin_pages/pages/user/edit-user.html:29

@@ -70,7 +70,7 @@ def create_code_send(account, account_type):
         subject = gettext("Verification code")
         data = {"title": subject,
                 "body": email_code_html_body(_str),
-                "other_info":None,
+                "other_info":"",
                 }
         html = get_email_html(data)
         send_email(subject=subject,

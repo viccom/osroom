@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-06 13:09+0800\n"
+"POT-Creation-Date: 2018-05-12 15:58+0800\n"
 "PO-Revision-Date: 2018-01-04 20:50+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -18,15 +18,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
+#: apps/themes/osr-style/pages/401.html:2
+#: apps/themes/osroom.com/pages/401.html:2
+msgid "401无权访问"
+msgstr "401 does not have access"
+
+#: apps/themes/osr-style/pages/401.html:32
+#: apps/themes/osroom.com/pages/401.html:32
+msgid "无权访问该页面"
+msgstr "No access to this page"
+
+#: apps/themes/osr-style/pages/401.html:32
+#: apps/themes/osr-style/pages/404.html:33
+#: apps/themes/osr-style/pages/500.html:32
+#: apps/themes/osroom.com/pages/401.html:32
+#: apps/themes/osroom.com/pages/404.html:33
+#: apps/themes/osroom.com/pages/500.html:32
+msgid "回到首页"
+msgstr "Homepage"
+
+#: apps/themes/osr-style/pages/404.html:2
+#: apps/themes/osroom.com/pages/404.html:2
+msgid "404页面不存在"
+msgstr "404 page does not exist"
+
+#: apps/themes/osr-style/pages/404.html:33
+#: apps/themes/osroom.com/pages/404.html:33
+msgid "该页面不存在"
+msgstr "Page does not exist"
+
+#: apps/themes/osr-style/pages/500.html:2
+#: apps/themes/osroom.com/pages/500.html:2
+msgid "500Server Error"
+msgstr "500服务器错误"
+
+#: apps/themes/osr-style/pages/500.html:32
+#: apps/themes/osroom.com/pages/500.html:32
+msgid "错误ID"
+msgstr "Error ID"
+
 #: apps/themes/osr-style/pages/_index_s2.html:8
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:9
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:22
 msgid "最新"
 msgstr "Latest"
 
 #: apps/themes/osr-style/pages/_index_s2.html:13
 #: apps/themes/osr-style/pages/corpus/index.html:30
 #: apps/themes/osr-style/pages/user/index.html:29
-#: apps/themes/osroom.com/pages/user/post/user_posts_nav.html:9
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:27
+#: apps/themes/osroom.com/pages/corpus/index.html:30
+#: apps/themes/osroom.com/pages/user/index.html:29
 msgid "热门"
 msgstr "Hot"
 
@@ -37,25 +78,44 @@ msgstr "Hot"
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:11
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:25
 #: apps/themes/osr-style/pages/user/post/preview.html:64
-#: apps/themes/osroom.com/pages/post/post_left.html:77
-#: apps/themes/osroom.com/pages/post/writer.html:12
-#: apps/themes/osroom.com/pages/post/writer.html:15
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:73
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:41
+#: apps/themes/osroom.com/pages/content/writer.html:12
+#: apps/themes/osroom.com/pages/content/writer.html:15
+#: apps/themes/osroom.com/pages/post/index.html:74
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:11
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:25
+#: apps/themes/osroom.com/pages/user/post/preview.html:64
 msgid "默认文集"
 msgstr "Default Collection"
 
 #: apps/themes/osr-style/pages/_index_s2.html:67
 #: apps/themes/osr-style/pages/account/settings/_avatar.html:24
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:86
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:91
 #: apps/themes/osr-style/pages/photo/introduction.html:55
 #: apps/themes/osr-style/pages/post/index.html:25
 #: apps/themes/osr-style/pages/post/index.html:99
+#: apps/themes/osr-style/pages/search/index.html:69
 #: apps/themes/osr-style/pages/user/_self_introduction.html:5
 #: apps/themes/osr-style/pages/user/_user_info.html:4
 #: apps/themes/osr-style/pages/user/follow/index.html:30
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:36
 #: apps/themes/osr-style/pages/user/post/preview.html:15
 #: apps/themes/osr-style/pages/user/post/preview.html:89
+#: apps/themes/osroom.com/pages/account/settings/_avatar.html:24
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:92
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:50
+#: apps/themes/osroom.com/pages/index.html:47
+#: apps/themes/osroom.com/pages/post/index.html:25
+#: apps/themes/osroom.com/pages/post/index.html:99
+#: apps/themes/osroom.com/pages/search/index.html:69
+#: apps/themes/osroom.com/pages/support/index.html:61
+#: apps/themes/osroom.com/pages/team/index.html:37
+#: apps/themes/osroom.com/pages/user/_self_introduction.html:5
+#: apps/themes/osroom.com/pages/user/_user_info.html:4
+#: apps/themes/osroom.com/pages/user/follow/index.html:30
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:36
+#: apps/themes/osroom.com/pages/user/post/preview.html:15
+#: apps/themes/osroom.com/pages/user/post/preview.html:89
 msgid "头像"
 msgstr "Avatar"
 
@@ -63,47 +123,66 @@ msgstr "Avatar"
 #: apps/themes/osr-style/pages/post/index.html:38
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:45
 #: apps/themes/osr-style/pages/user/post/preview.html:28
-#: apps/themes/osroom.com/pages/post/post_left.html:23
-#: apps/themes/osroom.com/pages/post/post_left.html:40
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:28
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:60
+#: apps/themes/osroom.com/pages/post/index.html:38
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:45
+#: apps/themes/osroom.com/pages/user/post/preview.html:28
 msgid "更新时间"
 msgstr "Update Time"
 
 #: apps/themes/osr-style/pages/_index_s2.html:108
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:91
 msgid "查看更多"
 msgstr "See more"
 
 #: apps/themes/osr-style/pages/_index_s2.html:111
+#: apps/themes/osroom.com/pages/blog/_index_s2.html:94
 msgid "我也是有底线的"
-msgstr ""
+msgstr "I also have a bottom line"
 
 #: apps/themes/osr-style/pages/index.html:2
+#: apps/themes/osroom.com/pages/blog/index.html:2
 msgid "DEMO"
-msgstr ""
+msgstr "DEMO"
 
 #: apps/themes/osr-style/pages/recover-password.html:2
 #: apps/themes/osroom.com/pages/recover-password.html:2
 msgid "找回密码"
 msgstr "Retrieve password"
 
+#: apps/themes/osr-style/pages/recover-password.html:14
+#: apps/themes/osr-style/pages/recover-password.html:17
+#: apps/themes/osr-style/pages/sign-up.html:22
+#: apps/themes/osroom.com/pages/recover-password.html:14
+#: apps/themes/osroom.com/pages/recover-password.html:17
+#: apps/themes/osroom.com/pages/sign-up.html:22
+msgid "电子邮箱"
+msgstr "E-mail"
+
 #: apps/themes/osr-style/pages/account/settings/email.html:26
 #: apps/themes/osr-style/pages/recover-password.html:15
 #: apps/themes/osr-style/pages/sign-up.html:20
+#: apps/themes/osroom.com/pages/account/settings/email.html:26
+#: apps/themes/osroom.com/pages/recover-password.html:15
+#: apps/themes/osroom.com/pages/sign-up.html:20
 msgid "邮箱地址不合法"
 msgstr "The email address is illegal"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:27
 #: apps/themes/osr-style/pages/recover-password.html:16
 #: apps/themes/osr-style/pages/sign-up.html:21
+#: apps/themes/osroom.com/pages/account/settings/email.html:27
+#: apps/themes/osroom.com/pages/recover-password.html:16
+#: apps/themes/osroom.com/pages/sign-up.html:21
 msgid "邮箱地址不能为空"
 msgstr "E-mail address cannot be blank"
 
 #: apps/themes/osr-style/pages/recover-password.html:21
 #: apps/themes/osr-style/pages/sign-in.html:21
 #: apps/themes/osr-style/pages/sign-up.html:26
-#: apps/themes/osroom.com/pages/recover-password.html:17
-#: apps/themes/osroom.com/pages/sign-in.html:17
-#: apps/themes/osroom.com/pages/sign-up.html:21
+#: apps/themes/osroom.com/pages/recover-password.html:21
+#: apps/themes/osroom.com/pages/sign-in.html:21
+#: apps/themes/osroom.com/pages/sign-up.html:26
 msgid "输入密码"
 msgstr "Enter the password"
 
@@ -116,54 +195,62 @@ msgstr "Enter the password"
 #: apps/themes/osr-style/pages/sign-up.html:27
 #: apps/themes/osr-style/pages/sign-up.html:28
 #: apps/themes/osr-style/pages/sign-up.html:34
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:22
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:25
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:26
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:32
+#: apps/themes/osroom.com/pages/recover-password.html:22
+#: apps/themes/osroom.com/pages/recover-password.html:23
+#: apps/themes/osroom.com/pages/recover-password.html:29
+#: apps/themes/osroom.com/pages/sign-up.html:27
+#: apps/themes/osroom.com/pages/sign-up.html:28
+#: apps/themes/osroom.com/pages/sign-up.html:34
 msgid "至少8个字符"
 msgstr "At least 8 characters"
 
 #: apps/themes/osr-style/pages/recover-password.html:27
 #: apps/themes/osr-style/pages/sign-up.html:32
-#: apps/themes/osroom.com/pages/recover-password.html:21
-#: apps/themes/osroom.com/pages/sign-up.html:25
+#: apps/themes/osroom.com/pages/recover-password.html:27
+#: apps/themes/osroom.com/pages/sign-up.html:32
 msgid "再次输入密码"
 msgstr "Enter password again"
 
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:33
 #: apps/themes/osr-style/pages/recover-password.html:30
 #: apps/themes/osr-style/pages/sign-up.html:35
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:27
-#: apps/themes/osroom.com/pages/recover-password.html:21
-#: apps/themes/osroom.com/pages/sign-up.html:25
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:33
+#: apps/themes/osroom.com/pages/recover-password.html:30
+#: apps/themes/osroom.com/pages/sign-up.html:35
 msgid "前后密码不一致"
 msgstr "Inconsistent password before and after"
 
 #: apps/themes/osr-style/pages/recover-password.html:38
-#: apps/themes/osroom.com/pages/recover-password.html:44
+#: apps/themes/osroom.com/pages/recover-password.html:38
 msgid "重设密码"
 msgstr "Reset password"
 
 #: apps/themes/osr-style/pages/recover-password.html:44
-#: apps/themes/osroom.com/pages/recover-password.html:50
+#: apps/themes/osroom.com/pages/recover-password.html:44
 msgid "回到登录"
 msgstr "Back to Login"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:101
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:106
 #: apps/themes/osr-style/pages/based/_mb_header_bar.html:21
 #: apps/themes/osr-style/pages/sign-in.html:2
 #: apps/themes/osr-style/pages/sign-in.html:46
-#: apps/themes/osroom.com/pages/based/header.html:95
-#: apps/themes/osroom.com/pages/based/m-header.html:50
 #: apps/themes/osroom.com/pages/sign-in.html:2
-#: apps/themes/osroom.com/pages/sign-in.html:37
+#: apps/themes/osroom.com/pages/sign-in.html:46
 msgid "登录"
 msgstr "Login"
 
 #: apps/themes/osr-style/pages/sign-in.html:15
-#: apps/themes/osroom.com/pages/sign-in.html:13
+#: apps/themes/osroom.com/pages/sign-in.html:15
 msgid "用户名或电子邮箱"
 msgstr "Username or E-mail"
 
 #: apps/themes/osr-style/pages/sign-in.html:16
 #: apps/themes/osr-style/pages/sign-in.html:17
+#: apps/themes/osroom.com/pages/sign-in.html:16
+#: apps/themes/osroom.com/pages/sign-in.html:17
 msgid "用户名或电子邮箱错误"
 msgstr "Username or Email Error"
 
@@ -173,13 +260,21 @@ msgstr "Username or Email Error"
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:19
 #: apps/themes/osr-style/pages/sign-in.html:22
 #: apps/themes/osr-style/pages/sign-in.html:23
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:17
+#: apps/themes/osroom.com/pages/account/settings/email.html:18
+#: apps/themes/osroom.com/pages/account/settings/email.html:19
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:18
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:19
+#: apps/themes/osroom.com/pages/sign-in.html:22
+#: apps/themes/osroom.com/pages/sign-in.html:23
 msgid "密码错误"
 msgstr "Bad password"
 
 #: apps/themes/osr-style/pages/account/settings/_send_code.html:24
 #: apps/themes/osr-style/pages/module/_send_code.html:33
 #: apps/themes/osr-style/pages/sign-in.html:28
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:24
+#: apps/themes/osroom.com/pages/module/_send_code.html:33
+#: apps/themes/osroom.com/pages/sign-in.html:28
 msgid "图片验证码"
 msgstr "Picture verification code"
 
@@ -192,88 +287,91 @@ msgstr "Picture verification code"
 #: apps/themes/osr-style/pages/module/_send_code.html:7
 #: apps/themes/osr-style/pages/module/_send_code.html:34
 #: apps/themes/osr-style/pages/sign-in.html:29
-#: apps/themes/osroom.com/pages/account/settings/email.html:28
-#: apps/themes/osroom.com/pages/account/settings/email.html:32
-#: apps/themes/osroom.com/pages/recover-password.html:28
-#: apps/themes/osroom.com/pages/sign-in.html:22
-#: apps/themes/osroom.com/pages/sign-up.html:32
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:25
+#: apps/themes/osroom.com/pages/account/settings/email.html:35
+#: apps/themes/osroom.com/pages/account/settings/email.html:36
+#: apps/themes/osroom.com/pages/account/settings/email.html:41
+#: apps/themes/osroom.com/pages/account/settings/email.html:42
+#: apps/themes/osroom.com/pages/module/_send_code.html:6
+#: apps/themes/osroom.com/pages/module/_send_code.html:7
+#: apps/themes/osroom.com/pages/module/_send_code.html:34
+#: apps/themes/osroom.com/pages/sign-in.html:29
 msgid "验证码错误"
 msgstr "Verification code error"
 
 #: apps/themes/osr-style/pages/sign-in.html:40
-#: apps/themes/osroom.com/pages/sign-in.html:31
+#: apps/themes/osroom.com/pages/sign-in.html:40
 msgid "记住登录"
 msgstr "Remember to sign in"
 
 #: apps/themes/osr-style/pages/sign-in.html:41
-#: apps/themes/osroom.com/pages/sign-in.html:32
+#: apps/themes/osroom.com/pages/sign-in.html:41
 msgid "忘记密码"
 msgstr "Forgot your password?"
 
 #: apps/themes/osr-style/pages/sign-in.html:51
 #: apps/themes/osr-style/pages/sign-up.html:2
 #: apps/themes/osr-style/pages/sign-up.html:43
-#: apps/themes/osroom.com/pages/based/m-header.html:51
-#: apps/themes/osroom.com/pages/sign-in.html:41
+#: apps/themes/osroom.com/pages/sign-in.html:51
 #: apps/themes/osroom.com/pages/sign-up.html:2
-#: apps/themes/osroom.com/pages/sign-up.html:49
+#: apps/themes/osroom.com/pages/sign-up.html:43
 msgid "注册"
 msgstr "Registration"
 
 #: apps/themes/osr-style/pages/sign-in.html:58
 msgid "点击 \"登录\" 即表示您同意并愿意遵守"
-msgstr ""
+msgstr "By clicking \"Login\" you are agreeing and willing to comply"
 
 #: apps/themes/osr-style/pages/sign-in.html:59
 #: apps/themes/osr-style/pages/sign-up.html:53
 #: apps/themes/osr-style/pages/statement/index.html:10
-#: apps/themes/osroom.com/pages/terms/_left_nav.html:7
-#: apps/themes/osroom.com/pages/terms/_left_nav.html:23
 msgid "用户协议"
-msgstr ""
+msgstr "User Agreement"
 
 #: apps/themes/osr-style/pages/sign-in.html:61
 #: apps/themes/osr-style/pages/statement/index.html:15
-#: apps/themes/osroom.com/pages/terms/_left_nav.html:12
-#: apps/themes/osroom.com/pages/terms/_left_nav.html:26
 msgid "Demo使用协议"
-msgstr ""
+msgstr "Demo Use Protocol"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:17
 #: apps/themes/osr-style/pages/sign-up.html:14
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:10
-#: apps/themes/osroom.com/pages/sign-up.html:12
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:17
+#: apps/themes/osroom.com/pages/sign-up.html:14
 msgid "用户名"
 msgstr "Username"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:20
 #: apps/themes/osr-style/pages/account/settings/_basis.html:33
 #: apps/themes/osr-style/pages/sign-up.html:15
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:20
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:33
+#: apps/themes/osroom.com/pages/sign-up.html:15
 msgid "用户名不能为空"
 msgstr "Username cannot be empty"
 
 #: apps/themes/osr-style/pages/sign-up.html:16
+#: apps/themes/osroom.com/pages/sign-up.html:16
 msgid "用户名至少3个字符"
 msgstr "Username is at least 3 characters"
 
 #: apps/themes/osr-style/pages/sign-up.html:48
-#: apps/themes/osroom.com/pages/sign-up.html:54
+#: apps/themes/osroom.com/pages/sign-up.html:48
 msgid "已有账户"
 msgstr "Existing Account"
 
 #: apps/themes/osr-style/pages/sign-up.html:52
 msgid "点击 \"注册\" 即表示您同意并愿意遵守"
-msgstr ""
+msgstr "By clicking \"Register\" you agree and you are willing to abide"
 
 #: apps/themes/osr-style/pages/sign-up.html:55
 msgid "隐私政策"
-msgstr ""
+msgstr "Privacy Policy"
 
 #: apps/themes/osr-style/pages/about-us/index.html:2
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:36
-#: apps/themes/osr-style/pages/based/_m_left_menu.html:30
+#: apps/themes/osr-style/pages/based/_m_left_menu.html:29
 msgid "关于我们"
-msgstr ""
+msgstr "About us"
 
 #: apps/themes/osr-style/pages/account/settings.html:2
 #: apps/themes/osroom.com/pages/account/settings.html:2
@@ -283,31 +381,35 @@ msgstr "Personal Settings"
 #: apps/themes/osr-style/pages/account/settings.html:13
 #: apps/themes/osr-style/pages/account/settings.html:98
 #: apps/themes/osr-style/pages/account/settings/_basis.html:5
-#: apps/themes/osroom.com/pages/account/settings.html:11
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:4
+#: apps/themes/osroom.com/pages/account/settings.html:13
+#: apps/themes/osroom.com/pages/account/settings.html:98
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:5
 msgid "基础设置"
 msgstr "Basic Settings"
 
 #: apps/themes/osr-style/pages/account/settings.html:18
 #: apps/themes/osr-style/pages/account/settings.html:95
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:33
-#: apps/themes/osroom.com/pages/account/settings.html:16
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:6
-#: apps/themes/osroom.com/pages/based/header.html:83
-#: apps/themes/osroom.com/pages/based/m-header.html:36
+#: apps/themes/osroom.com/pages/account/settings.html:18
+#: apps/themes/osroom.com/pages/account/settings.html:95
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:33
 msgid "个人资料"
 msgstr "Personal Information"
 
 #: apps/themes/osr-style/pages/account/settings/_avatar.html:19
+#: apps/themes/osroom.com/pages/account/settings/_avatar.html:19
 msgid "头像修改"
 msgstr "Avatar Modifications"
 
 #: apps/themes/osr-style/pages/account/settings/_avatar.html:35
 #: apps/themes/osr-style/pages/module/editor/markdown.html:22
+#: apps/themes/osroom.com/pages/account/settings/_avatar.html:35
+#: apps/themes/osroom.com/pages/module/editor/markdown.html:22
 msgid "选择图片"
 msgstr "Select a picture"
 
 #: apps/themes/osr-style/pages/account/settings/_avatar.html:53
+#: apps/themes/osroom.com/pages/account/settings/_avatar.html:53
 msgid "保存头像"
 msgstr "Save your picture"
 
@@ -315,23 +417,25 @@ msgstr "Save your picture"
 #: apps/themes/osr-style/pages/account/settings/email.html:10
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:10
 #: apps/themes/osr-style/pages/content/category/index.html:14
-#: apps/themes/osroom.com/pages/account/settings/email.html:11
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:11
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:8
+#: apps/themes/osroom.com/pages/account/settings/email.html:10
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:10
 #: apps/themes/osroom.com/pages/content/category/index.html:14
 msgid "返回"
 msgstr "Back"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:19
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:19
 msgid "用户名不能使用特殊符号"
 msgstr "Username cannot use special symbols"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:21
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:21
 msgid "至少3个字"
 msgstr "At least 3 words"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:26
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:17
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:20
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:26
 msgid "个性域"
 msgstr "Custom domain"
 
@@ -339,7 +443,10 @@ msgstr "Custom domain"
 #: apps/themes/osr-style/pages/account/settings/_basis.html:74
 #: apps/themes/osr-style/pages/content/category/index.html:35
 #: apps/themes/osr-style/pages/content/writer.html:54
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:21
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:29
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:74
+#: apps/themes/osroom.com/pages/content/category/index.html:35
+#: apps/themes/osroom.com/pages/content/writer.html:54
 msgid "添加"
 msgstr "Add"
 
@@ -350,65 +457,77 @@ msgstr "Add"
 #: apps/themes/osr-style/pages/post/index.html:158
 #: apps/themes/osr-style/pages/user/post/_comment.html:107
 #: apps/themes/osr-style/pages/user/post/preview.html:148
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:17
-#: apps/themes/osroom.com/pages/post/writer.html:61
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:30
+#: apps/themes/osroom.com/pages/based/msg_box.html:52
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:75
+#: apps/themes/osroom.com/pages/post/_comment.html:196
+#: apps/themes/osroom.com/pages/post/index.html:158
+#: apps/themes/osroom.com/pages/user/post/_comment.html:107
+#: apps/themes/osroom.com/pages/user/post/preview.html:148
 msgid "取消"
 msgstr "Cancel"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:32
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:32
 msgid "保存后不能修改"
 msgstr "Cannot be modified after saving"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:35
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:35
 msgid "只能是字母或数字"
 msgstr "can only be letters or numbers"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:36
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:36
 msgid "至少4个字"
 msgstr "At least 4 words"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:40
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:29
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:40
 msgid "编辑器"
 msgstr "Editor"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:46
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:46
 msgid "Markdown"
 msgstr "Markdown"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:54
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:36
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:54
 msgid "富文本"
 msgstr "Rich Text"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:59
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:40
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:59
 msgid "邮&nbsp;&nbsp;&nbsp;&nbsp;箱"
 msgstr "E-mail"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:63
 #: apps/themes/osr-style/pages/account/settings/_basis.html:73
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:41
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:63
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:73
 msgid "修改"
 msgstr "Modifications"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:66
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:66
 msgid "手&nbsp;&nbsp;&nbsp;&nbsp;机"
 msgstr "Cellphone number"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:70
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:70
 msgid "无"
 msgstr "none"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:79
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:45
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:79
 msgid "密&nbsp;&nbsp;&nbsp;&nbsp;码"
 msgstr "Password"
 
 #: apps/themes/osr-style/pages/account/settings/_basis.html:82
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:38
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:48
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:30
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:82
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:38
 msgid "重设"
 msgstr "Reset"
 
@@ -416,67 +535,68 @@ msgstr "Reset"
 #: apps/themes/osr-style/pages/account/settings/_profile.html:58
 #: apps/themes/osr-style/pages/content/category/index.html:26
 #: apps/themes/osr-style/pages/content/writer.html:122
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:52
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:55
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:52
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:57
-#: apps/themes/osroom.com/pages/content/category/index.html:31
-#: apps/themes/osroom.com/pages/post/writer.html:24
-#: apps/themes/osroom.com/pages/post/writer.html:98
+#: apps/themes/osroom.com/pages/account/settings/_basis.html:86
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:58
+#: apps/themes/osroom.com/pages/content/category/index.html:26
+#: apps/themes/osroom.com/pages/content/writer.html:122
 msgid "保存"
 msgstr "Save"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:4
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:8
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:4
 msgid "性别"
 msgstr "Sex"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:10
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:13
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:10
 msgid "男"
 msgstr "Male"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:18
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:19
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:18
 msgid "女"
 msgstr "Female"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:26
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:31
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:23
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:25
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:26
 msgid "保密"
 msgstr "​​Confidential"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:32
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:30
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:32
 msgid "出生日期"
 msgstr "Date of Birth"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:42
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:42
 msgid "个人主页"
 msgstr "Profile"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:43
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:43
 msgid "带上http://或https://"
 msgstr "Bring http:// or https://"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:45
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:45
 msgid "格式不合法"
 msgstr "illegal format"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:50
-#: apps/themes/osroom.com/pages/account/settings/_profile.html:46
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:50
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:2
 msgid "简介"
 msgstr "Introduction"
 
 #: apps/themes/osr-style/pages/account/settings/_profile.html:52
+#: apps/themes/osroom.com/pages/account/settings/_profile.html:52
 msgid "介绍下你自己吧!"
 msgstr "Introduce yourself!"
 
 #: apps/themes/osr-style/pages/account/settings/_send_code.html:5
 #: apps/themes/osr-style/pages/account/settings/_send_code.html:10
-#: apps/themes/osroom.com/pages/account/settings/email.html:37
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:5
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:10
 msgid "发送邮件验证码"
 msgstr "Send Email Verification Code"
 
@@ -488,31 +608,37 @@ msgstr "Send Email Verification Code"
 #: apps/themes/osr-style/pages/module/_send_code.html:28
 #: apps/themes/osr-style/pages/module/_send_code.html:44
 #: apps/themes/osr-style/pages/module/_send_code.html:95
-#: apps/themes/osroom.com/pages/recover-password.html:37
-#: apps/themes/osroom.com/pages/recover-password.html:129
-#: apps/themes/osroom.com/pages/sign-up.html:41
-#: apps/themes/osroom.com/pages/sign-up.html:142
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:19
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:35
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:108
+#: apps/themes/osroom.com/pages/module/_send_code.html:14
+#: apps/themes/osroom.com/pages/module/_send_code.html:19
+#: apps/themes/osroom.com/pages/module/_send_code.html:28
+#: apps/themes/osroom.com/pages/module/_send_code.html:44
+#: apps/themes/osroom.com/pages/module/_send_code.html:95
 msgid "发送验证码"
 msgstr "Send verification code"
 
 #: apps/themes/osr-style/pages/account/settings/_send_code.html:34
 #: apps/themes/osr-style/pages/module/_send_code.html:43
 #: apps/themes/osr-style/pages/module/editor/markdown.html:29
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:34
+#: apps/themes/osroom.com/pages/module/_send_code.html:43
+#: apps/themes/osroom.com/pages/module/editor/markdown.html:29
 msgid "关闭"
 msgstr "Close"
 
 #: apps/themes/osr-style/pages/account/settings/_send_code.html:111
 #: apps/themes/osr-style/pages/module/_send_code.html:98
-#: apps/themes/osroom.com/pages/account/settings/email.html:95
-#: apps/themes/osroom.com/pages/recover-password.html:132
-#: apps/themes/osroom.com/pages/sign-up.html:145
+#: apps/themes/osroom.com/pages/account/settings/_send_code.html:111
+#: apps/themes/osroom.com/pages/module/_send_code.html:98
 msgid "后重发"
 msgstr "Post-Reissue"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:2
 #: apps/themes/osr-style/pages/account/settings/email.html:7
 #: apps/themes/osroom.com/pages/account/settings/email.html:2
-#: apps/themes/osroom.com/pages/account/settings/email.html:9
+#: apps/themes/osroom.com/pages/account/settings/email.html:7
 msgid "邮箱修改"
 msgstr "E-mail modification"
 
@@ -523,32 +649,30 @@ msgstr "Password"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:23
 #: apps/themes/osr-style/pages/account/settings/email.html:25
-#: apps/themes/osroom.com/pages/account/settings/email.html:21
-#: apps/themes/osroom.com/pages/account/settings/email.html:22
+#: apps/themes/osroom.com/pages/account/settings/email.html:23
+#: apps/themes/osroom.com/pages/account/settings/email.html:25
 msgid "新邮箱"
 msgstr "New E-mail"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:32
 #: apps/themes/osr-style/pages/module/_send_code.html:3
-#: apps/themes/osroom.com/pages/account/settings/email.html:26
-#: apps/themes/osroom.com/pages/recover-password.html:26
-#: apps/themes/osroom.com/pages/sign-in.html:22
-#: apps/themes/osroom.com/pages/sign-up.html:30
+#: apps/themes/osroom.com/pages/account/settings/email.html:32
+#: apps/themes/osroom.com/pages/module/_send_code.html:3
 msgid "验证码"
 msgstr "Verification code"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:34
-#: apps/themes/osroom.com/pages/account/settings/email.html:27
+#: apps/themes/osroom.com/pages/account/settings/email.html:34
 msgid "当前邮箱收到的验证码"
 msgstr "The verification code of the current email"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:40
-#: apps/themes/osroom.com/pages/account/settings/email.html:31
+#: apps/themes/osroom.com/pages/account/settings/email.html:40
 msgid "新邮箱收到的验证码"
 msgstr "Verification code received by new email"
 
 #: apps/themes/osr-style/pages/account/settings/email.html:47
-#: apps/themes/osroom.com/pages/account/settings/email.html:42
+#: apps/themes/osroom.com/pages/account/settings/email.html:47
 msgid "绑定新邮箱"
 msgstr "Bind New E-mailes"
 
@@ -558,7 +682,7 @@ msgid "密码安全"
 msgstr "​​Password Security"
 
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:7
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:9
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:7
 msgid "密码修改"
 msgstr "Password Change"
 
@@ -571,229 +695,257 @@ msgstr "Current password"
 
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:22
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:24
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:20
 #: apps/themes/osroom.com/pages/account/settings/reset-password.html:22
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:24
 msgid "新密码"
 msgstr "New password"
 
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:29
 #: apps/themes/osr-style/pages/account/settings/reset-password.html:31
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:25
-#: apps/themes/osroom.com/pages/account/settings/reset-password.html:27
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:29
+#: apps/themes/osroom.com/pages/account/settings/reset-password.html:31
 msgid "确认密码"
 msgstr "Confirm password"
 
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:2
-#: apps/themes/osroom.com/pages/based/m-header.html:61
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:2
 msgid "首页"
-msgstr ""
+msgstr "Home"
 
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:16
-#: apps/themes/osr-style/pages/based/_m_left_menu.html:12
+#: apps/themes/osr-style/pages/based/_m_left_menu.html:11
 msgid "发现"
-msgstr ""
+msgstr "Discover"
 
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:22
-#: apps/themes/osr-style/pages/based/_m_left_menu.html:18
+#: apps/themes/osr-style/pages/based/_m_left_menu.html:17
 #: apps/themes/osr-style/pages/photo/index.html:2
 msgid "摄影"
-msgstr ""
+msgstr "Photography"
 
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:29
-#: apps/themes/osr-style/pages/based/_m_left_menu.html:24
-#: apps/themes/osroom.com/pages/based/footer.html:22
-#: apps/themes/osroom.com/pages/based/m-header.html:93
+#: apps/themes/osr-style/pages/based/_m_left_menu.html:23
 msgid "关于"
-msgstr ""
+msgstr "About"
 
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:41
-#: apps/themes/osr-style/pages/based/_m_left_menu.html:35
+#: apps/themes/osr-style/pages/based/_m_left_menu.html:34
 #: apps/themes/osr-style/pages/contact/index.html:2
-#: apps/themes/osroom.com/pages/based/m-header.html:85
 msgid "联系我们"
-msgstr ""
+msgstr "Contact Us"
 
 #: apps/themes/osr-style/pages/based/_header_bar_menu_left.html:48
-#: apps/themes/osr-style/pages/based/_m_left_menu.html:42
-#: apps/themes/osroom.com/pages/based/header.html:41
+#: apps/themes/osr-style/pages/based/_m_left_menu.html:41
 #: apps/themes/osroom.com/pages/support/index.html:2
-#: apps/themes/osroom.com/pages/support/index.html:5
+#: apps/themes/osroom.com/pages/support/index.html:7
 msgid "支持我们"
-msgstr ""
+msgstr "Support us"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:22
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:27
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:21
 #: apps/themes/osr-style/pages/user/message/index.html:2
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:28
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:21
+#: apps/themes/osroom.com/pages/user/message/index.html:2
 msgid "消息"
 msgstr "Message"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:43
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:48
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:49
 msgid "新评论"
 msgstr "New comment"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:47
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:52
 #: apps/themes/osr-style/pages/user/message/_notice.html:7
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:53
+#: apps/themes/osroom.com/pages/user/message/_notice.html:7
 msgid "审核未通过"
 msgstr "Audit Failed"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:51
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:56
 #: apps/themes/osr-style/pages/user/message/_notice.html:10
 #: apps/themes/osr-style/pages/user/message/index.html:13
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:57
+#: apps/themes/osroom.com/pages/user/message/_notice.html:10
+#: apps/themes/osroom.com/pages/user/message/index.html:13
 msgid "通知"
 msgstr "Notification"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:56
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:61
 #: apps/themes/osr-style/pages/user/message/index.html:30
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:62
+#: apps/themes/osroom.com/pages/user/message/index.html:30
 msgid "私信"
 msgstr "Private message"
 
-#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:75
+#: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:80
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_user.html:81
 msgid "查看所有消息"
 msgstr "See all messages"
 
 #: apps/themes/osr-style/pages/based/_inform_modal_input.html:7
+#: apps/themes/osroom.com/pages/based/_inform_modal_input.html:7
 msgid "广告"
 msgstr "Advertising"
 
 #: apps/themes/osr-style/pages/based/_inform_modal_input.html:12
+#: apps/themes/osroom.com/pages/based/_inform_modal_input.html:12
 msgid "垃圾信息"
 msgstr "​​Spam"
 
 #: apps/themes/osr-style/pages/based/_inform_modal_input.html:17
+#: apps/themes/osroom.com/pages/based/_inform_modal_input.html:17
 msgid "抄袭/侵权"
 msgstr "Plagiarism/Infringement"
 
 #: apps/themes/osr-style/pages/based/_inform_modal_input.html:23
-#: apps/themes/osroom.com/pages/based/header.html:18
+#: apps/themes/osroom.com/pages/based/_inform_modal_input.html:23
 msgid "其他"
 msgstr "Other"
 
 #: apps/themes/osr-style/pages/based/_inform_modal_input.html:26
+#: apps/themes/osroom.com/pages/based/_inform_modal_input.html:26
 msgid "违规详情(选择\"其他\"类型时必填)"
 msgstr "Violation Details (required if you select \"Other\")"
 
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:9
-#: apps/themes/osroom.com/pages/based/header.html:74
-#: apps/themes/osroom.com/pages/based/m-header.html:22
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:9
 msgid "管理台"
 msgstr "Admin"
 
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:16
 #: apps/themes/osr-style/pages/content/writer.html:121
-#: apps/themes/osroom.com/pages/based/header.html:68
-#: apps/themes/osroom.com/pages/based/m-header.html:27
-#: apps/themes/osroom.com/pages/post/writer.html:97
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:16
+#: apps/themes/osroom.com/pages/content/writer.html:121
 msgid "发布"
 msgstr "Release"
 
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:25
-#: apps/themes/osroom.com/pages/based/header.html:80
-#: apps/themes/osroom.com/pages/based/m-header.html:32
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:25
 msgid "我的主页"
 msgstr "My Home"
 
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:29
-#: apps/themes/osroom.com/pages/based/header.html:87
-#: apps/themes/osroom.com/pages/based/m-header.html:41
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:29
 msgid "设置"
 msgstr "Settings"
 
 #: apps/themes/osr-style/pages/based/_user_dropdown.html:42
-#: apps/themes/osroom.com/pages/based/header.html:89
-#: apps/themes/osroom.com/pages/based/m-header.html:45
+#: apps/themes/osroom.com/pages/based/_user_dropdown.html:42
 msgid "退出"
 msgstr "Sign out"
 
 #: apps/themes/osr-style/pages/based/footer.html:2
+#: apps/themes/osroom.com/pages/based/footer.html:2
 msgid "回到顶部"
 msgstr "To top"
 
-#: apps/themes/osr-style/pages/based/footer.html:7
+#: apps/themes/osr-style/pages/based/footer.html:21
 msgid "欢迎使用"
 msgstr "Welcome to use"
 
-#: apps/themes/osr-style/pages/based/footer.html:10
+#: apps/themes/osr-style/pages/based/footer.html:24
 msgid "版本"
 msgstr "Version"
 
-#: apps/themes/osr-style/pages/based/footer.html:22
+#: apps/themes/osr-style/pages/based/footer.html:36
 msgid "提供"
 msgstr "Provide"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:2
+#: apps/themes/osroom.com/pages/based/js_tr.html:2
 msgid "删除成功"
 msgstr "Successfully deleted"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:3
+#: apps/themes/osroom.com/pages/based/js_tr.html:3
 msgid "刚刚"
 msgstr "Just now "
 
 #: apps/themes/osr-style/pages/based/js_tr.html:4
+#: apps/themes/osroom.com/pages/based/js_tr.html:4
 msgid "分钟前"
 msgstr " min ago "
 
 #: apps/themes/osr-style/pages/based/js_tr.html:5
+#: apps/themes/osroom.com/pages/based/js_tr.html:5
 msgid "小时前"
 msgstr " hour ago "
 
 #: apps/themes/osr-style/pages/based/js_tr.html:6
+#: apps/themes/osroom.com/pages/based/js_tr.html:6
 msgid "昨天"
 msgstr " Yesterday "
 
 #: apps/themes/osr-style/pages/based/js_tr.html:7
+#: apps/themes/osroom.com/pages/based/js_tr.html:7
 msgid "您取消了更新"
 msgstr "You canceled the update"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:8
+#: apps/themes/osroom.com/pages/based/js_tr.html:8
 msgid "安装失败"
 msgstr "Installation failed"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:9
+#: apps/themes/osroom.com/pages/based/js_tr.html:9
 msgid "安装已成功，请刷新"
 msgstr "安装已成功，请刷新"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:10
+#: apps/themes/osroom.com/pages/based/js_tr.html:10
 msgid "点击选择文件"
 msgstr "Click to select file"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:11
+#: apps/themes/osroom.com/pages/based/js_tr.html:11
 msgid "继续添加"
 msgstr "Continue to add files"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:12
+#: apps/themes/osroom.com/pages/based/js_tr.html:12
 msgid "文件大小超出"
 msgstr "File size exceeds "
 
 #: apps/themes/osr-style/pages/based/js_tr.html:13
+#: apps/themes/osroom.com/pages/based/js_tr.html:13
 msgid "上传暂停"
 msgstr "Pause"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:14
+#: apps/themes/osroom.com/pages/based/js_tr.html:14
 msgid "上传失败，请重试"
 msgstr "Upload failed, please try again"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:15
+#: apps/themes/osroom.com/pages/based/js_tr.html:15
 msgid "上传成功"
 msgstr "Successful upload "
 
 #: apps/themes/osr-style/pages/based/js_tr.html:16
+#: apps/themes/osroom.com/pages/based/js_tr.html:16
 msgid "文件"
 msgstr " files"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:17
 #: apps/themes/osr-style/pages/module/upload.html:22
+#: apps/themes/osroom.com/pages/based/js_tr.html:17
+#: apps/themes/osroom.com/pages/module/upload.html:22
 msgid "开始上传"
 msgstr "Start upload"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:18
+#: apps/themes/osroom.com/pages/based/js_tr.html:18
 msgid "继续上传"
 msgstr "Continue to upload"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:19
+#: apps/themes/osroom.com/pages/based/js_tr.html:19
 msgid "暂停上传"
 msgstr "Pause uploading"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:20
+#: apps/themes/osroom.com/pages/based/js_tr.html:20
 msgid "重新上传"
 msgstr "Re-upload"
 
@@ -805,271 +957,298 @@ msgstr "Re-upload"
 #: apps/themes/osr-style/pages/user/message/_comment.html:44
 #: apps/themes/osr-style/pages/user/message/_notice.html:28
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:81
-#: apps/themes/osroom.com/pages/comment/comment.html:63
-#: apps/themes/osroom.com/pages/comment/comment.html:99
-#: apps/themes/osroom.com/pages/content/category/index.html:34
+#: apps/themes/osroom.com/pages/based/js_tr.html:21
+#: apps/themes/osroom.com/pages/content/category/index.html:27
+#: apps/themes/osroom.com/pages/content/category/index.html:36
+#: apps/themes/osroom.com/pages/post/_comment.html:79
+#: apps/themes/osroom.com/pages/post/_comment.html:145
+#: apps/themes/osroom.com/pages/user/message/_comment.html:44
+#: apps/themes/osroom.com/pages/user/message/_notice.html:28
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:81
 msgid "删除"
 msgstr "Delete"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:22
+#: apps/themes/osroom.com/pages/based/js_tr.html:22
 msgid "向左旋转"
 msgstr "Rotate-left"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:23
+#: apps/themes/osroom.com/pages/based/js_tr.html:23
 msgid "向右旋转"
 msgstr "Rotate-right"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:24
+#: apps/themes/osroom.com/pages/based/js_tr.html:24
 msgid "预览中"
 msgstr "In preview"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:25
+#: apps/themes/osroom.com/pages/based/js_tr.html:25
 msgid "不能预览"
 msgstr "Can't preview"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:26
+#: apps/themes/osroom.com/pages/based/js_tr.html:26
 msgid "选中文件个数"
 msgstr "The number of selected files"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:27
+#: apps/themes/osroom.com/pages/based/js_tr.html:27
 msgid "共"
 msgstr "total"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:28
+#: apps/themes/osroom.com/pages/based/js_tr.html:28
 msgid "个文件上传失败"
 msgstr "File upload failed"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:29
+#: apps/themes/osroom.com/pages/based/js_tr.html:29
 msgid "或"
 msgstr "or"
 
 #: apps/themes/osr-style/pages/based/js_tr.html:30
+#: apps/themes/osroom.com/pages/based/js_tr.html:30
 msgid "忽略"
 msgstr "ignore"
 
 #: apps/themes/osr-style/pages/based/msg_box.html:44
+#: apps/themes/osroom.com/pages/based/msg_box.html:44
 msgid "提示"
 msgstr "Tips"
 
 #: apps/themes/osr-style/pages/based/msg_box.html:48
 #: apps/themes/osr-style/pages/based/msg_box.html:60
+#: apps/themes/osroom.com/pages/based/msg_box.html:48
+#: apps/themes/osroom.com/pages/based/msg_box.html:60
 msgid "确定删除"
 msgstr "Delete"
 
 #: apps/themes/osr-style/pages/based/msg_box.html:55
+#: apps/themes/osroom.com/pages/based/msg_box.html:55
 msgid "确定"
 msgstr "OK"
 
 #: apps/themes/osr-style/pages/content/writer.html:2
-#: apps/themes/osroom.com/pages/post/writer.html:2
+#: apps/themes/osroom.com/pages/content/writer.html:2
 msgid "写点什么"
 msgstr "Write something"
 
 #: apps/themes/osr-style/pages/content/writer.html:24
-#: apps/themes/osr-style/pages/content/writer.html:182
-#: apps/themes/osroom.com/pages/post/writer.html:144
+#: apps/themes/osr-style/pages/content/writer.html:181
+#: apps/themes/osroom.com/pages/content/writer.html:24
+#: apps/themes/osroom.com/pages/content/writer.html:182
 msgid "存为草稿"
 msgstr "Save as Draft"
 
 #: apps/themes/osr-style/pages/content/writer.html:36
+#: apps/themes/osroom.com/pages/content/writer.html:36
 msgid "取个好标题吧"
 msgstr "Take a good title"
 
 #: apps/themes/osr-style/pages/content/writer.html:37
+#: apps/themes/osroom.com/pages/content/writer.html:37
 msgid "标题不能为空"
 msgstr "Header cannot be empty"
 
 #: apps/themes/osr-style/pages/content/writer.html:47
 #: apps/themes/osr-style/pages/content/writer.html:92
-#: apps/themes/osroom.com/pages/post/writer.html:48
+#: apps/themes/osroom.com/pages/content/writer.html:47
+#: apps/themes/osroom.com/pages/content/writer.html:92
 msgid "添加标签"
 msgstr "​​Tagging"
 
 #: apps/themes/osr-style/pages/content/writer.html:50
-#: apps/themes/osroom.com/pages/post/writer.html:45
+#: apps/themes/osroom.com/pages/content/writer.html:50
 msgid "可以在这里添加标签哦"
 msgstr "You can add tags here"
 
 #: apps/themes/osr-style/pages/content/writer.html:72
+#: apps/themes/osroom.com/pages/content/writer.html:72
 msgid "完成"
 msgstr "Complete"
 
-#: apps/themes/osr-style/pages/content/writer.html:174
-#: apps/themes/osroom.com/pages/post/writer.html:136
+#: apps/themes/osr-style/pages/content/writer.html:173
+#: apps/themes/osroom.com/pages/content/writer.html:174
 msgid "抱歉!检查到文本编辑器类型错误(editor),请关闭页面重新打开"
 msgstr ""
-"Sorry! Check the text editor type error (editor), please close the page "
-"and reopen it"
+"Sorry! Checked the text editor type error (editor), please close the page"
+" and reopen itSorry! Check the text editor type error (editor), please "
+"close the page and reopen it"
 
-#: apps/themes/osr-style/pages/content/writer.html:181
-#: apps/themes/osroom.com/pages/post/writer.html:143
+#: apps/themes/osr-style/pages/content/writer.html:180
+#: apps/themes/osroom.com/pages/content/writer.html:181
 msgid "更新发布"
 msgstr "Update Release"
 
-#: apps/themes/osr-style/pages/content/writer.html:184
-#: apps/themes/osroom.com/pages/post/writer.html:146
+#: apps/themes/osr-style/pages/content/writer.html:183
+#: apps/themes/osroom.com/pages/content/writer.html:184
 msgid "更新草稿"
 msgstr "Update Draft"
 
-#: apps/themes/osr-style/pages/content/writer.html:260
+#: apps/themes/osr-style/pages/content/writer.html:266
+#: apps/themes/osroom.com/pages/content/writer.html:260
 msgid "确认已保存内容后才离开哦"
 msgstr "Confirm the saved content before leaving"
 
 #: apps/themes/osr-style/pages/content/category/index.html:2
+#: apps/themes/osroom.com/pages/content/category/index.html:2
 msgid "内容分类管理"
 msgstr "Content Management"
 
 #: apps/themes/osr-style/pages/content/category/index.html:10
 #: apps/themes/osr-style/pages/corpus/index.html:2
+#: apps/themes/osroom.com/pages/content/category/index.html:10
+#: apps/themes/osroom.com/pages/corpus/index.html:2
 msgid "文集"
 msgstr "Collection"
 
 #: apps/themes/osr-style/pages/content/category/index.html:24
 #: apps/themes/osr-style/pages/content/category/index.html:33
+#: apps/themes/osroom.com/pages/content/category/index.html:24
+#: apps/themes/osroom.com/pages/content/category/index.html:33
 msgid "不能为空"
 msgstr "Can't be empty"
 
 #: apps/themes/osr-style/pages/content/category/index.html:24
 #: apps/themes/osr-style/pages/content/category/index.html:33
-#: apps/themes/osroom.com/pages/content/category/index.html:28
-#: apps/themes/osroom.com/pages/content/category/index.html:40
+#: apps/themes/osroom.com/pages/content/category/index.html:24
+#: apps/themes/osroom.com/pages/content/category/index.html:33
 msgid "分类名称"
 msgstr "Classification Name"
 
 #: apps/themes/osr-style/pages/corpus/index.html:17
 #: apps/themes/osr-style/pages/user/index.html:11
 #: apps/themes/osr-style/pages/user/post/pending.html:11
-#: apps/themes/osroom.com/pages/user/index.html:19
+#: apps/themes/osroom.com/pages/corpus/index.html:17
+#: apps/themes/osroom.com/pages/user/index.html:11
+#: apps/themes/osroom.com/pages/user/post/pending.html:11
 msgid "篇"
 msgstr "articles"
 
 #: apps/themes/osr-style/pages/corpus/index.html:25
 #: apps/themes/osr-style/pages/post/index.html:2
+#: apps/themes/osr-style/pages/search/index.html:27
 #: apps/themes/osr-style/pages/user/index.html:24
-#: apps/themes/osroom.com/pages/user/post/user_posts_nav.html:6
+#: apps/themes/osroom.com/pages/corpus/index.html:25
+#: apps/themes/osroom.com/pages/post/index.html:2
+#: apps/themes/osroom.com/pages/search/index.html:27
+#: apps/themes/osroom.com/pages/user/index.html:24
 msgid "文章"
 msgstr "Article"
 
 #: apps/themes/osr-style/pages/module/_send_code.html:5
-#: apps/themes/osroom.com/pages/recover-password.html:27
-#: apps/themes/osroom.com/pages/sign-up.html:31
+#: apps/themes/osroom.com/pages/module/_send_code.html:5
 msgid "邮箱验证码"
 msgstr "E-mail verification code"
 
 #: apps/themes/osr-style/pages/module/upload.html:11
+#: apps/themes/osroom.com/pages/module/upload.html:11
 msgid "或将文件拖到这里"
 msgstr "Or drag files here"
 
 #: apps/themes/osr-style/pages/module/editor/markdown.html:15
+#: apps/themes/osroom.com/pages/module/editor/markdown.html:15
 msgid "插入图片"
 msgstr "Insert picture"
 
 #: apps/themes/osr-style/pages/module/editor/markdown.html:28
+#: apps/themes/osroom.com/pages/module/editor/markdown.html:28
 msgid "上传"
 msgstr "Upload"
 
 #: apps/themes/osr-style/pages/module/editor/markdown.html:78
-#: apps/themes/osroom.com/pages/based/editor/markdown.html:50
+#: apps/themes/osroom.com/pages/module/editor/markdown.html:78
 msgid "当前使用的是MarkDown文本编辑器"
 msgstr "The MarkDown text editor is currently used"
 
 #: apps/themes/osr-style/pages/module/editor/markdown.html:88
+#: apps/themes/osroom.com/pages/module/editor/markdown.html:88
 msgid "每次最多上传5张图片"
 msgstr "Upload up to 5 pictures at a time"
 
 #: apps/themes/osr-style/pages/module/editor/richtext_atc_edit.html:57
+#: apps/themes/osroom.com/pages/module/editor/richtext_atc_edit.html:57
 msgid "您当前使用的是富文本编辑器"
 msgstr "You are currently using a rich text editor"
 
-#: apps/themes/osr-style/pages/module/email/send-temp.html:246
-#: apps/themes/osroom.com/pages/based/email/send-temp.html:246
-msgid "UTC时间"
-msgstr "UTC Time"
+#: apps/themes/osr-style/pages/module/email/send-temp.html:79
+#: apps/themes/osroom.com/pages/module/email/send-temp.html:79
+msgid "系统邮件, 请勿回复"
+msgstr ""
 
-#: apps/themes/osr-style/pages/module/exception/401.html:2
-msgid "401无权访问"
-msgstr "401 does not have access"
-
-#: apps/themes/osr-style/pages/module/exception/401.html:32
-msgid "无权访问该页面"
-msgstr "No access to this page"
-
-#: apps/themes/osr-style/pages/module/exception/401.html:32
-#: apps/themes/osr-style/pages/module/exception/404.html:33
-#: apps/themes/osr-style/pages/module/exception/500.html:32
-msgid "回到首页"
-msgstr "Homepage"
-
-#: apps/themes/osr-style/pages/module/exception/404.html:2
-msgid "404页面不存在"
-msgstr "404 page does not exist"
-
-#: apps/themes/osr-style/pages/module/exception/404.html:33
-msgid "该页面不存在"
-msgstr "Page does not exist"
-
-#: apps/themes/osr-style/pages/module/exception/500.html:2
-msgid "500Server Error"
-msgstr "500服务器错误"
-
-#: apps/themes/osr-style/pages/module/exception/500.html:32
-msgid "错误ID"
-msgstr "Error ID"
+#: apps/themes/osr-style/pages/notice/index.html:2
+#: apps/themes/osr-style/pages/statement/index.html:2
+msgid "平台协议"
+msgstr "Platform Agreement"
 
 #: apps/themes/osr-style/pages/photo/index.html:12
 msgid "全部"
 msgstr "All"
 
 #: apps/themes/osr-style/pages/photo/index.html:34
+#: apps/themes/osroom.com/pages/plugin/index.html:38
+#: apps/themes/osroom.com/pages/theme/index.html:38
 msgid "版权归原作者所有,与本站无关.如果侵权,请联系本站删除!"
 msgstr ""
+"The copyright belongs to the original author and has nothing to do with "
+"this site. If you infringe, please contact this site to delete!"
 
 #: apps/themes/osr-style/pages/photo/index.html:36
+#: apps/themes/osroom.com/pages/plugin/index.html:41
+#: apps/themes/osroom.com/pages/theme/index.html:41
 msgid "瞄简介"
-msgstr ""
+msgstr "Introduction"
 
 #: apps/themes/osr-style/pages/photo/index.html:37
 #: apps/themes/osr-style/pages/photo/introduction.html:15
 msgid "上传于"
-msgstr ""
+msgstr "Uploaded"
 
 #: apps/themes/osr-style/pages/photo/index.html:81
 #: apps/themes/osr-style/pages/post/_comment.html:244
+#: apps/themes/osr-style/pages/search/index.html:90
 #: apps/themes/osr-style/pages/user/follow/index.html:63
 #: apps/themes/osr-style/pages/user/message/index.html:85
 #: apps/themes/osr-style/pages/user/post/_comment.html:155
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:96
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:63
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:68
-#: apps/themes/osroom.com/pages/comment/comment.html:124
-#: apps/themes/osroom.com/pages/comment/comment.html:129
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:94
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:99
+#: apps/themes/osroom.com/pages/plugin/index.html:89
+#: apps/themes/osroom.com/pages/post/_comment.html:244
+#: apps/themes/osroom.com/pages/search/index.html:90
+#: apps/themes/osroom.com/pages/theme/index.html:89
+#: apps/themes/osroom.com/pages/user/follow/index.html:63
+#: apps/themes/osroom.com/pages/user/message/index.html:85
+#: apps/themes/osroom.com/pages/user/post/_comment.html:155
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:96
 msgid "上一页"
 msgstr "Previous"
 
 #: apps/themes/osr-style/pages/photo/index.html:84
 msgid "第{[photos.current_page]}页/共{[photos.page_total]}页"
-msgstr ""
+msgstr "{{photos.current_page]}Page/Total {[photos.page_total]}Page"
 
 #: apps/themes/osr-style/pages/photo/index.html:87
 #: apps/themes/osr-style/pages/post/_comment.html:248
+#: apps/themes/osr-style/pages/search/index.html:96
 #: apps/themes/osr-style/pages/user/follow/index.html:69
 #: apps/themes/osr-style/pages/user/message/index.html:89
 #: apps/themes/osr-style/pages/user/post/_comment.html:159
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:102
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:76
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:81
-#: apps/themes/osroom.com/pages/comment/comment.html:136
-#: apps/themes/osroom.com/pages/comment/comment.html:140
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:106
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:110
+#: apps/themes/osroom.com/pages/plugin/index.html:95
+#: apps/themes/osroom.com/pages/post/_comment.html:248
+#: apps/themes/osroom.com/pages/search/index.html:96
+#: apps/themes/osroom.com/pages/theme/index.html:95
+#: apps/themes/osroom.com/pages/user/follow/index.html:69
+#: apps/themes/osroom.com/pages/user/message/index.html:89
+#: apps/themes/osroom.com/pages/user/post/_comment.html:159
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:102
 msgid "下一页"
 msgstr "Next Page"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:2
 msgid "瞄下"
-msgstr ""
+msgstr "Looking down"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:43
 #: apps/themes/osr-style/pages/photo/introduction.html:105
@@ -1080,16 +1259,29 @@ msgstr ""
 #: apps/themes/osr-style/pages/user/post/_comment.html:83
 #: apps/themes/osr-style/pages/user/post/preview.html:69
 #: apps/themes/osr-style/pages/user/post/preview.html:141
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:39
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:68
+#: apps/themes/osroom.com/pages/post/_comment.html:84
+#: apps/themes/osroom.com/pages/post/_comment.html:150
+#: apps/themes/osroom.com/pages/post/index.html:79
+#: apps/themes/osroom.com/pages/user/post/_comment.html:54
+#: apps/themes/osroom.com/pages/user/post/_comment.html:83
+#: apps/themes/osroom.com/pages/user/post/preview.html:69
+#: apps/themes/osroom.com/pages/user/post/preview.html:141
 msgid "举报"
 msgstr "Report"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:45
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:41
 msgid "转载请联系作者获取授权, 侵权请联系本站删除"
 msgstr ""
+"Please contact the author for permission. If you want to infringe, please"
+" contact our website to delete."
 
 #: apps/themes/osr-style/pages/photo/introduction.html:46
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:42
 msgid "著作权归作者所有, 与本站无关"
-msgstr ""
+msgstr "Copyright belongs to the author, nothing to do with this site"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:66
 #: apps/themes/osr-style/pages/photo/introduction.html:77
@@ -1103,6 +1295,16 @@ msgstr ""
 #: apps/themes/osr-style/pages/user/follow/index.html:52
 #: apps/themes/osr-style/pages/user/post/preview.html:100
 #: apps/themes/osr-style/pages/user/post/preview.html:111
+#: apps/themes/osroom.com/pages/post/index.html:110
+#: apps/themes/osroom.com/pages/post/index.html:121
+#: apps/themes/osroom.com/pages/user/_user_info.html:14
+#: apps/themes/osroom.com/pages/user/_user_info.html:26
+#: apps/themes/osroom.com/pages/user/follow/index.html:2
+#: apps/themes/osroom.com/pages/user/follow/index.html:13
+#: apps/themes/osroom.com/pages/user/follow/index.html:40
+#: apps/themes/osroom.com/pages/user/follow/index.html:52
+#: apps/themes/osroom.com/pages/user/post/preview.html:100
+#: apps/themes/osroom.com/pages/user/post/preview.html:111
 msgid "关注"
 msgstr "Follow"
 
@@ -1112,6 +1314,11 @@ msgstr "Follow"
 #: apps/themes/osr-style/pages/user/follow/index.html:19
 #: apps/themes/osr-style/pages/user/follow/index.html:43
 #: apps/themes/osr-style/pages/user/post/preview.html:103
+#: apps/themes/osroom.com/pages/post/index.html:113
+#: apps/themes/osroom.com/pages/user/_user_info.html:17
+#: apps/themes/osroom.com/pages/user/follow/index.html:19
+#: apps/themes/osroom.com/pages/user/follow/index.html:43
+#: apps/themes/osroom.com/pages/user/post/preview.html:103
 msgid "粉丝"
 msgstr "Fans"
 
@@ -1120,6 +1327,10 @@ msgstr "Fans"
 #: apps/themes/osr-style/pages/user/_user_info.html:23
 #: apps/themes/osr-style/pages/user/follow/index.html:49
 #: apps/themes/osr-style/pages/user/post/preview.html:108
+#: apps/themes/osroom.com/pages/post/index.html:118
+#: apps/themes/osroom.com/pages/user/_user_info.html:23
+#: apps/themes/osroom.com/pages/user/follow/index.html:49
+#: apps/themes/osroom.com/pages/user/post/preview.html:108
 msgid "取消关注"
 msgstr "Unfollow"
 
@@ -1129,26 +1340,40 @@ msgstr "Unfollow"
 #: apps/themes/osr-style/pages/user/message/_comment.html:55
 #: apps/themes/osr-style/pages/user/post/_comment.html:110
 #: apps/themes/osr-style/pages/user/post/preview.html:151
+#: apps/themes/osroom.com/pages/module/_plugin_theme_info.html:78
+#: apps/themes/osroom.com/pages/post/_comment.html:199
+#: apps/themes/osroom.com/pages/post/index.html:161
+#: apps/themes/osroom.com/pages/user/message/_comment.html:55
+#: apps/themes/osroom.com/pages/user/post/_comment.html:110
+#: apps/themes/osroom.com/pages/user/post/preview.html:151
 msgid "提交"
 msgstr "Submit"
 
 #: apps/themes/osr-style/pages/post/_comment.html:3
 #: apps/themes/osr-style/pages/post/_comment.html:94
 #: apps/themes/osr-style/pages/post/_comment.html:161
+#: apps/themes/osroom.com/pages/post/_comment.html:3
+#: apps/themes/osroom.com/pages/post/_comment.html:94
+#: apps/themes/osroom.com/pages/post/_comment.html:161
 msgid "写点你的评论"
 msgstr "Write your comment"
 
 #: apps/themes/osr-style/pages/post/_comment.html:4
+#: apps/themes/osroom.com/pages/post/_comment.html:4
 msgid "最少2个字符, 最多300个字符"
-msgstr ""
+msgstr "2 characters at most, 300 characters at most"
 
 #: apps/themes/osr-style/pages/post/_comment.html:9
 #: apps/themes/osr-style/pages/post/_comment.html:100
 #: apps/themes/osr-style/pages/post/_comment.html:167
+#: apps/themes/osroom.com/pages/post/_comment.html:9
+#: apps/themes/osroom.com/pages/post/_comment.html:100
+#: apps/themes/osroom.com/pages/post/_comment.html:167
 msgid "请使用文明用语"
 msgstr "Please inform civilized content"
 
 #: apps/themes/osr-style/pages/post/_comment.html:12
+#: apps/themes/osroom.com/pages/post/_comment.html:12
 msgid "提交评论"
 msgstr "Submit"
 
@@ -1158,23 +1383,33 @@ msgstr "Submit"
 #: apps/themes/osr-style/pages/user/message/index.html:22
 #: apps/themes/osr-style/pages/user/post/_comment.html:1
 #: apps/themes/osr-style/pages/user/post/preview.html:34
-#: apps/themes/osroom.com/pages/comment/comment.html:26
-#: apps/themes/osroom.com/pages/post/post_left.html:29
+#: apps/themes/osroom.com/pages/post/_comment.html:17
+#: apps/themes/osroom.com/pages/post/index.html:44
+#: apps/themes/osroom.com/pages/user/message/_comment.html:7
+#: apps/themes/osroom.com/pages/user/message/index.html:22
+#: apps/themes/osroom.com/pages/user/post/_comment.html:1
+#: apps/themes/osroom.com/pages/user/post/preview.html:34
 msgid "评论"
 msgstr "Comment"
 
 #: apps/themes/osr-style/pages/post/_comment.html:23
 #: apps/themes/osr-style/pages/user/post/_comment.html:7
+#: apps/themes/osroom.com/pages/post/_comment.html:23
+#: apps/themes/osroom.com/pages/user/post/_comment.html:7
 msgid "喜欢排序"
 msgstr "By like"
 
 #: apps/themes/osr-style/pages/post/_comment.html:28
 #: apps/themes/osr-style/pages/user/post/_comment.html:12
+#: apps/themes/osroom.com/pages/post/_comment.html:28
+#: apps/themes/osroom.com/pages/user/post/_comment.html:12
 msgid "时间正序"
 msgstr "Positive(time)"
 
 #: apps/themes/osr-style/pages/post/_comment.html:33
 #: apps/themes/osr-style/pages/user/post/_comment.html:17
+#: apps/themes/osroom.com/pages/post/_comment.html:33
+#: apps/themes/osroom.com/pages/user/post/_comment.html:17
 msgid "时间倒序"
 msgstr "Reverse(time)"
 
@@ -1183,1586 +1418,428 @@ msgstr "Reverse(time)"
 #: apps/themes/osr-style/pages/post/_comment.html:134
 #: apps/themes/osr-style/pages/user/message/_comment.html:41
 #: apps/themes/osr-style/pages/user/post/_comment.html:73
-#: apps/themes/osroom.com/pages/comment/comment.html:60
-#: apps/themes/osroom.com/pages/comment/comment.html:93
-#: apps/themes/osroom.com/pages/comment/comment.html:96
+#: apps/themes/osroom.com/pages/post/_comment.html:68
+#: apps/themes/osroom.com/pages/post/_comment.html:124
+#: apps/themes/osroom.com/pages/post/_comment.html:134
+#: apps/themes/osroom.com/pages/user/message/_comment.html:41
+#: apps/themes/osroom.com/pages/user/post/_comment.html:73
 msgid "回复"
 msgstr "Reply"
 
 #: apps/themes/osr-style/pages/post/_comment.html:95
 #: apps/themes/osr-style/pages/post/_comment.html:162
+#: apps/themes/osroom.com/pages/post/_comment.html:95
+#: apps/themes/osroom.com/pages/post/_comment.html:162
 msgid "最多300个字符"
 msgstr "Up to 300 characters"
 
 #: apps/themes/osr-style/pages/post/_comment.html:103
 #: apps/themes/osr-style/pages/post/_comment.html:170
+#: apps/themes/osroom.com/pages/post/_comment.html:103
+#: apps/themes/osroom.com/pages/post/_comment.html:170
 msgid "回复评论"
 msgstr "Reply"
 
 #: apps/themes/osr-style/pages/post/_comment.html:189
 #: apps/themes/osr-style/pages/user/post/_comment.html:100
+#: apps/themes/osroom.com/pages/post/_comment.html:189
+#: apps/themes/osroom.com/pages/user/post/_comment.html:100
 msgid "评论举报"
 msgstr "Comment report"
 
 #: apps/themes/osr-style/pages/post/index.html:42
 #: apps/themes/osr-style/pages/user/post/preview.html:32
-#: apps/themes/osroom.com/pages/post/post_left.html:28
+#: apps/themes/osroom.com/pages/post/index.html:42
+#: apps/themes/osroom.com/pages/user/post/preview.html:32
 msgid "浏览"
 msgstr "Browsing"
 
 #: apps/themes/osr-style/pages/post/index.html:81
 #: apps/themes/osr-style/pages/user/post/preview.html:71
+#: apps/themes/osroom.com/pages/post/index.html:81
+#: apps/themes/osroom.com/pages/user/post/preview.html:71
 msgid "转载请联系作者获取授权"
 msgstr "Please contact the author for permission"
 
 #: apps/themes/osr-style/pages/post/index.html:82
 #: apps/themes/osr-style/pages/user/post/preview.html:72
-#: apps/themes/osroom.com/pages/post/post_left.html:80
+#: apps/themes/osroom.com/pages/post/index.html:82
+#: apps/themes/osroom.com/pages/user/post/preview.html:72
 msgid "著作权归作者所有"
 msgstr "The copyright belongs to the author"
 
 #: apps/themes/osr-style/pages/post/index.html:151
+#: apps/themes/osroom.com/pages/post/index.html:151
 msgid "文章举报"
+msgstr "Article Report"
+
+#: apps/themes/osr-style/pages/search/index.html:2
+#: apps/themes/osr-style/pages/search/index.html:12
+#: apps/themes/osr-style/pages/search/index.html:20
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:84
+#: apps/themes/osroom.com/pages/search/index.html:2
+#: apps/themes/osroom.com/pages/search/index.html:12
+#: apps/themes/osroom.com/pages/search/index.html:20
+msgid "搜索"
 msgstr ""
 
-#: apps/themes/osr-style/pages/statement/index.html:2
-msgid "平台协议"
+#: apps/themes/osr-style/pages/search/index.html:8
+#: apps/themes/osr-style/pages/search/index.html:19
+#: apps/themes/osroom.com/pages/search/index.html:8
+#: apps/themes/osroom.com/pages/search/index.html:19
+msgid "文章 用户"
+msgstr ""
+
+#: apps/themes/osr-style/pages/search/index.html:32
+#: apps/themes/osroom.com/pages/search/index.html:32
+msgid "用户"
+msgstr ""
+
+#: apps/themes/osr-style/pages/search/index.html:93
+#: apps/themes/osroom.com/pages/search/index.html:93
+msgid "第{[posts.items.current_page]}页/共{[posts.items.page_total]}页"
 msgstr ""
 
 #: apps/themes/osr-style/pages/user/_self_introduction.html:2
+#: apps/themes/osroom.com/pages/user/_self_introduction.html:2
 msgid "作者简介"
 msgstr "About the author"
 
 #: apps/themes/osr-style/pages/user/index.html:2
 #: apps/themes/osr-style/pages/user/post/pending.html:2
 #: apps/themes/osroom.com/pages/user/index.html:2
+#: apps/themes/osroom.com/pages/user/post/pending.html:2
 msgid "主页"
 msgstr "Home"
 
 #: apps/themes/osr-style/pages/user/index.html:16
-#: apps/themes/osroom.com/pages/user/post/pending.html:2
-#: apps/themes/osroom.com/pages/user/post/pending.html:6
+#: apps/themes/osroom.com/pages/user/index.html:16
 msgid "待处理"
 msgstr "Pending"
 
 #: apps/themes/osr-style/pages/user/index.html:34
-#: apps/themes/osroom.com/pages/user/post/user_posts_nav.html:12
+#: apps/themes/osroom.com/pages/user/index.html:34
 msgid "草稿"
 msgstr "Draft"
 
 #: apps/themes/osr-style/pages/user/follow/index.html:12
+#: apps/themes/osroom.com/pages/user/follow/index.html:12
 msgid "Ta的关注"
 msgstr "Ta's Following"
 
 #: apps/themes/osr-style/pages/user/follow/index.html:18
+#: apps/themes/osroom.com/pages/user/follow/index.html:18
 msgid "Ta的粉丝"
 msgstr "Fans of Ta"
 
 #: apps/themes/osr-style/pages/user/follow/index.html:66
+#: apps/themes/osroom.com/pages/user/follow/index.html:66
 msgid "第{[user_related_users.current_page]}页/共{[user_related_users.page_total]}页"
 msgstr ""
-"Page "
+"Page {[user_related_users.current_page]} / "
+"{{user_related_users.page_total]} PagesPage "
 "{[user_related_users.current_page]}/{{user_related_users.page_total]}Pages"
 
 #: apps/themes/osr-style/pages/user/message/_comment.html:13
+#: apps/themes/osroom.com/pages/user/message/_comment.html:13
 msgid "回复了评论"
 msgstr "Reply comment"
 
 #: apps/themes/osr-style/pages/user/message/_comment.html:21
+#: apps/themes/osroom.com/pages/user/message/_comment.html:21
 msgid "评论了"
 msgstr "Commented"
 
 #: apps/themes/osr-style/pages/user/post/_comment.html:42
 #: apps/themes/osr-style/pages/user/post/_comment.html:45
+#: apps/themes/osroom.com/pages/user/post/_comment.html:42
+#: apps/themes/osroom.com/pages/user/post/_comment.html:45
 msgid "预览页面, 不能点赞"
-msgstr ""
+msgstr "Preview Page, Cannot Like Like"
 
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:72
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:39
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:42
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:45
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:48
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:72
 msgid "编辑"
 msgstr "Editing"
 
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:75
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:75
 msgid "移到回收站"
 msgstr "Move to trash"
 
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:78
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:56
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:78
 msgid "恢复"
 msgstr "Recovery"
 
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:99
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:72
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:103
+#: apps/themes/osroom.com/pages/user/post/_user_posts.html:99
 msgid "第{[posts.current_page]}页/共{[posts.page_total]}页"
 msgstr "Page{[posts.current_page]}Pages/Total {[posts.page_total]}Pages"
 
 #: apps/themes/osr-style/pages/user/post/pending.html:14
-#: apps/themes/osroom.com/pages/user/post/pending.html:11
+#: apps/themes/osroom.com/pages/user/post/pending.html:14
 msgid "回到主页"
 msgstr "Back to homepage"
 
 #: apps/themes/osr-style/pages/user/post/pending.html:22
-#: apps/themes/osroom.com/pages/user/post/user_pending_posts_nav.html:6
+#: apps/themes/osroom.com/pages/user/post/pending.html:22
 msgid "回收站"
 msgstr "Recycle Bin"
 
 #: apps/themes/osr-style/pages/user/post/pending.html:27
-#: apps/themes/osroom.com/pages/user/post/user_pending_posts_nav.html:10
+#: apps/themes/osroom.com/pages/user/post/pending.html:27
 msgid "待审核"
 msgstr "pending"
 
 #: apps/themes/osr-style/pages/user/post/pending.html:32
+#: apps/themes/osroom.com/pages/user/post/pending.html:32
 msgid "违规内容"
 msgstr "Violation content"
 
 #: apps/themes/osr-style/pages/user/post/preview.html:2
 #: apps/themes/osr-style/pages/user/post/preview.html:10
-#: apps/themes/osroom.com/pages/post/post_left.html:8
+#: apps/themes/osroom.com/pages/user/post/preview.html:2
+#: apps/themes/osroom.com/pages/user/post/preview.html:10
 msgid "预览"
 msgstr "Preview"
 
 #: apps/themes/osr-style/static/js/osroom.js:109
+#: apps/themes/osroom.com/static/js/osroom.js:109
 msgid "请选择要上传的文件"
+msgstr "Please select the file to upload"
+
+#: apps/themes/osroom.com/pages/index.html:10
+msgid "开源CMF系统 | 一个Web服务端"
 msgstr ""
 
-#: apps/themes/osroom.com/pages/index.html:13
-msgid "Osroom-开源Python CMS Web"
-msgstr ""
+#: apps/themes/osroom.com/pages/index.html:14
+msgid "开始使用"
+msgstr "Start using"
 
 #: apps/themes/osroom.com/pages/index.html:17
-msgid "开始使用"
-msgstr ""
+msgid "演示"
+msgstr "Demo"
 
 #: apps/themes/osroom.com/pages/index.html:20
-msgid "演示"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/index.html:23
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
-#: apps/themes/osroom.com/pages/index.html:52
-msgid "可对接多种客户端"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/index.html:67
+#: apps/themes/osroom.com/pages/index.html:41
+#: apps/themes/osroom.com/pages/support/index.html:55
 msgid "赞助者"
-msgstr ""
+msgstr "Sponsors"
 
-#: apps/themes/osroom.com/pages/index.html:69
-#: apps/themes/osroom.com/pages/support/index.html:77
+#: apps/themes/osroom.com/pages/index.html:57
+#: apps/themes/osroom.com/pages/support/index.html:71
 msgid "「暂无」省吃俭用吃着泡面租服务器"
-msgstr ""
+msgstr "\"Nothing\" to eat and eat instant noodle rental server"
 
-#: apps/themes/osroom.com/pages/index.html:70
+#: apps/themes/osroom.com/pages/index.html:58
 msgid "为了保持项目与官网|Demo的持续进行,你可以"
 msgstr ""
+"In order to keep the project and the official website|Demo going on, you "
+"can"
 
-#: apps/themes/osroom.com/pages/based/footer.html:27
-#: apps/themes/osroom.com/pages/based/m-header.html:89
-#: apps/themes/osroom.com/pages/index.html:72
+#: apps/themes/osroom.com/pages/index.html:60
 msgid "赞助我们"
-msgstr ""
+msgstr "Sponsor Us"
 
-#: apps/themes/osroom.com/pages/recover-password.html:13
-#: apps/themes/osroom.com/pages/sign-up.html:17
-msgid "邮箱地址格式不合法"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:16
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:12
+msgid "文档"
+msgstr "Docs"
 
-#: apps/themes/osroom.com/pages/recover-password.html:17
-#: apps/themes/osroom.com/pages/sign-up.html:21
-msgid "密码最少8个字符, 且必须包含字母和数字"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:22
+msgid "安装部署"
+msgstr "Installation"
 
-#: apps/themes/osroom.com/pages/sign-in.html:14
-msgid "用户名或电子邮箱不对"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:27
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:23
+msgid "API调用"
+msgstr "API"
 
-#: apps/themes/osroom.com/pages/sign-in.html:18
-msgid "账户或密码错误"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:32
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:28
+msgid "插件开发"
+msgstr "Plugin Development"
 
-#: apps/themes/osroom.com/pages/sign-in.html:45
-msgid "登录即代表你同意"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:37
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:33
+msgid "主题开发"
+msgstr "Theme Development"
 
-#: apps/themes/osroom.com/pages/sign-in.html:46
-msgid "《Demo账户使用协议》"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:45
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:41
+msgid "插件|主题"
+msgstr "Plugins | Themes"
 
-#: apps/themes/osroom.com/pages/sign-up.html:13
-msgid "账户最少2个字符"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:51
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:47
+#: apps/themes/osroom.com/pages/plugin/index.html:2
+#: apps/themes/osroom.com/pages/plugin/index.html:12
+msgid "插件"
+msgstr "Plugins"
 
-#: apps/themes/osroom.com/pages/sign-up.html:58
-msgid "注册即代表你同意"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:56
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:52
+#: apps/themes/osroom.com/pages/theme/index.html:2
+#: apps/themes/osroom.com/pages/theme/index.html:12
+msgid "主题"
+msgstr "Themes"
 
-#: apps/themes/osroom.com/pages/sign-up.html:59
-msgid "《用户协议》"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:64
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:60
+#: apps/themes/osroom.com/pages/team/index.html:2
+#: apps/themes/osroom.com/pages/team/index.html:7
+msgid "团队"
+msgstr "Team"
 
-#: apps/themes/osroom.com/pages/sign-up.html:125
-msgid "验证码-用户注册"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:69
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:66
+msgid "支持OSROOM"
+msgstr "Support"
 
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:11
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:12
-msgid "至少3个字符"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:74
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:71
+msgid "博客"
+msgstr "Blog"
 
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:25
-msgid "保存后不能修改,至少4个字符,只能是字母, 数字"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_header_bar_menu_left.html:80
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:78
+#: apps/themes/osroom.com/pages/participate/index.html:2
+msgid "参与贡献"
+msgstr "Participate"
 
-#: apps/themes/osroom.com/pages/account/settings/_basis.html:25
-msgid "至少4个字符"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/_m_left_menu.html:18
+msgid "使用教程"
+msgstr "Use the tutorial"
 
-#: apps/themes/osroom.com/pages/account/settings/email.html:23
-msgid "邮箱格式错误"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/account/settings/email.html:73
-msgid "安全码-邮箱绑定(当前邮箱)"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/account/settings/email.html:78
-msgid "验证码-邮箱绑定(新邮箱)"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/account/settings/email.html:92
-msgid "重发"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/footer.html:23
-msgid "部署文档"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/footer.html:20
+msgid "OSROOM官网"
+msgstr "OSROOM"
 
 #: apps/themes/osroom.com/pages/based/footer.html:24
-#: apps/themes/osroom.com/pages/based/header.html:28
-msgid "插件开发"
-msgstr ""
+msgid "遵循"
+msgstr "Follow"
 
-#: apps/themes/osroom.com/pages/based/footer.html:25
-#: apps/themes/osroom.com/pages/based/header.html:29
-msgid "主题开发"
-msgstr ""
+#: apps/themes/osroom.com/pages/based/footer.html:27
+msgid "开源协议"
+msgstr "open source agreement"
 
-#: apps/themes/osroom.com/pages/based/footer.html:42
-msgid "在移动端打开"
-msgstr ""
+#: apps/themes/osroom.com/pages/plugin/index.html:17
+msgid "官方插件"
+msgstr "Official"
 
-#: apps/themes/osroom.com/pages/based/footer.html:55
-msgid "开源Web系统|Restful Api"
-msgstr ""
+#: apps/themes/osroom.com/pages/plugin/index.html:22
+msgid "其他插件"
+msgstr "Other"
 
-#: apps/themes/osroom.com/pages/based/header.html:13
-msgid "使用"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:16
-msgid "安装"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:17
-msgid "部署"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:24
-msgid "开发"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:27
-msgid "API 使用"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:36
+#: apps/themes/osroom.com/pages/plugin/index.html:44
+#: apps/themes/osroom.com/pages/theme/index.html:44
 msgid "下载"
+msgstr "Download"
+
+#: apps/themes/osroom.com/pages/plugin/index.html:92
+msgid "第{[plugins.current_page]}页/共{[plugins.page_total]}页"
+msgstr "Page {[plugins.current_page]}/Page of {[plugins.page_total]}"
+
+#: apps/themes/osroom.com/pages/support/index.html:9
+msgid "OSROOM是遵循BSD2协议的开源系统, 免费使用"
 msgstr ""
+"OSROOM is an open source system that complies with the BSD2 protocol and "
+"is free to use"
 
-#: apps/themes/osroom.com/pages/based/header.html:39
-#: apps/themes/osroom.com/pages/based/m-header.html:81
-#: apps/themes/osroom.com/pages/blog/index.html:2
-msgid "博客"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:40
-#: apps/themes/osroom.com/pages/team/index.html:2
-#: apps/themes/osroom.com/pages/team/index.html:5
-msgid "团队"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/header.html:42
-#: apps/themes/osroom.com/pages/translation/index.html:2
-#: apps/themes/osroom.com/pages/translation/index.html:5
-msgid "参与翻译"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:64
-msgid "开发文档"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:68
-msgid "WebApi文档"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:69
-msgid "主题(前端)开发"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:74
-msgid "源代码"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:77
-msgid "代码下载"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:78
-msgid "代码贡献"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:88
-msgid "投稿"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/m-header.html:90
-msgid "一起合作"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/based/editor/richtext.html:65
-msgid "<p>当前使用的是富文本编辑器</p>"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:12
-msgid "30天热门"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/blog/blogs_left.html:48
-msgid "默认"
-msgstr "Default"
-
-#: apps/themes/osroom.com/pages/comment/comment.html:13
-msgid "评论一个"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/comment/comment.html:16
-msgid "登录评论"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/comment/comment.html:30
-msgid "倒序"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/comment/comment.html:33
-msgid "正序"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/comment/comment.html:36
-msgid "热度"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/comment/comment.html:72
-#: apps/themes/osroom.com/pages/comment/comment.html:107
-msgid "提交回复"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/comment/comment.html:133
-msgid "第{[comments.current_page]}页/共{[comments.page_total]}页"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/content/category/index.html:2
-msgid "分类"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/content/category/index.html:12
-msgid "内容分类"
-msgstr "Content Category"
-
-#: apps/themes/osroom.com/pages/content/category/index.html:18
-msgid "内容类型"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/content/category/index.html:28
-#: apps/themes/osroom.com/pages/content/category/index.html:41
-msgid "至少一个字符"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/content/category/index.html:44
-msgid " 添加"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/post/post_left.html:96
-#: apps/themes/osroom.com/pages/user/index.html:16
-msgid "作者"
-msgstr "Author"
-
-#: apps/themes/osroom.com/pages/post/post_left.html:131
-msgid "请使用软件自带分享功能"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/post/post_right.html:6
-msgid "作者相关"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/post/writer.html:40
-msgid "内容准备发布"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/post/writer.html:46
-msgid "超字数"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/post/writer.html:69
-msgid "标题"
-msgstr "Title"
-
-#: apps/themes/osroom.com/pages/post/writer.html:70
-msgid "标题不能为空哦"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/support/index.html:7
-#: apps/themes/osroom.com/pages/translation/index.html:7
-msgid "Osroom是遵循BSD2协议的开源系统, 免费使用"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/support/index.html:7
+#: apps/themes/osroom.com/pages/support/index.html:9
 msgid ""
 "你可以从\n"
-"        <a href=\"https://github.com/osroom/osroom\" target=\"_blank\">\n"
-"            <i class=\"am-icon-github\"></i>GitHub\n"
-"        </a>下载源代码"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/support/index.html:11
-msgid "项目的进行需要一定的资金来维持(服务器等费用), 你可以通过以下方式支持我们"
+"                <a href=\"https://github.com/osroom/osroom\" "
+"target=\"_blank\">\n"
+"                    <i class=\"fa fa-github\"></i> GitHub\n"
+"                </a>下载源代码"
 msgstr ""
 
 #: apps/themes/osroom.com/pages/support/index.html:13
-msgid "个人支持"
+msgid "项目的维护和进行需要大家的支持, 如果对你有帮助, 你通过以下方式支持我们"
 msgstr ""
+"The maintenance and implementation of the project requires the support of"
+" everyone. If it helps you, you support us by"
 
-#: apps/themes/osroom.com/pages/support/index.html:15
-msgid "个人可以通过以下方式小额支持我们(点击获取二维码)"
-msgstr ""
+#: apps/themes/osroom.com/pages/support/index.html:18
+msgid "偶尔赞助"
+msgstr "Occasionally Sponsored"
 
 #: apps/themes/osroom.com/pages/support/index.html:20
-#: apps/themes/osroom.com/pages/support/index.html:53
-msgid "AliPay"
-msgstr ""
+msgid "你可以通过以下方式偶尔赞助我们"
+msgstr "You can sponsor us occasionally by"
 
-#: apps/themes/osroom.com/pages/support/index.html:26
-#: apps/themes/osroom.com/pages/support/index.html:59
-msgid "WeChatPay"
-msgstr ""
+#: apps/themes/osroom.com/pages/support/index.html:29
+msgid "周期赞助"
+msgstr "Continuous sponsorship"
 
 #: apps/themes/osroom.com/pages/support/index.html:32
-#: apps/themes/osroom.com/pages/support/index.html:65
-msgid "ApplePay"
+msgid "如果你选择周期赞助我们, 赞助后可以通过邮件联系我们在该站添加你的链接(需提供赞助途径与单号)"
 msgstr ""
+"If you choose to sponsor us for the period, you can contact us by email "
+"after the sponsorship to add your link at the station (providing "
+"sponsorship channels and ticket number)"
+
+#: apps/themes/osroom.com/pages/support/index.html:33
+#: apps/themes/osroom.com/pages/support/index.html:50
+#: apps/themes/osroom.com/pages/team/index.html:55
+msgid "联系方式"
+msgstr "Contact information"
+
+#: apps/themes/osroom.com/pages/support/index.html:37
+msgid "赞助方式同上"
+msgstr "Sponsorship is the same as above"
 
 #: apps/themes/osroom.com/pages/support/index.html:42
-msgid "持续赞助"
-msgstr ""
+msgid "其他支持方式"
+msgstr "Other support methods"
 
 #: apps/themes/osroom.com/pages/support/index.html:44
-msgid " 你也可以持续赞助我们, 我们将会在官网页面上放上你的公司Logo链接作为回报"
+msgid "广告投放"
+msgstr "Ad serving"
+
+#: apps/themes/osroom.com/pages/support/index.html:45
+msgid "你也选择在我们的DEMO网站广告栏投放广告(当有空闲广告位时)"
 msgstr ""
+"You also choose to serve ads on our DEMO website ad column (when there "
+"are free ad slots)"
 
-#: apps/themes/osroom.com/pages/support/index.html:46
-msgid "持续赞助后联系E-mail:"
+#: apps/themes/osroom.com/pages/team/index.html:9
+msgid "OSROOM及其配套功能主要由以下核心成员与贡献者协作开发完成, 贡献者无法每个提及, 请见谅"
 msgstr ""
-
-#: apps/themes/osroom.com/pages/support/index.html:74
-msgid "当前赞助商"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/team/index.html:7
-msgid "Osroom主要由以下成员协作开发完成, 其余参与过贡献的小伙伴, 由于无法在此每个展现, 请见谅"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/team/index.html:10
-msgid "成员信息"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/team/index.html:28
-msgid "其他贡献者信息"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/translation/index.html:8
-msgid "由于目前团队无翻译人员,你可以尽你的能力帮助我们翻译以下模块"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/user/index.html:21
-msgid "更多"
-msgstr "More"
-
-#: apps/themes/osroom.com/pages/user/user_right.html:7
-msgid "个人介绍"
-msgstr ""
-
-#: apps/themes/osroom.com/pages/user/post/user_pending_posts_nav.html:13
-msgid "未通过"
-msgstr "Failed"
-
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:53
-msgid "移除"
-msgstr "Remove"
-
-#: apps/themes/osroom.com/pages/user/post/user_posts.html:59
-msgid "永久删除"
-msgstr "Delete permanently"
-
-#~ msgid "文章总数"
-#~ msgstr ""
-
-#~ msgid "查看"
-#~ msgstr ""
-
-#~ msgid "评论总数"
-#~ msgstr ""
-
-#~ msgid "用户总数"
-#~ msgstr ""
-
-#~ msgid "多媒体库"
-#~ msgstr ""
-
-#~ msgid "动态数据"
-#~ msgstr ""
-
-#~ msgid "名称"
-#~ msgstr ""
-
-#~ msgid "7天"
-#~ msgstr ""
-
-#~ msgid "30天"
-#~ msgstr ""
-
-#~ msgid "总数"
-#~ msgstr ""
-
-#~ msgid "用户"
-#~ msgstr ""
-
-#~ msgid "待处理事件"
-#~ msgstr ""
-
-#~ msgid "异常"
-#~ msgstr ""
-
-#~ msgid "邮件发送"
-#~ msgstr ""
-
-#~ msgid "错误"
-#~ msgstr ""
-
-#~ msgid "短信发送"
-#~ msgstr ""
-
-#~ msgid "插件"
-#~ msgstr ""
-
-#~ msgid "举报状态"
-#~ msgstr ""
-
-#~ msgid "3小时"
-#~ msgstr ""
-
-#~ msgid "8小时"
-#~ msgstr ""
-
-#~ msgid "1天"
-#~ msgstr ""
-
-#~ msgid "仪表盘"
-#~ msgstr ""
-
-#~ msgid "欢迎使用OSROOM"
-#~ msgstr ""
-
-#~ msgid "查看最新版本"
-#~ msgstr ""
-
-#~ msgid "数据有缓存延迟"
-#~ msgstr ""
-
-#~ msgid "加载中"
-#~ msgstr ""
-
-#~ msgid "审核规则"
-#~ msgstr ""
-
-#~ msgid "结果"
-#~ msgstr ""
-
-#~ msgid "搜索"
-#~ msgstr ""
-
-#~ msgid "添加规则"
-#~ msgstr ""
-
-#~ msgid "审核规则配置主要用于预留部分网站使用名称, 如预留用户名称\"管理员\",不能给普通用户注册使用"
-#~ msgstr ""
-
-#~ msgid "添加规则后,用户则无法在相关项目的内容输入中使用符合规则的字词"
-#~ msgstr ""
-
-#~ msgid "规则支持正则表达式"
-#~ msgstr ""
-
-#~ msgid "规则只对非网站工作人员账号有效"
-#~ msgstr ""
-
-#~ msgid "项目"
-#~ msgstr ""
-
-#~ msgid "规则"
-#~ msgstr ""
-
-#~ msgid "删除选择"
-#~ msgstr ""
-
-#~ msgid "填入规则"
-#~ msgstr ""
-
-#~ msgid "站点首页"
-#~ msgstr ""
-
-#~ msgid "当前页面为OSROOM自带页面(属管理端), 需公开相关页面访问,建议使用主题"
-#~ msgstr ""
-
-#~ msgid "回到管理台"
-#~ msgstr ""
-
-#~ msgid "进入站点首页(需主题支持)"
-#~ msgstr ""
-
-#~ msgid "菜单"
-#~ msgstr ""
-
-#~ msgid "访问osroom.com"
-#~ msgstr ""
-
-#~ msgid "管理端"
-#~ msgstr ""
-
-#~ msgid "内容"
-#~ msgstr ""
-
-#~ msgid "文章管理"
-#~ msgstr ""
-
-#~ msgid "评论管理"
-#~ msgstr ""
-
-#~ msgid "多媒体"
-#~ msgstr ""
-
-#~ msgid "文本内容"
-#~ msgstr ""
-
-#~ msgid "图文|图库"
-#~ msgstr ""
-
-#~ msgid "音频库"
-#~ msgstr ""
-
-#~ msgid "视频库"
-#~ msgstr ""
-
-#~ msgid "其他类型"
-#~ msgstr ""
-
-#~ msgid "消息管理"
-#~ msgstr ""
-
-#~ msgid "站内消息"
-#~ msgstr ""
-
-#~ msgid "系统邮件"
-#~ msgstr ""
-
-#~ msgid "系统短信"
-#~ msgstr ""
-
-#~ msgid "发送消息"
-#~ msgstr ""
-
-#~ msgid "用户管理"
-#~ msgstr ""
-
-#~ msgid "角色管理"
-#~ msgstr ""
-
-#~ msgid "主题外观"
-#~ msgstr ""
-
-#~ msgid "主题"
-#~ msgstr ""
-
-#~ msgid "Token与权限"
-#~ msgstr ""
-
-#~ msgid "Rest Token"
-#~ msgstr ""
-
-#~ msgid "权限控制"
-#~ msgstr ""
-
-#~ msgid "参数配置"
-#~ msgstr ""
-
-#~ msgid "配置版本"
-#~ msgstr ""
-
-#~ msgid "服务器"
-#~ msgstr ""
-
-#~ msgid "类别"
-#~ msgstr ""
-
-#~ msgid "详情"
-#~ msgstr ""
-
-#~ msgid "阶级"
-#~ msgstr ""
-
-#~ msgid "赞"
-#~ msgstr ""
-
-#~ msgid "时间"
-#~ msgstr ""
-
-#~ msgid "鉴定(分)"
-#~ msgstr ""
-
-#~ msgid "备注"
-#~ msgstr ""
-
-#~ msgid "鉴定类别"
-#~ msgstr ""
-
-#~ msgid "评论回复"
-#~ msgstr ""
-
-#~ msgid "级评论"
-#~ msgstr ""
-
-#~ msgid "用户删除"
-#~ msgstr ""
-
-#~ msgid "管理员删除"
-#~ msgstr ""
-
-#~ msgid "未审核"
-#~ msgstr ""
-
-#~ msgid "人工审核"
-#~ msgstr ""
-
-#~ msgid "自动审核"
-#~ msgstr ""
-
-#~ msgid "人工鉴定"
-#~ msgstr ""
-
-#~ msgid "通过"
-#~ msgstr ""
-
-#~ msgid "不通过"
-#~ msgstr ""
-
-#~ msgid "确定移入待删区?"
-#~ msgstr ""
-
-#~ msgid "移入待删除"
-#~ msgstr ""
-
-#~ msgid "被举报"
-#~ msgstr ""
-
-#~ msgid "字数"
-#~ msgstr ""
-
-#~ msgid "举报总数"
-#~ msgstr ""
-
-#~ msgid "最后举报"
-#~ msgstr ""
-
-#~ msgid "正常"
-#~ msgstr ""
-
-#~ msgid "待删除"
-#~ msgstr ""
-
-#~ msgid "分类设置"
-#~ msgstr ""
-
-#~ msgid "时间排序"
-#~ msgstr ""
-
-#~ msgid "举报排序"
-#~ msgstr ""
-
-#~ msgid "选"
-#~ msgstr ""
-
-#~ msgid "全选"
-#~ msgstr ""
-
-#~ msgid "举报信息"
-#~ msgstr ""
-
-#~ msgid "批量上传"
-#~ msgstr ""
-
-#~ msgid "关闭上传"
-#~ msgstr ""
-
-#~ msgid "请选择要删除的项"
-#~ msgstr ""
-
-#~ msgid "取消全选"
-#~ msgstr ""
-
-#~ msgid "音频文本编辑"
-#~ msgstr ""
-
-#~ msgid "音频"
-#~ msgstr ""
-
-#~ msgid "音频文本"
-#~ msgstr ""
-
-#~ msgid "名称不能为空"
-#~ msgstr ""
-
-#~ msgid "上传时间"
-#~ msgstr ""
-
-#~ msgid "操作"
-#~ msgstr ""
-
-#~ msgid "播放"
-#~ msgstr ""
-
-#~ msgid "详情|编辑"
-#~ msgstr ""
-
-#~ msgid "点击选择音频"
-#~ msgstr ""
-
-#~ msgid "图文|图库文本编辑"
-#~ msgstr ""
-
-#~ msgid "图文图库"
-#~ msgstr ""
-
-#~ msgid "图片文本"
-#~ msgstr ""
-
-#~ msgid "上传更新"
-#~ msgstr ""
-
-#~ msgid "链接"
-#~ msgstr ""
-
-#~ msgid "链接打开方式"
-#~ msgstr ""
-
-#~ msgid "新标签"
-#~ msgstr ""
-
-#~ msgid "当前标签"
-#~ msgstr ""
-
-#~ msgid "未分类"
-#~ msgstr ""
-
-#~ msgid "编辑|详情"
-#~ msgstr ""
-
-#~ msgid "点击选择图片"
-#~ msgstr ""
-
-#~ msgid "其他库文本编辑"
-#~ msgstr ""
-
-#~ msgid "其他类型库"
-#~ msgstr ""
-
-#~ msgid "文本"
-#~ msgstr ""
-
-#~ msgid "其他文件库"
-#~ msgstr ""
-
-#~ msgid "文本内容编辑"
-#~ msgstr ""
-
-#~ msgid "文本库"
-#~ msgstr ""
-
-#~ msgid "创建时间"
-#~ msgstr ""
-
-#~ msgid "视频文本编辑"
-#~ msgstr ""
-
-#~ msgid "视频文本"
-#~ msgstr ""
-
-#~ msgid "视频播放"
-#~ msgstr ""
-
-#~ msgid "点击选择视频"
-#~ msgstr ""
-
-#~ msgid "发件人"
-#~ msgstr ""
-
-#~ msgid "收件人"
-#~ msgstr ""
-
-#~ msgid "状态"
-#~ msgstr ""
-
-#~ msgid "异常|错误信息"
-#~ msgstr ""
-
-#~ msgid "多用户"
-#~ msgstr ""
-
-#~ msgid "站内消息管理"
-#~ msgstr ""
-
-#~ msgid "被通知"
-#~ msgstr ""
-
-#~ msgid "系统通知"
-#~ msgstr ""
-
-#~ msgid "(主页)"
-#~ msgstr ""
-
-#~ msgid "发送类型"
-#~ msgstr ""
-
-#~ msgid "站内"
-#~ msgstr ""
-
-#~ msgid "邮件"
-#~ msgstr ""
-
-#~ msgid "短信"
-#~ msgstr ""
-
-#~ msgid "邮件和短信发送后无法撤回, 站内消息发送后可以在消息管理删除"
-#~ msgstr ""
-
-#~ msgid "必须是本站正常用户名(多个用 ; 隔开)"
-#~ msgstr ""
-
-#~ msgid "发送给所有用户请填\"All\""
-#~ msgstr ""
-
-#~ msgid "确认发送"
-#~ msgstr ""
-
-#~ msgid "输入字符Send确认发送"
-#~ msgstr ""
-
-#~ msgid "输入Send确认"
-#~ msgstr ""
-
-#~ msgid "输入确认字符"
-#~ msgstr ""
-
-#~ msgid "发送"
-#~ msgstr ""
-
-#~ msgid "确认失败,未发送"
-#~ msgstr ""
-
-#~ msgid "权限表"
-#~ msgstr "Permissions table"
-
-#~ msgid "数量"
-#~ msgstr "Quantity"
-
-#~ msgid "权限名(Key)"
-#~ msgstr "Permission name(key)"
-
-#~ msgid "权重"
-#~ msgstr ""
-
-#~ msgid "说明"
-#~ msgstr ""
-
-#~ msgid "添加页面路由"
-#~ msgstr ""
-
-#~ msgid "页面路由"
-#~ msgstr ""
-
-#~ msgid "路由不能为空"
-#~ msgstr ""
-
-#~ msgid "URL权限修改"
-#~ msgstr ""
-
-#~ msgid "权限修改"
-#~ msgstr ""
-
-#~ msgid "自定义指定是否需要登录验证, 对系统代码中已强制需要登录验证的URL无效"
-#~ msgstr ""
-
-#~ msgid "自定义指定权限, 则默认的权限(系统代码中指定的)则会失效"
-#~ msgstr ""
-
-#~ msgid "指定多个权限, 请求时用户只需要匹配其中任意一个权限则有权请求"
-#~ msgstr ""
-
-#~ msgid "查看权限表"
-#~ msgstr ""
-
-#~ msgid "URL(api/路由)"
-#~ msgstr ""
-
-#~ msgid "请求方式"
-#~ msgstr ""
-
-#~ msgid "访问权限:"
-#~ msgstr ""
-
-#~ msgid "未自定义"
-#~ msgstr ""
-
-#~ msgid "登录验证"
-#~ msgstr ""
-
-#~ msgid "选择访问权限(可多选)"
-#~ msgstr ""
-
-#~ msgid "保存修改"
-#~ msgstr ""
-
-#~ msgid "取消自定义"
-#~ msgstr ""
-
-#~ msgid "URL权限管理"
-#~ msgstr ""
-
-#~ msgid "URL&API权限控制"
-#~ msgstr ""
-
-#~ msgid "添加页面"
-#~ msgstr ""
-
-#~ msgid "Endpoint"
-#~ msgstr ""
-
-#~ msgid "类型"
-#~ msgstr ""
-
-#~ msgid "否"
-#~ msgstr ""
-
-#~ msgid "权限验证"
-#~ msgstr ""
-
-#~ msgid "未自定义(使用代码中配置的默认权限验证)"
-#~ msgstr ""
-
-#~ msgid "所有"
-#~ msgstr ""
-
-#~ msgid "ApiUrl"
-#~ msgstr ""
-
-#~ msgid "请了解插件各设置项作用后, 再做更改, 错误的设置可能导致本插件功能不起作用!"
-#~ msgstr ""
-
-#~ msgid "如果插件包配置代码有做修改, 请刷新配置后, 插件包中的新设置项才会生效, 并在此设置页面显示"
-#~ msgstr ""
-
-#~ msgid "修改后需要重新激活插件生效"
-#~ msgstr ""
-
-#~ msgid "修改后直接生效"
-#~ msgstr ""
-
-#~ msgid "本插件无配置项!"
-#~ msgstr ""
-
-#~ msgid "刷新配置"
-#~ msgstr ""
-
-#~ msgid "变量(key)"
-#~ msgstr ""
-
-#~ msgid "当前值"
-#~ msgstr ""
-
-#~ msgid "重新激活"
-#~ msgstr ""
-
-#~ msgid "作用&说明"
-#~ msgstr ""
-
-#~ msgid "是"
-#~ msgstr ""
-
-#~ msgid "添加元素"
-#~ msgstr ""
-
-#~ msgid "确认配置无误?"
-#~ msgstr ""
-
-#~ msgid "确定执行安装依赖包?"
-#~ msgstr ""
-
-#~ msgid "安装或更新插件依赖包"
-#~ msgstr ""
-
-#~ msgid "主机IP"
-#~ msgstr ""
-
-#~ msgid "插件依赖包安装状态"
-#~ msgstr ""
-
-#~ msgid "连接服务器错误"
-#~ msgstr ""
-
-#~ msgid "没有成功安装需求依赖包"
-#~ msgstr ""
-
-#~ msgid "插件管理"
-#~ msgstr ""
-
-#~ msgid "选择插件"
-#~ msgstr ""
-
-#~ msgid "插件上传支持zip压缩包"
-#~ msgstr ""
-
-#~ msgid "[上传]功能只对单点部署有效: 集群部署的站点, 请把非压缩的\"插件包\"直接放于各台服务器Osroom系统目录的apps/plugins下"
-#~ msgstr ""
-
-#~ msgid "[删除]功能只对单点部署有效: 集群部署的站点, 请直接把各台服务器Osroom系统目录的apps/plugins下的插件目录删除"
-#~ msgstr ""
-
-#~ msgid "插件安装成功后, 请检查是否需要安装依赖包. 如果需要， 请安装请进入设置检查依赖包安装情况"
-#~ msgstr ""
-
-#~ msgid "名称(别名)"
-#~ msgstr ""
-
-#~ msgid "安装时间"
-#~ msgstr ""
-
-#~ msgid "确定停止使用此插件?"
-#~ msgstr ""
-
-#~ msgid "停止"
-#~ msgstr ""
-
-#~ msgid "激活"
-#~ msgstr ""
-
-#~ msgid "插件设置有误或缺少插件需求包，请进入设置检查，然后重新激活插件"
-#~ msgstr ""
-
-#~ msgid "如果以上操作无效，可能是插件程序出现致命的错误，请删除，重新安装"
-#~ msgstr ""
-
-#~ msgid "查看详情"
-#~ msgstr ""
-
-#~ msgid "不需要"
-#~ msgstr ""
-
-#~ msgid "插件设置"
-#~ msgstr ""
-
-#~ msgid "喜欢"
-#~ msgstr ""
-
-#~ msgid "发布时间"
-#~ msgstr ""
-
-#~ msgid "更多信息"
-#~ msgstr ""
-
-#~ msgid "正文"
-#~ msgstr ""
-
-#~ msgid "文集分类"
-#~ msgstr ""
-
-#~ msgid "编辑格式"
-#~ msgstr ""
-
-#~ msgid "最近更新"
-#~ msgstr ""
-
-#~ msgid "标签"
-#~ msgstr ""
-
-#~ msgid "最近更新: "
-#~ msgstr ""
-
-#~ msgid "角色编辑|添加"
-#~ msgstr ""
-
-#~ msgid "角色名"
-#~ msgstr ""
-
-#~ msgid "角色名称"
-#~ msgstr ""
-
-#~ msgid "角色名不能为空"
-#~ msgstr ""
-
-#~ msgid "默认角色"
-#~ msgstr ""
-
-#~ msgid "用户角色"
-#~ msgstr ""
-
-#~ msgid "添加角色"
-#~ msgstr ""
-
-#~ msgid "角色"
-#~ msgstr ""
-
-#~ msgid "权限"
-#~ msgstr ""
-
-#~ msgid "配置修改后"
-#~ msgstr ""
-
-#~ msgid "重启网站生效"
-#~ msgstr ""
-
-#~ msgid "对没有禁止\"重启更新配置\"的部署服务器有效"
-#~ msgstr ""
-
-#~ msgid "查看各服务器的\"配置文件\"情况"
-#~ msgstr ""
-
-#~ msgid "配置管理"
-#~ msgstr ""
-
-#~ msgid "配置"
-#~ msgstr ""
-
-#~ msgid "All"
-#~ msgstr ""
-
-#~ msgid "搜索结果"
-#~ msgstr ""
-
-#~ msgid "配置版本设置"
-#~ msgstr ""
-
-#~ msgid "未禁止\"重启更新\"与未选择\"切换版本\"的主机则自动更新到最新版配置"
-#~ msgstr ""
-
-#~ msgid "主机名"
-#~ msgstr ""
-
-#~ msgid "需要切换到"
-#~ msgstr ""
-
-#~ msgid "切换状态"
-#~ msgstr ""
-
-#~ msgid "重启更新"
-#~ msgstr ""
-
-#~ msgid "重启日志"
-#~ msgstr ""
-
-#~ msgid "需重启网站"
-#~ msgstr ""
-
-#~ msgid "切换版本请先打开\"重启更新\""
-#~ msgstr ""
-
-#~ msgid "警"
-#~ msgstr ""
-
-#~ msgid "查看全部"
-#~ msgstr ""
-
-#~ msgid "系统可修改配置，修改配置前请了解配置的作用"
-#~ msgstr ""
-
-#~ msgid "修改后需要重启系统生效"
-#~ msgstr ""
-
-#~ msgid "配置项"
-#~ msgstr ""
-
-#~ msgid "修改需要重启"
-#~ msgstr ""
-
-#~ msgid "最后更新"
-#~ msgstr ""
-
-#~ msgid "修改配置"
-#~ msgstr ""
-
-#~ msgid "服务器编辑"
-#~ msgstr ""
-
-#~ msgid "服务器管理"
-#~ msgstr ""
-
-#~ msgid "主机用户名"
-#~ msgstr ""
-
-#~ msgid "主机密码"
-#~ msgstr ""
-
-#~ msgid "主机端口"
-#~ msgstr ""
-
-#~ msgid "端口"
-#~ msgstr ""
-
-#~ msgid "命令(注释#开头)"
-#~ msgstr ""
-
-#~ msgid "保存一个需要常用的Linux shell 命令"
-#~ msgstr ""
-
-#~ msgid "测试连接"
-#~ msgstr ""
-
-#~ msgid "命令执行"
-#~ msgstr ""
-
-#~ msgid "Linux shell 命令"
-#~ msgstr ""
-
-#~ msgid "执行命令"
-#~ msgstr ""
-
-#~ msgid "网站已运行"
-#~ msgstr ""
-
-#~ msgid "启动日志"
-#~ msgstr ""
-
-#~ msgid "编辑连接"
-#~ msgstr ""
-
-#~ msgid "日志"
-#~ msgstr ""
-
-#~ msgid "主题配置文档"
-#~ msgstr ""
-
-#~ msgid "选择主题"
-#~ msgstr ""
-
-#~ msgid "此主题指的是普通浏览器网页版主题, 与小程序客户端UI无关. 主题上传支持zip压缩包"
-#~ msgstr ""
-
-#~ msgid "[上传]功能只对单点部署有效: 集群部署的站点, 请把非压缩的\"主题包\"直接放于各台服务器Osroom系统目录的apps/themes下"
-#~ msgstr ""
-
-#~ msgid "[删除]功能只对单点部署有效: 集群部署的站点, 请直接把各台服务器Osroom系统目录的apps/themes下的主题目录删除"
-#~ msgstr ""
-
-#~ msgid "致命错误"
-#~ msgstr ""
-
-#~ msgid "查看配置文档"
-#~ msgstr ""
-
-#~ msgid "已启用"
-#~ msgstr ""
-
-#~ msgid "启用"
-#~ msgstr ""
-
-#~ msgid "页面"
-#~ msgstr ""
-
-#~ msgid "页面编辑"
-#~ msgstr ""
-
-#~ msgid "此页面功能只是提供给\"单点部署\"站点的快捷修改. 如果你是集群部署,请勿使用此功能"
-#~ msgstr ""
-
-#~ msgid "自定义路由"
-#~ msgstr ""
-
-#~ msgid "如"
-#~ msgstr ""
-
-#~ msgid "主题代码编辑"
-#~ msgstr ""
-
-#~ msgid "当前编辑"
-#~ msgstr ""
-
-#~ msgid "主题静态文件"
-#~ msgstr ""
-
-#~ msgid "自添加页面)"
-#~ msgstr ""
-
-#~ msgid "所有文件"
-#~ msgstr ""
-
-#~ msgid "自带文件"
-#~ msgstr ""
-
-#~ msgid "自定义文件"
-#~ msgstr ""
-
-#~ msgid "Rest Api Token管理"
-#~ msgstr ""
-
-#~ msgid "密钥Token与权限"
-#~ msgstr ""
-
-#~ msgid "密钥Token"
-#~ msgstr ""
-
-#~ msgid "显示"
-#~ msgstr ""
-
-#~ msgid "停用后, 使用此token的请求则无法通过服务端验证,确定停用?"
-#~ msgstr ""
-
-#~ msgid "停用"
-#~ msgstr ""
-
-#~ msgid "创建Token"
-#~ msgstr ""
-
-#~ msgid "重要提示"
-#~ msgstr ""
-
-#~ msgid "SecretToken与AccessToken用于在无CsrfToken时调用API请求的一个客户端令牌, 以验证客户端是否为伪造的"
-#~ msgstr ""
-
-#~ msgid "而SecretToken是长期可用验证令牌(除非你停用或者删除了它), 需要保存在客户端使用"
-#~ msgstr ""
-
-#~ msgid "使用令牌时, 可以使用SecretToken做令牌或者OSR-ClientId与AccessToken组合做令牌(见使用方式)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "为了减少SecretToken的暴露风险, Restful api发送请求时, 尽量使用OSR-"
-#~ "ClientId和AccessToken作为客户端验证令牌"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "当没有获取过AccessToken或者AccessToken失效时, 请通过/api/token/access-"
-#~ "token获取新的AccessToken(具体请查看/api/token/access-token文档)"
-#~ msgstr ""
-
-#~ msgid "这个时候只能使用SecretToken作为客户端令牌验证"
-#~ msgstr ""
-
-#~ msgid "使用SecretToken时, 尽量使用https"
-#~ msgstr ""
-
-#~ msgid "使用方式"
-#~ msgstr ""
-
-#~ msgid "在http请求中设置请求头"
-#~ msgstr ""
-
-#~ msgid "OSR-RestToken:\"SecretToken xxxxx\""
-#~ msgstr ""
-
-#~ msgid "OSR-RestToken:\"AccessToken xxxxx\" 和 OSR-ClientId:\"xxxxx\""
-#~ msgstr ""
-
-#~ msgid "隐藏"
-#~ msgstr ""
-
-#~ msgid "编辑用户信息"
-#~ msgstr ""
-
-#~ msgid "电子邮箱"
-#~ msgstr ""
-
-#~ msgid "手机号码"
-#~ msgstr ""
-
-#~ msgid "昵称"
-#~ msgstr ""
-
-#~ msgid "域"
-#~ msgstr ""
-
-#~ msgid "邮箱"
-#~ msgstr ""
-
-#~ msgid "手机号"
-#~ msgstr ""
-
-#~ msgid "确定冻结?"
-#~ msgstr ""
-
-#~ msgid "冻结"
-#~ msgstr ""
-
-#~ msgid "用户信息"
-#~ msgstr ""
-
-#~ msgid "登录日志"
-#~ msgstr ""
-
-#~ msgid "操作日志"
-#~ msgstr ""
-
-#~ msgid "识别ID"
-#~ msgstr ""
-
-#~ msgid "注册时间"
-#~ msgstr ""
-
-#~ msgid "常居地址"
-#~ msgstr ""
-
-#~ msgid "个人简介"
-#~ msgstr ""
-
-#~ msgid "客户端"
-#~ msgstr ""
-
-#~ msgid "地理位置"
-#~ msgstr ""
-
-#~ msgid "未激活"
-#~ msgstr ""
-
-#~ msgid "已移除"
-#~ msgstr ""
-
-#~ msgid "运行时错误"
-#~ msgstr ""
-
-#~ msgid "已经连接"
-#~ msgstr ""
-
-#~ msgid "按钮指定错误"
-#~ msgstr ""
+"OSROOM and its supporting functions are mainly developed by the following"
+" core members and contributors. The contributors cannot mention each one."
+" Please forgive me."
+
+#: apps/themes/osroom.com/pages/team/index.html:11
+msgid "查看其他贡献者"
+msgstr "See other contributors"
+
+#: apps/themes/osroom.com/pages/team/index.html:11
+msgid "添加联系"
+msgstr "Contact"
+
+#: apps/themes/osroom.com/pages/team/index.html:14
+msgid "主页成员信息"
+msgstr "Core member information"
+
+#: apps/themes/osroom.com/pages/team/index.html:31
+msgid "其他贡献者"
+msgstr "Other contributors"
+
+#: apps/themes/osroom.com/pages/theme/index.html:17
+msgid "官方认证"
+msgstr "Official"
+
+#: apps/themes/osroom.com/pages/theme/index.html:22
+msgid "其他主题"
+msgstr "Other"
+
+#: apps/themes/osroom.com/pages/theme/index.html:92
+msgid "第{[themes.current_page]}页/共{[themes.page_total]}页"
+msgstr "The {[themes.current_page]} page/Total {[themes.page_total]} page"
 

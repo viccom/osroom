@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-06 14:26+0800\n"
+"POT-Creation-Date: 2018-05-12 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,7 +72,7 @@ msgid "Keep at least one active token"
 msgstr ""
 
 #: apps/core/auth/rest_token_auth.py:102
-#: apps/modules/message/process/sys_message.py:58
+#: apps/modules/message/process/sys_message.py:86
 #: apps/modules/message/process/user_message.py:184
 #: apps/modules/permission/process/url_permission.py:190
 #: apps/modules/plug_in_manager/process/manager.py:118
@@ -203,24 +203,24 @@ msgstr ""
 msgid "The value of parameter \"{}\" is illegal"
 msgstr ""
 
-#: apps/core/plug_in/manager.py:103
+#: apps/core/plug_in/manager.py:104
 msgid "Plugin startup file does not exist"
 msgstr ""
 
-#: apps/core/plug_in/manager.py:221
+#: apps/core/plug_in/manager.py:224
 #: apps/modules/theme_setting/process/themes.py:173
 msgid "Configuration file \"conf.yaml\" but few parameters \"{}\""
 msgstr ""
 
-#: apps/core/plug_in/manager.py:224
+#: apps/core/plug_in/manager.py:227
 msgid "Missing startup file in plugin package"
 msgstr ""
 
-#: apps/core/plug_in/manager.py:235
+#: apps/core/plug_in/manager.py:238
 msgid "Plugin installed successfully"
 msgstr ""
 
-#: apps/core/plug_in/manager.py:238
+#: apps/core/plug_in/manager.py:241
 msgid "Missing plugin main function(execution function)"
 msgstr ""
 
@@ -362,12 +362,12 @@ msgid "Delete the success"
 msgstr ""
 
 #: apps/modules/comments/process/comment.py:265
-#: apps/modules/post/process/post.py:90
+#: apps/modules/post/process/post.py:88
 msgid "Success"
 msgstr ""
 
 #: apps/modules/comments/process/comment.py:267
-#: apps/modules/post/process/post.py:92
+#: apps/modules/post/process/post.py:90
 msgid "Failed"
 msgstr ""
 
@@ -449,53 +449,53 @@ msgid "{} files have been deleted"
 msgstr ""
 
 #: apps/modules/media/process/media.py:322
-#: apps/modules/message/process/sys_message.py:60
+#: apps/modules/message/process/sys_message.py:88
 #: apps/modules/message/process/user_message.py:186
 #: apps/modules/plug_in_manager/process/manager.py:124
-#: apps/modules/setting/process/host_setting.py:59
+#: apps/modules/setting/process/host_setting.py:60
 msgid "Failed to delete"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:26
+#: apps/modules/message/process/send_msg.py:31
 #: apps/modules/post/process/user_post.py:56
 msgid "title"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:27
+#: apps/modules/message/process/send_msg.py:32
 #: apps/modules/post/process/user_post.py:61
 #: apps/modules/post/process/user_post.py:70
 msgid "content"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:28
+#: apps/modules/message/process/send_msg.py:33
 msgid "send type"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:29
+#: apps/modules/message/process/send_msg.py:34
 msgid "user name"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:49
+#: apps/modules/message/process/send_msg.py:70
 msgid "Station news success"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:51
+#: apps/modules/message/process/send_msg.py:72
 msgid "No relevant user"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:64
+#: apps/modules/message/process/send_msg.py:85
 msgid "Mail message is being sent"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:66
+#: apps/modules/message/process/send_msg.py:87
 msgid "There is no such email address user"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:79
+#: apps/modules/message/process/send_msg.py:100
 msgid "SMS sent"
 msgstr ""
 
-#: apps/modules/message/process/send_msg.py:81
+#: apps/modules/message/process/send_msg.py:102
 msgid "No user mobile phone number was obtained"
 msgstr ""
 
@@ -505,8 +505,8 @@ msgid "Update succeed"
 msgstr ""
 
 #: apps/modules/message/process/user_message.py:162
-#: apps/modules/setting/process/host_setting.py:46
-#: apps/modules/user/process/adm_user.py:121
+#: apps/modules/setting/process/host_setting.py:47
+#: apps/modules/user/process/adm_user.py:119
 #: apps/modules/user/process/profile.py:96
 #: apps/modules/user/process/profile.py:148
 #: apps/modules/user/process/role.py:124 apps/modules/user/process/role.py:130
@@ -665,13 +665,17 @@ msgstr ""
 msgid "Restore failed"
 msgstr ""
 
+#: apps/modules/search/process/search.py:26
+msgid "keyword"
+msgstr ""
+
 #: apps/modules/setting/process/get_file_log.py:29
-#: apps/modules/setting/process/host_setting.py:83
+#: apps/modules/setting/process/host_setting.py:84
 msgid "Connection host[{}] failed,Check the host Settings"
 msgstr ""
 
 #: apps/modules/setting/process/get_file_log.py:69
-#: apps/modules/setting/process/host_setting.py:106
+#: apps/modules/setting/process/host_setting.py:107
 msgid "There is no host {}"
 msgstr ""
 
@@ -684,40 +688,40 @@ msgstr ""
 msgid "password"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:44
+#: apps/modules/setting/process/host_setting.py:45
 msgid "The update is successful"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:56
+#: apps/modules/setting/process/host_setting.py:57
 msgid "Successfully deleted {} host information"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:78
-#: apps/modules/setting/process/host_setting.py:127
+#: apps/modules/setting/process/host_setting.py:79
+#: apps/modules/setting/process/host_setting.py:128
 msgid "[{}] {}"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:95
+#: apps/modules/setting/process/host_setting.py:96
 msgid "[Warning]: \"sudo\" command go to the server"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:97
+#: apps/modules/setting/process/host_setting.py:98
 msgid "[Warning]: \"rm\" command go to the server"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:102
+#: apps/modules/setting/process/host_setting.py:103
 msgid "Command executed {}"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:131
+#: apps/modules/setting/process/host_setting.py:132
 msgid "Connection host[{}] failed"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:135
+#: apps/modules/setting/process/host_setting.py:136
 msgid "Successfully connecting server host"
 msgstr ""
 
-#: apps/modules/setting/process/host_setting.py:137
+#: apps/modules/setting/process/host_setting.py:138
 msgid "Host does not exist"
 msgstr ""
 
@@ -819,7 +823,7 @@ msgid "Uploaded successfully"
 msgstr ""
 
 #: apps/modules/upload/process/upload_file.py:56
-#: apps/modules/user/process/avatar_upload.py:64
+#: apps/modules/user/process/avatar_upload.py:65
 msgid "Upload failed"
 msgstr ""
 
@@ -855,57 +859,57 @@ msgid "Successfully logged out"
 msgstr ""
 
 #: apps/modules/user/process/adm_user.py:22
-#: apps/modules/user/process/user_profile_process.py:32
-#: apps/modules/user/process/user_profile_process.py:61
+#: apps/modules/user/process/user_profile_process.py:31
+#: apps/modules/user/process/user_profile_process.py:58
 msgid "The specified user is not found"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:104
+#: apps/modules/user/process/adm_user.py:102
 #: apps/modules/user/process/profile.py:151
 msgid "Update success"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:116
+#: apps/modules/user/process/adm_user.py:114
 msgid "No permission modification"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:151
+#: apps/modules/user/process/adm_user.py:149
 msgid "Has recovered {} users, {} users can not operate"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:154
+#: apps/modules/user/process/adm_user.py:152
 msgid "Recycle user failed.May not have permission"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:159
+#: apps/modules/user/process/adm_user.py:158
 msgid "{} users have been deleted and {} users can not be deleted"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:162
+#: apps/modules/user/process/adm_user.py:161
 msgid "Failed to delete.May not have permission"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:189
+#: apps/modules/user/process/adm_user.py:188
 msgid "Restore the {} users,The other {} users have no power control"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:192
+#: apps/modules/user/process/adm_user.py:191
 msgid "Restore the failure.May not have permission"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:219
+#: apps/modules/user/process/adm_user.py:218
 msgid "{} user activation is successful, {} no permission to operate"
 msgstr ""
 
-#: apps/modules/user/process/adm_user.py:222
+#: apps/modules/user/process/adm_user.py:221
 msgid "Activation failed.May not have permission"
 msgstr ""
 
-#: apps/modules/user/process/avatar_upload.py:53
+#: apps/modules/user/process/avatar_upload.py:55
 msgid "Save failed"
 msgstr ""
 
-#: apps/modules/user/process/avatar_upload.py:62
+#: apps/modules/user/process/avatar_upload.py:63
 msgid "Save successfully"
 msgstr ""
 
@@ -982,8 +986,7 @@ msgstr ""
 
 #: apps/modules/user/process/password.py:154
 #: apps/modules/user/process/sign_in.py:166
-#: apps/modules/user/process/sign_up.py:106
-#: apps/utils/verify/msg_verify_code.py:73
+#: apps/modules/user/process/sign_up.py:107
 msgid "End"
 msgstr ""
 
@@ -1100,12 +1103,12 @@ msgid ""
 msgstr ""
 
 #: apps/modules/user/process/sign_in.py:249
-#: apps/modules/user/process/sign_up.py:118
+#: apps/modules/user/process/sign_up.py:119
 msgid "Registered successfully"
 msgstr ""
 
 #: apps/modules/user/process/sign_in.py:253
-#: apps/modules/user/process/sign_up.py:122
+#: apps/modules/user/process/sign_up.py:123
 msgid "Data saved incorrectly, please try again"
 msgstr ""
 
@@ -1121,7 +1124,7 @@ msgstr ""
 msgid "This number has been registered in the site oh, please login directly."
 msgstr ""
 
-#: apps/modules/user/process/sign_up.py:99
+#: apps/modules/user/process/sign_up.py:100
 msgid "Registration success notification"
 msgstr ""
 
@@ -1129,7 +1132,7 @@ msgstr ""
 msgid "Password is not a readable attribute"
 msgstr ""
 
-#: apps/modules/user/process/user.py:122
+#: apps/modules/user/process/user.py:127
 msgid "Unknown"
 msgstr ""
 
@@ -1240,11 +1243,11 @@ msgid ""
 "it. Please do not tell the verification code to others"
 msgstr ""
 
-#: apps/utils/verify/msg_verify_code.py:114
+#: apps/utils/verify/msg_verify_code.py:113
 msgid "Your verification code is"
 msgstr ""
 
-#: apps/utils/verify/msg_verify_code.py:115
+#: apps/utils/verify/msg_verify_code.py:114
 msgid ""
 "If you do not send it, please ignore it.Please do not tell the "
 "verification code to others"

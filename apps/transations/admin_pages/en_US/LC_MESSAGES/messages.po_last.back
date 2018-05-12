@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-06 09:37+0800\n"
+"POT-Creation-Date: 2018-05-12 15:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -31,7 +31,7 @@ msgstr "Total Articles"
 #: apps/admin_pages/pages/comment/index.html:87
 #: apps/admin_pages/pages/media/other.html:61
 #: apps/admin_pages/pages/media/text.html:119
-#: apps/admin_pages/pages/plugin/index.html:114
+#: apps/admin_pages/pages/plugin/index.html:115
 #: apps/admin_pages/pages/setting/_config_warning_info.html:14
 #: apps/admin_pages/pages/setting/host/index.html:36
 msgid "查看"
@@ -196,8 +196,8 @@ msgstr "Dashboard"
 msgid "欢迎使用OSROOM"
 msgstr "Welcome to OSROOM"
 
-#: apps/admin_pages/pages/based/footer.html:18
-#: apps/admin_pages/pages/based/footer_adm.html:12
+#: apps/admin_pages/pages/based/footer.html:16
+#: apps/admin_pages/pages/based/footer_adm.html:9
 #: apps/admin_pages/pages/index.html:13
 #: apps/admin_pages/pages/setting/config-versions.html:36
 msgid "版本"
@@ -222,6 +222,12 @@ msgstr "Loading"
 #: apps/admin_pages/pages/recover-password.html:2
 msgid "找回密码"
 msgstr "Retrieve password"
+
+#: apps/admin_pages/pages/recover-password.html:12
+#: apps/admin_pages/pages/recover-password.html:15
+#: apps/admin_pages/pages/user/edit-user.html:26
+msgid "电子邮箱"
+msgstr "E-mail"
 
 #: apps/admin_pages/pages/own/account/settings/email.html:26
 #: apps/admin_pages/pages/recover-password.html:13
@@ -327,7 +333,7 @@ msgstr "Registration"
 
 #: apps/admin_pages/pages/message/send.html:43
 #: apps/admin_pages/pages/own/account/settings/_basis.html:17
-#: apps/admin_pages/pages/setting/host/edit.html:25
+#: apps/admin_pages/pages/setting/host/edit.html:32
 #: apps/admin_pages/pages/sign-up.html:12
 #: apps/admin_pages/pages/user/edit-user.html:23
 msgid "用户名"
@@ -415,13 +421,16 @@ msgid "审核规则配置主要用于预留部分网站使用名称, 如预留�
 msgstr ""
 "Audit rule configuration is mainly used to reserve part of the site name,"
 " such as reserved user name \"Administrator\", can not be registered for "
-"ordinary users"
+"ordinary usersAudit rule configuration is mainly used to reserve part of "
+"the site name, such as reserved user name \"Administrator\", can not be "
+"registered for ordinary users"
 
 #: apps/admin_pages/pages/audit/rule/index.html:53
 msgid "添加规则后,用户则无法在相关项目的内容输入中使用符合规则的字词"
 msgstr ""
 "After adding a rule, users cannot use terms that match the rule in the "
-"content entry of the related item"
+"content entry of the related itemAfter adding a rule, users cannot use "
+"terms that match the rule in the content entry of the related item"
 
 #: apps/admin_pages/pages/audit/rule/index.html:54
 msgid "规则支持正则表达式"
@@ -455,7 +464,7 @@ msgstr "Rules"
 #: apps/admin_pages/pages/own/user/message/_notice.html:28
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:67
 #: apps/admin_pages/pages/permission/url/index.html:106
-#: apps/admin_pages/pages/plugin/index.html:89
+#: apps/admin_pages/pages/plugin/index.html:90
 #: apps/admin_pages/pages/role/index.html:58
 #: apps/admin_pages/pages/setting/host/index.html:49
 #: apps/admin_pages/pages/theme-setting/file/index.html:63
@@ -479,7 +488,7 @@ msgstr "Delete Selection"
 #: apps/admin_pages/pages/own/user/post/_comment.html:227
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:82
 #: apps/admin_pages/pages/permission/url/index.html:150
-#: apps/admin_pages/pages/plugin/index.html:164
+#: apps/admin_pages/pages/plugin/index.html:165
 #: apps/admin_pages/pages/post/index.html:199
 #: apps/admin_pages/pages/role/index.html:106
 #: apps/admin_pages/pages/setting/configs.html:117
@@ -500,7 +509,7 @@ msgstr "​​Previous"
 #: apps/admin_pages/pages/own/user/post/_comment.html:231
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:88
 #: apps/admin_pages/pages/permission/url/index.html:154
-#: apps/admin_pages/pages/plugin/index.html:168
+#: apps/admin_pages/pages/plugin/index.html:169
 #: apps/admin_pages/pages/post/index.html:203
 #: apps/admin_pages/pages/role/index.html:110
 #: apps/admin_pages/pages/setting/configs.html:121
@@ -626,7 +635,7 @@ msgstr "My Home"
 
 #: apps/admin_pages/pages/based/_user_dropdown.html:27
 #: apps/admin_pages/pages/based/sidebar.html:260
-#: apps/admin_pages/pages/plugin/index.html:86
+#: apps/admin_pages/pages/plugin/index.html:87
 #: apps/admin_pages/pages/plugin/setting.html:9
 #: apps/admin_pages/pages/plugin/setting.html:15
 msgid "设置"
@@ -648,20 +657,22 @@ msgid "当前页面为OSROOM自带页面(属管理端), 需公开相关页面访
 msgstr ""
 "The current page is OSROOM's own page (belonging to the management side)."
 " It is necessary to open related page visits. It is recommended to use "
-"the theme."
+"the theme.The current page is OSROOM's own page (belonging to the "
+"management side). It is necessary to open related page visits. It is "
+"recommended to use the theme."
 
-#: apps/admin_pages/pages/based/footer.html:9
-#: apps/admin_pages/pages/based/footer_adm.html:3
+#: apps/admin_pages/pages/based/footer.html:8
+#: apps/admin_pages/pages/based/footer_adm.html:2
 msgid "回到顶部"
 msgstr "back to top"
 
-#: apps/admin_pages/pages/based/footer.html:15
-#: apps/admin_pages/pages/based/footer_adm.html:9
+#: apps/admin_pages/pages/based/footer.html:13
+#: apps/admin_pages/pages/based/footer_adm.html:6
 msgid "欢迎使用"
 msgstr "Welcome to use"
 
-#: apps/admin_pages/pages/based/footer.html:30
-#: apps/admin_pages/pages/based/footer_adm.html:24
+#: apps/admin_pages/pages/based/footer.html:28
+#: apps/admin_pages/pages/based/footer_adm.html:21
 msgid "提供"
 msgstr "Provide"
 
@@ -1010,7 +1021,7 @@ msgstr "Classification Name"
 #: apps/admin_pages/pages/own/content/category/index.html:26
 #: apps/admin_pages/pages/own/content/writer.html:122
 #: apps/admin_pages/pages/role/edit-role.html:56
-#: apps/admin_pages/pages/setting/host/edit.html:44
+#: apps/admin_pages/pages/setting/host/edit.html:51
 #: apps/admin_pages/pages/theme-setting/file/add-page.html:45
 #: apps/admin_pages/pages/user/edit-user.html:50
 msgid "保存"
@@ -1220,7 +1231,7 @@ msgstr "All"
 #: apps/admin_pages/pages/media/video-edit.html:38
 #: apps/admin_pages/pages/post/index.html:237
 #: apps/admin_pages/pages/role/index.html:31
-#: apps/admin_pages/pages/setting/host/edit.html:36
+#: apps/admin_pages/pages/setting/host/edit.html:43
 msgid "默认"
 msgstr "Default"
 
@@ -1395,7 +1406,7 @@ msgstr "The current label"
 #: apps/admin_pages/pages/media/image.html:30
 #: apps/admin_pages/pages/media/video.html:29
 msgid "未分类"
-msgstr ""
+msgstr "Uncategorized"
 
 #: apps/admin_pages/pages/media/image.html:50
 #: apps/admin_pages/pages/media/video.html:50
@@ -1522,8 +1533,10 @@ msgstr "SMS"
 #: apps/admin_pages/pages/message/send.html:39
 msgid "邮件和短信发送后无法撤回, 站内消息发送后可以在消息管理删除"
 msgstr ""
-"Mail and SMS cannot be revoked after sending, post messages can be "
-"deleted in the message management"
+"Mail and SMS cannot be revoked after sending. After the station's message"
+" is sent, it can be deleted in message management.Mail and SMS cannot be "
+"revoked after sending, post messages can be deleted in the message "
+"management"
 
 #: apps/admin_pages/pages/message/send.html:44
 msgid "必须是本站正常用户名(多个用 ; 隔开)"
@@ -1589,7 +1602,7 @@ msgstr "Or drag files here"
 
 #: apps/admin_pages/pages/module/editor/markdown.html:15
 msgid "插入图片"
-msgstr ""
+msgstr "Insert images"
 
 #: apps/admin_pages/pages/module/editor/markdown.html:77
 msgid "当前使用的是MarkDown文本编辑器"
@@ -1597,15 +1610,15 @@ msgstr "Currently using a MarkDown text editor"
 
 #: apps/admin_pages/pages/module/editor/markdown.html:87
 msgid "每次最多上传5张图片"
-msgstr ""
+msgstr "Upload up to 5 images at a time"
 
 #: apps/admin_pages/pages/module/editor/richtext_atc_edit.html:58
 msgid "您当前使用的是富文本编辑器"
 msgstr "You are currently using a rich text editor"
 
-#: apps/admin_pages/pages/module/email/send-temp.html:246
-msgid "UTC时间"
-msgstr "UTC Time"
+#: apps/admin_pages/pages/module/email/send-temp.html:79
+msgid "系统邮件, 请勿回复"
+msgstr ""
 
 #: apps/admin_pages/pages/module/exception/401.html:2
 msgid "401无权访问"
@@ -1616,8 +1629,8 @@ msgid "无权访问该页面"
 msgstr "No permission to access"
 
 #: apps/admin_pages/pages/module/exception/401.html:32
-#: apps/admin_pages/pages/module/exception/404.html:33
-#: apps/admin_pages/pages/module/exception/500.html:32
+#: apps/admin_pages/pages/module/exception/404.html:32
+#: apps/admin_pages/pages/module/exception/500.html:31
 msgid "回到首页"
 msgstr "Home page"
 
@@ -1625,15 +1638,15 @@ msgstr "Home page"
 msgid "404页面不存在"
 msgstr "404 page does not exist"
 
-#: apps/admin_pages/pages/module/exception/404.html:33
+#: apps/admin_pages/pages/module/exception/404.html:32
 msgid "该页面不存在"
 msgstr "404 page does not exist"
 
 #: apps/admin_pages/pages/module/exception/500.html:2
 msgid "500Server Error"
-msgstr ""
+msgstr "500服务器错误"
 
-#: apps/admin_pages/pages/module/exception/500.html:32
+#: apps/admin_pages/pages/module/exception/500.html:31
 msgid "错误ID"
 msgstr "Error ID"
 
@@ -1759,7 +1772,7 @@ msgid "格式不合法"
 msgstr "illegal format"
 
 #: apps/admin_pages/pages/own/account/settings/_profile.html:50
-#: apps/admin_pages/pages/plugin/index.html:65
+#: apps/admin_pages/pages/plugin/index.html:66
 msgid "简介"
 msgstr "Introduction"
 
@@ -1778,7 +1791,7 @@ msgid "邮箱修改"
 msgstr "Mailbox modification"
 
 #: apps/admin_pages/pages/own/account/settings/email.html:15
-#: apps/admin_pages/pages/setting/host/edit.html:31
+#: apps/admin_pages/pages/setting/host/edit.html:38
 msgid "密码"
 msgstr "Password"
 
@@ -1859,7 +1872,8 @@ msgstr "Complete"
 msgid "抱歉!检查到文本编辑器类型错误(editor),请关闭页面重新打开"
 msgstr ""
 "Sorry! Check the text editor type error (editor), please close the page "
-"and reopen it"
+"and reopen itSorry! Check the text editor type error (editor), please "
+"close the page and reopen it"
 
 #: apps/admin_pages/pages/own/content/writer.html:181
 msgid "更新发布"
@@ -1869,9 +1883,9 @@ msgstr "Update Release"
 msgid "更新草稿"
 msgstr "Update draft"
 
-#: apps/admin_pages/pages/own/content/writer.html:258
+#: apps/admin_pages/pages/own/content/writer.html:262
 msgid "确认已保存内容后才离开哦"
-msgstr ""
+msgstr "Confirm the saved content before leaving"
 
 #: apps/admin_pages/pages/own/content/category/index.html:10
 #: apps/admin_pages/pages/own/corpus/index.html:2
@@ -1939,6 +1953,8 @@ msgstr "Fans of Ta"
 msgid "第{[user_related_users.current_page]}页/共{[user_related_users.page_total]}页"
 msgstr ""
 "Page "
+"{[user_related_users.current_page]}/{{user_related_users.page_total]}PagesPage"
+" "
 "{[user_related_users.current_page]}/{{user_related_users.page_total]}Pages"
 
 #: apps/admin_pages/pages/own/user/message/_comment.html:13
@@ -1966,44 +1982,44 @@ msgstr "Submit"
 #: apps/admin_pages/pages/own/user/post/_comment.html:86
 #: apps/admin_pages/pages/own/user/post/_comment.html:144
 msgid "写点你的评论"
-msgstr ""
+msgstr "Write your comment"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:4
 #: apps/admin_pages/pages/own/user/post/_comment.html:87
 #: apps/admin_pages/pages/own/user/post/_comment.html:145
 msgid "最多300个字符"
-msgstr ""
+msgstr "Up to 300 characters"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:9
 #: apps/admin_pages/pages/own/user/post/_comment.html:92
 #: apps/admin_pages/pages/own/user/post/_comment.html:150
 msgid "请使用文明用语"
-msgstr ""
+msgstr "Please release civilized content"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:12
 msgid "提交评论"
-msgstr ""
+msgstr "Submit"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:23
 msgid "喜欢排序"
-msgstr ""
+msgstr "By like"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:28
 msgid "时间正序"
-msgstr ""
+msgstr "Positive(time)"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:33
 msgid "时间倒序"
-msgstr ""
+msgstr "Reverse(time)"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:95
 #: apps/admin_pages/pages/own/user/post/_comment.html:153
 msgid "回复评论"
-msgstr ""
+msgstr "Reply"
 
 #: apps/admin_pages/pages/own/user/post/_comment.html:172
 msgid "评论举报"
-msgstr ""
+msgstr "Comment report"
 
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:31
 #: apps/admin_pages/pages/own/user/post/preview.html:28
@@ -2114,19 +2130,24 @@ msgstr "Permission Modifications"
 msgid "自定义指定是否需要登录验证, 对系统代码中已强制需要登录验证的URL无效"
 msgstr ""
 "Custom specifies whether login authentication is required. Invalid URL "
-"that is mandatory for login authentication in system code"
+"that is mandatory for login authentication in system codeCustom specifies"
+" whether login authentication is required. Invalid URL that is mandatory "
+"for login authentication in system code"
 
 #: apps/admin_pages/pages/permission/url/edit.html:33
 msgid "自定义指定权限, 则默认的权限(系统代码中指定的)则会失效"
 msgstr ""
-"Customize the specified permissions, then the default permissions "
-"(specified in the system code) will expire"
+"Specified permissions are specified, the default permissions (specified "
+"in the system code) will expireCustomize the specified permissions, then "
+"the default permissions (specified in the system code) will expire"
 
 #: apps/admin_pages/pages/permission/url/edit.html:35
 msgid "指定多个权限, 请求时用户只需要匹配其中任意一个权限则有权请求"
 msgstr ""
 "Specify multiple permissions. When requesting, the user only needs to "
-"match any one of the rights, they have the right to request"
+"match any one of the rights, the user has the right to requestSpecify "
+"multiple permissions. When requesting, the user only needs to match any "
+"one of the rights, they have the right to request"
 
 #: apps/admin_pages/pages/permission/url/edit.html:42
 msgid "查看权限表"
@@ -2225,16 +2246,21 @@ msgstr "ApiUrl"
 #: apps/admin_pages/pages/plugin/_edit.html:9
 msgid "请了解插件各设置项作用后, 再做更改, 错误的设置可能导致本插件功能不起作用!"
 msgstr ""
-"Please understand the role of the various settings of the plug-in, and "
-"then make changes, the wrong settings may lead to this plug-in function "
-"does not work!"
+"Please understand the role of the plug-in settings, and then make "
+"changes, the wrong settings may lead to this plug-in function does not "
+"work!Please understand the role of the various settings of the plug-in, "
+"and then make changes, the wrong settings may lead to this plug-in "
+"function does not work!"
 
 #: apps/admin_pages/pages/plugin/_edit.html:11
 msgid "如果插件包配置代码有做修改, 请刷新配置后, 插件包中的新设置项才会生效, 并在此设置页面显示"
 msgstr ""
 "If the plugin package configuration code is modified, please refresh the "
-"configuration, the new settings in the plugin package will not take "
-"effect, and will be displayed on this page."
+"configuration. The new settings in the plugin package will not take "
+"effect and will be displayed on this page.If the plugin package "
+"configuration code is modified, please refresh the configuration, the new"
+" settings in the plugin package will not take effect, and will be "
+"displayed on this page."
 
 #: apps/admin_pages/pages/plugin/_edit.html:12
 msgid "修改后需要重新激活插件生效"
@@ -2303,13 +2329,14 @@ msgstr "Installing or Updating Plug-in Dependency Packages"
 
 #: apps/admin_pages/pages/plugin/_edit.html:134
 #: apps/admin_pages/pages/setting/config-versions.html:35
+#: apps/admin_pages/pages/setting/host/edit.html:28
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:26
 #: apps/admin_pages/pages/setting/host/index.html:22
 msgid "主机IP"
 msgstr "Host IP"
 
 #: apps/admin_pages/pages/plugin/_edit.html:135
-#: apps/admin_pages/pages/plugin/index.html:66
+#: apps/admin_pages/pages/plugin/index.html:67
 msgid "插件依赖包安装状态"
 msgstr "Plugin Dependent Package Installation Status"
 
@@ -2338,65 +2365,76 @@ msgstr "Plug-in upload support zip archive"
 #: apps/admin_pages/pages/plugin/index.html:51
 msgid "[上传]功能只对单点部署有效: 集群部署的站点, 请把非压缩的\"插件包\"直接放于各台服务器Osroom系统目录的apps/plugins下"
 msgstr ""
-"The [upload] function is only valid for single-point deployments: For "
-"sites deployed in a cluster, please place the uncompressed \"plug-in "
-"package\" directly under the apps/plugins of each server's Osroom system "
-"directory."
+"[Upload] function is only valid for single-point deployment: For sites "
+"deployed in cluster, please put non-compressed \"plug-in package\" "
+"directly under the apps/plugins of each server's Osroom system "
+"directory.The [upload] function is only valid for single-point "
+"deployments: For sites deployed in a cluster, please place the "
+"uncompressed \"plug-in package\" directly under the apps/plugins of each "
+"server's Osroom system directory."
 
 #: apps/admin_pages/pages/plugin/index.html:54
 msgid "[删除]功能只对单点部署有效: 集群部署的站点, 请直接把各台服务器Osroom系统目录的apps/plugins下的插件目录删除"
 msgstr ""
-"The [Delete] function is valid only for single-point deployment: For "
-"cluster deployment sites, delete the plug-in directory under apps/plugins"
-" of the Osroom system directory on each server."
+"[Delete] function is only valid for single-point deployment: For cluster "
+"deployment sites, please delete the plug-in directory under apps/plugins "
+"of each server's Osroom system directory directly.The [Delete] function "
+"is valid only for single-point deployment: For cluster deployment sites, "
+"delete the plug-in directory under apps/plugins of the Osroom system "
+"directory on each server."
 
 #: apps/admin_pages/pages/plugin/index.html:57
-msgid "插件安装成功后, 请检查是否需要安装依赖包. 如果需要， 请安装请进入设置检查依赖包安装情况"
+msgid "插件安装成功后, 1.请检查是否需要安装依赖包. 如果需要， 请安装请进入设置检查依赖包安装情况."
 msgstr ""
-"After installing the plug-in successfully, please check whether it is "
-"necessary to install the dependencies. If necessary, please install "
-"please check the dependencies"
 
-#: apps/admin_pages/pages/plugin/index.html:64
+#: apps/admin_pages/pages/plugin/index.html:58
+msgid "2.检测插件是否需要配置, 部分插件需要激活后才会出现配置项"
+msgstr ""
+
+#: apps/admin_pages/pages/plugin/index.html:65
 msgid "名称(别名)"
 msgstr "Name (alias)"
 
-#: apps/admin_pages/pages/plugin/index.html:67
+#: apps/admin_pages/pages/plugin/index.html:68
 msgid "安装时间"
 msgstr "Installation Time"
 
-#: apps/admin_pages/pages/plugin/index.html:77
+#: apps/admin_pages/pages/plugin/index.html:78
 msgid "确定停止使用此插件?"
 msgstr "Are you sure you want to stop using this plugin?"
 
-#: apps/admin_pages/pages/plugin/index.html:79
+#: apps/admin_pages/pages/plugin/index.html:80
 msgid "停止"
 msgstr "Stop"
 
-#: apps/admin_pages/pages/plugin/index.html:83
+#: apps/admin_pages/pages/plugin/index.html:84
 #: apps/admin_pages/pages/user/edit-user.html:45
 #: apps/admin_pages/pages/user/index.html:50
 #: apps/admin_pages/pages/user/index.html:115
 msgid "激活"
 msgstr "Activation"
 
-#: apps/admin_pages/pages/plugin/index.html:98
+#: apps/admin_pages/pages/plugin/index.html:99
 msgid "插件设置有误或缺少插件需求包，请进入设置检查，然后重新激活插件"
 msgstr ""
-"The plug-in is set incorrectly or lacks a plug-in requirement package. "
-"Please enter the setup check and reactivate the plug-in"
+"Plugin is set incorrectly or lacks a plug-in requirement package. Please "
+"enter the setup check and reactivate the plug-inThe plug-in is set "
+"incorrectly or lacks a plug-in requirement package. Please enter the "
+"setup check and reactivate the plug-in"
 
-#: apps/admin_pages/pages/plugin/index.html:99
+#: apps/admin_pages/pages/plugin/index.html:100
 msgid "如果以上操作无效，可能是插件程序出现致命的错误，请删除，重新安装"
 msgstr ""
 "If the above operation is invalid, it may be a fatal error in the plug-in"
-" program. Please delete and re-install."
+" program. Please delete and reinstall it.If the above operation is "
+"invalid, it may be a fatal error in the plug-in program. Please delete "
+"and re-install."
 
-#: apps/admin_pages/pages/plugin/index.html:108
+#: apps/admin_pages/pages/plugin/index.html:109
 msgid "查看详情"
 msgstr "see details"
 
-#: apps/admin_pages/pages/plugin/index.html:117
+#: apps/admin_pages/pages/plugin/index.html:118
 msgid "不需要"
 msgstr "No"
 
@@ -2498,7 +2536,8 @@ msgstr "Restart Website Effective"
 msgid "对没有禁止\"重启更新配置\"的部署服务器有效"
 msgstr ""
 "Valid for deployment server that does not prohibit \"Restart Update "
-"Config\\"
+"Configuration\\Valid for deployment server that does not prohibit "
+"\"Restart Update Config\\"
 
 #: apps/admin_pages/pages/setting/_config_warning_info.html:13
 msgid "查看各服务器的\"配置文件\"情况"
@@ -2530,8 +2569,10 @@ msgstr "Config Version Settings"
 #: apps/admin_pages/pages/setting/config-versions.html:26
 msgid "未禁止\"重启更新\"与未选择\"切换版本\"的主机则自动更新到最新版配置"
 msgstr ""
-"Hosts that have not disabled \"Restart Update\" and have not "
-"selected\"Change Version\" are automatically updated to the latest "
+"Hosts that are not forbidden to \"restart updates\" and have not selected"
+" \"toggle versions\" are automatically updated to the latest version of "
+"the configurationHosts that have not disabled \"Restart Update\" and have"
+" not selected\"Change Version\" are automatically updated to the latest "
 "version of the configuration"
 
 #: apps/admin_pages/pages/setting/config-versions.html:34
@@ -2579,7 +2620,9 @@ msgstr "See All"
 msgid "系统可修改配置，修改配置前请了解配置的作用"
 msgstr ""
 "The system can modify the configuration. Before modifying the "
-"configuration, understand the role of the configuration."
+"configuration, understand the role of the configuration.The system can "
+"modify the configuration. Before modifying the configuration, understand "
+"the role of the configuration."
 
 #: apps/admin_pages/pages/setting/configs.html:36
 msgid "修改后需要重启系统生效"
@@ -2611,33 +2654,37 @@ msgstr "Server Edit"
 msgid "服务器管理"
 msgstr "Servers"
 
-#: apps/admin_pages/pages/setting/host/edit.html:27
+#: apps/admin_pages/pages/setting/host/edit.html:26
+msgid "IP"
+msgstr ""
+
+#: apps/admin_pages/pages/setting/host/edit.html:34
 msgid "主机用户名"
 msgstr "Host User Name"
 
-#: apps/admin_pages/pages/setting/host/edit.html:33
+#: apps/admin_pages/pages/setting/host/edit.html:40
 msgid "主机密码"
 msgstr "Host Password"
 
-#: apps/admin_pages/pages/setting/host/edit.html:36
+#: apps/admin_pages/pages/setting/host/edit.html:43
 msgid "主机端口"
 msgstr "Host Port"
 
-#: apps/admin_pages/pages/setting/host/edit.html:37
+#: apps/admin_pages/pages/setting/host/edit.html:44
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:29
 msgid "端口"
 msgstr "Port"
 
-#: apps/admin_pages/pages/setting/host/edit.html:40
+#: apps/admin_pages/pages/setting/host/edit.html:47
 #: apps/admin_pages/pages/setting/host/exec-cmd.html:35
 msgid "命令(注释#开头)"
 msgstr "Command (Note # at the beginning)"
 
-#: apps/admin_pages/pages/setting/host/edit.html:41
+#: apps/admin_pages/pages/setting/host/edit.html:48
 msgid "保存一个需要常用的Linux shell 命令"
 msgstr "Saving a Required Linux Shell Command"
 
-#: apps/admin_pages/pages/setting/host/edit.html:47
+#: apps/admin_pages/pages/setting/host/edit.html:54
 msgid "测试连接"
 msgstr "Test Connection"
 
@@ -2675,7 +2722,7 @@ msgstr "Log"
 #: apps/admin_pages/pages/theme-setting/readme.html:2
 #: apps/admin_pages/pages/theme-setting/readme.html:10
 msgid "主题配置文档"
-msgstr ""
+msgstr "Config doc"
 
 #: apps/admin_pages/pages/theme-setting/themes.html:20
 msgid "选择主题"
@@ -2684,22 +2731,32 @@ msgstr "Select theme"
 #: apps/admin_pages/pages/theme-setting/themes.html:37
 msgid "此主题指的是普通浏览器网页版主题, 与小程序客户端UI无关. 主题上传支持zip压缩包"
 msgstr ""
-"​​This topic refers to the theme of a normal browser web page, and has "
-"nothing to do with the applet client UI. Theme upload support zip archive"
+"This topic refers to the theme of the normal browser web page, and has "
+"nothing to do with the applet client UI. Theme upload support zip "
+"archive​​This topic refers to the theme of a normal browser web page, and"
+" has nothing to do with the applet client UI. Theme upload support zip "
+"archive"
 
 #: apps/admin_pages/pages/theme-setting/themes.html:39
 msgid "[上传]功能只对单点部署有效: 集群部署的站点, 请把非压缩的\"主题包\"直接放于各台服务器Osroom系统目录的apps/themes下"
 msgstr ""
-"[Upload] function is only valid for single point deployment: For cluster "
-"deployed sites, please place the non-compressed \"theme package\" "
-"directly under the apps/themes of each server's Osroom system directory."
+"The [upload] function is only valid for single-point deployment: For "
+"cluster-deployed sites, please put the non-compressed \"theme package\" "
+"directly under the apps/themes of the server's Osroom system "
+"directory.[Upload] function is only valid for single point deployment: "
+"For cluster deployed sites, please place the non-compressed \"theme "
+"package\" directly under the apps/themes of each server's Osroom system "
+"directory."
 
 #: apps/admin_pages/pages/theme-setting/themes.html:42
 msgid "[删除]功能只对单点部署有效: 集群部署的站点, 请直接把各台服务器Osroom系统目录的apps/themes下的主题目录删除"
 msgstr ""
-"The [Delete] function is valid only for single-point deployment: For "
-"sites deployed in a cluster, directly delete the subject directory under "
-"apps/themes of the Osroom system directory on each server."
+"The [Delete] function is only valid for single-point deployment: For "
+"cluster-deployed sites, directly delete the subject directory under "
+"apps/themes of the Osroom system directory on each server.The [Delete] "
+"function is valid only for single-point deployment: For sites deployed in"
+" a cluster, directly delete the subject directory under apps/themes of "
+"the Osroom system directory on each server."
 
 #: apps/admin_pages/pages/theme-setting/themes.html:55
 msgid "致命错误"
@@ -2707,7 +2764,7 @@ msgstr "Fatal Error"
 
 #: apps/admin_pages/pages/theme-setting/themes.html:60
 msgid "查看配置文档"
-msgstr ""
+msgstr "View config doc"
 
 #: apps/admin_pages/pages/theme-setting/themes.html:65
 msgid "已启用"
@@ -2733,8 +2790,10 @@ msgstr "Page Editing"
 #: apps/admin_pages/pages/theme-setting/file/edit.html:30
 msgid "此页面功能只是提供给\"单点部署\"站点的快捷修改. 如果你是集群部署,请勿使用此功能"
 msgstr ""
-"This page feature is just a quick modification to the \"single point "
-"deployment\" site. If you are deploying in a cluster, do not use this "
+"This page function is just a quick modification to the \"single point "
+"deployment\" site. If you are a cluster deployment, do not use this "
+"featureThis page feature is just a quick modification to the single point"
+" deployment\" site. If you are deploying in a cluster, do not use this "
 "feature"
 
 #: apps/admin_pages/pages/theme-setting/file/add-page.html:35
@@ -2795,7 +2854,8 @@ msgstr "Display"
 msgid "停用后, 使用此token的请求则无法通过服务端验证,确定停用?"
 msgstr ""
 "After deactivation, the request to use this token cannot be verified by "
-"the server."
+"the server.After deactivation, the request to use this token cannot be "
+"verified by the server."
 
 #: apps/admin_pages/pages/token/rest-token.html:40
 msgid "停用"
@@ -2812,19 +2872,25 @@ msgstr "Important Tips"
 #: apps/admin_pages/pages/token/rest-token.html:63
 msgid "SecretToken与AccessToken用于在无CsrfToken时调用API请求的一个客户端令牌, 以验证客户端是否为伪造的"
 msgstr ""
-"SecureToken with AccessToken A client token used to call an API request "
-"when there is no CsrfToken to verify if the client is forged"
+"SecureToken and AccessToken A client token used to call an API request "
+"when there is no CsrfToken to verify if the client is "
+"falsifiedSecureToken with AccessToken A client token used to call an API "
+"request when there is no CsrfToken to verify if the client is forged"
 
 #: apps/admin_pages/pages/token/rest-token.html:64
 msgid "而SecretToken是长期可用验证令牌(除非你停用或者删除了它), 需要保存在客户端使用"
 msgstr ""
 "And the SecretToken is a long-available verification token (unless you "
-"disabled or deleted it) that needs to be saved on the client"
+"disable or delete it) and needs to be saved on the clientAnd the "
+"SecretToken is a long-available verification token (unless you disabled "
+"or deleted it) that needs to be saved on the client"
 
 #: apps/admin_pages/pages/token/rest-token.html:66
 msgid "使用令牌时, 可以使用SecretToken做令牌或者OSR-ClientId与AccessToken组合做令牌(见使用方式)"
 msgstr ""
-"When using a token, you can use either the SecretToken as a token or the "
+"When using tokens, you can use either the SecretToken as a token or the "
+"combination of OSR-ClientId and AccessToken as tokens (see Usage).When "
+"using a token, you can use either the SecretToken as a token or the "
 "combination of OSR-ClientId and AccessToken as a token (see How to use "
 "it)"
 
@@ -2835,7 +2901,9 @@ msgid ""
 msgstr ""
 "In order to reduce the exposure risk of SecretToken, Restful api uses OSR"
 " as much as possible when sending requests.ClientId and AccessToken as "
-"Client Authentication Tokens"
+"Client Authentication TokensIn order to reduce the exposure risk of "
+"SecretToken, Restful api uses OSR as much as possible when sending "
+"requests.ClientId and AccessToken as Client Authentication Tokens"
 
 #: apps/admin_pages/pages/token/rest-token.html:70
 msgid ""
@@ -2844,7 +2912,9 @@ msgid ""
 msgstr ""
 "When access to an AccessToken or AccessToken fails, please pass "
 "/api/token/access-Token Gets a New AccessToken (see /api/token/access-"
-"token Documentation for Details)"
+"token Documentation for Details)When access to an AccessToken or "
+"AccessToken fails, please pass /api/token/access-Token Gets a New "
+"AccessToken (see /api/token/access-token Documentation for Details)"
 
 #: apps/admin_pages/pages/token/rest-token.html:71
 msgid "这个时候只能使用SecretToken作为客户端令牌验证"
@@ -2877,10 +2947,6 @@ msgstr "Hide"
 #: apps/admin_pages/pages/user/edit-user.html:2
 msgid "编辑用户信息"
 msgstr "Editing User Information"
-
-#: apps/admin_pages/pages/user/edit-user.html:26
-msgid "电子邮箱"
-msgstr "E-mail"
 
 #: apps/admin_pages/pages/user/edit-user.html:29
 msgid "手机号码"
@@ -2969,10 +3035,4 @@ msgstr "Already connected"
 #: apps/admin_pages/static/js/webuploader.js:1705
 msgid "按钮指定错误"
 msgstr "Button assignment error"
-
-#~ msgid "500 Server Error"
-#~ msgstr "500 Server Error"
-
-#~ msgid "预览页面, 禁用评论点赞"
-#~ msgstr "Preview Page, Disable Comment Like"
 
