@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-12 16:07+0800\n"
+"POT-Creation-Date: 2018-05-13 22:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -455,7 +455,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/user/message/_comment.html:44
 #: apps/admin_pages/pages/own/user/message/_notice.html:28
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:67
-#: apps/admin_pages/pages/permission/url/index.html:106
+#: apps/admin_pages/pages/permission/url/index.html:112
 #: apps/admin_pages/pages/plugin/index.html:90
 #: apps/admin_pages/pages/role/index.html:58
 #: apps/admin_pages/pages/setting/host/index.html:49
@@ -479,7 +479,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/user/message/index.html:84
 #: apps/admin_pages/pages/own/user/post/_comment.html:227
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:82
-#: apps/admin_pages/pages/permission/url/index.html:150
+#: apps/admin_pages/pages/permission/url/index.html:156
 #: apps/admin_pages/pages/plugin/index.html:165
 #: apps/admin_pages/pages/post/index.html:199
 #: apps/admin_pages/pages/role/index.html:106
@@ -500,7 +500,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/user/message/index.html:88
 #: apps/admin_pages/pages/own/user/post/_comment.html:231
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:88
-#: apps/admin_pages/pages/permission/url/index.html:154
+#: apps/admin_pages/pages/permission/url/index.html:160
 #: apps/admin_pages/pages/plugin/index.html:169
 #: apps/admin_pages/pages/post/index.html:203
 #: apps/admin_pages/pages/role/index.html:110
@@ -532,7 +532,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/account/settings/_basis.html:29
 #: apps/admin_pages/pages/own/account/settings/_basis.html:74
 #: apps/admin_pages/pages/own/content/category/index.html:35
-#: apps/admin_pages/pages/own/content/writer.html:54
+#: apps/admin_pages/pages/own/content/writer.html:57
 #: apps/admin_pages/pages/permission/url/add.html:30
 #: apps/admin_pages/pages/role/edit-role.html:11
 #: apps/admin_pages/pages/role/edit-role.html:21
@@ -617,7 +617,7 @@ msgid "站点首页"
 msgstr ""
 
 #: apps/admin_pages/pages/based/_user_dropdown.html:14
-#: apps/admin_pages/pages/own/content/writer.html:121
+#: apps/admin_pages/pages/own/content/writer.html:124
 msgid "发布"
 msgstr ""
 
@@ -928,7 +928,7 @@ msgstr ""
 #: apps/admin_pages/pages/media/text-edit.html:12
 #: apps/admin_pages/pages/media/video-edit.html:13
 #: apps/admin_pages/pages/own/user/post/_user_posts.html:58
-#: apps/admin_pages/pages/permission/url/index.html:103
+#: apps/admin_pages/pages/permission/url/index.html:109
 #: apps/admin_pages/pages/role/edit-role.html:10
 #: apps/admin_pages/pages/role/edit-role.html:20
 #: apps/admin_pages/pages/role/index.html:55
@@ -1006,7 +1006,7 @@ msgstr ""
 #: apps/admin_pages/pages/own/account/settings/_basis.html:86
 #: apps/admin_pages/pages/own/account/settings/_profile.html:58
 #: apps/admin_pages/pages/own/content/category/index.html:26
-#: apps/admin_pages/pages/own/content/writer.html:122
+#: apps/admin_pages/pages/own/content/writer.html:125
 #: apps/admin_pages/pages/role/edit-role.html:56
 #: apps/admin_pages/pages/setting/host/edit.html:51
 #: apps/admin_pages/pages/theme-setting/file/add-page.html:45
@@ -1497,7 +1497,7 @@ msgid "(主页)"
 msgstr ""
 
 #: apps/admin_pages/pages/message/send.html:17
-#: apps/admin_pages/pages/own/content/writer.html:37
+#: apps/admin_pages/pages/own/content/writer.html:40
 msgid "标题不能为空"
 msgstr ""
 
@@ -1829,41 +1829,41 @@ msgstr ""
 msgid "默认文集"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:24
-#: apps/admin_pages/pages/own/content/writer.html:182
+#: apps/admin_pages/pages/own/content/writer.html:27
+#: apps/admin_pages/pages/own/content/writer.html:185
 msgid "存为草稿"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:36
+#: apps/admin_pages/pages/own/content/writer.html:39
 msgid "取个好标题吧"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:47
-#: apps/admin_pages/pages/own/content/writer.html:92
+#: apps/admin_pages/pages/own/content/writer.html:50
+#: apps/admin_pages/pages/own/content/writer.html:95
 msgid "添加标签"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:50
+#: apps/admin_pages/pages/own/content/writer.html:53
 msgid "可以在这里添加标签哦"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:72
+#: apps/admin_pages/pages/own/content/writer.html:75
 msgid "完成"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:174
+#: apps/admin_pages/pages/own/content/writer.html:177
 msgid "抱歉!检查到文本编辑器类型错误(editor),请关闭页面重新打开"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:181
+#: apps/admin_pages/pages/own/content/writer.html:184
 msgid "更新发布"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:184
+#: apps/admin_pages/pages/own/content/writer.html:187
 msgid "更新草稿"
 msgstr ""
 
-#: apps/admin_pages/pages/own/content/writer.html:262
+#: apps/admin_pages/pages/own/content/writer.html:265
 msgid "确认已保存内容后才离开哦"
 msgstr ""
 
@@ -2082,7 +2082,7 @@ msgstr ""
 
 #: apps/admin_pages/pages/permission/url/add.html:12
 #: apps/admin_pages/pages/permission/url/add.html:24
-#: apps/admin_pages/pages/permission/url/index.html:174
+#: apps/admin_pages/pages/permission/url/index.html:180
 msgid "页面路由"
 msgstr ""
 
@@ -2124,6 +2124,7 @@ msgid "URL(api/路由)"
 msgstr ""
 
 #: apps/admin_pages/pages/permission/url/edit.html:51
+#: apps/admin_pages/pages/permission/url/index.html:70
 msgid "请求方式"
 msgstr ""
 
@@ -2136,7 +2137,7 @@ msgid "未自定义"
 msgstr ""
 
 #: apps/admin_pages/pages/permission/url/edit.html:74
-#: apps/admin_pages/pages/permission/url/index.html:70
+#: apps/admin_pages/pages/permission/url/index.html:76
 msgid "登录验证"
 msgstr ""
 
@@ -2181,7 +2182,7 @@ msgstr ""
 msgid "类型"
 msgstr ""
 
-#: apps/admin_pages/pages/permission/url/index.html:72
+#: apps/admin_pages/pages/permission/url/index.html:78
 #: apps/admin_pages/pages/plugin/_edit.html:53
 #: apps/admin_pages/pages/plugin/_edit.html:54
 #: apps/admin_pages/pages/setting/_config_edit.html:28
@@ -2191,20 +2192,20 @@ msgstr ""
 msgid "否"
 msgstr ""
 
-#: apps/admin_pages/pages/permission/url/index.html:84
+#: apps/admin_pages/pages/permission/url/index.html:90
 msgid "权限验证"
 msgstr ""
 
-#: apps/admin_pages/pages/permission/url/index.html:86
-#: apps/admin_pages/pages/permission/url/index.html:95
+#: apps/admin_pages/pages/permission/url/index.html:92
+#: apps/admin_pages/pages/permission/url/index.html:101
 msgid "未自定义(使用代码中配置的默认权限验证)"
 msgstr ""
 
-#: apps/admin_pages/pages/permission/url/index.html:172
+#: apps/admin_pages/pages/permission/url/index.html:178
 msgid "所有"
 msgstr ""
 
-#: apps/admin_pages/pages/permission/url/index.html:173
+#: apps/admin_pages/pages/permission/url/index.html:179
 msgid "ApiUrl"
 msgstr ""
 

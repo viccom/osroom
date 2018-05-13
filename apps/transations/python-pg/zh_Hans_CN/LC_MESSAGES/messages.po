@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  v1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-13 01:46+0800\n"
+"POT-Creation-Date: 2018-05-13 22:52+0800\n"
 "PO-Revision-Date: 2018-05-01 13:31+0800\n"
 "Last-Translator: AllenWoo\n"
 "Language: en_GB\n"
@@ -141,10 +141,10 @@ msgstr "OSR-RestToken验证失败"
 msgid ""
 "Please add the 'OSR-RestToken' or 'X-CSRFToken' request header, the "
 "specific use please refer to the osroom system documentation: "
-"http://www.osroom.com"
+"http://osroom.com"
 msgstr ""
-"请添加\"OSR-RestToken\"或\"X-CSRFToken\"到请求头部, "
-"具体使用请参考osroom系统文档：\"http://www.osroom.com\""
+"请添加'OSR-RestToken'或'X-CSRFToken'到请求头"
+"具体使用请参考osroom系统文档:http://osroom.com"
 
 #: apps/core/flask/errorhandler.py:67
 msgid "Not logged in"
@@ -275,7 +275,7 @@ msgstr "名称已存在"
 #: apps/modules/category/process/category.py:99
 #: apps/modules/media/process/media.py:293
 #: apps/modules/permission/process/url_permission.py:167
-#: apps/modules/plug_in_manager/process/setting.py:139
+#: apps/modules/plug_in_manager/process/setting.py:142
 #: apps/modules/setting/process/settings.py:263
 msgid "Modify the success"
 msgstr "修改成功"
@@ -309,7 +309,7 @@ msgid "Does not match the data to be deleted"
 msgstr "与要删除的数据不符"
 
 #: apps/modules/comments/process/adm_comment.py:96
-#: apps/modules/post/process/post_process.py:274
+#: apps/modules/post/process/post_process.py:279
 msgid "Removed from the database, {}"
 msgstr "从数据库删除:{}"
 
@@ -317,7 +317,7 @@ msgstr "从数据库删除:{}"
 #: apps/modules/comments/process/adm_comment.py:114
 #: apps/modules/post/process/adm_post.py:94
 #: apps/modules/post/process/adm_post.py:114
-#: apps/modules/post/process/post_process.py:277
+#: apps/modules/post/process/post_process.py:282
 #: apps/modules/post/process/user_post.py:200
 msgid "No match to relevant data"
 msgstr "没有匹配到相关数据"
@@ -583,7 +583,7 @@ msgstr "相同名称的插件已存在"
 msgid "The same name theme already exists"
 msgstr "相同名称的主题已存在"
 
-#: apps/modules/plug_in_manager/process/setting.py:51
+#: apps/modules/plug_in_manager/process/setting.py:44
 #: apps/modules/setting/process/host_setting.py:27
 #: apps/modules/setting/process/settings.py:135
 msgid ""
@@ -591,47 +591,47 @@ msgid ""
 "value of the password type has been replaced."
 msgstr "参数配置system下的KEY_HIDING已开启. 当前为password类型数据的值已被替换."
 
-#: apps/modules/plug_in_manager/process/setting.py:72
+#: apps/modules/plug_in_manager/process/setting.py:75
 #: apps/modules/setting/process/settings.py:138
 #: apps/modules/setting/process/settings.py:166
 msgid "There is no such data"
 msgstr "没有相关数据"
 
-#: apps/modules/plug_in_manager/process/setting.py:109
-#: apps/modules/plug_in_manager/process/setting.py:116
-#: apps/modules/plug_in_manager/process/setting.py:126
+#: apps/modules/plug_in_manager/process/setting.py:112
+#: apps/modules/plug_in_manager/process/setting.py:119
+#: apps/modules/plug_in_manager/process/setting.py:129
 #: apps/modules/setting/process/settings.py:203
 #: apps/modules/setting/process/settings.py:210
 #: apps/modules/setting/process/settings.py:220
 msgid "The format of the \"value\" errors, need a \"{}\" type"
 msgstr "“value”格式错误，需要一个“{}”类型"
 
-#: apps/modules/plug_in_manager/process/setting.py:122
+#: apps/modules/plug_in_manager/process/setting.py:125
 #: apps/modules/setting/process/settings.py:216
 msgid "There is no {}"
 msgstr "没有{}"
 
-#: apps/modules/plug_in_manager/process/setting.py:161
+#: apps/modules/plug_in_manager/process/setting.py:164
 msgid "Refreshed successfully"
 msgstr "刷新成功"
 
-#: apps/modules/plug_in_manager/process/setting.py:163
+#: apps/modules/plug_in_manager/process/setting.py:166
 msgid ""
 "Failed to refresh. Please check the previous plug-in page for error "
 "messages"
 msgstr "刷新失败，请查看插件的错误信息"
 
-#: apps/modules/plug_in_manager/process/setting.py:181
+#: apps/modules/plug_in_manager/process/setting.py:184
 msgid "There is no requirement file"
 msgstr "没有需求文件"
 
-#: apps/modules/plug_in_manager/process/setting.py:241
+#: apps/modules/plug_in_manager/process/setting.py:244
 msgid ""
 "Some host connections failed. Successfully connected host has installed "
 "requirements package in the background"
 msgstr "部分服务器连接失败，连接成功的服务器已在后台安装第三方需求包"
 
-#: apps/modules/plug_in_manager/process/setting.py:245
+#: apps/modules/plug_in_manager/process/setting.py:248
 msgid "Executed related installation commands in the background"
 msgstr "在后台执行相关需求命令"
 

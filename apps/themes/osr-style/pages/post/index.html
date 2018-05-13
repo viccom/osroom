@@ -2,7 +2,8 @@
 {% block title %}{{_("文章")}}-{% endblock %}
 {% block content %}
 <div id="app" class="row osr-edit-page">
-    <section class="osr-panel article">
+    <!--存在才显示-->
+    <section v-if="post._id" class="osr-panel article">
         <!--广告 rec_1-->
         <a v-if="rec_1" class="hidden-xs hidden-sm" target="_blank" v-bind:href="rec_1.link">
              <span class="osr-img-tag">
@@ -232,6 +233,8 @@
             }
 
             history_state(vue.post.title+"-{{g.site_global.site_config.TITLE_SUFFIX}}");
+        }).catch(function (r){
+            alert_msg({msg:"{{_('当前访问的内容已不存在')}}", msg_type:"e"})
         });
     }
 

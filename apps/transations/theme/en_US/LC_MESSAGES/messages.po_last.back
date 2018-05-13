@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-12 15:58+0800\n"
+"POT-Creation-Date: 2018-05-13 22:53+0800\n"
 "PO-Revision-Date: 2018-01-04 20:50+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -74,7 +74,7 @@ msgstr "Hot"
 #: apps/themes/osr-style/pages/_index_s2.html:58
 #: apps/themes/osr-style/pages/content/writer.html:12
 #: apps/themes/osr-style/pages/content/writer.html:15
-#: apps/themes/osr-style/pages/post/index.html:74
+#: apps/themes/osr-style/pages/post/index.html:75
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:11
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:25
 #: apps/themes/osr-style/pages/user/post/preview.html:64
@@ -92,8 +92,8 @@ msgstr "Default Collection"
 #: apps/themes/osr-style/pages/account/settings/_avatar.html:24
 #: apps/themes/osr-style/pages/based/_header_bar_menu_user.html:91
 #: apps/themes/osr-style/pages/photo/introduction.html:55
-#: apps/themes/osr-style/pages/post/index.html:25
-#: apps/themes/osr-style/pages/post/index.html:99
+#: apps/themes/osr-style/pages/post/index.html:26
+#: apps/themes/osr-style/pages/post/index.html:100
 #: apps/themes/osr-style/pages/search/index.html:69
 #: apps/themes/osr-style/pages/user/_self_introduction.html:5
 #: apps/themes/osr-style/pages/user/_user_info.html:4
@@ -120,7 +120,7 @@ msgid "头像"
 msgstr "Avatar"
 
 #: apps/themes/osr-style/pages/_index_s2.html:77
-#: apps/themes/osr-style/pages/post/index.html:38
+#: apps/themes/osr-style/pages/post/index.html:39
 #: apps/themes/osr-style/pages/user/post/_user_posts.html:45
 #: apps/themes/osr-style/pages/user/post/preview.html:28
 #: apps/themes/osroom.com/pages/blog/_index_s2.html:60
@@ -329,7 +329,6 @@ msgid "用户协议"
 msgstr "User Agreement"
 
 #: apps/themes/osr-style/pages/sign-in.html:61
-#: apps/themes/osr-style/pages/statement/index.html:15
 msgid "Demo使用协议"
 msgstr "Demo Use Protocol"
 
@@ -364,6 +363,7 @@ msgid "点击 \"注册\" 即表示您同意并愿意遵守"
 msgstr "By clicking \"Register\" you agree and you are willing to abide"
 
 #: apps/themes/osr-style/pages/sign-up.html:55
+#: apps/themes/osr-style/pages/statement/index.html:15
 msgid "隐私政策"
 msgstr "Privacy Policy"
 
@@ -454,7 +454,7 @@ msgstr "Add"
 #: apps/themes/osr-style/pages/based/msg_box.html:52
 #: apps/themes/osr-style/pages/photo/introduction.html:112
 #: apps/themes/osr-style/pages/post/_comment.html:196
-#: apps/themes/osr-style/pages/post/index.html:158
+#: apps/themes/osr-style/pages/post/index.html:159
 #: apps/themes/osr-style/pages/user/post/_comment.html:107
 #: apps/themes/osr-style/pages/user/post/preview.html:148
 #: apps/themes/osroom.com/pages/account/settings/_basis.html:30
@@ -1036,7 +1036,7 @@ msgid "写点什么"
 msgstr "Write something"
 
 #: apps/themes/osr-style/pages/content/writer.html:24
-#: apps/themes/osr-style/pages/content/writer.html:181
+#: apps/themes/osr-style/pages/content/writer.html:182
 #: apps/themes/osroom.com/pages/content/writer.html:24
 #: apps/themes/osroom.com/pages/content/writer.html:182
 msgid "存为草稿"
@@ -1069,7 +1069,7 @@ msgstr "You can add tags here"
 msgid "完成"
 msgstr "Complete"
 
-#: apps/themes/osr-style/pages/content/writer.html:173
+#: apps/themes/osr-style/pages/content/writer.html:174
 #: apps/themes/osroom.com/pages/content/writer.html:174
 msgid "抱歉!检查到文本编辑器类型错误(editor),请关闭页面重新打开"
 msgstr ""
@@ -1077,17 +1077,17 @@ msgstr ""
 " and reopen itSorry! Check the text editor type error (editor), please "
 "close the page and reopen it"
 
-#: apps/themes/osr-style/pages/content/writer.html:180
+#: apps/themes/osr-style/pages/content/writer.html:181
 #: apps/themes/osroom.com/pages/content/writer.html:181
 msgid "更新发布"
 msgstr "Update Release"
 
-#: apps/themes/osr-style/pages/content/writer.html:183
+#: apps/themes/osr-style/pages/content/writer.html:184
 #: apps/themes/osroom.com/pages/content/writer.html:184
 msgid "更新草稿"
 msgstr "Update Draft"
 
-#: apps/themes/osr-style/pages/content/writer.html:266
+#: apps/themes/osr-style/pages/content/writer.html:264
 #: apps/themes/osroom.com/pages/content/writer.html:260
 msgid "确认已保存内容后才离开哦"
 msgstr "Confirm the saved content before leaving"
@@ -1254,7 +1254,7 @@ msgstr "Looking down"
 #: apps/themes/osr-style/pages/photo/introduction.html:105
 #: apps/themes/osr-style/pages/post/_comment.html:84
 #: apps/themes/osr-style/pages/post/_comment.html:150
-#: apps/themes/osr-style/pages/post/index.html:79
+#: apps/themes/osr-style/pages/post/index.html:80
 #: apps/themes/osr-style/pages/user/post/_comment.html:54
 #: apps/themes/osr-style/pages/user/post/_comment.html:83
 #: apps/themes/osr-style/pages/user/post/preview.html:69
@@ -1285,8 +1285,8 @@ msgstr "Copyright belongs to the author, nothing to do with this site"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:66
 #: apps/themes/osr-style/pages/photo/introduction.html:77
-#: apps/themes/osr-style/pages/post/index.html:110
-#: apps/themes/osr-style/pages/post/index.html:121
+#: apps/themes/osr-style/pages/post/index.html:111
+#: apps/themes/osr-style/pages/post/index.html:122
 #: apps/themes/osr-style/pages/user/_user_info.html:14
 #: apps/themes/osr-style/pages/user/_user_info.html:26
 #: apps/themes/osr-style/pages/user/follow/index.html:2
@@ -1309,7 +1309,7 @@ msgid "关注"
 msgstr "Follow"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:69
-#: apps/themes/osr-style/pages/post/index.html:113
+#: apps/themes/osr-style/pages/post/index.html:114
 #: apps/themes/osr-style/pages/user/_user_info.html:17
 #: apps/themes/osr-style/pages/user/follow/index.html:19
 #: apps/themes/osr-style/pages/user/follow/index.html:43
@@ -1323,7 +1323,7 @@ msgid "粉丝"
 msgstr "Fans"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:74
-#: apps/themes/osr-style/pages/post/index.html:118
+#: apps/themes/osr-style/pages/post/index.html:119
 #: apps/themes/osr-style/pages/user/_user_info.html:23
 #: apps/themes/osr-style/pages/user/follow/index.html:49
 #: apps/themes/osr-style/pages/user/post/preview.html:108
@@ -1336,7 +1336,7 @@ msgstr "Unfollow"
 
 #: apps/themes/osr-style/pages/photo/introduction.html:115
 #: apps/themes/osr-style/pages/post/_comment.html:199
-#: apps/themes/osr-style/pages/post/index.html:161
+#: apps/themes/osr-style/pages/post/index.html:162
 #: apps/themes/osr-style/pages/user/message/_comment.html:55
 #: apps/themes/osr-style/pages/user/post/_comment.html:110
 #: apps/themes/osr-style/pages/user/post/preview.html:151
@@ -1378,7 +1378,7 @@ msgid "提交评论"
 msgstr "Submit"
 
 #: apps/themes/osr-style/pages/post/_comment.html:17
-#: apps/themes/osr-style/pages/post/index.html:44
+#: apps/themes/osr-style/pages/post/index.html:45
 #: apps/themes/osr-style/pages/user/message/_comment.html:7
 #: apps/themes/osr-style/pages/user/message/index.html:22
 #: apps/themes/osr-style/pages/user/post/_comment.html:1
@@ -1447,31 +1447,36 @@ msgstr "Reply"
 msgid "评论举报"
 msgstr "Comment report"
 
-#: apps/themes/osr-style/pages/post/index.html:42
+#: apps/themes/osr-style/pages/post/index.html:43
 #: apps/themes/osr-style/pages/user/post/preview.html:32
 #: apps/themes/osroom.com/pages/post/index.html:42
 #: apps/themes/osroom.com/pages/user/post/preview.html:32
 msgid "浏览"
 msgstr "Browsing"
 
-#: apps/themes/osr-style/pages/post/index.html:81
+#: apps/themes/osr-style/pages/post/index.html:82
 #: apps/themes/osr-style/pages/user/post/preview.html:71
 #: apps/themes/osroom.com/pages/post/index.html:81
 #: apps/themes/osroom.com/pages/user/post/preview.html:71
 msgid "转载请联系作者获取授权"
 msgstr "Please contact the author for permission"
 
-#: apps/themes/osr-style/pages/post/index.html:82
+#: apps/themes/osr-style/pages/post/index.html:83
 #: apps/themes/osr-style/pages/user/post/preview.html:72
 #: apps/themes/osroom.com/pages/post/index.html:82
 #: apps/themes/osroom.com/pages/user/post/preview.html:72
 msgid "著作权归作者所有"
 msgstr "The copyright belongs to the author"
 
-#: apps/themes/osr-style/pages/post/index.html:151
+#: apps/themes/osr-style/pages/post/index.html:152
 #: apps/themes/osroom.com/pages/post/index.html:151
 msgid "文章举报"
 msgstr "Article Report"
+
+#: apps/themes/osr-style/pages/post/index.html:237
+#: apps/themes/osroom.com/pages/post/index.html:236
+msgid "当前访问的内容已不存在"
+msgstr ""
 
 #: apps/themes/osr-style/pages/search/index.html:2
 #: apps/themes/osr-style/pages/search/index.html:12
@@ -1604,8 +1609,8 @@ msgstr "Violation content"
 msgid "预览"
 msgstr "Preview"
 
-#: apps/themes/osr-style/static/js/osroom.js:109
-#: apps/themes/osroom.com/static/js/osroom.js:109
+#: apps/themes/osr-style/static/js/osroom.js:111
+#: apps/themes/osroom.com/static/js/osroom.js:111
 msgid "请选择要上传的文件"
 msgstr "Please select the file to upload"
 

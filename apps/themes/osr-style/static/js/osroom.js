@@ -60,7 +60,9 @@ function osrHttp(type, url, data, args){
                         data = {msg:$("#js-tr-204").attr("content"), msg_type:"s"};
                     }
                     //消息弹出
-                    if(!not_prompt){ alert_msg(data);}
+                    if(!not_prompt || data.msg_type != "s"){
+                        alert_msg(data);
+                    }
 
                     if(location_href && data.msg_type == "s"){
                         location.href = location_href;
@@ -128,7 +130,9 @@ function osrHttpUpload(type, url, data, args){
                         data = {msg:$("#js-tr-204").attr("content"), msg_type:"s"};
                     }
                     //消息弹出
-                    if(!not_prompt){ alert_msg(data);}
+                    if(!not_prompt || data.msg_type != "s"){
+                        alert_msg(data);
+                    }
                     if(location_href && data.msg_type == "s"){
                         location.href = location_href;
                     }else if(data.to_url && data.msg_type == "s"){

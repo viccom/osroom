@@ -118,20 +118,29 @@
 
 <div class="col-md-4">
     <!--推荐位3 文本媒体-->
-    <div v-if="rec_3" class="text-center">
-        <a :href="rec_3.link" target="_blank" class="text-success" style="font-size:25px;">
-            <i class="fa fa-github" style="font-size:30px;"></i>
-            <span>{[rec_3.title]}</span>
-        </a>
+    <div v-for="rec in rec_3" >
+        <div class="text-center">
+            <a :href="rec.link" target="_blank" class="text-success" style="font-size:25px;">
+                <span v-if="rec.title">{[rec.title]}</span>
+                <div v-if="rec.text" v-html="rec.text_html"></div>
+            </a>
+        </div>
     </div>
     <!--//推荐位3-->
     <!--推荐位4-->
     <div v-for="rec in rec_4" >
         <hr>
-        <div class="text-center">
-            <p class="osr-text">{[rec.title]}</p>
-            <img :src="rec.url" class="osr-side-img">
-            <div v-html="rec.text_html"></div>
+        <div class="text-center" >
+            <a v-if="rec.link_open_new_tab" :href="rec.link" target="_blank">
+                <p class="osr-text">{[rec.title]}</p>
+                <img :src="rec.url" class="osr-side-img">
+                <div v-html="rec.text_html"></div>
+            </a>
+            <a v-else :href="rec.link">
+                <p class="osr-text">{[rec.title]}</p>
+                <img :src="rec.url" class="osr-side-img">
+                <div v-html="rec.text_html"></div>
+            </a>
         </div>
     </div>
     <!--//推荐位4-->
