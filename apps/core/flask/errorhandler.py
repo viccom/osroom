@@ -90,6 +90,7 @@ def internal_server_error(e):
     except:
         code = 500
     msg_type = "w"
+    msg = gettext("An error occurred. Please contact the administrator")
     if code == 401:
         msg = gettext("Permission denied")
 
@@ -98,6 +99,10 @@ def internal_server_error(e):
 
     elif code == 500:
         msg = gettext("Server error")
+        msg_type = "e"
+
+    elif isinstance(code, int) and code//500 == 1:
+        msg = gettext("Server error, please check whether the third-party plug-in is normal")
         msg_type = "e"
 
     data = {"http_status": code, "request_id": g.weblog_id,
