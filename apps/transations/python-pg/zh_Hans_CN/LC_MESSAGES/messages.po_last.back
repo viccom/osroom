@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  v1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-13 22:52+0800\n"
+"POT-Creation-Date: 2018-05-14 01:15+0800\n"
 "PO-Revision-Date: 2018-05-01 13:31+0800\n"
 "Last-Translator: AllenWoo\n"
 "Language: en_GB\n"
@@ -142,23 +142,31 @@ msgid ""
 "Please add the 'OSR-RestToken' or 'X-CSRFToken' request header, the "
 "specific use please refer to the osroom system documentation: "
 "http://osroom.com"
-msgstr ""
+msgstr "请添加'OSR-RestToken'或'X-CSRFToken'到请求头具体使用请参考osroom系统文档:http://osroom.com"
 
 #: apps/core/flask/errorhandler.py:67
 msgid "Not logged in"
 msgstr "未登录"
 
-#: apps/core/flask/errorhandler.py:94
+#: apps/core/flask/errorhandler.py:93
+msgid "An error occurred. Please contact the administrator"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:95
 msgid "Permission denied"
 msgstr "没有权限"
 
-#: apps/core/flask/errorhandler.py:97
+#: apps/core/flask/errorhandler.py:98
 msgid "The api does not exist or has been deprecated"
 msgstr "api不存在或已被弃用"
 
-#: apps/core/flask/errorhandler.py:100
+#: apps/core/flask/errorhandler.py:101
 msgid "Server error"
 msgstr "服务器错误"
+
+#: apps/core/flask/errorhandler.py:105
+msgid "Server error, please check whether the third-party plug-in is normal"
+msgstr ""
 
 #: apps/core/flask/login_manager.py:53
 msgid "Anonymous users can not access '{}', need to log in"
@@ -1270,13 +1278,4 @@ msgid ""
 "If you do not send it, please ignore it.Please do not tell the "
 "verification code to others"
 msgstr "如果您没有发送，请忽略它。不要将验证码告诉其他人！"
-
-#~ msgid ""
-#~ "Please add the 'OSR-RestToken' or "
-#~ "'X-CSRFToken' request header, the specific "
-#~ "use please refer to the osroom "
-#~ "system documentation: http://www.osroom.com"
-#~ msgstr ""
-#~ "请添加\"OSR-RestToken\"或\"X-CSRFToken\"到请求头部, "
-#~ "具体使用请参考osroom系统文档：\"http://www.osroom.com\""
 

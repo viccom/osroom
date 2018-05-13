@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-13 22:52+0800\n"
+"POT-Creation-Date: 2018-05-14 01:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,16 +147,24 @@ msgstr ""
 msgid "Not logged in"
 msgstr ""
 
-#: apps/core/flask/errorhandler.py:94
+#: apps/core/flask/errorhandler.py:93
+msgid "An error occurred. Please contact the administrator"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:95
 msgid "Permission denied"
 msgstr ""
 
-#: apps/core/flask/errorhandler.py:97
+#: apps/core/flask/errorhandler.py:98
 msgid "The api does not exist or has been deprecated"
 msgstr ""
 
-#: apps/core/flask/errorhandler.py:100
+#: apps/core/flask/errorhandler.py:101
 msgid "Server error"
+msgstr ""
+
+#: apps/core/flask/errorhandler.py:105
+msgid "Server error, please check whether the third-party plug-in is normal"
 msgstr ""
 
 #: apps/core/flask/login_manager.py:53

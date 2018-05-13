@@ -28,21 +28,25 @@ def push_url_to_db(app):
         else:
             continue
 
-        # 防止同时启动多个应用时前面启动的把后面的覆盖, 故更新时"update_time":{"$lt":now_time}
-        r = mdb_sys.dbs["sys_urls"].update_one({"url":rule.rule.rstrip("/"), "update_time":{"$lt":now_time}},
-                                           {"$set":{"methods":list(rule.methods),
-                                                    "endpoint":rule.endpoint,
-                                                    "type":type,
-                                                    "create":"auto",
-                                                    "update_time":now_time}})
-        if not r.matched_count:
+        r = mdb_sys.dbs["sys_urls"].find_one({"url":rule.rule.rstrip("/")})
+        if not r:
+            # 不存在
             mdb_sys.dbs["sys_urls"].insert_one({"url": rule.rule.rstrip("/"),
                                                 "methods": list(rule.methods),
                                                 "endpoint": rule.endpoint,
-                                                "custom_permission":{},
+                                                "custom_permission": {},
                                                 "type": type,
                                                 "create": "auto",
                                                 "update_time": now_time})
+
+        elif r and r["update_time"] < now_time:
+            # 如果存在, 并且更新时间比现在前(防止同时启动多个进程时错乱，导致下面程序当旧数据清理)
+            mdb_sys.dbs["sys_urls"].update_one({"url":rule.rule.rstrip("/"), "update_time":{"$lt":now_time}},
+                                               {"$set":{"methods":list(rule.methods),
+                                                        "endpoint":rule.endpoint,
+                                                        "type":type,
+                                                        "create":"auto",
+                                                        "update_time":now_time}})
 
     urls = mdb_sys.dbs["sys_urls"].find({})
     for url in urls:

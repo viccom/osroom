@@ -8,7 +8,7 @@ __author__ = "Allen Woo"
 def import_plugin_config(plugin_name, config):
 
     '''
-    导入插件配置到数据库
+    导入插件配置到数据库,已存在的则更新时间
     :param plugin_name 插件名
     :param CONFIG:
     :return:
@@ -22,15 +22,13 @@ def import_plugin_config(plugin_name, config):
             v["reactivate"] = True
         if not "info" in v:
             v["info"] = ""
+
         # 查找相同的配置
-        r = mdb_sys.db.plugin_config.update_one({"plugin_name":plugin_name,
-                                            "key":k,
-                                            "value_type":v["value_type"]},
-                                            {"$set":{"update_time":current_time,
-                                                     "reactivate": v["reactivate"],
-                                                     "info":v["info"]}})
-        if not r.modified_count:
-            # 如果更新时间不成功,此配置不存在数据库
+        r = mdb_sys.db.plugin_config.find_one({"plugin_name": plugin_name,
+                                               "key": k,
+                                               "value_type": v["value_type"]})
+        if not r:
+            # 如果不存在
             mdb_sys.db.plugin_config.insert_one({"plugin_name": plugin_name,
                                                  "key": k,
                                                  "value_type": v["value_type"],
@@ -39,10 +37,16 @@ def import_plugin_config(plugin_name, config):
                                                  "info":v["info"]
                                                  }
                                                 )
+        elif r and r["update_time"] < current_time:
+            # 存在, 而且比当前时间前的(防止同时启动多个进程时错乱，导致下面程序当旧数据清理)
+            r = mdb_sys.db.plugin_config.update_one({"_id": r["_id"]},
+                                                    {"$set": {"update_time": current_time,
+                                                              "reactivate": v["reactivate"],
+                                                              "info": v["info"]}
+                                                     })
+
     # 删除已不需要的配置
-    mdb_sys.db.plugin_config.delete_many({"plugin_name": plugin_name,
-                                         "update_time": {"$lt":current_time},
-                                         })
+    mdb_sys.db.plugin_config.delete_many({"plugin_name": plugin_name,"update_time": {"$lt":current_time}})
     # 更新插件配置缓存, # 删除缓存，达到更新缓存
     cache.delete(key=PLUG_IN_CONFIG_CACHE_KEY)
 

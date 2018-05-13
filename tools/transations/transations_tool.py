@@ -198,8 +198,12 @@ class Transations():
 
     def cfg_sack(self):
 
-        print("cfg file: " + self.cfg_path)
+        print("\n* [Dangerous operation] Please check if the update option is wrong\n")
+        print("Extraction path: {}".format(self.extract_path))
+        print("Output path: {}".format(self.save_path))
+        print("Cfg file: " + self.cfg_path)
         self.print_cfg()
+        print("\n")
         ch = input("Are you sure you want to use this cfg file?(Y/N): ")
         if ch.lower() not in ["yes", "y"]:
             sys.exit(0)
