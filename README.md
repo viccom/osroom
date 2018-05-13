@@ -7,6 +7,8 @@ OSROOM基于Python3 Flask + Mongodb3.4+ Redis开发. 目前只在Ubuntu 14.04, 1
 
 可用于搭建（开发）个人网站，企业官网，微信小程序后端等！也可以自己开发更多的插件或者扩展模块，让功能更全面!
 
+代码更新首发地址: https://github.com/osroom/osroom
+
 ### 文档与Demo
 > 官网与文档
 
@@ -15,18 +17,12 @@ OSROOM基于Python3 Flask + Mongodb3.4+ Redis开发. 目前只在Ubuntu 14.04, 1
 > Demo网站
 
 Demo网站使用默认简单主题，预装了文件存储插件(用于作为图床)，文本内容检查插件，IP识别地址插件
+
 https://demo.osroom.com 
 
-目前Demo安装的属于测试版本，如有BUG请提交
+Demo网站内部有提供管理员账户和密码，可自己在Demo站点注册账户使用
 
- 
-```
-  Ddemo站点管理员账户
-  Username: Demo    
-  Password: demopass
-  此账户已禁止后端管理数据修改和账户本身基础资料修改
-  也可自己在Demo站点注册账户使用
-```
+目前Demo安装的属于测试版本，如有BUG请提交
 
 ### 支持与功能
 > 支持开发
