@@ -19,8 +19,8 @@ def robots():
     robots.txt
     :return:
     '''
-
-    absolute_path = os.path.abspath("{}/robots.txt".format(theme_view.template_folder))
+    absolute_path = "{}/{}/pages/robots.txt".format(theme_view.template_folder,
+                                           get_config("theme", "CURRENT_THEME_NAME"))
     return send_file(absolute_path)
 
 @csrf.exempt
