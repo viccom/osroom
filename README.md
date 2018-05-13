@@ -1,20 +1,45 @@
 
-<div align=center><img width="auto" height="50" src="https://raw.githubusercontent.com/osroom/osroom/master/apps/static/admin/sys_imgs/osroom-logo.png" alt="osroom"/></div>
+<div align=center><img width="auto" height="50" src="https://raw.githubusercontent.com/osroom/osroom/master/apps/static/sys_imgs/osroom-logo.png" alt="osroom"/></div>
 
-> 还在开发中...,请不要下载使用, 也不要pull requests. 
+> 目前处于测试中... 还未发布公测版本
 ## OSRoom 开源Web系统
-开源协议:BSD2
+OSROOM基于Python3 Flask + Mongodb3.4+ Redis开发. 目前只在Ubuntu 14.04, 16.04测试过，其余Linux发行版还未测试.
 
-<div align=center><img width="auto" src="https://raw.githubusercontent.com/osroom/osroom/master/docs/imgs/dashboard.png" alt="osroom"/></div>
+可用于搭建（开发）个人网站，企业官网，微信小程序后端等！也可以自己开发更多的插件或者扩展模块，让功能更全面!
 
+### 文档与Demo
+> 官网与文档
 
-> 支持
-- 插件开发，官方插件Github地址: https://github.com/osroom-plugins
+编写预热中...
+
+> Demo网站
+
+Demo网站使用默认简单主题，预装了文件存储插件(用于作为图床)，文本内容检查插件，IP识别地址插件
+https://demo.osroom.com 
+
+目前Demo安装的属于测试版本，如有BUG请提交
+
+ 
+```
+  Ddemo站点管理员账户
+  Username: Demo    
+  Password: demopass
+  此账户已禁止后端管理数据修改和账户本身基础资料修改
+  也可自己在Demo站点注册账户使用
+```
+
+### 支持与功能
+> 支持开发
+- 插件开发，官方插件Github地址: https://github.com/osroom-plugins 进入查看OSROOM官方插件
 - 主题开发，官方主题Github地址: https://github.com/osroom
-> 基础功能
-- Web 服务端Api, Restful api，简单修改即可做微信小程序Api.
+- 扩展
 
-> 初期想法
-* 主项目osroom主要构建osroom核心部分，包括插件扩展功能. 更多的功能需求使用插件单独开发扩展，需要使用时导入到osroom主项目中，结合使用。
-为何想这样做？贡献者和贡献者的精力有限。
+> 功能
+- 可做Web 服务端Api, Restful api，简单修改即可做微信小程序Api的！
 
+### 为何开发？
+这个吗？那就是基于自己对Web编程的兴趣与学习更多的编程知识，也为了之后能更快的帮他人建立一个网站
+
+### License
+[BSD2](http://opensource.org/licenses/BSD-2-Clause)
+Copyright (c) 2017-present, Allen Woo
