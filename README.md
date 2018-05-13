@@ -3,7 +3,7 @@
 
 > 目前处于测试中... 还未发布公测版本
 ## OSRoom 开源Web系统
-OSROOM基于Flask + Mongodb3.4+ + Python3.4+开. 目前只在Ubuntu 14.04, 16.04测试过，其余Linux发行版还未测试.
+OSROOM基于Python3 Flask + Mongodb3.4+ Redis开发. 目前只在Ubuntu 14.04, 16.04测试过，其余Linux发行版还未测试.
 
 可用于搭建（开发）个人网站，企业官网，微信小程序后端等！也可以自己开发更多的插件或者扩展模块，让功能更全面!
 
