@@ -87,7 +87,7 @@ def get_posts_pr(field=None, page=1, pre=10, status="is_issued", sort=None, time
         query_conditions['is_delete'] = {"$in":[2,3]}
 
     else:
-        if "user_id" not in other_filter or not current_user.is_authenticated or\
+        if (other_filter and "user_id" not in other_filter) or not current_user.is_authenticated or\
                 other_filter["user_id"] != current_user.str_id:
             # 如果没有查询中没有指定用户,或者指定的用户不是当前用户, 则使用缓存功能
             use_cache = True
