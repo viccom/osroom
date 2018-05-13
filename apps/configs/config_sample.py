@@ -801,7 +801,7 @@ CONFIG = {
             "type": "string",
             "sort": 11,
             "info": "Web站点URL(如果没有填写, 则使用默认的当前域名首页地址)",
-            "value": "http://www.osroom.com"
+            "value": "http://osroom.com"
         },
         "HEAD_CODE": {
             "type": "string",

@@ -62,9 +62,15 @@
                                     {[url.type]}
                                 </a>
                             </div>
-                            <div class="task-title">
+                            <div>
                                 <strong class="osr-color-success">{{_("URL(api/路由)")}}: </strong>
                                 <a>{[url.url]}</a>
+                            </div>
+                            <div>
+                                <strong class="osr-color-success">{{_("请求方式")}}: </strong>
+                                <span v-for="md in url.methods" class="osr-color-secondary">
+                                    {[md]}&nbsp;
+                                </span>
                             </div>
                             <div v-if="url.type=='page'">
                                 <span class="osr-color-success">{{_("登录验证")}}: </span>

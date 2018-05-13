@@ -35,7 +35,7 @@ def start_info():
     info = '''
     Welcome to use the osroom open source web system.
     osroom v{}
-    osroom website: \033[1;34m http://www.osroom.com \033[0m
+    osroom website: \033[1;34m http://osroom.com \033[0m
     Project code download: \033[1;34m https://github.com/osroom/osroom \033[0m
     License: BSD2
     The operating system: {}

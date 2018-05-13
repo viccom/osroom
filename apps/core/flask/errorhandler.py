@@ -59,7 +59,7 @@ class ErrorHandler():
             data = {"http_status": e.code, "msg": e.description, "msg_type": "e", "error_id":40104,
                     "help":gettext("Please add the 'OSR-RestToken' or 'X-CSRFToken' request header,"
                         " the specific use please refer to the osroom system documentation:"
-                        " http://www.osroom.com")}
+                        " http://osroom.com")}
             return response_format(data)
 
         @app.errorhandler(LoginReqError)
