@@ -256,8 +256,8 @@ def sys_config_edit():
         # 更新修改数据
         mdb_sys.db.sys_config.update_one(
             {"project": project, "key":key, "conf_version": now_version},
-            {"$set": conf},
-            upsert=True)
+            {"$set": conf}, upsert=True)
+
         # 删除缓存，达到更新缓存
         cache.delete(CONFIG_CACHE_KEY)
         data = {"msg":gettext("Modify the success"), "msg_type":"s", "http_status":201}
