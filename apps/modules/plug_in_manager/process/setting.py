@@ -39,6 +39,11 @@ def get_plugin_setting():
             if key_hiding and conf["value_type"] == "password":
                 conf["value"] = "Has been hidden"
 
+        if key_hiding:
+            data["msg_type"] = "w"
+            data["msg"] = gettext("The KEY_HIDING switch in the system configuration has been enabled."
+                                  " The value of the password type has been replaced.")
+
     data["configs"] = configs
     plugin = mdb_sys.db.plugin.find_one({"plugin_name": plugin_name}, {"_id": 0})
     if plugin:
@@ -46,10 +51,7 @@ def get_plugin_setting():
     else:
         data["plugin_info"] = None
 
-    if key_hiding:
-        data["msg_type"] = "w"
-        data["msg"] = gettext("The KEY_HIDING switch in the system configuration has been enabled."
-                              " The value of the password type has been replaced.")
+
     return data
 
 
