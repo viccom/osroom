@@ -16,6 +16,9 @@ OSROOM基于Flask + Mongodb3.4+ + Python3.4+开. 目前只在Ubuntu 14.04, 16.04
 
 Demo网站使用默认简单主题，预装了文件存储插件(用于作为图床)，文本内容检查插件，IP识别地址插件
 https://demo.osroom.com 
+
+目前Demo安装的属于测试版本，如有BUG请提交
+
  
 ```
   Ddemo站点管理员账户
