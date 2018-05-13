@@ -5,22 +5,29 @@
 ## OSRoom 开源Web系统
 OSROOM基于Flask + Mongodb3.4+ + Python3.4+开. 目前只在Ubuntu 14.04, 16.04测试过，其余Linux发行版还未测试.
 
-可用于搭建（开发）个人网站，企业官网，微信小程序后端等！也可以自己开发更多的插件或者扩展模块，然功能更全面!
+可用于搭建（开发）个人网站，企业官网，微信小程序后端等！也可以自己开发更多的插件或者扩展模块，让功能更全面!
 
 ### 文档与Demo
-**官网与文档** 编写预热中...
+> 官网与文档
 
-**Demo网站:** https://demo.osroom.com
+编写预热中...
+
+> Demo网站
+
+Demo网站使用默认简单主题，预装了文件存储插件(用于作为图床)，文本内容检查插件，IP识别地址插件
+https://demo.osroom.com 
+ 
 ```
-  Ddemo站点管理员账户，也可自己注册账户使用，Demo网站使用默认简单主题
+  Ddemo站点管理员账户
   Username: Demo    
   Password: demopass
   此账户已禁止后端管理数据修改和账户本身基础资料修改
+  也可自己在Demo站点注册账户使用
 ```
 
 ### 支持与功能
 > 支持开发
-- 插件开发，官方插件Github地址: https://github.com/osroom-plugins
+- 插件开发，官方插件Github地址: https://github.com/osroom-plugins 进入查看OSROOM官方插件
 - 主题开发，官方主题Github地址: https://github.com/osroom
 - 扩展
 
