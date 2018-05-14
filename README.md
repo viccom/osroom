@@ -2,10 +2,11 @@
 <div align=center><img width="auto" height="50" src="https://raw.githubusercontent.com/osroom/osroom/master/apps/static/sys_imgs/osroom-logo.png" alt="osroom"/></div>
 
 > 目前处于测试中... 还未发布公测版本
-## OSRoom 开源Web系统
-OSROOM基于Python3 Flask + Mongodb3.4+ Redis开发. 目前只在Ubuntu 14.04, 16.04测试过，其余Linux发行版还未测试.
 
-可用于搭建（开发）个人网站，企业官网，微信小程序后端等！也可以自己开发更多的插件或者扩展模块，让功能更全面!
+## OSRoom 开源Web系统
+OSROOM基于Python3 Flask + Mongodb3.4+ Redis开发的一个Web系统.
+可用于搭建（开发）个人网站, 企业官网, 也可以作为微信小程序服务端, 小程序客户端直接调用OSROOM Api. 功能支持方便,可以自己开发更多的插件或者扩展模块，让功能更全面!
+目前只在Ubuntu 14.04, 16.04测试过，其余Linux发行版还未测试.
 
 代码更新首发地址: https://github.com/osroom/osroom
 
