@@ -39,7 +39,7 @@ def import_plugin_config(plugin_name, config):
                                                 )
         elif r and r["update_time"] < current_time:
             # 存在, 而且比当前时间前的(防止同时启动多个进程时错乱，导致下面程序当旧数据清理)
-            r = mdb_sys.db.plugin_config.update_one({"_id": r["_id"]},
+            mdb_sys.db.plugin_config.update_one({"_id": r["_id"], "update_time": {"$lt":current_time}},
                                                     {"$set": {"update_time": current_time,
                                                               "reactivate": v["reactivate"],
                                                               "info": v["info"]}

@@ -41,7 +41,7 @@ def push_url_to_db(app):
 
         elif r and r["update_time"] < now_time:
             # 如果存在, 并且更新时间比现在前(防止同时启动多个进程时错乱，导致下面程序当旧数据清理)
-            mdb_sys.dbs["sys_urls"].update_one({"url":rule.rule.rstrip("/"), "update_time":{"$lt":now_time}},
+            mdb_sys.dbs["sys_urls"].update_one({"_id":r["_id"], "update_time":{"$lt":now_time}},
                                                {"$set":{"methods":list(rule.methods),
                                                         "endpoint":rule.endpoint,
                                                         "type":type,
